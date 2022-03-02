@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>ZI ZI0005 ZIROUTD ZIROUTD</keywords>
+<pagetitle>Route Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Route Details</title>
+<rotoid>ZI0005</rotoid>
+<tablelist>
+<table name="ZIROUTD" desc="Route Details" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Sequenced revisions</protocol><protocol>Key auto generate</protocol></protocollist>
+<dllname>ZIROUTD</dllname>
+<compositionlist>
+<composition>
+<comprotoid>ZI0004</comprotoid>
+<compdesc>Route Headers</compdesc>
+<compdll>ZIROUTH</compdll>
+<comptablelist>
+<comptable name="ZIROUTH" desc="Route Headers" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Orig, Dest, Route, Level</keytitle>
+<keyfieldlist>
+<keyfield>ORGCOMPID</keyfield>
+<keyfield>DESCOMPID</keyfield>
+<keyfield>ROUTENO</keyfield>
+<keyfield>LEVEL</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Level Company</keytitle>
+<keyfieldlist>
+<keyfield>LEVCOMPID</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ORGCOMPID</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Originator</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>DESCOMPID</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Destination</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>ROUTENO</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Route Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LEVEL</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Level</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LEVCOMPID</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Level Company ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>PRECMPA</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Previous Company Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>NXTCMPA</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Next Company Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>FUNCCUR</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Functional Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>CURRATETP</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SWPSTSRCE</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Keep Source Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Exclude Source Currency in G/L Posting" /><fieldpresent index="1" value="Include Source Currency in G/L Posting" /></fieldpresentlist></field>
+<field>
+<fieldname>PACCTDESC</fieldname>
+<fieldindex>100</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Previous G/L Account Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PACCTFMTTD</fieldname>
+<fieldindex>101</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Previous G/L Account Formatted Account Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PDCURNCODE</fieldname>
+<fieldindex>102</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Previous G/L Account Default Currency Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PMCSW</fieldname>
+<fieldindex>103</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Previous G/L Account Multicurrency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PQTYSW</fieldname>
+<fieldindex>104</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Previous G/L Account Quantities Allowed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PACTIVESW</fieldname>
+<fieldindex>105</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Previous G/L Account Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PCTLACCTSW</fieldname>
+<fieldindex>106</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Previous G/L Account Control Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PSPECSW</fieldname>
+<fieldindex>107</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Previous G/L Account Specific Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NACCTDESC</fieldname>
+<fieldindex>108</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Next G/L Account Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NACCTFMTTD</fieldname>
+<fieldindex>109</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Next G/L Account Formatted Account Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NDCURNCODE</fieldname>
+<fieldindex>110</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Next G/L Account Default Currency Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NMCSW</fieldname>
+<fieldindex>111</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Next G/L Account Multicurrency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NQTYSW</fieldname>
+<fieldindex>112</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Next G/L Account Quantities Allowed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NACTIVESW</fieldname>
+<fieldindex>113</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Next G/L Account Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NCTLACCTSW</fieldname>
+<fieldindex>114</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Next G/L Account Control Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NSPECSW</fieldname>
+<fieldindex>115</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Next G/L Account Specific Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

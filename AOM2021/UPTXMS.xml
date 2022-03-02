@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>UP UP0029 UPTXMS UPTXMS</keywords>
+<pagetitle>Company Payroll Taxes</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="UPTXMS" desc="Company Payroll Taxes">
+<view name="UP0029" desc="Company Payroll Taxes" />
+<recordlength>1282</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Tax</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TAXID</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Tax by Category, Type</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CATEGORY</keyfield><keyfield>TAXTYPE</keyfield><keyfield>TAXID</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>TAXID</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Tax</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Category</fielddesc>
+</field>
+<field>
+<fieldname>TAXTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Type</fielddesc>
+<fieldpresentlist><fieldpresent index="19" value="Income Tax" /><fieldpresent index="20" value="Unemployment Tax" /><fieldpresent index="18" value="Insurance Tax" /><fieldpresent index="21" value="Pension Plan Tax" /><fieldpresent index="22" value="Health Tax" /><fieldpresent index="23" value="Other Tax" /></fieldpresentlist></field>
+<field>
+<fieldname>LONGDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>SHORTDESC</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Short Description</fielddesc>
+</field>
+<field>
+<fieldname>REPORTID</fieldname>
+<fieldtype>String*20</fieldtype>
+<fielddesc>Reporting ID</fielddesc>
+<mask>%-15C</mask></field>
+<field>
+<fieldname>ACTIVESW</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Tax Inactive</fielddesc>
+</field>
+<field>
+<fieldname>INACTASOF</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Inactive Date</fielddesc>
+</field>
+<field>
+<fieldname>LASTMAINT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Maintained</fielddesc>
+</field>
+<field>
+<fieldname>BASEMULT</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Base Multiplier</fielddesc>
+</field>
+<field>
+<fieldname>SURTAXMULT</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Surtax Multiplier</fielddesc>
+</field>
+<field>
+<fieldname>ROUNDTAXSW</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Round Tax</fielddesc>
+</field>
+<field>
+<fieldname>DAILYPPY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Daily Pay Periods per Year</fielddesc>
+</field>
+<field>
+<fieldname>TAXCREDITS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>RESERVED - Tax Credits</fielddesc>
+</field>
+<field>
+<fieldname>TAXCRPCNT</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>RESERVED - Tax Credit Percent</fielddesc>
+</field>
+<field>
+<fieldname>STDARDDED1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Standard Deduction</fielddesc>
+</field>
+<field>
+<fieldname>STDARDDED2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>RESERVED - Standard Deduction</fielddesc>
+</field>
+<field>
+<fieldname>STDARDDED3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>RESERVED - Standard Deduction</fielddesc>
+</field>
+<field>
+<fieldname>STDARDDED4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>RESERVED - Standard Deduction</fielddesc>
+</field>
+<field>
+<fieldname>EXMPTNAMT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount per Exemption</fielddesc>
+</field>
+<field>
+<fieldname>EXMPTNAMT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>RESERVED - Amount per Exemption</fielddesc>
+</field>
+<field>
+<fieldname>EXMPTNAMT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>RESERVED - Amount per Exemption</fielddesc>
+</field>
+<field>
+<fieldname>EXMPTNAMT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>RESERVED - Amount per Exemption</fielddesc>
+</field>
+<field>
+<fieldname>EXMPTCRSW</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Tax Credit Exemption switch</fielddesc>
+</field>
+<field>
+<fieldname>ANNMAXHRS</fieldname>
+<fieldtype>BCD*4.3</fieldtype>
+<fielddesc>Annual Maximum Hours</fielddesc>
+</field>
+<field>
+<fieldname>ANNMAXERN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Annual Maximum Earnings</fielddesc>
+</field>
+<field>
+<fieldname>ANNUALMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Annual Minimum Earnings</fielddesc>
+</field>
+<field>
+<fieldname>W2BOXTYP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>W-2 Box Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Not Applicable" /><fieldpresent index="2" value="Other Information Box" /><fieldpresent index="3" value="Combine with Another Tax" /><fieldpresent index="4" value="Local Tax Box" /><fieldpresent index="5" value="Suppress W2 Reporting" /></fieldpresentlist></field>
+<field>
+<fieldname>W2WITHTAX</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Combine with Tax</fielddesc>
+</field>
+<field>
+<fieldname>ASSOCW2SW</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Associate with W-2 printing</fielddesc>
+</field>
+<field>
+<fieldname>ASSOCTAX</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Associated Tax</fielddesc>
+</field>
+<field>
+<fieldname>ECALCMTHD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employee Calculation Method</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="None" /><fieldpresent index="2" value="Flat" /><fieldpresent index="5" value="Amount per Hour" /><fieldpresent index="7" value="Percentage of Base" /><fieldpresent index="13" value="Tax Bracket Table" /><fieldpresent index="14" value="Percentage of Another Tax" /></fieldpresentlist></field>
+<field>
+<fieldname>ESUPPRATE</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Employee Supplemental Rate</fielddesc>
+</field>
+<field>
+<fieldname>EBASETAX</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Employee Base Tax</fielddesc>
+</field>
+<field>
+<fieldname>EAMTORPCT</fieldname>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Employee Amount/Percent</fielddesc>
+</field>
+<field>
+<fieldname>ELIMITON</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employee Limit</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="No Limit" /><fieldpresent index="4" value="Withholding" /><fieldpresent index="5" value="Base" /></fieldpresentlist></field>
+<field>
+<fieldname>EANNUALMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Annual Maximum</fielddesc>
+</field>
+<field>
+<fieldname>ECLCMINWRK</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Employee Minimum Weeks Worked</fielddesc>
+</field>
+<field>
+<fieldname>EDAILYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Daily Minimum</fielddesc>
+</field>
+<field>
+<fieldname>EDAILYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Daily Maximum</fielddesc>
+</field>
+<field>
+<fieldname>EWEEKLYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Weekly Minimum</fielddesc>
+</field>
+<field>
+<fieldname>EWEEKLYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Weekly Maximum</fielddesc>
+</field>
+<field>
+<fieldname>EBIWKLYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Biweekly Minimum</fielddesc>
+</field>
+<field>
+<fieldname>EBIWKLYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Biweekly Maximum</fielddesc>
+</field>
+<field>
+<fieldname>ESEMIMNMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Semimonthly Minimum</fielddesc>
+</field>
+<field>
+<fieldname>ESEMIMNMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Semimonthly Maximum</fielddesc>
+</field>
+<field>
+<fieldname>EMNTHLYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Monthly Minimum</fielddesc>
+</field>
+<field>
+<fieldname>EMNTHLYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Monthly Maximum</fielddesc>
+</field>
+<field>
+<fieldname>EQRTRLYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Quarterly Minimum</fielddesc>
+</field>
+<field>
+<fieldname>EQRTRLYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Quarterly Maximum</fielddesc>
+</field>
+<field>
+<fieldname>E10PPPYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee 10 Pay Periods/Year Min</fielddesc>
+</field>
+<field>
+<fieldname>E10PPPYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee 10 Pay Periods/Year Max</fielddesc>
+</field>
+<field>
+<fieldname>E13PPPYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee 13 Pay Periods/Year Min</fielddesc>
+</field>
+<field>
+<fieldname>E13PPPYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee 13 Pay Periods/Year Max</fielddesc>
+</field>
+<field>
+<fieldname>E22PPPYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee 22 Pay Periods/Year Min</fielddesc>
+</field>
+<field>
+<fieldname>E22PPPYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee 22 Pay Periods/Year Max</fielddesc>
+</field>
+<field>
+<fieldname>RCALCMTHD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employer Calculation Method</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="None" /><fieldpresent index="2" value="Flat" /><fieldpresent index="5" value="Amount per Hour" /><fieldpresent index="7" value="Percentage of Base" /><fieldpresent index="13" value="Tax Bracket Table" /><fieldpresent index="15" value="Percentage of Employee Withholding" /></fieldpresentlist></field>
+<field>
+<fieldname>RBASETAX</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Employer Base Tax</fielddesc>
+</field>
+<field>
+<fieldname>RAMTORPCT</fieldname>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Employer Amount/Percent</fielddesc>
+</field>
+<field>
+<fieldname>RLIMITON</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employer Limit</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="No Limit" /><fieldpresent index="4" value="Withholding" /><fieldpresent index="5" value="Base" /></fieldpresentlist></field>
+<field>
+<fieldname>RANNUALMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Annual Maximum</fielddesc>
+</field>
+<field>
+<fieldname>RCLCMINWRK</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Employer Minimum Weeks Worked</fielddesc>
+</field>
+<field>
+<fieldname>RDAILYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Daily Minimum</fielddesc>
+</field>
+<field>
+<fieldname>RDAILYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Daily Maximum</fielddesc>
+</field>
+<field>
+<fieldname>RWEEKLYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Weekly Minimum</fielddesc>
+</field>
+<field>
+<fieldname>RWEEKLYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Weekly Maximum</fielddesc>
+</field>
+<field>
+<fieldname>RBIWKLYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Biweekly Minimum</fielddesc>
+</field>
+<field>
+<fieldname>RBIWKLYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Biweekly Maximum</fielddesc>
+</field>
+<field>
+<fieldname>RSEMIMNMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Semimonthly Minimum</fielddesc>
+</field>
+<field>
+<fieldname>RSEMIMNMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Semimonthly Maximum</fielddesc>
+</field>
+<field>
+<fieldname>RMNTHLYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Monthly Minimum</fielddesc>
+</field>
+<field>
+<fieldname>RMNTHLYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Monthly Maximum</fielddesc>
+</field>
+<field>
+<fieldname>RQRTRLYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Quarterly Minimum</fielddesc>
+</field>
+<field>
+<fieldname>RQRTRLYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Quarterly Maximum</fielddesc>
+</field>
+<field>
+<fieldname>R10PPPYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer 10 Pay Periods/Year Min</fielddesc>
+</field>
+<field>
+<fieldname>R10PPPYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer 10 Pay Periods/Year Max</fielddesc>
+</field>
+<field>
+<fieldname>R13PPPYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer 13 Pay Periods/Year Min</fielddesc>
+</field>
+<field>
+<fieldname>R13PPPYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer 13 Pay Periods/Year Max</fielddesc>
+</field>
+<field>
+<fieldname>R22PPPYMIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer 22 Pay Periods/Year Min</fielddesc>
+</field>
+<field>
+<fieldname>R22PPPYMAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer 22 Pay Periods/Year Max</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 1</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 1</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR1</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 1</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 2</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 2</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR2</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 2</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 3</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 3</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR3</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 3</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 4</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 4</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR4</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 4</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 5</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 5</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR5</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 5</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK6</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 6</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT6</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 6</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR6</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 6</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK7</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 7</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT7</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 7</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR7</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 7</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK8</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 8</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT8</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 8</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR8</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 8</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK9</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 9</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT9</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 9</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR9</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 9</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK10</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 10</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT10</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 10</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR10</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 10</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK11</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 11</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT11</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 11</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR11</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 11</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK12</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 12</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT12</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 12</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR12</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 12</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK13</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 13</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT13</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 13</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR13</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 13</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK14</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 14</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT14</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 14</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR14</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 14</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK15</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 15</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT15</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 15</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR15</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 15</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK16</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 16</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT16</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 16</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR16</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 16</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK17</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 17</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT17</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 17</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR17</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 17</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK18</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 18</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT18</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 18</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR18</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 18</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK19</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 19</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT19</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 19</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR19</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 19</fielddesc>
+</field>
+<field>
+<fieldname>WGBRACK20</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Wage Ceiling for Bracket 20</fielddesc>
+</field>
+<field>
+<fieldname>WGADDAMT20</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Add Amount for Bracket 20</fielddesc>
+</field>
+<field>
+<fieldname>WGPCTOVR20</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Tax Percentage for Bracket 20</fielddesc>
+</field>
+<field>
+<fieldname>LEVEL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Level</fielddesc>
+</field>
+<field>
+<fieldname>LISTUSEBHI</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>List Usage for Base Hours Include</fielddesc>
+</field>
+<field>
+<fieldname>LISTUSEBEI</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>List Usage for Base Earnings Include</fielddesc>
+</field>
+<field>
+<fieldname>WHMETHBEI</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Withholding Method for Base Earnings Include</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Regular Rate" /><fieldpresent index="4" value="Taxable, No Withholding" /><fieldpresent index="6" value="Supplemental Withholding" /></fieldpresentlist></field>
+<field>
+<fieldname>LISTUSEBDI</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>List Usage for Base Deductions Include</fielddesc>
+</field>
+<field>
+<fieldname>EFFECTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>INTERNAL USE - Tax Table Effective Date</fielddesc>
+</field>
+<field>
+<fieldname>FIPSNBR</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>INTERNAL USE - Tax Table FIPS Number</fielddesc>
+</field>
+<field>
+<fieldname>FIPSCODE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>INTERNAL USE - Tax Table FIPS Code</fielddesc>
+</field>
+<field>
+<fieldname>CFGPARMVER</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>INTERNAL USE - Tax Table Parameter Version</fielddesc>
+</field>
+<field>
+<fieldname>CFGPARMCNT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>INTERNAL USE - Tax Table Parameter Count</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>AUTOUPDATE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Automatically Update Local Tax</fielddesc>
+</field>
+<field>
+<fieldname>LOCSTATE</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>State</fielddesc>
+<mask>%-2C</mask></field>
+<field>
+<fieldname>LOCTAXCODE</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Local Tax Code</fielddesc>
+<mask>%-10n</mask></field>
+<field>
+<fieldname>ATXTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>RESERVED - Aatrix Tax Type</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

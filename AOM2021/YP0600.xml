@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>YP YP0600 YPSPSPRC</keywords>
+<pagetitle>SPS Transaction Processor</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>SPS Transaction Processor</title>
+<rotoid>YP0600</rotoid>
+<protocollist>
+<protocol>Superview</protocol></protocollist>
+<dllname>YPSPSPRC</dllname>
+<keylist>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>IDCUST</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>IDCARD</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Card ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DOCNUMBER</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>REF1</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc>Reference1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>APP</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Application</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANSID</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*36</fieldtype>
+<fielddesc>Transaction ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PRETRANSID</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*36</fieldtype>
+<fielddesc>Existing Transaction ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="3" value="Capture" /><fieldpresent index="13" value="Capture Pending" /><fieldpresent index="4" value="Void Preauthorization" /><fieldpresent index="14" value="Void Preauthorization Pending" /><fieldpresent index="1000" value="Generate a GUID" /><fieldpresent index="1001" value="Non-interactive Preauthorization" /><fieldpresent index="1002" value="Non-interactive Sale" /><fieldpresent index="1003" value="Non-interactive Preauth CNA2 P1" /><fieldpresent index="1004" value="Non-interactive Sale CNA2 P1" /><fieldpresent index="1005" value="Non-interactive Preauth CNA2 P2" /><fieldpresent index="1006" value="Non-interactive Sale CNA2 P2" /></fieldpresentlist></field>
+<field>
+<fieldname>AMOUNT</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transaction Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TAXAMOUNT</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PROCESSCOD</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Processing Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>STATUS</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="2" value="Transaction Error" /><fieldpresent index="4" value="Approved" /><fieldpresent index="5" value="Declined" /><fieldpresent index="6" value="Card Error" /></fieldpresentlist></field>
+<field>
+<fieldname>GUID</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>String*36</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NAME</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>String*103</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ADDR1</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ADDR2</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CITY</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>STATE</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COUNTRY</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ZIPCODE</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CARDDESC</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CARDCMNT</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>String*255</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BANK</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CODECURN</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>XMLSTRING</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>String*20000</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RESPIND</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RESPCD</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RESPMSG</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>String*32</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>AUTHCODE</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>AVSRESULT</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CVVRESULT</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VANREF</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LAST4</fieldname>
+<fieldindex>34</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PMTDESC</fieldname>
+<fieldindex>35</fieldindex>
+<fieldtype>String*30</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PMTTYPEID</fieldname>
+<fieldindex>36</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

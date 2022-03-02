@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0290 ICILOC ICILOC</keywords>
+<pagetitle>Location Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICILOC" desc="Location Details">
+<view name="IC0290" desc="Location Details" />
+<recordlength>451</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Item Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield><keyfield>LOCATION</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Location</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>LOCATION</keyfield><keyfield>ITEMNO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Last Allocated Serial</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>LASTSERALC</keyfield><keyfield>ITEMNO</keyfield><keyfield>LOCATION</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Last Allocated Lot</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>LASTLOTALC</keyfield><keyfield>ITEMNO</keyfield><keyfield>LOCATION</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>PICKINGSEQ</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Picking Sequence</fielddesc>
+</field>
+<field>
+<fieldname>ACTIVE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allowed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATEACTIVE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Location Activated</fielddesc>
+</field>
+<field>
+<fieldname>USED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>In Use</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LASTUSED</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Used</fielddesc>
+</field>
+<field>
+<fieldname>QTYONHAND</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity on Hand (Last Day End)</fielddesc>
+</field>
+<field>
+<fieldname>QTYONORDER</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity on P/O</fielddesc>
+</field>
+<field>
+<fieldname>QTYSALORDR</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity on S/O</fielddesc>
+</field>
+<field>
+<fieldname>QTYOFFSET</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Not in Cost File</fielddesc>
+</field>
+<field>
+<fieldname>QTYSHNOCST</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Shipped Not Costed</fielddesc>
+</field>
+<field>
+<fieldname>QTYRENOCST</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Received Not Costed</fielddesc>
+</field>
+<field>
+<fieldname>QTYADNOCST</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Adjusted Not Costed</fielddesc>
+</field>
+<field>
+<fieldname>NUMNOCST</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Uncosted Transactions</fielddesc>
+</field>
+<field>
+<fieldname>TOTALCOST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Cost</fielddesc>
+</field>
+<field>
+<fieldname>COSTOFFSET</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cost Not in Cost File</fielddesc>
+</field>
+<field>
+<fieldname>COSTUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Cost Unit of Measure</fielddesc>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>COSTCONV</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Cost Unit Conversion Factor</fielddesc>
+</field>
+<field>
+<fieldname>STDCOST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Standard Cost</fielddesc>
+</field>
+<field>
+<fieldname>LASTSTDCST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Last Standard Cost</fielddesc>
+</field>
+<field>
+<fieldname>LASTSTDDAT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Standard Cost Date</fielddesc>
+</field>
+<field>
+<fieldname>LASTSHIPDT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Shipment Date</fielddesc>
+</field>
+<field>
+<fieldname>DAYSTOSHIP</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Average Days To Ship</fielddesc>
+</field>
+<field>
+<fieldname>UNITSSHIP</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Average Units Shipped</fielddesc>
+</field>
+<field>
+<fieldname>SHIPMENTS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Shipments Used In Calculation</fielddesc>
+</field>
+<field>
+<fieldname>LASTRCPTDT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Receipt Date</fielddesc>
+</field>
+<field>
+<fieldname>RECENTCOST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Most Recent Cost</fielddesc>
+</field>
+<field>
+<fieldname>COST1</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>User Defined Cost 1</fielddesc>
+</field>
+<field>
+<fieldname>COST2</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>User Defined Cost 2</fielddesc>
+</field>
+<field>
+<fieldname>LASTCOST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Last Unit Cost</fielddesc>
+</field>
+<field>
+<fieldname>QTYCOMMIT</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Committed</fielddesc>
+</field>
+<field>
+<fieldname>LASTSERALC</fieldname>
+<fieldtype>String*70</fieldtype>
+<fielddesc>Last Allocated Serial</fielddesc>
+</field>
+<field>
+<fieldname>LASTLOTALC</fieldname>
+<fieldtype>String*70</fieldtype>
+<fielddesc>Last Allocated Lot</fielddesc>
+</field>
+<field>
+<fieldname>LEADTIME</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Lead Time (SIA)</fielddesc>
+</field>
+<field>
+<fieldname>QTYMINREQ</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Inventory Minimum (SIA)</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

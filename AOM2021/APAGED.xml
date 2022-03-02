@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AP AP0125 APAGED APAGED</keywords>
+<pagetitle>Aged Documents</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="APAGED" desc="Aged Documents">
+<view name="AP0125" desc="Aged Documents" />
+<recordlength>674</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Primary Key</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>AGESEQ</keyfield><keyfield>RECORDNO</keyfield><keyfield>IDVEND</keyfield><keyfield>IDINVC</keyfield><keyfield>ADJNO</keyfield><keyfield>RECTYPE</keyfield><keyfield>CNTSEQ</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>AGESEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Aging Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>RECORDNO</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Record Number</fielddesc>
+</field>
+<field>
+<fieldname>IDVEND</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>IDINVC</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>ADJNO</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Adjustment Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>RECTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Record Type</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Document" /><fieldpresent index="1" value="Applied Detail" /><fieldpresent index="2" value="Retainage Document" /></fieldpresentlist></field>
+<field>
+<fieldname>CNTSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Detail Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>IDRMIT</fieldname>
+<fieldtype>String*18</fieldtype>
+<fielddesc>Check Number</fielddesc>
+<mask>%-18D</mask></field>
+<field>
+<fieldname>TRXTYPETXT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Document Type</fielddesc>
+</field>
+<field>
+<fieldname>TRXTYPEID</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+</field>
+<field>
+<fieldname>DATEINVC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Document Date</fielddesc>
+</field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>DATEDUE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Due Date</fielddesc>
+</field>
+<field>
+<fieldname>SWPYSTTS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Payment Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Normal" /><fieldpresent index="1" value="On Hold" /><fieldpresent index="2" value="Forced" /></fieldpresentlist></field>
+<field>
+<fieldname>IDMEMOXREF</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Reference Document No.</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVCTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Invoice Amount (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVCHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Invoice Amount (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>AMTPAIDTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount Paid (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTPAIDHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount Paid (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE1TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Current Amount Due (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE1HC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Current Amount Due (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE2TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 1 Amount Due (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE2HC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 1 Amount Due (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE3TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 2 Amount Due (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE3HC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 2 Amount Due (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE4TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 3 Amount Due (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE4HC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 3 Amount Due (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE5TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 4 Amount Due (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE5HC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 4 Amount Due (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE6TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 5 Amount Due (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE6HC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 5 Amount Due (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE7TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 6 Amount Due (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE7HC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 6 Amount Due (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE8TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 7 Amount Due (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE8HC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 7 Amount Due (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE9TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 9 Amount Due (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE9HC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 9 Amount Due (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>TOTBKWDTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Backward Aging (Source)</fielddesc>
+</field>
+<field>
+<fieldname>TOTBKWDHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Backward Aging (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>TOTFWDTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Forward Aging (Source)</fielddesc>
+</field>
+<field>
+<fieldname>TOTFWDHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Forward Aging (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>AMTBALDUET</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Vendor Balance Due (Source)</fielddesc>
+</field>
+<field>
+<fieldname>AMTBALDUEH</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Vendor Balance Due (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>DOCTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Document Type</fielddesc>
+</field>
+<field>
+<fieldname>SWNONRCVBL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Misc. Payment Flag</fielddesc>
+</field>
+<field>
+<fieldname>RTGDATEDUE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Retainage Due</fielddesc>
+</field>
+<field>
+<fieldname>SORTVALUE1</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Sort Field Value 1</fielddesc>
+</field>
+<field>
+<fieldname>SORTVALUE2</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Sort Field Value 2</fielddesc>
+</field>
+<field>
+<fieldname>SORTVALUE3</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Sort Field Value 3</fielddesc>
+</field>
+<field>
+<fieldname>SORTVALUE4</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Sort Field Value 4</fielddesc>
+</field>
+<field>
+<fieldname>SORTTYPE1</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sort Field Type 1</fielddesc>
+</field>
+<field>
+<fieldname>SORTTYPE2</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sort Field Type 2</fielddesc>
+</field>
+<field>
+<fieldname>SORTTYPE3</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sort Field Type 3</fielddesc>
+</field>
+<field>
+<fieldname>SORTTYPE4</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sort Field Type 4</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

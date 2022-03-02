@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0590 ICREEH ICREEH</keywords>
+<pagetitle>Receipt Headers</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICREEH" desc="Receipt Headers">
+<view name="IC0590" desc="Receipt Headers" />
+<recordlength>395</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Sequence Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SEQUENCENO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>IC-Unique Document Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DOCUNIQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Receipt Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>RECPNUMBER</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Status by Document Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>STATUS</keyfield><keyfield>RECPNUMBER</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SEQUENCENO</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>RECPDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>RECPDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Receipt Date</fielddesc>
+</field>
+<field>
+<fieldname>FISCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%4D</mask></field>
+<field>
+<fieldname>FISCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="1 " /><fieldpresent index="2" value="2 " /><fieldpresent index="3" value="3 " /><fieldpresent index="4" value="4 " /><fieldpresent index="5" value="5 " /><fieldpresent index="6" value="6 " /><fieldpresent index="7" value="7 " /><fieldpresent index="8" value="8 " /><fieldpresent index="9" value="9 " /><fieldpresent index="10" value="10" /><fieldpresent index="11" value="11" /><fieldpresent index="12" value="12" /></fieldpresentlist></field>
+<field>
+<fieldname>PONUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Purchase Order Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+</field>
+<field>
+<fieldname>RECPTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Receipt Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Receipt" /><fieldpresent index="2" value="Return" /><fieldpresent index="3" value="Adjustment" /><fieldpresent index="4" value="Complete" /></fieldpresentlist></field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operation</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>VENDNUMBER</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>RECPCUR</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Receipt Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RECPRATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEOVRRD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Rate Override</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ADDCOST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Additional Cost</fielddesc>
+</field>
+<field>
+<fieldname>ADDCOSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Orig. Additional Cost-Func.</fielddesc>
+</field>
+<field>
+<fieldname>ADDCOSTSRC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Orig. Additional Cost-Source</fielddesc>
+</field>
+<field>
+<fieldname>ADDCUR</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Additional Cost Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>TOTCSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Extended Cost-Functional</fielddesc>
+</field>
+<field>
+<fieldname>TOTCSTSRC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Extended Cost-Source</fielddesc>
+</field>
+<field>
+<fieldname>TOTCSTADJ</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Extended Cost-Adjusted</fielddesc>
+</field>
+<field>
+<fieldname>TOTADJHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Adjusted Cost-Functional</fielddesc>
+</field>
+<field>
+<fieldname>TOTCSTRET</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Return Cost</fielddesc>
+</field>
+<field>
+<fieldname>NUMCSTDETL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Number of Details with Cost</fielddesc>
+</field>
+<field>
+<fieldname>LABELS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Require Labels</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ADDCSTTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Additional Cost Allocation Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Leave" /><fieldpresent index="2" value="Prorate" /></fieldpresentlist></field>
+<field>
+<fieldname>COMPLETE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Complete</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ORIGTOTSRC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Original Total Cost-Source</fielddesc>
+</field>
+<field>
+<fieldname>ORIGTOTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Original Total Cost-Functional</fielddesc>
+</field>
+<field>
+<fieldname>DOCUNIQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>IC-Unique Document Number</fielddesc>
+</field>
+<field>
+<fieldname>DELETED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Record Deleted</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TRANSNUM</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Transaction Number</fielddesc>
+</field>
+<field>
+<fieldname>STATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Record Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Entered" /><fieldpresent index="2" value="Posted" /><fieldpresent index="3" value="Costed" /><fieldpresent index="20" value="Day End Completed" /></fieldpresentlist></field>
+<field>
+<fieldname>RECPNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Receipt Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>NEXTDTLNUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Next Detail Line Number</fielddesc>
+</field>
+<field>
+<fieldname>PRINTED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Record Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>ENTEREDBY</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Entered By</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

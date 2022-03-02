@@ -1,0 +1,1762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PM 68A</keywords>
+<pagetitle>Project and Job Costing</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<application name="Project and Job Costing" version="6.8A">
+<viewlist>
+<view name="PM0001" desc="Cost Types" dllname="PMCOST">
+<viewtablelist>
+<table name="PMCOST" desc="Cost Types" />
+</viewtablelist>
+</view>
+<view name="PM0002" desc="Employee" dllname="PMSTAFF">
+<viewtablelist>
+<table name="PMSTAFF" desc="Employee" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0479" desc="Employee Detail View" /><viewcomp name="PM0511" desc="Employee Optional Fields" /></viewcomplist>
+</view>
+<view name="PM0003" desc="Options" dllname="PMOPT">
+<viewtablelist>
+<table name="PMOPT" desc="Options" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0019" desc="Options" /><viewcomp name="PM0020" desc="Options" /></viewcomplist>
+</view>
+<view name="PM0006" desc="Project Code" dllname="PMPROJ">
+<viewtablelist>
+<table name="PMPROJ" desc="Project Code" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0509" desc="Project Optional Fields" /></viewcomplist>
+</view>
+<view name="PM0011" desc="Contract Structures" dllname="PMSTRUC">
+<viewtablelist>
+<table name="PMSTRUC" desc="Contract Structures" />
+</viewtablelist>
+</view>
+<view name="PM0013" desc="Segments" dllname="PMSEG">
+<viewtablelist>
+<table name="PMSEG" desc="Segments" />
+</viewtablelist>
+</view>
+<view name="PM0014" desc="Segment Codes" dllname="PMSEGV">
+<viewtablelist>
+<table name="PMSEGV" desc="Segment Codes" />
+</viewtablelist>
+</view>
+<view name="PM0017" desc="Account Sets" dllname="PMACCT">
+<viewtablelist>
+<table name="PMACCT" desc="Account Sets" />
+</viewtablelist>
+</view>
+<view name="PM0018" desc="Categories" dllname="PMCTG">
+<viewtablelist>
+<table name="PMCTG" desc="Categories" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0475" desc="Categories Detail View" /><viewcomp name="PM0510" desc="Category Optional Fields" /></viewcomplist>
+</view>
+<view name="PM0019" desc="Options" dllname="PMOPT2">
+<viewtablelist>
+<table name="PMOPT2" desc="Options" />
+</viewtablelist>
+</view>
+<view name="PM0020" desc="Options" dllname="PMOPT3">
+<viewtablelist>
+<table name="PMOPT3" desc="Options" />
+</viewtablelist>
+</view>
+<view name="PM0021" desc="^4" dllname="PMCONTS">
+<viewtablelist>
+<table name="PMCONTS" desc="^4" />
+<table name="PMCONTT" desc="^4" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0022" desc="^5" /><viewcomp name="PM0039" desc="^1 ^6" /><viewcomp name="PM0120" desc="^1 Resources" /><viewcomp name="PM0121" desc="^1 Resource ^6" /><viewcomp name="PM0850" desc="Contract Optional Field" /></viewcomplist>
+</view>
+<view name="PM0022" desc="^5" dllname="PMPROJS">
+<viewtablelist>
+<table name="PMPROJS" desc="^5" />
+<table name="PMPROJT" desc="^5" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0021" desc="^4" /><viewcomp name="PM0039" desc="^1 ^6" /><viewcomp name="PM0120" desc="^1 Resources" /><viewcomp name="PM0121" desc="^1 Resource ^6" /><viewcomp name="PM0851" desc="Project Optional Field" /></viewcomplist>
+</view>
+<view name="PM0023" desc="Charge Codes" dllname="PMCHARG">
+<viewtablelist>
+<table name="PMCHARG" desc="Charge Codes" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0478" desc="Charge Codes Detail View" /><viewcomp name="PM0516" desc="Charges Optional Field" /></viewcomplist>
+</view>
+<view name="PM0025" desc="Equipment" dllname="PMEQMT">
+<viewtablelist>
+<table name="PMEQMT" desc="Equipment" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0476" desc="Equipment Detail View" /><viewcomp name="PM0512" desc="Equipment Optional Fields" /></viewcomplist>
+</view>
+<view name="PM0026" desc="Subcontractors" dllname="PMSUBCN">
+<viewtablelist>
+<table name="PMSUBCN" desc="Subcontractors" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0477" desc="Subcontractors Detail View" /><viewcomp name="PM0515" desc="Subcontractor Optional Fields" /></viewcomplist>
+</view>
+<view name="PM0028" desc="Miscellaneous Expenses" dllname="PMMIEXP">
+<viewtablelist>
+<table name="PMMIEXP" desc="Miscellaneous Expenses" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0480" desc="Misc. Expenses Detail View" /><viewcomp name="PM0513" desc="Miscellaneous Expenses Optional Fields" /></viewcomplist>
+</view>
+<view name="PM0029" desc="Overhead Codes" dllname="PMOHEXP">
+<viewtablelist>
+<table name="PMOHEXP" desc="Overhead Codes" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0481" desc="Overhead Expenses Detail View" /><viewcomp name="PM0514" desc="Overhead Optional Fields" /></viewcomplist>
+</view>
+<view name="PM0030" desc="Equipment" dllname="PMEQIPH">
+<viewtablelist>
+<table name="PMEQIPH" desc="Equipment" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0031" desc="Equipment Detail" /><viewcomp name="PM0505" desc="Equipment Optional Field" /></viewcomplist>
+</view>
+<view name="PM0031" desc="Equipment Detail" dllname="PMEQIPD">
+<viewtablelist>
+<table name="PMEQIPD" desc="Equipment Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0030" desc="Equipment" /><viewcomp name="PM0506" desc="Equipment Detail Optional Field" /></viewcomplist>
+</view>
+<view name="PM0032" desc="Equipment Audit" dllname="PMEQIPHA">
+<viewtablelist>
+<table name="PMEQPHA" desc="Equipment Audit" />
+</viewtablelist>
+</view>
+<view name="PM0033" desc="Equipment Audit Detail" dllname="PMEQIPDA">
+<viewtablelist>
+<table name="PMEQPDA" desc="Equipment Audit Detail" />
+</viewtablelist>
+</view>
+<view name="PM0034" desc="Options" dllname="PMOPT4">
+<viewtablelist>
+<table name="PMOPT4" desc="Options" />
+</viewtablelist>
+</view>
+<view name="PM0039" desc="^1 ^6" dllname="PMCATGT">
+<viewtablelist>
+<table name="PMCATGT" desc="^1 ^6" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0022" desc="^5" /><viewcomp name="PM0021" desc="^4" /><viewcomp name="PM0852" desc="Category Optional Field" /></viewcomplist>
+</view>
+<view name="PM0040" desc="Timecard" dllname="PMTIMEH">
+<viewtablelist>
+<table name="PMTIMEH" desc="Timecard" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0041" desc="Timecard Time Detail" /><viewcomp name="PM0113" desc="Timecard Expense Detail" /><viewcomp name="PM0115" desc="Timecard Time Totals" /><viewcomp name="PM0532" desc="Timecard Optional Field" /></viewcomplist>
+</view>
+<view name="PM0041" desc="Timecard Time Detail" dllname="PMTIMED">
+<viewtablelist>
+<table name="PMTIMED" desc="Timecard Time Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0040" desc="Timecard" /><viewcomp name="PM0115" desc="Timecard Time Totals" /><viewcomp name="PM0531" desc="Timecard Detail Optional Field" /></viewcomplist>
+</view>
+<view name="PM0042" desc="Timecard Audit" dllname="PMTIMHA">
+<viewtablelist>
+<table name="PMTIMHA" desc="Timecard Audit" />
+</viewtablelist>
+</view>
+<view name="PM0043" desc="Timecard Time Detail Audit" dllname="PMTIMDA">
+<viewtablelist>
+<table name="PMTIMDA" desc="Timecard Time Detail Audit" />
+</viewtablelist>
+</view>
+<view name="PM0046" desc="Material Returns" dllname="PMMATRH">
+<viewtablelist>
+<table name="PMMATRH" desc="Material Returns" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0047" desc="Material Returns Detail" /><viewcomp name="PM0485" desc="Material Return Detail Serial Number" /><viewcomp name="PM0486" desc="Material Return Detail Lot Numbers" /><viewcomp name="PM0536" desc="Material Return Optional Field" /></viewcomplist>
+</view>
+<view name="PM0047" desc="Material Returns Detail" dllname="PMMATRD">
+<viewtablelist>
+<table name="PMMATRD" desc="Material Returns Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0046" desc="Material Returns" /><viewcomp name="PM0485" desc="Material Return Detail Serial Number" /><viewcomp name="PM0486" desc="Material Return Detail Lot Numbers" /><viewcomp name="PM0535" desc="Material Return Detail Opt. Fld" /></viewcomplist>
+</view>
+<view name="PM0050" desc="Material Usage" dllname="PMMATH">
+<viewtablelist>
+<table name="PMMATH" desc="Material Usage" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0051" desc="Material Usage Detail" /><viewcomp name="PM0483" desc="Material Usage Detail Serial Numbers" /><viewcomp name="PM0484" desc="Material Usage Detail Lot Numbers" /><viewcomp name="PM0538" desc="Material Usage Optional Field" /></viewcomplist>
+</view>
+<view name="PM0051" desc="Material Usage Detail" dllname="PMMATD">
+<viewtablelist>
+<table name="PMMATD" desc="Material Usage Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0050" desc="Material Usage" /><viewcomp name="PM0483" desc="Material Usage Detail Serial Numbers" /><viewcomp name="PM0484" desc="Material Usage Detail Lot Numbers" /><viewcomp name="PM0537" desc="Material Usage Detail Opt. Field" /></viewcomplist>
+</view>
+<view name="PM0054" desc="Charges" dllname="PMCHRGH">
+<viewtablelist>
+<table name="PMCHRGH" desc="Charges" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0055" desc="Charges Detail" /><viewcomp name="PM0524" desc="Charges Optional Field" /></viewcomplist>
+</view>
+<view name="PM0055" desc="Charges Detail" dllname="PMCHRGD">
+<viewtablelist>
+<table name="PMCHRGD" desc="Charges Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0054" desc="Charges" /><viewcomp name="PM0523" desc="Charges Detail Optional Field" /></viewcomplist>
+</view>
+<view name="PM0056" desc="Charges Audit" dllname="PMCHGHA">
+<viewtablelist>
+<table name="PMCHGHA" desc="Charges Audit" />
+</viewtablelist>
+</view>
+<view name="PM0057" desc="Charges Audit Detail" dllname="PMCHGDA">
+<viewtablelist>
+<table name="PMCHGDA" desc="Charges Audit Detail" />
+</viewtablelist>
+</view>
+<view name="PM0058" desc="Revise Estimates" dllname="PMCHNGH">
+<viewtablelist>
+<table name="PMCHNGH" desc="Revise Estimates" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0059" desc="Revise Estimates Detail" /></viewcomplist>
+</view>
+<view name="PM0059" desc="Revise Estimates Detail" dllname="PMCHNGD">
+<viewtablelist>
+<table name="PMCHNGD" desc="Revise Estimates Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0058" desc="Revise Estimates" /><viewcomp name="PM0550" desc="Revise Estimates Detail Opt. Fld" /></viewcomplist>
+</view>
+<view name="PM0060" desc="Revise Estimates Audit" dllname="PMCHNGHA">
+<viewtablelist>
+<table name="PMCHNHA" desc="Revise Estimates Audit" />
+</viewtablelist>
+</view>
+<view name="PM0061" desc="Revise Estimates Audit Detail" dllname="PMCHNGDA">
+<viewtablelist>
+<table name="PMCHNDA" desc="Revise Estimates Audit Detail" />
+</viewtablelist>
+</view>
+<view name="PM0062" desc="Adjustments" dllname="PMADJH">
+<viewtablelist>
+<table name="PMADJH" desc="Adjustments" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0063" desc="Adjustments Detail" /><viewcomp name="PM0528" desc="Adjustment Optional Field" /></viewcomplist>
+</view>
+<view name="PM0063" desc="Adjustments Detail" dllname="PMADJD">
+<viewtablelist>
+<table name="PMADJD" desc="Adjustments Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0062" desc="Adjustments" /><viewcomp name="PM0527" desc="Adjustment Detail Optional Field" /></viewcomplist>
+</view>
+<view name="PM0064" desc="Adjustments Audit" dllname="PMADJHA">
+<viewtablelist>
+<table name="PMADJHA" desc="Adjustments Audit" />
+</viewtablelist>
+</view>
+<view name="PM0065" desc="Adjustments Audit Detail" dllname="PMADJDA">
+<viewtablelist>
+<table name="PMADJDA" desc="Adjustments Audit Detail" />
+</viewtablelist>
+</view>
+<view name="PM0080" desc="Create Billing Worksheet Superview" dllname="PMBWS">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0081" desc="Billing Worksheet" dllname="PMBWH">
+<viewtablelist>
+<table name="PMBWH" desc="Billing Worksheet" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0083" desc="Billing Worksheet Customer" /><viewcomp name="PM0082" desc="Billing Worksheet Detail" /><viewcomp name="PM0542" desc="Billing Optional Field" /></viewcomplist>
+</view>
+<view name="PM0082" desc="Billing Worksheet Detail" dllname="PMBWD">
+<viewtablelist>
+<table name="PMBWD" desc="Billing Worksheet Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0081" desc="Billing Worksheet" /><viewcomp name="PM0083" desc="Billing Worksheet Customer" /><viewcomp name="PM0544" desc="Billing Detail Optional Field" /></viewcomplist>
+</view>
+<view name="PM0083" desc="Billing Worksheet Customer" dllname="PMBWC">
+<viewtablelist>
+<table name="PMBWC" desc="Billing Worksheet Customer" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0081" desc="Billing Worksheet" /><viewcomp name="PM0082" desc="Billing Worksheet Detail" /></viewcomplist>
+</view>
+<view name="PM0084" desc="Post Billing Worksheet" dllname="PMBWP">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0090" desc="Generate Rev. Rec. Worksheet" dllname="PMRWGEN">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0091" desc="Revenue Recognition Worksheet" dllname="PMRWH">
+<viewtablelist>
+<table name="PMRWH" desc="Revenue Recognition Worksheet" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0092" desc="RR Worksheet Detail" /><viewcomp name="PM0094" desc="RR Worksheet Accounts" /></viewcomplist>
+</view>
+<view name="PM0092" desc="RR Worksheet Detail" dllname="PMRWD">
+<viewtablelist>
+<table name="PMRWD" desc="RR Worksheet Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0091" desc="Revenue Recognition Worksheet" /><viewcomp name="PM0094" desc="RR Worksheet Accounts" /><viewcomp name="PM0546" desc="RR Detail Optional Field" /></viewcomplist>
+</view>
+<view name="PM0094" desc="RR Worksheet Accounts" dllname="PMRWDD">
+<viewtablelist>
+<table name="PMRWDD" desc="RR Worksheet Accounts" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0092" desc="RR Worksheet Detail" /><viewcomp name="PM0091" desc="Revenue Recognition Worksheet" /></viewcomplist>
+</view>
+<view name="PM0095" desc="RR Worksheet Header Audit" dllname="PMRWHA">
+<viewtablelist>
+<table name="PMRWHA" desc="RR Worksheet Header Audit" />
+</viewtablelist>
+</view>
+<view name="PM0096" desc="RR Worksheet Detail Audit" dllname="PMRWDA">
+<viewtablelist>
+<table name="PMRWDA" desc="RR Worksheet Detail Audit" />
+</viewtablelist>
+</view>
+<view name="PM0097" desc="RR Worksheet Accounts Audit" dllname="PMRWDDA">
+<viewtablelist>
+<table name="PMRWDDA" desc="RR Worksheet Accounts Audit" />
+</viewtablelist>
+</view>
+<view name="PM0111" desc="^1 Transactions" dllname="PMTRAN">
+<viewtablelist>
+<table name="PMTRAN" desc="^1 Transactions" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0854" desc="Transaction Optional Field" /></viewcomplist>
+</view>
+<view name="PM0113" desc="Timecard Expense Detail" dllname="PMTIMEE">
+<viewtablelist>
+<table name="PMTIMEE" desc="Timecard Expense Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0040" desc="Timecard" /><viewcomp name="PM0539" desc="Timecard Expense Optional Field" /></viewcomplist>
+</view>
+<view name="PM0114" desc="Timecard Expense Detail Audit" dllname="PMTIMEA">
+<viewtablelist>
+<table name="PMTIMEA" desc="Timecard Expense Detail Audit" />
+</viewtablelist>
+</view>
+<view name="PM0115" desc="Timecard Time Totals" dllname="PMTIMET">
+<viewtablelist>
+<table name="PMTIMET" desc="Timecard Time Totals" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0040" desc="Timecard" /><viewcomp name="PM0041" desc="Timecard Time Detail" /></viewcomplist>
+</view>
+<view name="PM0116" desc="Update Payroll" dllname="PMTCTFR">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0117" desc="Timecard Time Audit" dllname="PMTIMTA">
+<viewtablelist>
+<table name="PMTIMTA" desc="Timecard Time Audit" />
+</viewtablelist>
+</view>
+<view name="PM0120" desc="^1 Resources" dllname="PMRES">
+<viewtablelist>
+<table name="PMRES" desc="^1 Resources" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0022" desc="^5" /><viewcomp name="PM0021" desc="^4" /><viewcomp name="PM0039" desc="^1 ^6" /><viewcomp name="PM0121" desc="^1 Resource ^6" /><viewcomp name="PM0853" desc="Resource Optional Field" /></viewcomplist>
+</view>
+<view name="PM0121" desc="^1 Resource ^6" dllname="PMRESC">
+<viewtablelist>
+<table name="PMRESC" desc="^1 Resource ^6" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0022" desc="^5" /><viewcomp name="PM0021" desc="^4" /><viewcomp name="PM0039" desc="^1 ^6" /><viewcomp name="PM0120" desc="^1 Resources" /></viewcomplist>
+</view>
+<view name="PM0122" desc="Budget Detail" dllname="PMBUDD">
+<viewtablelist>
+<table name="PMBUDD" desc="Budget Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0123" desc="Budget Header" /><viewcomp name="PM0124" desc="Budget Lookup" /></viewcomplist>
+</view>
+<view name="PM0123" desc="Budget Header" dllname="PMBUDH">
+<viewtablelist>
+<table name="PMBUDH" desc="Budget Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0122" desc="Budget Detail" /></viewcomplist>
+</view>
+<view name="PM0124" desc="Budget Lookup" dllname="PMBUDL">
+<viewtablelist>
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0122" desc="Budget Detail" /></viewcomplist>
+</view>
+<view name="PM0125" desc="Update Budget Superview" dllname="PMBUDS">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0126" desc="Budget Audit" dllname="PMBUDA">
+<viewtablelist>
+<table name="PMBUDA" desc="Budget Audit" />
+</viewtablelist>
+</view>
+<view name="PM0130" desc="Posting Errors" dllname="PMPERR">
+<viewtablelist>
+<table name="PMPERR" desc="Posting Errors" />
+</viewtablelist>
+</view>
+<view name="PM0135" desc="Clear History" dllname="PMCHIST">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0200" desc="Generate Reopen Worksheet" dllname="PMROGEN">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0201" desc="Reopening Projects Worksheet" dllname="PMROH">
+<viewtablelist>
+<table name="PMROH" desc="Reopening Projects Worksheet" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0202" desc="Reopen Worksheet Detail" /><viewcomp name="PM0204" desc="Reopen Worksheet Accounts" /></viewcomplist>
+</view>
+<view name="PM0202" desc="Reopen Worksheet Detail" dllname="PMROD">
+<viewtablelist>
+<table name="PMROD" desc="Reopen Worksheet Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0201" desc="Reopening Projects Worksheet" /><viewcomp name="PM0204" desc="Reopen Worksheet Accounts" /><viewcomp name="PM0203" desc="Reopen Detail Optional Field" /></viewcomplist>
+</view>
+<view name="PM0203" desc="Reopen Detail Optional Field" dllname="PMRODO">
+<viewtablelist>
+<table name="PMRODO" desc="Reopen Detail Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0202" desc="Reopen Worksheet Detail" /></viewcomplist>
+</view>
+<view name="PM0204" desc="Reopen Worksheet Accounts" dllname="PMRODD">
+<viewtablelist>
+<table name="PMRODD" desc="Reopen Worksheet Accounts" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0202" desc="Reopen Worksheet Detail" /><viewcomp name="PM0201" desc="Reopening Projects Worksheet" /></viewcomplist>
+</view>
+<view name="PM0205" desc="Reopen Worksheet Header Audit" dllname="PMROHA">
+<viewtablelist>
+<table name="PMROHA" desc="Reopen Worksheet Header Audit" />
+</viewtablelist>
+</view>
+<view name="PM0206" desc="Reopen Worksheet Detail Audit" dllname="PMRODA">
+<viewtablelist>
+<table name="PMRODA" desc="Reopen Worksheet Detail Audit" />
+</viewtablelist>
+</view>
+<view name="PM0207" desc="Reopen Detail OF Audit" dllname="PMRODOA">
+<viewtablelist>
+<table name="PMRODOA" desc="Reopen Detail OF Audit" />
+</viewtablelist>
+</view>
+<view name="PM0208" desc="Reopen Worksheet Accounts Audit" dllname="PMRODDA">
+<viewtablelist>
+<table name="PMRODDA" desc="Reopen Worksheet Accounts Audit" />
+</viewtablelist>
+</view>
+<view name="PM0209" desc="G/L Closing Entries" dllname="PMCLOSE">
+<viewtablelist>
+<table name="PMCLOSE" desc="G/L Closing Entries" />
+</viewtablelist>
+</view>
+<view name="PM0300" desc="Project and Job Costing Activation" dllname="PMINIT">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0301" desc="A/R Superview" dllname="PMAR">
+<viewtablelist>
+<table name="PMAR" desc="A/R Superview" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0521" desc="A/R Optional Field" /></viewcomplist>
+</view>
+<view name="PM0302" desc="A/P Superview" dllname="PMAP">
+<viewtablelist>
+<table name="PMAP" desc="A/P Superview" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0520" desc="A/P Optional Field" /></viewcomplist>
+</view>
+<view name="PM0304" desc="IC Superview" dllname="PMIC">
+<viewtablelist>
+<table name="PMIC" desc="IC Superview" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0541" desc="I/C Optional Field" /></viewcomplist>
+</view>
+<view name="PM0305" desc="P/O Superview" dllname="PMPO">
+<viewtablelist>
+<table name="PMPO" desc="P/O Superview" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0522" desc="P/O Optional Field" /></viewcomplist>
+</view>
+<view name="PM0320" desc="Committed Costs Audit" dllname="PMCOCA">
+<viewtablelist>
+<table name="PMCOCA" desc="Committed Costs Audit" />
+</viewtablelist>
+</view>
+<view name="PM0400" desc="Users" dllname="PMUSER">
+<viewtablelist>
+<table name="PMUSER" desc="Users" />
+</viewtablelist>
+</view>
+<view name="PM0401" desc="Opening Balances" dllname="PMOBH">
+<viewtablelist>
+<table name="PMOBH" desc="Opening Balances" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0402" desc="Opening Balances Detail" /></viewcomplist>
+</view>
+<view name="PM0402" desc="Opening Balances Detail" dllname="PMOBD">
+<viewtablelist>
+<table name="PMOBD" desc="Opening Balances Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0401" desc="Opening Balances" /></viewcomplist>
+</view>
+<view name="PM0403" desc="Opening Balances Audit" dllname="PMOBHA">
+<viewtablelist>
+<table name="PMOBHA" desc="Opening Balances Audit" />
+</viewtablelist>
+</view>
+<view name="PM0404" desc="Opening Balances Audit Detail" dllname="PMOBDA">
+<viewtablelist>
+<table name="PMOBDA" desc="Opening Balances Audit Detail" />
+</viewtablelist>
+</view>
+<view name="PM0410" desc="Update Retainage Detail" dllname="PMURD">
+<viewtablelist>
+<table name="PMURD" desc="Update Retainage Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0412" desc="Update Retainage" /></viewcomplist>
+</view>
+<view name="PM0411" desc="Update Retainage Detail Audit" dllname="PMURDA">
+<viewtablelist>
+<table name="PMURDA" desc="Update Retainage Detail Audit" />
+</viewtablelist>
+</view>
+<view name="PM0412" desc="Update Retainage" dllname="PMURH">
+<viewtablelist>
+<table name="PMURH" desc="Update Retainage" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0410" desc="Update Retainage Detail" /></viewcomplist>
+</view>
+<view name="PM0413" desc="Update Retainage Audit" dllname="PMURHA">
+<viewtablelist>
+<table name="PMURHA" desc="Update Retainage Audit" />
+</viewtablelist>
+</view>
+<view name="PM0420" desc="Cost Entries Header" dllname="PMCEH">
+<viewtablelist>
+<table name="PMCEH" desc="Cost Entries Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0422" desc="Cost Entries Detail" /><viewcomp name="PM0421" desc="Cost Entries Optional Field" /></viewcomplist>
+</view>
+<view name="PM0421" desc="Cost Entries Optional Field" dllname="PMCEHO">
+<viewtablelist>
+<table name="PMCEHO" desc="Cost Entries Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0420" desc="Cost Entries Header" /></viewcomplist>
+</view>
+<view name="PM0422" desc="Cost Entries Detail" dllname="PMCED">
+<viewtablelist>
+<table name="PMCED" desc="Cost Entries Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0420" desc="Cost Entries Header" /><viewcomp name="PM0423" desc="Cost Entries Detail Optional Field" /></viewcomplist>
+</view>
+<view name="PM0423" desc="Cost Entries Detail Optional Field" dllname="PMCEDO">
+<viewtablelist>
+<table name="PMCEDO" desc="Cost Entries Detail Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0422" desc="Cost Entries Detail" /></viewcomplist>
+</view>
+<view name="PM0424" desc="Cost Entries Audit" dllname="PMCEHA">
+<viewtablelist>
+<table name="PMCEHA" desc="Cost Entries Audit" />
+</viewtablelist>
+</view>
+<view name="PM0425" desc="Cost Entries Audit Optional Fld" dllname="PMCEHAO">
+<viewtablelist>
+<table name="PMCEHAO" desc="Cost Entries Audit Optional Fld" />
+</viewtablelist>
+</view>
+<view name="PM0426" desc="Cost Entries Detail Audit" dllname="PMCEDA">
+<viewtablelist>
+<table name="PMCEDA" desc="Cost Entries Detail Audit" />
+</viewtablelist>
+</view>
+<view name="PM0427" desc="Cost Entries Detail Audit Opt." dllname="PMCEDAO">
+<viewtablelist>
+<table name="PMCEDAO" desc="Cost Entries Detail Audit Opt." />
+</viewtablelist>
+</view>
+<view name="PM0450" desc="Canadian Payroll Superview" dllname="PMCP">
+<viewtablelist>
+<table name="PMCP" desc="Canadian Payroll Superview" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0452" desc="C/P Optional Field" /></viewcomplist>
+</view>
+<view name="PM0451" desc="US Payroll Superview" dllname="PMUP">
+<viewtablelist>
+<table name="PMUP" desc="US Payroll Superview" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0453" desc="U/P Optional Field" /></viewcomplist>
+</view>
+<view name="PM0452" desc="C/P Optional Field" dllname="PMCPO">
+<viewtablelist>
+<table name="PMCPO" desc="C/P Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0450" desc="Canadian Payroll Superview" /></viewcomplist>
+</view>
+<view name="PM0453" desc="U/P Optional Field" dllname="PMUPO">
+<viewtablelist>
+<table name="PMUPO" desc="U/P Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0451" desc="US Payroll Superview" /></viewcomplist>
+</view>
+<view name="PM0460" desc="Material Allocation" dllname="PMMTAH">
+<viewtablelist>
+<table name="PMMTAH" desc="Material Allocation" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0461" desc="Material Allocation Detail" /><viewcomp name="PM0462" desc="Material Allocation Optional" /></viewcomplist>
+</view>
+<view name="PM0461" desc="Material Allocation Detail" dllname="PMMTAD">
+<viewtablelist>
+<table name="PMMTAD" desc="Material Allocation Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0460" desc="Material Allocation" /><viewcomp name="PM0463" desc="Material Allocation Dtl Optional" /></viewcomplist>
+</view>
+<view name="PM0462" desc="Material Allocation Optional" dllname="PMMTAHO">
+<viewtablelist>
+<table name="PMMTAHO" desc="Material Allocation Optional" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0460" desc="Material Allocation" /></viewcomplist>
+</view>
+<view name="PM0463" desc="Material Allocation Dtl Optional" dllname="PMMTADO">
+<viewtablelist>
+<table name="PMMTADO" desc="Material Allocation Dtl Optional" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0461" desc="Material Allocation Detail" /></viewcomplist>
+</view>
+<view name="PM0464" desc="Material Allocation" dllname="PMMTAHA">
+<viewtablelist>
+<table name="PMMTAHA" desc="Material Allocation" />
+</viewtablelist>
+</view>
+<view name="PM0465" desc="Material Allocation Detail" dllname="PMMTADA">
+<viewtablelist>
+<table name="PMMTADA" desc="Material Allocation Detail" />
+</viewtablelist>
+</view>
+<view name="PM0466" desc="Material Allocation Optional Field" dllname="PMMTAHAO">
+<viewtablelist>
+<table name="PMMTAHAO" desc="Material Allocation Optional Field" />
+</viewtablelist>
+</view>
+<view name="PM0467" desc="Material Allocation Detail Optional Field" dllname="PMMTADAO">
+<viewtablelist>
+<table name="PMMTADAO" desc="Material Allocation Detail Optional Field" />
+</viewtablelist>
+</view>
+<view name="PM0468" desc="" dllname="PMAIAS">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0469" desc="AIA Report Temporary File" dllname="PMAIAT">
+<viewtablelist>
+<table name="PMAIAT" desc="AIA Report Temporary File" />
+</viewtablelist>
+</view>
+<view name="PM0472" desc="AIA Superview Temporary File" dllname="PMAIAST">
+<viewtablelist>
+<table name="PMAIAST" desc="AIA Superview Temporary File" />
+</viewtablelist>
+</view>
+<view name="PM0473" desc="O/E Superview" dllname="PMOE">
+<viewtablelist>
+<table name="PMOE" desc="O/E Superview" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0474" desc="O/E Optional Field" /></viewcomplist>
+</view>
+<view name="PM0474" desc="O/E Optional Field" dllname="PMOEO">
+<viewtablelist>
+<table name="PMOEO" desc="O/E Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0473" desc="O/E Superview" /></viewcomplist>
+</view>
+<view name="PM0475" desc="Categories Detail View" dllname="PMCTGD">
+<viewtablelist>
+<table name="PMCTGD" desc="Categories Detail View" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0018" desc="Categories" /></viewcomplist>
+</view>
+<view name="PM0476" desc="Equipment Detail View" dllname="PMEQMTD">
+<viewtablelist>
+<table name="PMEQMTD" desc="Equipment Detail View" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0025" desc="Equipment" /></viewcomplist>
+</view>
+<view name="PM0477" desc="Subcontractors Detail View" dllname="PMSUBCND">
+<viewtablelist>
+<table name="PMSUBCND" desc="Subcontractors Detail View" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0026" desc="Subcontractors" /></viewcomplist>
+</view>
+<view name="PM0478" desc="Charge Codes Detail View" dllname="PMCHARGD">
+<viewtablelist>
+<table name="PMCHARGD" desc="Charge Codes Detail View" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0023" desc="Charge Codes" /></viewcomplist>
+</view>
+<view name="PM0479" desc="Employee Detail View" dllname="PMSTAFFD">
+<viewtablelist>
+<table name="PMSTAFFD" desc="Employee Detail View" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0002" desc="Employee" /></viewcomplist>
+</view>
+<view name="PM0480" desc="Misc. Expenses Detail View" dllname="PMMIEXPD">
+<viewtablelist>
+<table name="PMMIEXPD" desc="Misc. Expenses Detail View" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0028" desc="Miscellaneous Expenses" /></viewcomplist>
+</view>
+<view name="PM0481" desc="Overhead Expenses Detail View" dllname="PMOHEXPD">
+<viewtablelist>
+<table name="PMOHEXPD" desc="Overhead Expenses Detail View" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0029" desc="Overhead Codes" /></viewcomplist>
+</view>
+<view name="PM0482" desc="Super View" dllname="PMCPRJ">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0483" desc="Material Usage Detail Serial Numbers" dllname="PMMATDS">
+<viewtablelist>
+<table name="PMMATDS" desc="Material Usage Detail Serial Numbers" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0051" desc="Material Usage Detail" /><viewcomp name="PM0050" desc="Material Usage" /></viewcomplist>
+</view>
+<view name="PM0484" desc="Material Usage Detail Lot Numbers" dllname="PMMATDL">
+<viewtablelist>
+<table name="PMMATDL" desc="Material Usage Detail Lot Numbers" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0051" desc="Material Usage Detail" /><viewcomp name="PM0050" desc="Material Usage" /></viewcomplist>
+</view>
+<view name="PM0485" desc="Material Return Detail Serial Number" dllname="PMMATRDS">
+<viewtablelist>
+<table name="PMMATRDS" desc="Material Return Detail Serial Number" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0047" desc="Material Returns Detail" /><viewcomp name="PM0046" desc="Material Returns" /></viewcomplist>
+</view>
+<view name="PM0486" desc="Material Return Detail Lot Numbers" dllname="PMMATRDL">
+<viewtablelist>
+<table name="PMMATRDL" desc="Material Return Detail Lot Numbers" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0047" desc="Material Returns Detail" /><viewcomp name="PM0046" desc="Material Returns" /></viewcomplist>
+</view>
+<view name="PM0487" desc="Age WIP Report Superview" dllname="PMAGEWIP">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0488" desc="Age WIP Report Temporary File" dllname="PMAGET">
+<viewtablelist>
+<table name="PMAGET" desc="Age WIP Report Temporary File" />
+</viewtablelist>
+</view>
+<view name="PM0500" desc="Optional Fields Detail" dllname="PMOFD">
+<viewtablelist>
+<table name="PMOFD" desc="Optional Fields Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0501" desc="Optional Fields Header" /></viewcomplist>
+</view>
+<view name="PM0501" desc="Optional Fields Header" dllname="PMOFH">
+<viewtablelist>
+<table name="PMOFH" desc="Optional Fields Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0500" desc="Optional Fields Detail" /></viewcomplist>
+</view>
+<view name="PM0502" desc="Optional Fields Superview" dllname="PMOFCMD">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0505" desc="Equipment Optional Field" dllname="PMEQHO">
+<viewtablelist>
+<table name="PMEQHO" desc="Equipment Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0030" desc="Equipment" /></viewcomplist>
+</view>
+<view name="PM0506" desc="Equipment Detail Optional Field" dllname="PMEQDO">
+<viewtablelist>
+<table name="PMEQDO" desc="Equipment Detail Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0031" desc="Equipment Detail" /></viewcomplist>
+</view>
+<view name="PM0507" desc="Equipment Audit Optional Field" dllname="PMEQHAO">
+<viewtablelist>
+<table name="PMEQHAO" desc="Equipment Audit Optional Field" />
+</viewtablelist>
+</view>
+<view name="PM0508" desc="Equipment Audit Detail OF" dllname="PMEQDAO">
+<viewtablelist>
+<table name="PMEQDAO" desc="Equipment Audit Detail OF" />
+</viewtablelist>
+</view>
+<view name="PM0509" desc="Project Optional Fields" dllname="PMPROJO">
+<viewtablelist>
+<table name="PMPROJO" desc="Project Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0006" desc="Project Code" /></viewcomplist>
+</view>
+<view name="PM0510" desc="Category Optional Fields" dllname="PMCTGO">
+<viewtablelist>
+<table name="PMCTGO" desc="Category Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0018" desc="Categories" /></viewcomplist>
+</view>
+<view name="PM0511" desc="Employee Optional Fields" dllname="PMSTAFFO">
+<viewtablelist>
+<table name="PMSTAFFO" desc="Employee Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0002" desc="Employee" /></viewcomplist>
+</view>
+<view name="PM0512" desc="Equipment Optional Fields" dllname="PMEQMTO">
+<viewtablelist>
+<table name="PMEQMTO" desc="Equipment Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0025" desc="Equipment" /></viewcomplist>
+</view>
+<view name="PM0513" desc="Miscellaneous Expenses Optional Fields" dllname="PMMIEXPO">
+<viewtablelist>
+<table name="PMMIEXPO" desc="Miscellaneous Expenses Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0028" desc="Miscellaneous Expenses" /></viewcomplist>
+</view>
+<view name="PM0514" desc="Overhead Optional Fields" dllname="PMOHEXPO">
+<viewtablelist>
+<table name="PMOHEXPO" desc="Overhead Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0029" desc="Overhead Codes" /></viewcomplist>
+</view>
+<view name="PM0515" desc="Subcontractor Optional Fields" dllname="PMSUBCNO">
+<viewtablelist>
+<table name="PMSUBCNO" desc="Subcontractor Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0026" desc="Subcontractors" /></viewcomplist>
+</view>
+<view name="PM0516" desc="Charges Optional Field" dllname="PMCHARGO">
+<viewtablelist>
+<table name="PMCHARGO" desc="Charges Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0023" desc="Charge Codes" /></viewcomplist>
+</view>
+<view name="PM0520" desc="A/P Optional Field" dllname="PMAPO">
+<viewtablelist>
+<table name="PMAPO" desc="A/P Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0302" desc="A/P Superview" /></viewcomplist>
+</view>
+<view name="PM0521" desc="A/R Optional Field" dllname="PMARO">
+<viewtablelist>
+<table name="PMARO" desc="A/R Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0301" desc="A/R Superview" /></viewcomplist>
+</view>
+<view name="PM0522" desc="P/O Optional Field" dllname="PMPOO">
+<viewtablelist>
+<table name="PMPOO" desc="P/O Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0305" desc="P/O Superview" /></viewcomplist>
+</view>
+<view name="PM0523" desc="Charges Detail Optional Field" dllname="PMCHGDO">
+<viewtablelist>
+<table name="PMCHGDO" desc="Charges Detail Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0055" desc="Charges Detail" /></viewcomplist>
+</view>
+<view name="PM0524" desc="Charges Optional Field" dllname="PMCHGHO">
+<viewtablelist>
+<table name="PMCHGHO" desc="Charges Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0054" desc="Charges" /></viewcomplist>
+</view>
+<view name="PM0525" desc="Charges Audit Detail Opt. Field" dllname="PMCHGDAO">
+<viewtablelist>
+<table name="PMCHGDAO" desc="Charges Audit Detail Opt. Field" />
+</viewtablelist>
+</view>
+<view name="PM0526" desc="Charges Audit Optional Field" dllname="PMCHGHAO">
+<viewtablelist>
+<table name="PMCHGHAO" desc="Charges Audit Optional Field" />
+</viewtablelist>
+</view>
+<view name="PM0527" desc="Adjustment Detail Optional Field" dllname="PMADJDO">
+<viewtablelist>
+<table name="PMADJDO" desc="Adjustment Detail Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0063" desc="Adjustments Detail" /></viewcomplist>
+</view>
+<view name="PM0528" desc="Adjustment Optional Field" dllname="PMADJHO">
+<viewtablelist>
+<table name="PMADJHO" desc="Adjustment Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0062" desc="Adjustments" /></viewcomplist>
+</view>
+<view name="PM0529" desc="Adjustment Audit Detail OF" dllname="PMADJDAO">
+<viewtablelist>
+<table name="PMADJDAO" desc="Adjustment Audit Detail OF" />
+</viewtablelist>
+</view>
+<view name="PM0530" desc="Adjustment Audit Optional Field" dllname="PMADJHAO">
+<viewtablelist>
+<table name="PMADJHAO" desc="Adjustment Audit Optional Field" />
+</viewtablelist>
+</view>
+<view name="PM0531" desc="Timecard Detail Optional Field" dllname="PMTIMDO">
+<viewtablelist>
+<table name="PMTIMDO" desc="Timecard Detail Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0041" desc="Timecard Time Detail" /></viewcomplist>
+</view>
+<view name="PM0532" desc="Timecard Optional Field" dllname="PMTIMHO">
+<viewtablelist>
+<table name="PMTIMHO" desc="Timecard Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0040" desc="Timecard" /></viewcomplist>
+</view>
+<view name="PM0533" desc="Timecard Audit Detail OF" dllname="PMTIMDAO">
+<viewtablelist>
+<table name="PMTIMDAO" desc="Timecard Audit Detail OF" />
+</viewtablelist>
+</view>
+<view name="PM0534" desc="Timecard Audit Optional Field" dllname="PMTIMHAO">
+<viewtablelist>
+<table name="PMTIMHAO" desc="Timecard Audit Optional Field" />
+</viewtablelist>
+</view>
+<view name="PM0535" desc="Material Return Detail Opt. Fld" dllname="PMMATRDO">
+<viewtablelist>
+<table name="PMMATRDO" desc="Material Return Detail Opt. Fld" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0047" desc="Material Returns Detail" /></viewcomplist>
+</view>
+<view name="PM0536" desc="Material Return Optional Field" dllname="PMMATRHO">
+<viewtablelist>
+<table name="PMMATRHO" desc="Material Return Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0046" desc="Material Returns" /></viewcomplist>
+</view>
+<view name="PM0537" desc="Material Usage Detail Opt. Field" dllname="PMMATDO">
+<viewtablelist>
+<table name="PMMATDO" desc="Material Usage Detail Opt. Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0051" desc="Material Usage Detail" /></viewcomplist>
+</view>
+<view name="PM0538" desc="Material Usage Optional Field" dllname="PMMATHO">
+<viewtablelist>
+<table name="PMMATHO" desc="Material Usage Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0050" desc="Material Usage" /></viewcomplist>
+</view>
+<view name="PM0539" desc="Timecard Expense Optional Field" dllname="PMTIMEO">
+<viewtablelist>
+<table name="PMTIMEO" desc="Timecard Expense Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0113" desc="Timecard Expense Detail" /></viewcomplist>
+</view>
+<view name="PM0540" desc="Timecard Audit Expense OF" dllname="PMTIMEAO">
+<viewtablelist>
+<table name="PMTIMEAO" desc="Timecard Audit Expense OF" />
+</viewtablelist>
+</view>
+<view name="PM0541" desc="I/C Optional Field" dllname="PMICO">
+<viewtablelist>
+<table name="PMICO" desc="I/C Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0304" desc="IC Superview" /></viewcomplist>
+</view>
+<view name="PM0542" desc="Billing Optional Field" dllname="PMBWHO">
+<viewtablelist>
+<table name="PMBWHO" desc="Billing Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0081" desc="Billing Worksheet" /></viewcomplist>
+</view>
+<view name="PM0544" desc="Billing Detail Optional Field" dllname="PMBWDO">
+<viewtablelist>
+<table name="PMBWDO" desc="Billing Detail Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0082" desc="Billing Worksheet Detail" /></viewcomplist>
+</view>
+<view name="PM0546" desc="RR Detail Optional Field" dllname="PMRWDO">
+<viewtablelist>
+<table name="PMRWDO" desc="RR Detail Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0092" desc="RR Worksheet Detail" /></viewcomplist>
+</view>
+<view name="PM0547" desc="RR Detail OF Audit" dllname="PMRWDAO">
+<viewtablelist>
+<table name="PMRWDAO" desc="RR Detail OF Audit" />
+</viewtablelist>
+</view>
+<view name="PM0550" desc="Revise Estimates Detail Opt. Fld" dllname="PMREVDO">
+<viewtablelist>
+<table name="PMREVDO" desc="Revise Estimates Detail Opt. Fld" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0059" desc="Revise Estimates Detail" /></viewcomplist>
+</view>
+<view name="PM0551" desc="Revise Estimates Audit Detail OF" dllname="PMREVDAO">
+<viewtablelist>
+<table name="PMREVDAO" desc="Revise Estimates Audit Detail OF" />
+</viewtablelist>
+</view>
+<view name="PM0552" desc="Revise Estimates Wizard" dllname="PMREVW">
+<viewtablelist>
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0058" desc="Revise Estimates" /><viewcomp name="PM0059" desc="Revise Estimates Detail" /></viewcomplist>
+</view>
+<view name="PM0600" desc="G/L Integration" dllname="PMGLIT">
+<viewtablelist>
+<table name="PMGLIT" desc="G/L Integration" />
+</viewtablelist>
+</view>
+<view name="PM0610" desc="Restart" dllname="PMRSTRT">
+<viewtablelist>
+<table name="PMRSTRT" desc="Restart" />
+</viewtablelist>
+</view>
+<view name="PM0801" desc="Payroll Earnings" dllname="PMPEARN">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0802" desc="Payroll Expenses" dllname="PMPEXP">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0850" desc="Contract Optional Field" dllname="PMCONO">
+<viewtablelist>
+<table name="PMCONO" desc="Contract Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0021" desc="^4" /></viewcomplist>
+</view>
+<view name="PM0851" desc="Project Optional Field" dllname="PMPROJSO">
+<viewtablelist>
+<table name="PMPROJSO" desc="Project Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0022" desc="^5" /></viewcomplist>
+</view>
+<view name="PM0852" desc="Category Optional Field" dllname="PMCATGTO">
+<viewtablelist>
+<table name="PMCATGTO" desc="Category Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0039" desc="^1 ^6" /></viewcomplist>
+</view>
+<view name="PM0853" desc="Resource Optional Field" dllname="PMRESO">
+<viewtablelist>
+<table name="PMRESO" desc="Resource Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0120" desc="^1 Resources" /></viewcomplist>
+</view>
+<view name="PM0854" desc="Transaction Optional Field" dllname="PMTRANO">
+<viewtablelist>
+<table name="PMTRANO" desc="Transaction Optional Field" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0111" desc="^1 Transactions" /></viewcomplist>
+</view>
+<view name="PM0900" desc="Transaction Posting" dllname="PMTRPST">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0910" desc="Create G/L Batch" dllname="PMGLTR">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0993" desc="Superview" dllname="PMTREE">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0994" desc="New ^1 Wizard" dllname="PMCWIZ">
+<viewtablelist>
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="PM0021" desc="^4" /><viewcomp name="PM0022" desc="^5" /><viewcomp name="PM0039" desc="^1 ^6" /><viewcomp name="PM0120" desc="^1 Resources" /><viewcomp name="PM0121" desc="^1 Resource ^6" /></viewcomplist>
+</view>
+<view name="PM0995" desc="^1 Transactions" dllname="PMTRANS">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0996" desc="Superview" dllname="PMSUP">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0997" desc="Drilldown View" dllname="PMDLDN">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0998" desc="Superview" dllname="PMSRES">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="PM0999" desc="Integrity Check" dllname="PMINTCK">
+<viewtablelist>
+</viewtablelist>
+</view>
+</viewlist>
+<tablelist>
+<table name="PMACCT" desc="Account Sets">
+<view name="PM0017" desc="Account Sets" />
+</table>
+<table name="PMADJD" desc="Adjustments Detail">
+<view name="PM0063" desc="Adjustments Detail" />
+</table>
+<table name="PMADJDA" desc="Adjustments Audit Detail">
+<view name="PM0065" desc="Adjustments Audit Detail" />
+</table>
+<table name="PMADJDAO" desc="Adjustment Audit Detail OF">
+<view name="PM0529" desc="Adjustment Audit Detail OF" />
+</table>
+<table name="PMADJDO" desc="Adjustment Detail Optional Field">
+<view name="PM0527" desc="Adjustment Detail Optional Field" />
+</table>
+<table name="PMADJH" desc="Adjustments">
+<view name="PM0062" desc="Adjustments" />
+</table>
+<table name="PMADJHA" desc="Adjustments Audit">
+<view name="PM0064" desc="Adjustments Audit" />
+</table>
+<table name="PMADJHAO" desc="Adjustment Audit Optional Field">
+<view name="PM0530" desc="Adjustment Audit Optional Field" />
+</table>
+<table name="PMADJHO" desc="Adjustment Optional Field">
+<view name="PM0528" desc="Adjustment Optional Field" />
+</table>
+<table name="PMAGET" desc="Age WIP Report Temporary File">
+<view name="PM0488" desc="Age WIP Report Temporary File" />
+</table>
+<table name="PMAIAST" desc="AIA Superview Temporary File">
+<view name="PM0472" desc="AIA Superview Temporary File" />
+</table>
+<table name="PMAIAT" desc="AIA Report Temporary File">
+<view name="PM0469" desc="AIA Report Temporary File" />
+</table>
+<table name="PMAP" desc="A/P Superview">
+<view name="PM0302" desc="A/P Superview" />
+</table>
+<table name="PMAPO" desc="A/P Optional Field">
+<view name="PM0520" desc="A/P Optional Field" />
+</table>
+<table name="PMAR" desc="A/R Superview">
+<view name="PM0301" desc="A/R Superview" />
+</table>
+<table name="PMARO" desc="A/R Optional Field">
+<view name="PM0521" desc="A/R Optional Field" />
+</table>
+<table name="PMBUDA" desc="Budget Audit">
+<view name="PM0126" desc="Budget Audit" />
+</table>
+<table name="PMBUDD" desc="Budget Detail">
+<view name="PM0122" desc="Budget Detail" />
+</table>
+<table name="PMBUDH" desc="Budget Header">
+<view name="PM0123" desc="Budget Header" />
+</table>
+<table name="PMBWC" desc="Billing Worksheet Customer">
+<view name="PM0083" desc="Billing Worksheet Customer" />
+</table>
+<table name="PMBWD" desc="Billing Worksheet Detail">
+<view name="PM0082" desc="Billing Worksheet Detail" />
+</table>
+<table name="PMBWDO" desc="Billing Detail Optional Field">
+<view name="PM0544" desc="Billing Detail Optional Field" />
+</table>
+<table name="PMBWH" desc="Billing Worksheet">
+<view name="PM0081" desc="Billing Worksheet" />
+</table>
+<table name="PMBWHO" desc="Billing Optional Field">
+<view name="PM0542" desc="Billing Optional Field" />
+</table>
+<table name="PMCATGT" desc="^1 ^6">
+<view name="PM0039" desc="^1 ^6" />
+</table>
+<table name="PMCATGTO" desc="Category Optional Field">
+<view name="PM0852" desc="Category Optional Field" />
+</table>
+<table name="PMCED" desc="Cost Entries Detail">
+<view name="PM0422" desc="Cost Entries Detail" />
+</table>
+<table name="PMCEDA" desc="Cost Entries Detail Audit">
+<view name="PM0426" desc="Cost Entries Detail Audit" />
+</table>
+<table name="PMCEDAO" desc="Cost Entries Detail Audit Opt.">
+<view name="PM0427" desc="Cost Entries Detail Audit Opt." />
+</table>
+<table name="PMCEDO" desc="Cost Entries Detail Optional Field">
+<view name="PM0423" desc="Cost Entries Detail Optional Field" />
+</table>
+<table name="PMCEH" desc="Cost Entries Header">
+<view name="PM0420" desc="Cost Entries Header" />
+</table>
+<table name="PMCEHA" desc="Cost Entries Audit">
+<view name="PM0424" desc="Cost Entries Audit" />
+</table>
+<table name="PMCEHAO" desc="Cost Entries Audit Optional Fld">
+<view name="PM0425" desc="Cost Entries Audit Optional Fld" />
+</table>
+<table name="PMCEHO" desc="Cost Entries Optional Field">
+<view name="PM0421" desc="Cost Entries Optional Field" />
+</table>
+<table name="PMCHARG" desc="Charge Codes">
+<view name="PM0023" desc="Charge Codes" />
+</table>
+<table name="PMCHARGD" desc="Charge Codes Detail View">
+<view name="PM0478" desc="Charge Codes Detail View" />
+</table>
+<table name="PMCHARGO" desc="Charges Optional Field">
+<view name="PM0516" desc="Charges Optional Field" />
+</table>
+<table name="PMCHGDA" desc="Charges Audit Detail">
+<view name="PM0057" desc="Charges Audit Detail" />
+</table>
+<table name="PMCHGDAO" desc="Charges Audit Detail Opt. Field">
+<view name="PM0525" desc="Charges Audit Detail Opt. Field" />
+</table>
+<table name="PMCHGDO" desc="Charges Detail Optional Field">
+<view name="PM0523" desc="Charges Detail Optional Field" />
+</table>
+<table name="PMCHGHA" desc="Charges Audit">
+<view name="PM0056" desc="Charges Audit" />
+</table>
+<table name="PMCHGHAO" desc="Charges Audit Optional Field">
+<view name="PM0526" desc="Charges Audit Optional Field" />
+</table>
+<table name="PMCHGHO" desc="Charges Optional Field">
+<view name="PM0524" desc="Charges Optional Field" />
+</table>
+<table name="PMCHNDA" desc="Revise Estimates Audit Detail">
+<view name="PM0061" desc="Revise Estimates Audit Detail" />
+</table>
+<table name="PMCHNGD" desc="Revise Estimates Detail">
+<view name="PM0059" desc="Revise Estimates Detail" />
+</table>
+<table name="PMCHNGH" desc="Revise Estimates">
+<view name="PM0058" desc="Revise Estimates" />
+</table>
+<table name="PMCHNHA" desc="Revise Estimates Audit">
+<view name="PM0060" desc="Revise Estimates Audit" />
+</table>
+<table name="PMCHRGD" desc="Charges Detail">
+<view name="PM0055" desc="Charges Detail" />
+</table>
+<table name="PMCHRGH" desc="Charges">
+<view name="PM0054" desc="Charges" />
+</table>
+<table name="PMCLOSE" desc="G/L Closing Entries">
+<view name="PM0209" desc="G/L Closing Entries" />
+</table>
+<table name="PMCOCA" desc="Committed Costs Audit">
+<view name="PM0320" desc="Committed Costs Audit" />
+</table>
+<table name="PMCONO" desc="Contract Optional Field">
+<view name="PM0850" desc="Contract Optional Field" />
+</table>
+<table name="PMCONTS" desc="^4">
+<view name="PM0021" desc="^4" />
+</table>
+<table name="PMCONTT" desc="^4">
+<view name="PM0021" desc="^4" />
+</table>
+<table name="PMCOST" desc="Cost Types">
+<view name="PM0001" desc="Cost Types" />
+</table>
+<table name="PMCP" desc="Canadian Payroll Superview">
+<view name="PM0450" desc="Canadian Payroll Superview" />
+</table>
+<table name="PMCPO" desc="C/P Optional Field">
+<view name="PM0452" desc="C/P Optional Field" />
+</table>
+<table name="PMCTG" desc="Categories">
+<view name="PM0018" desc="Categories" />
+</table>
+<table name="PMCTGD" desc="Categories Detail View">
+<view name="PM0475" desc="Categories Detail View" />
+</table>
+<table name="PMCTGO" desc="Category Optional Fields">
+<view name="PM0510" desc="Category Optional Fields" />
+</table>
+<table name="PMEQDAO" desc="Equipment Audit Detail OF">
+<view name="PM0508" desc="Equipment Audit Detail OF" />
+</table>
+<table name="PMEQDO" desc="Equipment Detail Optional Field">
+<view name="PM0506" desc="Equipment Detail Optional Field" />
+</table>
+<table name="PMEQHAO" desc="Equipment Audit Optional Field">
+<view name="PM0507" desc="Equipment Audit Optional Field" />
+</table>
+<table name="PMEQHO" desc="Equipment Optional Field">
+<view name="PM0505" desc="Equipment Optional Field" />
+</table>
+<table name="PMEQIPD" desc="Equipment Detail">
+<view name="PM0031" desc="Equipment Detail" />
+</table>
+<table name="PMEQIPH" desc="Equipment">
+<view name="PM0030" desc="Equipment" />
+</table>
+<table name="PMEQMT" desc="Equipment">
+<view name="PM0025" desc="Equipment" />
+</table>
+<table name="PMEQMTD" desc="Equipment Detail View">
+<view name="PM0476" desc="Equipment Detail View" />
+</table>
+<table name="PMEQMTO" desc="Equipment Optional Fields">
+<view name="PM0512" desc="Equipment Optional Fields" />
+</table>
+<table name="PMEQPDA" desc="Equipment Audit Detail">
+<view name="PM0033" desc="Equipment Audit Detail" />
+</table>
+<table name="PMEQPHA" desc="Equipment Audit">
+<view name="PM0032" desc="Equipment Audit" />
+</table>
+<table name="PMGLIT" desc="G/L Integration">
+<view name="PM0600" desc="G/L Integration" />
+</table>
+<table name="PMIC" desc="IC Superview">
+<view name="PM0304" desc="IC Superview" />
+</table>
+<table name="PMICO" desc="I/C Optional Field">
+<view name="PM0541" desc="I/C Optional Field" />
+</table>
+<table name="PMMATD" desc="Material Usage Detail">
+<view name="PM0051" desc="Material Usage Detail" />
+</table>
+<table name="PMMATDL" desc="Material Usage Detail Lot Numbers">
+<view name="PM0484" desc="Material Usage Detail Lot Numbers" />
+</table>
+<table name="PMMATDO" desc="Material Usage Detail Opt. Field">
+<view name="PM0537" desc="Material Usage Detail Opt. Field" />
+</table>
+<table name="PMMATDS" desc="Material Usage Detail Serial Numbers">
+<view name="PM0483" desc="Material Usage Detail Serial Numbers" />
+</table>
+<table name="PMMATH" desc="Material Usage">
+<view name="PM0050" desc="Material Usage" />
+</table>
+<table name="PMMATHO" desc="Material Usage Optional Field">
+<view name="PM0538" desc="Material Usage Optional Field" />
+</table>
+<table name="PMMATRD" desc="Material Returns Detail">
+<view name="PM0047" desc="Material Returns Detail" />
+</table>
+<table name="PMMATRDL" desc="Material Return Detail Lot Numbers">
+<view name="PM0486" desc="Material Return Detail Lot Numbers" />
+</table>
+<table name="PMMATRDO" desc="Material Return Detail Opt. Fld">
+<view name="PM0535" desc="Material Return Detail Opt. Fld" />
+</table>
+<table name="PMMATRDS" desc="Material Return Detail Serial Number">
+<view name="PM0485" desc="Material Return Detail Serial Number" />
+</table>
+<table name="PMMATRH" desc="Material Returns">
+<view name="PM0046" desc="Material Returns" />
+</table>
+<table name="PMMATRHO" desc="Material Return Optional Field">
+<view name="PM0536" desc="Material Return Optional Field" />
+</table>
+<table name="PMMIEXP" desc="Miscellaneous Expenses">
+<view name="PM0028" desc="Miscellaneous Expenses" />
+</table>
+<table name="PMMIEXPD" desc="Misc. Expenses Detail View">
+<view name="PM0480" desc="Misc. Expenses Detail View" />
+</table>
+<table name="PMMIEXPO" desc="Miscellaneous Expenses Optional Fields">
+<view name="PM0513" desc="Miscellaneous Expenses Optional Fields" />
+</table>
+<table name="PMMTAD" desc="Material Allocation Detail">
+<view name="PM0461" desc="Material Allocation Detail" />
+</table>
+<table name="PMMTADA" desc="Material Allocation Detail">
+<view name="PM0465" desc="Material Allocation Detail" />
+</table>
+<table name="PMMTADAO" desc="Material Allocation Detail Optional Field">
+<view name="PM0467" desc="Material Allocation Detail Optional Field" />
+</table>
+<table name="PMMTADO" desc="Material Allocation Dtl Optional">
+<view name="PM0463" desc="Material Allocation Dtl Optional" />
+</table>
+<table name="PMMTAH" desc="Material Allocation">
+<view name="PM0460" desc="Material Allocation" />
+</table>
+<table name="PMMTAHA" desc="Material Allocation">
+<view name="PM0464" desc="Material Allocation" />
+</table>
+<table name="PMMTAHAO" desc="Material Allocation Optional Field">
+<view name="PM0466" desc="Material Allocation Optional Field" />
+</table>
+<table name="PMMTAHO" desc="Material Allocation Optional">
+<view name="PM0462" desc="Material Allocation Optional" />
+</table>
+<table name="PMOBD" desc="Opening Balances Detail">
+<view name="PM0402" desc="Opening Balances Detail" />
+</table>
+<table name="PMOBDA" desc="Opening Balances Audit Detail">
+<view name="PM0404" desc="Opening Balances Audit Detail" />
+</table>
+<table name="PMOBH" desc="Opening Balances">
+<view name="PM0401" desc="Opening Balances" />
+</table>
+<table name="PMOBHA" desc="Opening Balances Audit">
+<view name="PM0403" desc="Opening Balances Audit" />
+</table>
+<table name="PMOE" desc="O/E Superview">
+<view name="PM0473" desc="O/E Superview" />
+</table>
+<table name="PMOEO" desc="O/E Optional Field">
+<view name="PM0474" desc="O/E Optional Field" />
+</table>
+<table name="PMOFD" desc="Optional Fields Detail">
+<view name="PM0500" desc="Optional Fields Detail" />
+</table>
+<table name="PMOFH" desc="Optional Fields Header">
+<view name="PM0501" desc="Optional Fields Header" />
+</table>
+<table name="PMOHEXP" desc="Overhead Codes">
+<view name="PM0029" desc="Overhead Codes" />
+</table>
+<table name="PMOHEXPD" desc="Overhead Expenses Detail View">
+<view name="PM0481" desc="Overhead Expenses Detail View" />
+</table>
+<table name="PMOHEXPO" desc="Overhead Optional Fields">
+<view name="PM0514" desc="Overhead Optional Fields" />
+</table>
+<table name="PMOPT" desc="Options">
+<view name="PM0003" desc="Options" />
+</table>
+<table name="PMOPT2" desc="Options">
+<view name="PM0003" desc="Options" />
+</table>
+<table name="PMOPT3" desc="Options">
+<view name="PM0003" desc="Options" />
+</table>
+<table name="PMOPT4" desc="Options">
+<view name="PM0003" desc="Options" />
+</table>
+<table name="PMPERR" desc="Posting Errors">
+<view name="PM0130" desc="Posting Errors" />
+</table>
+<table name="PMPO" desc="P/O Superview">
+<view name="PM0305" desc="P/O Superview" />
+</table>
+<table name="PMPOO" desc="P/O Optional Field">
+<view name="PM0522" desc="P/O Optional Field" />
+</table>
+<table name="PMPROJ" desc="Project Code">
+<view name="PM0006" desc="Project Code" />
+</table>
+<table name="PMPROJO" desc="Project Optional Fields">
+<view name="PM0509" desc="Project Optional Fields" />
+</table>
+<table name="PMPROJS" desc="^5">
+<view name="PM0022" desc="^5" />
+</table>
+<table name="PMPROJSO" desc="Project Optional Field">
+<view name="PM0851" desc="Project Optional Field" />
+</table>
+<table name="PMPROJT" desc="^5">
+<view name="PM0022" desc="^5" />
+</table>
+<table name="PMRES" desc="^1 Resources">
+<view name="PM0120" desc="^1 Resources" />
+</table>
+<table name="PMRESC" desc="^1 Resource ^6">
+<view name="PM0121" desc="^1 Resource ^6" />
+</table>
+<table name="PMRESO" desc="Resource Optional Field">
+<view name="PM0853" desc="Resource Optional Field" />
+</table>
+<table name="PMREVDAO" desc="Revise Estimates Audit Detail OF">
+<view name="PM0551" desc="Revise Estimates Audit Detail OF" />
+</table>
+<table name="PMREVDO" desc="Revise Estimates Detail Opt. Fld">
+<view name="PM0550" desc="Revise Estimates Detail Opt. Fld" />
+</table>
+<table name="PMROD" desc="Reopen Worksheet Detail">
+<view name="PM0202" desc="Reopen Worksheet Detail" />
+</table>
+<table name="PMRODA" desc="Reopen Worksheet Detail Audit">
+<view name="PM0206" desc="Reopen Worksheet Detail Audit" />
+</table>
+<table name="PMRODD" desc="Reopen Worksheet Accounts">
+<view name="PM0204" desc="Reopen Worksheet Accounts" />
+</table>
+<table name="PMRODDA" desc="Reopen Worksheet Accounts Audit">
+<view name="PM0208" desc="Reopen Worksheet Accounts Audit" />
+</table>
+<table name="PMRODO" desc="Reopen Detail Optional Field">
+<view name="PM0203" desc="Reopen Detail Optional Field" />
+</table>
+<table name="PMRODOA" desc="Reopen Detail OF Audit">
+<view name="PM0207" desc="Reopen Detail OF Audit" />
+</table>
+<table name="PMROH" desc="Reopening Projects Worksheet">
+<view name="PM0201" desc="Reopening Projects Worksheet" />
+</table>
+<table name="PMROHA" desc="Reopen Worksheet Header Audit">
+<view name="PM0205" desc="Reopen Worksheet Header Audit" />
+</table>
+<table name="PMRSTRT" desc="Restart">
+<view name="PM0610" desc="Restart" />
+</table>
+<table name="PMRWD" desc="RR Worksheet Detail">
+<view name="PM0092" desc="RR Worksheet Detail" />
+</table>
+<table name="PMRWDA" desc="RR Worksheet Detail Audit">
+<view name="PM0096" desc="RR Worksheet Detail Audit" />
+</table>
+<table name="PMRWDAO" desc="RR Detail OF Audit">
+<view name="PM0547" desc="RR Detail OF Audit" />
+</table>
+<table name="PMRWDD" desc="RR Worksheet Accounts">
+<view name="PM0094" desc="RR Worksheet Accounts" />
+</table>
+<table name="PMRWDDA" desc="RR Worksheet Accounts Audit">
+<view name="PM0097" desc="RR Worksheet Accounts Audit" />
+</table>
+<table name="PMRWDO" desc="RR Detail Optional Field">
+<view name="PM0546" desc="RR Detail Optional Field" />
+</table>
+<table name="PMRWH" desc="Revenue Recognition Worksheet">
+<view name="PM0091" desc="Revenue Recognition Worksheet" />
+</table>
+<table name="PMRWHA" desc="RR Worksheet Header Audit">
+<view name="PM0095" desc="RR Worksheet Header Audit" />
+</table>
+<table name="PMSEG" desc="Segments">
+<view name="PM0013" desc="Segments" />
+</table>
+<table name="PMSEGV" desc="Segment Codes">
+<view name="PM0014" desc="Segment Codes" />
+</table>
+<table name="PMSTAFF" desc="Employee">
+<view name="PM0002" desc="Employee" />
+</table>
+<table name="PMSTAFFD" desc="Employee Detail View">
+<view name="PM0479" desc="Employee Detail View" />
+</table>
+<table name="PMSTAFFO" desc="Employee Optional Fields">
+<view name="PM0511" desc="Employee Optional Fields" />
+</table>
+<table name="PMSTRUC" desc="Contract Structures">
+<view name="PM0011" desc="Contract Structures" />
+</table>
+<table name="PMSUBCN" desc="Subcontractors">
+<view name="PM0026" desc="Subcontractors" />
+</table>
+<table name="PMSUBCND" desc="Subcontractors Detail View">
+<view name="PM0477" desc="Subcontractors Detail View" />
+</table>
+<table name="PMSUBCNO" desc="Subcontractor Optional Fields">
+<view name="PM0515" desc="Subcontractor Optional Fields" />
+</table>
+<table name="PMTIMDA" desc="Timecard Time Detail Audit">
+<view name="PM0043" desc="Timecard Time Detail Audit" />
+</table>
+<table name="PMTIMDAO" desc="Timecard Audit Detail OF">
+<view name="PM0533" desc="Timecard Audit Detail OF" />
+</table>
+<table name="PMTIMDO" desc="Timecard Detail Optional Field">
+<view name="PM0531" desc="Timecard Detail Optional Field" />
+</table>
+<table name="PMTIMEA" desc="Timecard Expense Detail Audit">
+<view name="PM0114" desc="Timecard Expense Detail Audit" />
+</table>
+<table name="PMTIMEAO" desc="Timecard Audit Expense OF">
+<view name="PM0540" desc="Timecard Audit Expense OF" />
+</table>
+<table name="PMTIMED" desc="Timecard Time Detail">
+<view name="PM0041" desc="Timecard Time Detail" />
+</table>
+<table name="PMTIMEE" desc="Timecard Expense Detail">
+<view name="PM0113" desc="Timecard Expense Detail" />
+</table>
+<table name="PMTIMEH" desc="Timecard">
+<view name="PM0040" desc="Timecard" />
+</table>
+<table name="PMTIMEO" desc="Timecard Expense Optional Field">
+<view name="PM0539" desc="Timecard Expense Optional Field" />
+</table>
+<table name="PMTIMET" desc="Timecard Time Totals">
+<view name="PM0115" desc="Timecard Time Totals" />
+</table>
+<table name="PMTIMHA" desc="Timecard Audit">
+<view name="PM0042" desc="Timecard Audit" />
+</table>
+<table name="PMTIMHAO" desc="Timecard Audit Optional Field">
+<view name="PM0534" desc="Timecard Audit Optional Field" />
+</table>
+<table name="PMTIMHO" desc="Timecard Optional Field">
+<view name="PM0532" desc="Timecard Optional Field" />
+</table>
+<table name="PMTIMTA" desc="Timecard Time Audit">
+<view name="PM0117" desc="Timecard Time Audit" />
+</table>
+<table name="PMTRAN" desc="^1 Transactions">
+<view name="PM0111" desc="^1 Transactions" />
+</table>
+<table name="PMTRANO" desc="Transaction Optional Field">
+<view name="PM0854" desc="Transaction Optional Field" />
+</table>
+<table name="PMUP" desc="US Payroll Superview">
+<view name="PM0451" desc="US Payroll Superview" />
+</table>
+<table name="PMUPO" desc="U/P Optional Field">
+<view name="PM0453" desc="U/P Optional Field" />
+</table>
+<table name="PMURD" desc="Update Retainage Detail">
+<view name="PM0410" desc="Update Retainage Detail" />
+</table>
+<table name="PMURDA" desc="Update Retainage Detail Audit">
+<view name="PM0411" desc="Update Retainage Detail Audit" />
+</table>
+<table name="PMURH" desc="Update Retainage">
+<view name="PM0412" desc="Update Retainage" />
+</table>
+<table name="PMURHA" desc="Update Retainage Audit">
+<view name="PM0413" desc="Update Retainage Audit" />
+</table>
+</tablelist>
+<objectlist>
+<object name="PMACCT">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="PM0017" desc="Account Sets" />
+</objectviewlist>
+</object>
+<object name="PMADJ">
+<protocolflag type="Protocol" value="SEQ3" desc="SEQ3" />
+<objectviewlist>
+<objectview name="PM0062" desc="Adjustments" />
+<objectview name="PM0063" desc="Adjustments Detail" />
+<objectview name="PM0064" desc="Adjustments Audit" />
+<objectview name="PM0065" desc="Adjustments Audit Detail" />
+</objectviewlist>
+</object>
+<object name="PMADJ">
+<protocolflag type="Protocol" value="SEQ3" desc="SEQ3" />
+<objectviewlist>
+<objectview name="PM0062" desc="Adjustments" />
+<objectview name="PM0063" desc="Adjustments Detail" />
+<objectview name="PM0528" desc="Adjustment Optional Field" />
+<objectview name="PM0527" desc="Adjustment Detail Optional Field" />
+</objectviewlist>
+</object>
+<object name="PMBUD">
+<protocolflag type="Protocol" value="SEQ2" desc="SEQ2" />
+<objectviewlist>
+<objectview name="PM0123" desc="Budget Header" />
+<objectview name="PM0122" desc="Budget Detail" />
+<objectview name="PM0124" desc="Budget Lookup" />
+</objectviewlist>
+</object>
+<object name="PMBW">
+<protocolflag typ

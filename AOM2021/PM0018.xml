@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PM PM0018 PMCTG PMCTG</keywords>
+<pagetitle>Categories</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Categories</title>
+<rotoid>PM0018</rotoid>
+<tablelist>
+<table name="PMCTG" desc="Categories" />
+</tablelist>
+<protocollist>
+<protocol>Header</protocol></protocollist>
+<dllname>PMCTG</dllname>
+<compositionlist>
+<composition>
+<comprotoid>PM0475</comprotoid>
+<compdesc>Categories Detail View</compdesc>
+<compdll>PMCTGD</compdll>
+<comptablelist>
+<comptable name="PMCTGD" desc="Categories Detail View" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PM0510</comprotoid>
+<compdesc>Category Optional Fields</compdesc>
+<compdll>PMCTGO</compdll>
+<comptablelist>
+<comptable name="PMCTGO" desc="Category Optional Fields" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Category</keytitle>
+<keyfieldlist>
+<keyfield>CATEGORY</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc>^3</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-16N</mask></field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COSTTYPE</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Cost Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-10N</mask></field>
+<field>
+<fieldname>TYPE</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Cost Class</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Labor" /><fieldpresent index="2" value="Material" /><fieldpresent index="3" value="Equipment" /><fieldpresent index="4" value="Subcontractor" /><fieldpresent index="5" value="Overhead" /><fieldpresent index="6" value="Miscellaneous" /></fieldpresentlist></field>
+<field>
+<fieldname>INACTIVE</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Active" /><fieldpresent index="1" value="Inactive" /></fieldpresentlist></field>
+<field>
+<fieldname>DATELASTMN</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Maintained</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATEINACTV</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Inactive</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ARITEM</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc>A/R Item No.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-16C</mask></field>
+<field>
+<fieldname>UOM</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Unit of Measure</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-10C</mask></field>
+<field>
+<fieldname>UNITCOST</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Unit Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BILLRATE</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Billing Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OVERHD</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Overhead Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="None" /><fieldpresent index="2" value="Flat Rate Per Unit" /><fieldpresent index="5" value="Percentage of Cost" /></fieldpresentlist></field>
+<field>
+<fieldname>OHEADRATE</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Overhead Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HEADPER</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Overhead Percentage</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LABOR</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Labor Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="None" /><fieldpresent index="2" value="Flat Rate Per Labor Hour/Unit" /><fieldpresent index="3" value="Percentage of Labor Cost" /></fieldpresentlist></field>
+<field>
+<fieldname>LABORRATE</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Labor Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LABORPER</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Labor Percentage</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PERRETPAID</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>A/P Retainage Percentage</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RETPAIDD</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>A/P Retention Period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGOVERRD</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Override G/L Account Segments</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGNUM1</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Segment 1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGVAL1</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Segment Code 1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGNUM2</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Segment 2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGVAL2</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Segment Code 2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGNUM3</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Segment 3</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGVAL3</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Segment Code 3</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGNUM4</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Segment 4</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGVAL4</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Segment Code 4</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGNUM5</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Segment 5</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGVAL5</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Segment Code 5</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGNUM6</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Segment 6</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGVAL6</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Segment Code 6</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGNUM7</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Segment 7</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGVAL7</fieldname>
+<fieldindex>34</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Segment Code 7</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGNUM8</fieldname>
+<fieldindex>35</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Segment 8</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGVAL8</fieldname>
+<fieldindex>36</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Segment Code 8</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGNUM9</fieldname>
+<fieldindex>37</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Segment 9</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGVAL9</fieldname>
+<fieldindex>38</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Segment Code 9</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PLCODE</fieldname>
+<fieldindex>39</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Reserved</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldindex>40</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

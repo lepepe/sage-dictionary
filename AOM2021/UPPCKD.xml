@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>UP UP0080 UPPCKD UPPCKD</keywords>
+<pagetitle>Print Checks Detail Extension</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="UPPCKD" desc="Print Checks Detail Extension">
+<view name="UP0080" desc="Print Checks Detail Extension" />
+<recordlength>161</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Sort Code</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SORTCODE</keyfield><keyfield>CATEGORY</keyfield><keyfield>EARNDED</keyfield><keyfield>LINETYPE</keyfield><keyfield>LINENO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Print Order</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SORTCODE</keyfield><keyfield>PCATEGORY</keyfield><keyfield>PLINETYPE</keyfield><keyfield>EARNDED</keyfield><keyfield>LINETYPE</keyfield><keyfield>LINENO</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SORTCODE</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Sort Code</fielddesc>
+</field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Category</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Accrual" /><fieldpresent index="2" value="Earning" /><fieldpresent index="3" value="Advance" /><fieldpresent index="4" value="Deduction" /><fieldpresent index="5" value="Expense Reimbursement" /><fieldpresent index="6" value="Benefit" /><fieldpresent index="7" value="Federal Tax" /><fieldpresent index="8" value="State Tax" /><fieldpresent index="9" value="Local Tax" /><fieldpresent index="10" value="User Tax" /><fieldpresent index="11" value="EFT Entry" /></fieldpresentlist></field>
+<field>
+<fieldname>EARNDED</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Earning/Deduction/Tax Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LINETYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Line Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Payment" /><fieldpresent index="2" value="Accrual" /><fieldpresent index="3" value="Regular" /><fieldpresent index="4" value="Overtime" /><fieldpresent index="5" value="Shift Differential" /><fieldpresent index="6" value="n/a" /><fieldpresent index="7" value="Normal Withholding" /><fieldpresent index="8" value="Backup Withholding" /><fieldpresent index="9" value="Supplemental Withholding" /></fieldpresentlist></field>
+<field>
+<fieldname>LINENO</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>SHORTDESC</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Short Desc</fielddesc>
+</field>
+<field>
+<fieldname>HOURS</fieldname>
+<fieldtype>BCD*4.3</fieldtype>
+<fielddesc>Number of Hours</fielddesc>
+</field>
+<field>
+<fieldname>ECNTBASE</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Base Amount</fielddesc>
+</field>
+<field>
+<fieldname>RATEFMT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Format</fielddesc>
+</field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Hourly Rate/Percent/Amount</fielddesc>
+</field>
+<field>
+<fieldname>CURRAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Current Amount</fielddesc>
+</field>
+<field>
+<fieldname>YTDAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>YTD Amount</fielddesc>
+</field>
+<field>
+<fieldname>BALANCE</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Accrual Balance</fielddesc>
+</field>
+<field>
+<fieldname>PCATEGORY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Printing Category</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="CHKD Earnings" /><fieldpresent index="2" value="CHKD Deductions" /><fieldpresent index="3" value="CHKD Taxes" /><fieldpresent index="4" value="CHKD Other" /><fieldpresent index="5" value="CHKD Benefits" /><fieldpresent index="6" value="CHKE EFT Entries" /></fieldpresentlist></field>
+<field>
+<fieldname>PLINETYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Printing Line type</fielddesc>
+<fieldpresentlist><fieldpresent index="11" value="CHKD Regular Line" /><fieldpresent index="11" value="CHKD Overtime Line" /><fieldpresent index="11" value="CHKD Shift Diff Line" /><fieldpresent index="14" value="CHKD Disbursed Tips" /><fieldpresent index="15" value="CHKD Vacation Payment" /><fieldpresent index="16" value="CHKD Sick Payment" /><fieldpresent index="17" value="CHKD Comp. Time Payment" /><fieldpresent index="21" value="CHKD Deduction Entry" /><fieldpresent index="31" value="CHKD Federal Income Entry" /><fieldpresent index="32" value="CHKD Federal Insurance Entry" /><fieldpresent index="33" value="CHKD Federal UI Entry" /><fieldpresent index="34" value="CHKD Federal Pension Entry" /><fieldpresent index="35" value="CHKD Federal Health Entry" /><fieldpresent index="36" value="CHKD Federal Other Entry" /><fieldpresent index="41" value="CHKD State Income Entry" /><fieldpresent index="42" value="CHKD State Insurance Entry" /><fieldpresent index="43" value="CHKD State UI Entry" /><fieldpresent index="44" value="CHKD State Pension Entry" /><fieldpresent index="45" value="CHKD State Health Entry" /><fieldpresent index="46" value="CHKD State Other Entry" /><fieldpresent index="51" value="CHKD Local Income Entry" /><fieldpresent index="52" value="CHKD Local Insurance Entry" /><fieldpresent index="53" value="CHKD Local UI Entry" /><fieldpresent index="54" value="CHKD Local Pension Entry" /><fieldpresent index="55" value="CHKD Local Health Entry" /><fieldpresent index="56" value="CHKD Local Other Entry" /><fieldpresent index="61" value="CHKD User Income Entry" /><fieldpresent index="62" value="CHKD User Insurance Entry" /><fieldpresent index="63" value="CHKD User UI Entry" /><fieldpresent index="64" value="CHKD User Pension Entry" /><fieldpresent index="65" value="CHKD User Health Entry" /><fieldpresent index="66" value="CHKD User Other Entry" /><fieldpresent index="71" value="CHKD Exp Reimbursement" /><fieldpresent index="72" value="CHKD Cash Advance" /><fieldpresent index="73" value="CHKD Reported Tips" /><fieldpresent index="74" value="CHKD Allocated Tips" /><fieldpresent index="75" value="CHKD Noncash Advance" /><fieldpresent index="76" value="CHKD Vac Accrual" /><fieldpresent index="77" value="CHKD Sick Accrual" /><fieldpresent index="78" value="CHKD Comp Accrual" /><fieldpresent index="81" value="CHKD Cash Benefit" /><fieldpresent index="82" value="CHKD Noncash Benefit" /><fieldpresent index="91" value="CHKE EFT Entry - Fixed Amount" /><fieldpresent index="92" value="CHKE EFT Entry - % of Gross Earnings" /><fieldpresent index="93" value="CHKE EFT Entry - % of Net Pay" /></fieldpresentlist></field>
+<field>
+<fieldname>POOLEDTIPS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pooled Tips</fielddesc>
+</field>
+<field>
+<fieldname>DISTCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Distribution Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>DISTRNAME</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Distribution Description</fielddesc>
+</field>
+<field>
+<fieldname>OYTDAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Other YTD Amount - RESERVED</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

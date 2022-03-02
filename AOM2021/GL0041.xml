@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>GL GL0041 GLREH GLREH</keywords>
+<pagetitle>Recurring Journal Headers</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Recurring Journal Headers</title>
+<rotoid>GL0041</rotoid>
+<tablelist>
+<table name="GLREH" desc="Recurring Journal Headers" />
+</tablelist>
+<protocollist>
+<protocol>Header</protocol></protocollist>
+<dllname>GLREH</dllname>
+<compositionlist>
+<composition>
+<comprotoid>GL0042</comprotoid>
+<compdesc>Recurring Entry Details</compdesc>
+<compdll>GLRED</compdll>
+<comptablelist>
+<comptable name="GLRED" desc="Recurring Entry Details" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Recurring Entries</keytitle>
+<keyfieldlist>
+<keyfield>RECID</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Schedule / Schedule Link</keytitle>
+<keyfieldlist>
+<keyfield>SCHEDKEY</keyfield>
+<keyfield>SCHEDLINK</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>RECID</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Recurring Entry Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-16C</mask></field>
+<field>
+<fieldname>RECDESC</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Recurring Entry Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATESTART</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SWEXPIRE</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Expiration Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No Expiration Date" /><fieldpresent index="1" value="Specific Date" /></fieldpresentlist></field>
+<field>
+<fieldname>DATEEXPIRY</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Expiration Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATERUN</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Run Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SWACTIVE</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Inactive" /><fieldpresent index="1" value="Active" /></fieldpresentlist></field>
+<field>
+<fieldname>DATEINACT</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Inactive Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATEMAINT</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Maintained Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SRCELEDGER</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Ledger</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2A</mask></field>
+<field>
+<fieldname>SRCETYPE</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SWREVERSE</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Auto Reversal</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Auto Reversal Off" /><fieldpresent index="1" value="Auto Reversal On" /></fieldpresentlist></field>
+<field>
+<fieldname>JRNLDESC</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Journal Entry Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SWEXRATE</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Exchange Rate Switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Use recurring entry rate" /><fieldpresent index="1" value="Use current rate" /></fieldpresentlist></field>
+<field>
+<fieldname>RDACCT</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Rounding Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>RECDR</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Debits</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECCR</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Credits</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECQTY</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Quantity</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NCOUNT</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reserved</fielddesc>
+<attributeflaglist>
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SCHEDKEY</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Schedule</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>SCHEDLINK</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Schedule Link</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ZEROSRCCNT</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Zero Source Amount Counter</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BALANCE</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Out of Balance By</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GSSTATUS</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Recurring Entry GL Sec. Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

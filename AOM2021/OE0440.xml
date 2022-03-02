@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>OE OE0440 OEMISC OEMISC</keywords>
+<pagetitle>Miscellaneous Charges</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Miscellaneous Charges</title>
+<rotoid>OE0440</rotoid>
+<tablelist>
+<table name="OEMISC" desc="Miscellaneous Charges" />
+</tablelist>
+<protocollist>
+<protocol>Header</protocol></protocollist>
+<dllname>OEMISC</dllname>
+<compositionlist>
+<composition>
+<comprotoid>OE0460</comprotoid>
+<compdesc>Miscellaneous Charge Taxes</compdesc>
+<compdll>OEMISCT</compdll>
+<comptablelist>
+<comptable name="OEMISCT" desc="Miscellaneous Charge Taxes" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0450</comprotoid>
+<compdesc>Misc. Charge Optional Fields</compdesc>
+<compdll>OEMISCO</compdll>
+<comptablelist>
+<comptable name="OEMISCO" desc="Misc. Charge Optional Fields" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Currency and Misc. Charge</keytitle>
+<keyfieldlist>
+<keyfield>CURRENCY</keyfield>
+<keyfield>MISCCHARGE</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Miscellaneous Charge</keytitle>
+<keyfieldlist>
+<keyfield>MISCCHARGE</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CURRENCY</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>MISCCHARGE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Miscellaneous Charge Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>MISCACCT</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Misc. Charge Revenue Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>AMOUNT</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>MISCACDESC</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Account Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PROCESSCMD</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Process Command</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Nothing to Process" /><fieldpresent index="1" value="Insert Optional Fields" /><fieldpresent index="2" value="Default and Tranfer Optional Fields" /><fieldpresent index="3" value="Default Opt. Fields During Record Generation" /><fieldpresent index="4" value="Remove Optional Fields" /><fieldpresent index="5" value="Transfer Opt. Fields from Standing Document" /><fieldpresent index="21" value="Auto-generate Serials" /><fieldpresent index="22" value="Auto-generate Lots" /><fieldpresent index="23" value="Auto-allocate Serials" /><fieldpresent index="24" value="Auto-allocate Lots" /><fieldpresent index="25" value="Clear Serials" /><fieldpresent index="26" value="Clear Lots" /><fieldpresent index="27" value="Auto-assign Serials" /><fieldpresent index="28" value="Auto-assign Lots" /><fieldpresent index="29" value="Create List of Existing Serials/Lots" /><fieldpresent index="31" value="Post Serials/Lots to IC Inventory" /><fieldpresent index="32" value="Verify Serials/Lots" /></fieldpresentlist></field>
+<field>
+<fieldname>HASJOB</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Job Related</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXTCOST</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>MCCOSTEXP</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Misc. Charge Expense Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>MCCLEARING</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Misc. Charge Clearing Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>CSTEXPDESC</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Misc. Charge Cost Expense Account Desc</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>MCCLRDESC</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Misc. Charge Clearing Account Desc</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FUNCCURR</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Functional Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>TARIFFCODE</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>String*20</fieldtype>
+<fielddesc>Tariff Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

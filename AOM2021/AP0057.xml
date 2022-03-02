@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AP AP0057 APCTRL</keywords>
+<pagetitle>Control Payments</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Control Payments</title>
+<rotoid>AP0057</rotoid>
+<protocollist>
+<protocol>Superview</protocol></protocollist>
+<dllname>APCTRL</dllname>
+<keylist>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SWREQTYPE</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Request Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Specific Vendor" /><fieldpresent index="2" value="Vendor Range" /></fieldpresentlist></field>
+<field>
+<fieldname>IDVENDSTRT</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Starting Vendor Range</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>IDVENDEND</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Ending Vendor Range</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>IDVGRPSTRT</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Starting Group Range</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>IDVGRPEND</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Ending Group Range</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>IDDOCSTART</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Starting Document Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>IDDOCEND</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Ending Document Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>SWINCLINVC</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Include Invoices</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Do Not Include" /><fieldpresent index="1" value="Include" /></fieldpresentlist></field>
+<field>
+<fieldname>SWINCLCRED</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Include Credits Notes</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Do Not Include" /><fieldpresent index="1" value="Include" /></fieldpresentlist></field>
+<field>
+<fieldname>SWINCLDEB</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Include Debits Notes</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Do Not Include" /><fieldpresent index="1" value="Include" /></fieldpresentlist></field>
+<field>
+<fieldname>SWINCLPPD</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Include Prepayments</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Do Not Include" /><fieldpresent index="1" value="Include" /></fieldpresentlist></field>
+<field>
+<fieldname>CNTPAYSCHD</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Scheduled Payment Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SWSTATUS</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Desired Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="99" value="None" /><fieldpresent index="0" value="Normal" /><fieldpresent index="1" value="Hold" /><fieldpresent index="2" value="Force" /></fieldpresentlist></field>
+<field>
+<fieldname>AMTDISC</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Vendor Discount Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATEDUE</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Due Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATEDISC</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Discount Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATEACTIVE</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Activation Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SWINCLINT</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Include Interest</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Do Not Include" /><fieldpresent index="1" value="Include" /></fieldpresentlist></field>
+<field>
+<fieldname>SWPYMLM</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Clear Payment Limit</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>AMTPYMLM</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Payment Limit</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

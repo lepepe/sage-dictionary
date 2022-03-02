@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0777 PORQNLV PORQNLV</keywords>
+<pagetitle>Requisition Vendors</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Requisition Vendors</title>
+<rotoid>PO0777</rotoid>
+<tablelist>
+<table name="PORQNLV" desc="Requisition Vendors" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>PORQNLV</dllname>
+<compositionlist>
+<composition>
+<comprotoid>PO0760</comprotoid>
+<compdesc>Requisitions</compdesc>
+<compdll>PORQNH</compdll>
+<comptablelist>
+<comptable name="PORQNH1" desc="Requisitions" />
+<comptable name="PORQNH2" desc="Requisitions" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0759</comprotoid>
+<compdesc>Requisition Functions</compdesc>
+<compdll>PORQNG</compdll>
+<comptablelist>
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0770</comprotoid>
+<compdesc>Requisition Lines</compdesc>
+<compdll>PORQNL</compdll>
+<comptablelist>
+<comptable name="PORQNL" desc="Requisition Lines" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Master key</keytitle>
+<keyfieldlist>
+<keyfield>RQNHSEQ</keyfield>
+<keyfield>VDCODE</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>RQNHSEQ</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Requisition Sequence Key</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VDCODE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>LINES</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LINESCMPL</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines Complete</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>INDBTABLE</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Stored in Database Table</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>VDEXISTS</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Vendor Exists</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>CURRENCY</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SPREAD</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Rate Spread</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEMATCH</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Match Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RATEOPER</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operation</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>RATEOVER</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Rate Overridden</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SCURNDECML</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Decimal Places</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EXTENDED</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FCEXTENDED</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Extended Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ISCOMPLETE</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Completed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DTCOMPLETE</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Completed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CURRENCYD</fieldname>
+<fieldindex>300</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Currency Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RATETYPED</fieldname>
+<fieldindex>301</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Rate Type Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VEND</fieldname>
+<fieldindex>302</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Vendors</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VENDCMPL</fieldname>
+<fieldindex>303</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Vendors Completed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LOCKED</fieldname>
+<fieldindex>304</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Document Locked</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RATEEXISTS</fieldname>
+<fieldindex>305</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Exchange Rate Exists</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>HASDETAILS</fieldname>
+<fieldindex>306</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Has Details</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>PROCESSCMD</fieldname>
+<fieldindex>307</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Command</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Nothing to Process" /><fieldpresent index="1" value="Insert Optional Fields" /><fieldpresent index="2" value="Default and Tranfer Optional Fields" /><fieldpresent index="3" value="Default Opt. Fields During Record Generation" /><fieldpresent index="4" value="Remove Optional Fields" /><fieldpresent index="5" value="Transfer Opt. Fields from Standing Document" /><fieldpresent index="6" value="Insert Item Serial Optional Fields" /><fieldpresent index="7" value="Insert Item Lot Optional Fields" /><fieldpresent index="21" value="Auto-generate Serials" /><fieldpresent index="22" value="Auto-generate Lots" /><fieldpresent index="23" value="Auto-allocate Serials" /><fieldpresent index="24" value="Auto-allocate Lots" /><fieldpresent index="25" value="Clear Serials" /><fieldpresent index="26" value="Clear Lots" /><fieldpresent index="27" value="Auto-assign Serials" /><fieldpresent index="28" value="Auto-assign Lots" /><fieldpresent index="29" value="Create Serials/Lots List" /><fieldpresent index="31" value="Post Serials/Lots to IC Inventory" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

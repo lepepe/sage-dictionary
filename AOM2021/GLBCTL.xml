@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>GL GL0008 GLBCTL GLBCTL</keywords>
+<pagetitle>Batches</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="GLBCTL" desc="Batches">
+<view name="GL0008" desc="Batches" />
+<recordlength>159</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Batch</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BATCHID</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Status</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BATCHSTAT</keyfield><keyfield>BATCHID</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>BATCHID</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Batch Number</fielddesc>
+<mask>%06D</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>ACTIVESW</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Active Switch</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Inactive" /><fieldpresent index="1" value="Active" /></fieldpresentlist></field>
+<field>
+<fieldname>BTCHDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>SRCELEDGR</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Ledger</fielddesc>
+<mask>%-2A</mask></field>
+<field>
+<fieldname>DATECREAT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Created</fielddesc>
+</field>
+<field>
+<fieldname>DATEEDIT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Edited</fielddesc>
+</field>
+<field>
+<fieldname>BATCHTYPE</fieldname>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Type</fielddesc>
+<fieldpresentlist><fieldpresent index=" 1" value="Entered" /><fieldpresent index=" 2" value="Subledger" /><fieldpresent index=" 3" value="Imported" /><fieldpresent index=" 4" value="Generated" /><fieldpresent index=" 5" value="Recurring" /></fieldpresentlist></field>
+<field>
+<fieldname>BATCHSTAT</fieldname>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Status</fielddesc>
+<fieldpresentlist><fieldpresent index=" 1" value="Open" /><fieldpresent index=" 3" value="Deleted" /><fieldpresent index=" 4" value="Posted" /><fieldpresent index=" 6" value="Prov. Posted" /><fieldpresent index=" 8" value="Post In Progress" /><fieldpresent index=" 9" value="Ready To Post" /><fieldpresent index=" A" value="Prov. Post In Progress" /></fieldpresentlist></field>
+<field>
+<fieldname>POSTNGSEQ</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>DEBITTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Debits</fielddesc>
+</field>
+<field>
+<fieldname>CREDITTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Credits</fielddesc>
+</field>
+<field>
+<fieldname>QTYTOTAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Quantity Total</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYCNT</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Number of Entries</fielddesc>
+</field>
+<field>
+<fieldname>NEXTENTRY</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Next Entry Number</fielddesc>
+</field>
+<field>
+<fieldname>ERRORCNT</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>No. of Errors</fielddesc>
+</field>
+<field>
+<fieldname>ORIGSTATUS</fieldname>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Original Status</fielddesc>
+</field>
+<field>
+<fieldname>SWPRINTED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWICT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>ICT Related</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWRVRECOG</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Revaluation(Recognized) Batch</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

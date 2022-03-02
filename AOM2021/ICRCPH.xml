@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0560 ICRCPH ICRCPH</keywords>
+<pagetitle>Receipt Not Costed Headers</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICRCPH" desc="Receipt Not Costed Headers">
+<view name="IC0560" desc="Receipt Not Costed Headers" />
+<recordlength>304</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Sequence Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SEQUENCENO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Transaction Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TRANSNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>IC-Unique Document Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DOCUNIQ</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SEQUENCENO</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>TRANSNUM</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Transaction Number</fielddesc>
+</field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+</field>
+<field>
+<fieldname>FISCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%4D</mask></field>
+<field>
+<fieldname>FISCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+</field>
+<field>
+<fieldname>VENDNUM</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>PONUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Purchase Order Number</fielddesc>
+</field>
+<field>
+<fieldname>RECPNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Receipt Number</fielddesc>
+</field>
+<field>
+<fieldname>RECPCUR</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Source Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RECPRATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operation</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>RATEOVRRD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Rate Override</fielddesc>
+</field>
+<field>
+<fieldname>ADDCOST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Additional Cost</fielddesc>
+</field>
+<field>
+<fieldname>ADDCSTCUR</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Additional Cost Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>TOTCSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Receipt Cost - Func.</fielddesc>
+</field>
+<field>
+<fieldname>TOTCSTSRC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Receipt Cost - Source</fielddesc>
+</field>
+<field>
+<fieldname>NUMDETAILS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Number of Details with Cost</fielddesc>
+</field>
+<field>
+<fieldname>COMPLETE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Receipt Complete</fielddesc>
+</field>
+<field>
+<fieldname>HDRDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>ADDCSTTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Addt'l. Cost Allocation Method</fielddesc>
+</field>
+<field>
+<fieldname>DOCUNIQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>IC-Unique Document Number</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>STATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Record Status</fielddesc>
+<fieldpresentlist><fieldpresent index="2" value="Posted" /><fieldpresent index="3" value="Costed" /></fieldpresentlist></field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

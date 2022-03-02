@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0006 ARR06 ARR06</keywords>
+<pagetitle>G/L Integration Options</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ARR06" desc="G/L Integration Options">
+<view name="AR0006" desc="G/L Integration Options" />
+<recordlength>99</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Integration Options Key</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDR06</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>IDR06</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Integration Options Key</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>DATELASTMN</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Maintained</fielddesc>
+</field>
+<field>
+<fieldname>SWGLPSTDFR</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Defer Create G/L Batch</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="During Posting" /><fieldpresent index="1" value="On Request Using Create G/L Batch Icon" /></fieldpresentlist></field>
+<field>
+<fieldname>SWGLAPDBTH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Create G/L Transactions By</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Adding to an Existing Batch" /><fieldpresent index="0" value="Creating a New Batch" /><fieldpresent index="2" value="Creating and Posting a New Batch" /></fieldpresentlist></field>
+<field>
+<fieldname>SWGLPSTCON</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Consolidate G/L Transactions</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Do Not Consolidate" /><fieldpresent index="1" value="Consolidate by Post Seq., Account and Fiscal Period" /><fieldpresent index="2" value="Consolidate by Post Seq., Account, Fiscal Period and Source" /></fieldpresentlist></field>
+<field>
+<fieldname>CODEGLREF</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>RESERVED: G/L Reference Field</fielddesc>
+</field>
+<field>
+<fieldname>CODEGLDESC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>RESERVED: G/L Description Field</fielddesc>
+</field>
+<field>
+<fieldname>GLPAYMPOST</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Last Receipt Posting Seq. to G/L</fielddesc>
+</field>
+<field>
+<fieldname>GLINVCPOST</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Last Invoice Posting Seq. to G/L</fielddesc>
+</field>
+<field>
+<fieldname>GLADJPOST</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Last Adj. Posting Seq. to G/L</fielddesc>
+</field>
+<field>
+<fieldname>GLRVALPOST</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Last Reval. Posting Seq. to G/L</fielddesc>
+</field>
+<field>
+<fieldname>GLRFPOST</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Last Refund Posting Seq. to G/L</fielddesc>
+</field>
+<field>
+<fieldname>SRCTYPEIN</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Invoice</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEDB</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Debit Note</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPECR</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Credit Note</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEIT</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Interest</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEPY</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Payment Received</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEED</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Discount</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEGL</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Revaluation</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEAD</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Adjustment</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPECO</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Consolidation</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEWO</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Write-Off</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEPI</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Prepayment</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEUC</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Unapplied Cash</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPERF</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Refund</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPERD</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Rounding</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEPYR</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Payment Reversal</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPERFR</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>G/L Src code - Refund Reversal</fielddesc>
+<mask>%-2N</mask></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

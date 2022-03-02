@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0980 POXLOT ICXLOT</keywords>
+<pagetitle>Inventory Lot Numbers</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Inventory Lot Numbers</title>
+<rotoid>PO0980</rotoid>
+<tablelist>
+<table name="ICXLOT" desc="Inventory Lot Numbers" />
+</tablelist>
+<protocollist>
+<protocol>Header</protocol></protocollist>
+<dllname>POXLOT</dllname>
+<compositionlist>
+<composition>
+<comprotoid>IC0812</comprotoid>
+<compdesc>Lot Optional Fields</compdesc>
+<compdll>ICXLOTO</compdll>
+<comptablelist>
+<comptable name="ICXLOTO" desc="Lot Optional Fields" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Lot/Item/Location</keytitle>
+<keyfieldlist>
+<keyfield>LOTNUM</keyfield>
+<keyfield>ITEMNUM</keyfield>
+<keyfield>LOCATION</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Item/Lot</keytitle>
+<keyfieldlist>
+<keyfield>ITEMNUM</keyfield>
+<keyfield>LOTNUM</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Location/Item</keytitle>
+<keyfieldlist>
+<keyfield>LOCATION</keyfield>
+<keyfield>ITEMNUM</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Location/Lot</keytitle>
+<keyfieldlist>
+<keyfield>LOCATION</keyfield>
+<keyfield>LOTNUM</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Item/Location/Qty. Level/Lot</keytitle>
+<keyfieldlist>
+<keyfield>ITEMNUM</keyfield>
+<keyfield>LOCATION</keyfield>
+<keyfield>QTYLEVEL</keyfield>
+<keyfield>LOTNUM</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Item/Location/Qty. Level/Stock D</keytitle>
+<keyfieldlist>
+<keyfield>ITEMNUM</keyfield>
+<keyfield>LOCATION</keyfield>
+<keyfield>QTYLEVEL</keyfield>
+<keyfield>STOCKDATE</keyfield>
+<keyfield>LOTNUM</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Item/Location/Qty. Level/Expiry</keytitle>
+<keyfieldlist>
+<keyfield>ITEMNUM</keyfield>
+<keyfield>LOCATION</keyfield>
+<keyfield>QTYLEVEL</keyfield>
+<keyfield>EXPIRYDATE</keyfield>
+<keyfield>LOTNUM</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Stock Date/Qty Avail/Asset Qty/A</keytitle>
+<keyfieldlist>
+<keyfield>STOCKDATE</keyfield>
+<keyfield>QTYAVAIL</keyfield>
+<keyfield>ASSETQTY</keyfield>
+<keyfield>ITEMNUM</keyfield>
+<keyfield>LOCATION</keyfield>
+<keyfield>LOTNUM</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>LOTNUM</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Unformatted Lot Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ITEMNUM</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Unformatted Item Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>QTYAVAIL</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Available</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYORDED</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity On order</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>STOCKDATE</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Stock Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EXPIRYDATE</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Expiry Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QUARTRELDT</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Quarantine Release Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LOTNUMF</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Lot Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYLEVEL</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Quantity Level</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Quantity Zero" /><fieldpresent index="1" value="Quantity Above Zero" /><fieldpresent index="-1" value="Quantity Below Zero" /></fieldpresentlist></field>
+<field>
+<fieldname>ASSETQTY</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity For Costing</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ASSETCOST</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cost for Costing</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECALLED</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Recalled</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RECALLDATE</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Recalled</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CONTCODE</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Contract Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>INUSE1</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Contract Period 1 In Use</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATE1</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Contract Period 1 Expiry Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EFFDATE1</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Contract Period 1 Effective Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LIFECONT1</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Contract Period 1 Lifetime</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>INUSE2</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Contract Period 2 In Use</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATE2</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Contract Period 2 Expiry Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EFFDATE2</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Contract Period 2 Effective Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LIFECONT2</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Contract Period 2 Lifetime</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>INUSE3</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Contract Period 3 In Use</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATE3</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Contract Period 3 Expiry Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EFFDATE3</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Contract Period 3 Effective Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LIFECONT3</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Contract Period 3 Lifetime</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>INUSE4</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Contract Period 4 In Use</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATE4</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Contract Period 4 Expiry Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EFFDATE4</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Contract Period 4 Effective Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LIFECONT4</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Contract Period 4 Lifetime</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>INUSE5</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Contract Period 5 In Use</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATE5</fieldname>
+<fieldindex>34</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Contract Period 5 Expiry Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EFFDATE5</fieldname>
+<fieldindex>35</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Contract Period 5 Effective Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LIFECONT5</fieldname>
+<fieldindex>36</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Contract Period 5 Lifetime</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ONQUART</fieldname>
+<fieldindex>37</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lot On Quarantine</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ONQUARTDT</fieldname>
+<fieldindex>38</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Quarantineed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>STATUS</fieldname>
+<fieldindex>50</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Not Available" /><fieldpresent index="1" value="Available" /></fieldpresentlist></field>
+<field>
+<fieldname>CONTDESC</fieldname>
+<fieldindex>51</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DESC1</fieldname>
+<fieldindex>52</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Contract Period 1 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DESC2</fieldname>
+<fieldindex>53</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Contract Period 2 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DESC3</fieldname>
+<fieldindex>54</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Contract Period 3 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DESC4</fieldname>
+<fieldindex>55</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Contract Period 4 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DESC5</fieldname>
+<fieldindex>56</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Contract Period 5 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYSHPABLE</fieldname>
+<fieldindex>57</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Shippable</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ASSETUCST</fieldname>
+<fieldindex>58</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Asset Unit Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EDITFROMUI</fieldname>
+<fieldindex>59</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Updated by UI?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>HOMECURDEC</fieldname>
+<fieldindex>60</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Home Currency Decimals</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>TX TX0011 TXAUDH TXAUDH</keywords>
+<pagetitle>Tax Tracking</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="TXAUDH" desc="Tax Tracking">
+<view name="TX0011" desc="Tax Tracking" />
+<recordlength>398</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Tax Tracking Sequence</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SEQUENCE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Tax Tracking by Fiscal Period</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>AUTHORITY</keyfield><keyfield>TYPE</keyfield><keyfield>FISCYEAR</keyfield><keyfield>FISCPERIOD</keyfield><keyfield>CUSTVEND</keyfield><keyfield>DOCDATE</keyfield><keyfield>SRCEAPP</keyfield><keyfield>DOCTYPE</keyfield><keyfield>DOCNUMBER</keyfield><keyfield>SEQUENCE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Tax Tracking by Customer/Vendor</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>AUTHORITY</keyfield><keyfield>TYPE</keyfield><keyfield>CUSTVEND</keyfield><keyfield>DOCDATE</keyfield><keyfield>SRCEAPP</keyfield><keyfield>DOCTYPE</keyfield><keyfield>DOCNUMBER</keyfield><keyfield>SEQUENCE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Tax Tracking by Document Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>AUTHORITY</keyfield><keyfield>TYPE</keyfield><keyfield>DOCDATE</keyfield><keyfield>BUYERCLASS</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SEQUENCE</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Sequence</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUTHORITY</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Sales" /><fieldpresent index="2" value="Purchases" /></fieldpresentlist></field>
+<field>
+<fieldname>FISCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%4D</mask></field>
+<field>
+<fieldname>FISCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="1" /><fieldpresent index="2" value="2" /><fieldpresent index="3" value="3" /><fieldpresent index="4" value="4" /><fieldpresent index="5" value="5" /><fieldpresent index="6" value="6" /><fieldpresent index="7" value="7" /><fieldpresent index="8" value="8" /><fieldpresent index="9" value="9" /><fieldpresent index="10" value="10" /><fieldpresent index="11" value="11" /><fieldpresent index="12" value="12" /></fieldpresentlist></field>
+<field>
+<fieldname>CUSTVEND</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer/Vendor ID</fielddesc>
+</field>
+<field>
+<fieldname>DOCDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Document Date</fielddesc>
+</field>
+<field>
+<fieldname>SRCEAPP</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Application</fielddesc>
+</field>
+<field>
+<fieldname>DOCTYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Document Type</fielddesc>
+</field>
+<field>
+<fieldname>DOCNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document No.</fielddesc>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>BUYERCLASS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Cust/Vend Tax Class</fielddesc>
+</field>
+<field>
+<fieldname>COUNTRY</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Country Code</fielddesc>
+</field>
+<field>
+<fieldname>REPORTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Report Date</fielddesc>
+</field>
+<field>
+<fieldname>DESCRIPTIO</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>ISFOREIGN</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Foreign Invoice</fielddesc>
+</field>
+<field>
+<fieldname>HCURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Home Currency Code</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SCURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Source Currency Code</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Rate</fielddesc>
+</field>
+<field>
+<fieldname>CUSTVENDNM</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Customer/Vendor Name</fielddesc>
+</field>
+<field>
+<fieldname>SDECIMAL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Decimals in Source Currency</fielddesc>
+</field>
+<field>
+<fieldname>SINVAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Invoice Amt in Source Currency</fielddesc>
+</field>
+<field>
+<fieldname>HINVAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Invoice Amt in Func. Currency</fielddesc>
+</field>
+<field>
+<fieldname>RECOVERABL</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Recoverable</fielddesc>
+</field>
+<field>
+<fieldname>EXPSEPARTE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Expense Separately</fielddesc>
+</field>
+<field>
+<fieldname>RATERECOV</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Recoverable Rate</fielddesc>
+</field>
+<field>
+<fieldname>SRECOVRAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Recov. Amt in Source Currency</fielddesc>
+</field>
+<field>
+<fieldname>HRECOVRAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Recov. Amt in Func. Currency</fielddesc>
+</field>
+<field>
+<fieldname>TCURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Tax Reporting Currency Code</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>TDECIMAL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Decimals in Tax Reporting Currency</fielddesc>
+</field>
+<field>
+<fieldname>TRATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Tax Reporting Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>TRATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Tax Reporting Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>TRATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Tax Reporting Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operation</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide  " /></fieldpresentlist></field>
+<field>
+<fieldname>TRATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Reporting Rate Operation</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide  " /></fieldpresentlist></field>
+<field>
+<fieldname>TRECOVRAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Recov. Amt in Tax Reporting Currency</fielddesc>
+</field>
+<field>
+<fieldname>SRCEDOCNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Source Document Number</fielddesc>
+</field>
+<field>
+<fieldname>ID1099CLAS</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Withholding Tax 1099/CPRS Code</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

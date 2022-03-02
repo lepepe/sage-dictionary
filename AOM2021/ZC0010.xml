@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>ZC ZC0010 ZCIAUDV ZCIAUD</keywords>
+<pagetitle>Import Audit</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Import Audit</title>
+<rotoid>ZC0010</rotoid>
+<tablelist>
+<table name="ZCIAUD" desc="Import Audit" />
+</tablelist>
+<protocollist>
+<protocol>Flat</protocol></protocollist>
+<dllname>ZCIAUDV</dllname>
+<keylist>
+<key>
+<keytitle>Import Sequence</keytitle>
+<keyfieldlist>
+<keyfield>IMPSEQNR</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Export Unit And Sequence</keytitle>
+<keyfieldlist>
+<keyfield>UNITID</keyfield>
+<keyfield>PROCESS</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Unit, Fiscal Year And Period</keytitle>
+<keyfieldlist>
+<keyfield>UNITID</keyfield>
+<keyfield>FISCYR</keyfield>
+<keyfield>FISCPERD</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Import Date</keytitle>
+<keyfieldlist>
+<keyfield>IMPDATE</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>IMPSEQNR</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Import Sequence Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EXPSEQNR</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Export Sequence Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>UNITID</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Process Unit ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-4N</mask></field>
+<field>
+<fieldname>PROCESS</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Process ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>DESTCURN</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Destination Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>IMPSEGS</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Segments</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPSRC</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Source Codes</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPACCTS</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Accounts</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUDS</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budgets</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPTRANS</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Transactions</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Different Method" /><fieldpresent index="4" value="Different Period" /><fieldpresent index="5" value="Missing" /><fieldpresent index="6" value="Aborted" /><fieldpresent index="7" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPMAP</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Mapping Table</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUD1</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budget Set 1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUD2</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budget Set 2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUD3</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budget Set 3</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUD4</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budget Set 4</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUD5</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budget Set 5</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>MAPTBL</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Mapping Table</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>IMPMETH</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Net Changes" /><fieldpresent index="1" value="Transactions By Posting Sequence" /><fieldpresent index="2" value="Transactions By Fiscal Period" /><fieldpresent index="3" value="Balances" /><fieldpresent index="4" value="N/A" /></fieldpresentlist></field>
+<field>
+<fieldname>MAPMETH</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Mapping Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Generate Error For Unmapped Accounts" /><fieldpresent index="1" value="Only Map Accounts In Table" /><fieldpresent index="2" value="Only Transfer Mapped Accounts" /></fieldpresentlist></field>
+<field>
+<fieldname>USESEGS</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Use Segments</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>USESRCCODE</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Use Source Codes</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>FISCYR</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPERD</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%02D</mask></field>
+<field>
+<fieldname>PSEQFR</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>From Posting Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PSEQTO</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>To Posting Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PSEQHI</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Highest Posting Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PSEQLO</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Lowest Posting Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FISCYRHI</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Highest Fiscal Year</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPERDHI</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Highest Fiscal Period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%02D</mask></field>
+<field>
+<fieldname>FISCYRLO</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Lowest Fiscal Year</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPERDLO</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Lowest Fiscal Period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%02D</mask></field>
+<field>
+<fieldname>TOTTRNFILE</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Total Trans. Files In Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TOTTRNRECS</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Trans. Records In Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TOTACCRECS</fieldname>
+<fieldindex>34</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Account Records In Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TOTSRCRECS</fieldname>
+<fieldindex>35</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Src Code Records In Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TOTSEGRECS</fieldname>
+<fieldindex>36</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Segment Records In Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TOTBDGRECS</fieldname>
+<fieldindex>37</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Budget Records In Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>MULTICURN</fieldname>
+<fieldindex>38</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Was For Multi Curr. Co.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Single" /><fieldpresent index="1" value="Multi" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPDATE</fieldname>
+<fieldindex>39</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Exported</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>IMPUSER</fieldname>
+<fieldindex>40</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>User That Did Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EXPCOMP</fieldname>
+<fieldindex>41</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Exporting Company</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SRCCURN</fieldname>
+<fieldindex>42</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Func. Currency Of Exporting Co.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>VERSION</fieldname>
+<fieldindex>43</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Program Version</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>IMPOFDS</fieldname>
+<fieldindex>44</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Opt. Flds from G/L Setup</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>TOTOFDRECS</fieldname>
+<fieldindex>45</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Opt. Flds Recs In Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>IMPACTOPT</fieldname>
+<fieldindex>46</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Account Opt. Fields</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPTRANOPT</fieldname>
+<fieldindex>47</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Trans. Opt. Fields</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPCSOFDS</fieldname>
+<fieldindex>48</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Opt. Field from C/S Setup</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>TOTCSOFDS</fieldname>
+<fieldindex>49</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total C/S Setup Opt. Flds In Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>IMPACCTGRP</fieldname>
+<fieldindex>50</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Account Groups</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>TOTAGPRECS</fieldname>
+<fieldindex>51</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Account Groups In Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PRINTED</fieldname>
+<fieldindex>52</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Record Printed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPDATE</fieldname>
+<fieldindex>53</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Actually Imported</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FIRBTCH</fieldname>
+<fieldindex>54</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>First Batch Created For Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LSTBTCH</fieldname>
+<fieldindex>55</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Last Batch Created For Import</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CLRSEL</fieldname>
+<fieldindex>56</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Clear Deselected Data</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DUPL</fieldname>
+<fieldindex>57</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Duplication Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="Same Posting Seq." /><fieldpresent index="2" value="Same Fiscal Period" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPSTATE</fieldname>
+<fieldindex>58</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import State</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Aborted" /><fieldpresent index="1" value="Deleted" /><fieldpresent index="2" value="Imported" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

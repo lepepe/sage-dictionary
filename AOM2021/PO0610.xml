@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0610 POPORC POPORC</keywords>
+<pagetitle>Purchase Order Comments</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Purchase Order Comments</title>
+<rotoid>PO0610</rotoid>
+<tablelist>
+<table name="POPORC" desc="Purchase Order Comments" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Sequenced revisions</protocol><protocol>Key auto generate</protocol></protocollist>
+<dllname>POPORC</dllname>
+<compositionlist>
+<composition>
+<comprotoid>PO0620</comprotoid>
+<compdesc>Purchase Orders</compdesc>
+<compdll>POPORH</compdll>
+<comptablelist>
+<comptable name="POPORH1" desc="Purchase Orders" />
+<comptable name="POPORH2" desc="Purchase Orders" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0630</comprotoid>
+<compdesc>Purchase Order Lines</compdesc>
+<compdll>POPORL</compdll>
+<comptablelist>
+<comptable name="POPORL" desc="Purchase Order Lines" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Comment Key</keytitle>
+<keyfieldlist>
+<keyfield>PORHSEQ</keyfield>
+<keyfield>PORCREV</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Comment Line Key</keytitle>
+<keyfieldlist>
+<keyfield>PORHSEQ</keyfield>
+<keyfield>PORCSEQ</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PORHSEQ</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Purchase Order Sequence Key</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PORCREV</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Comment Identifier</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PORCSEQ</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Purchase Order Comment Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>INDBTABLE</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Stored in Database Table</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>COMMENTTYP</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Line Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Comment" /><fieldpresent index="2" value="Instruction" /></fieldpresentlist></field>
+<field>
+<fieldname>COMMENT</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*80</fieldtype>
+<fielddesc>Comments/Instructions</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

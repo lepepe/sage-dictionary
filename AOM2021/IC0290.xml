@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0290 ICILOC ICILOC</keywords>
+<pagetitle>Location Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Location Details</title>
+<rotoid>IC0290</rotoid>
+<tablelist>
+<table name="ICILOC" desc="Location Details" />
+</tablelist>
+<protocollist>
+<protocol>Flat</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>ICILOC</dllname>
+<compositionlist>
+<composition>
+<comprotoid>IC0310</comprotoid>
+<compdesc>Items</compdesc>
+<compdll>ICITEM</compdll>
+<comptablelist>
+<comptable name="ICITEM" desc="Items" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0370</comprotoid>
+<compdesc>Locations</compdesc>
+<compdll>ICLOC</compdll>
+<comptablelist>
+<comptable name="ICLOC" desc="Locations" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0750</comprotoid>
+<compdesc>Units of Measure</compdesc>
+<compdll>ICUNIT</compdll>
+<comptablelist>
+<comptable name="ICUNIT" desc="Units of Measure" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Item Number</keytitle>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield>
+<keyfield>LOCATION</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Location</keytitle>
+<keyfieldlist>
+<keyfield>LOCATION</keyfield>
+<keyfield>ITEMNO</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Last Allocated Serial</keytitle>
+<keyfieldlist>
+<keyfield>LASTSERALC</keyfield>
+<keyfield>ITEMNO</keyfield>
+<keyfield>LOCATION</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Last Allocated Lot</keytitle>
+<keyfieldlist>
+<keyfield>LASTLOTALC</keyfield>
+<keyfield>ITEMNO</keyfield>
+<keyfield>LOCATION</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>PICKINGSEQ</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Picking Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ACTIVE</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allowed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATEACTIVE</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Location Activated</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>USED</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>In Use</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LASTUSED</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Used</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYONHAND</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity on Hand (Last Day End)</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYONORDER</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity on P/O</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYSALORDR</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity on S/O</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYOFFSET</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Not in Cost File</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYSHNOCST</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Shipped Not Costed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYRENOCST</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Received Not Costed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYADNOCST</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Adjusted Not Costed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NUMNOCST</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Uncosted Transactions</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TOTALCOST</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COSTOFFSET</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cost Not in Cost File</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COSTUNIT</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Cost Unit of Measure</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>COSTCONV</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Cost Unit Conversion Factor</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>STDCOST</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Standard Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LASTSTDCST</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Last Standard Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LASTSTDDAT</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Standard Cost Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LASTSHIPDT</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Shipment Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DAYSTOSHIP</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Average Days To Ship</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>UNITSSHIP</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Average Units Shipped</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SHIPMENTS</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Shipments Used In Calculation</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LASTRCPTDT</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Receipt Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECENTCOST</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Most Recent Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COST1</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>User Defined Cost 1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COST2</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>User Defined Cost 2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LASTCOST</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Last Unit Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYCOMMIT</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Committed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LASTSERALC</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>String*70</fieldtype>
+<fielddesc>Last Allocated Serial</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LASTLOTALC</fieldname>
+<fieldindex>34</fieldindex>
+<fieldtype>String*70</fieldtype>
+<fielddesc>Last Allocated Lot</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LEADTIME</fieldname>
+<fieldindex>35</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Lead Time (SIA)</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYMINREQ</fieldname>
+<fieldindex>36</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Inventory Minimum (SIA)</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYAVAIL</fieldname>
+<fieldindex>62</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Available to Ship</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CNTLACCT</fieldname>
+<fieldindex>63</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Account Set Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>AQTYONHAND</fieldname>
+<fieldindex>64</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity on Hand</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>AVGCOST</fieldname>
+<fieldindex>65</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Average Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COSTMETHOD</fieldname>
+<fieldindex>66</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Costing Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Moving Average" /><fieldpresent index="2" value="FIFO" /><fieldpresent index="3" value="LIFO" /><fieldpresent index="4" value="Standard Cost" /><fieldpresent index="5" value="Most Recent Cost" /><fieldpresent index="6" value="User-Specified" /><fieldpresent index="7" value="Serial" /><fieldpresent index="8" value="Lot" /></fieldpresentlist></field>
+<field>
+<fieldname>LOCDESC</fieldname>
+<fieldindex>67</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Name</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CHECKITEM</fieldname>
+<fieldindex>68</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Check Item Existence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

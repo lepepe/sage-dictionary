@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>TX TX0013 TXSTATEH TXSTATEH</keywords>
+<pagetitle>Tax State Headers</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="TXSTATEH" desc="Tax State Headers">
+<view name="TX0013" desc="Tax State Headers" />
+<recordlength>212</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Tax Group/Tran. Type/Version</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>GROUPID</keyfield><keyfield>TTYPE</keyfield><keyfield>VERSION</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Tax Group/Tran. Type/Hash Metric</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>GROUPID</keyfield><keyfield>TTYPE</keyfield><keyfield>HASHMETRIC</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>GROUPID</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Group</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Sales" /><fieldpresent index="2" value="Purchases" /></fieldpresentlist></field>
+<field>
+<fieldname>VERSION</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Version</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>HASHMETRIC</fieldname>
+<fieldtype>Binary*96</fieldtype>
+<fielddesc>Hash Metric</fielddesc>
+</field>
+<field>
+<fieldname>CREATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Creation Date</fielddesc>
+</field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>CALCMETHOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Calculation Method</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Calculate tax by summary" /><fieldpresent index="2" value="Calculate tax by detail" /></fieldpresentlist></field>
+<field>
+<fieldname>SRCCURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Tax Reporting Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>TRATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Tax Reporting Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>CNTTXAUTH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Number of Authorities</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0310 ICITEM ICITEM</keywords>
+<pagetitle>Items</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICITEM" desc="Items">
+<view name="IC0310" desc="Items" />
+<recordlength>990</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Item Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Category</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CATEGORY</keyfield><keyfield>ITEMNO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Alternate Item Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ALTSET</keyfield><keyfield>ITEMNO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Formatted Item Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>FMTITEMNO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Item Description</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DESC</keyfield><keyfield>ITEMNO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Allow in Web Store</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ALLOWONWEB</keyfield><keyfield>ITEMNO</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Unformatted Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>ALTSET</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Alternate Item Set Number</fielddesc>
+</field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTMN</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Maintained</fielddesc>
+</field>
+<field>
+<fieldname>INACTIVE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Active" /><fieldpresent index="1" value="Inactive" /></fieldpresentlist></field>
+<field>
+<fieldname>ITEMBRKID</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Structure Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>FMTITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Category</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CNTLACCT</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Account Set Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>STOCKITEM</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Stock Item</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>STOCKUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Stocking Unit of Measure</fielddesc>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>DEFPRICLST</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Price List Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>UNITWGT</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Unit Weight</fielddesc>
+</field>
+<field>
+<fieldname>PICKINGSEQ</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Default Picking Sequence</fielddesc>
+</field>
+<field>
+<fieldname>SERIALNO</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serial Numbers</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>COMMODIM</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Commodity Number</fielddesc>
+</field>
+<field>
+<fieldname>DATEINACTV</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Inactive</fielddesc>
+</field>
+<field>
+<fieldname>SEGMENT1</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 1</fielddesc>
+</field>
+<field>
+<fieldname>SEGMENT2</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 2</fielddesc>
+</field>
+<field>
+<fieldname>SEGMENT3</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 3</fielddesc>
+</field>
+<field>
+<fieldname>SEGMENT4</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 4</fielddesc>
+</field>
+<field>
+<fieldname>SEGMENT5</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 5</fielddesc>
+</field>
+<field>
+<fieldname>SEGMENT6</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 6</fielddesc>
+</field>
+<field>
+<fieldname>SEGMENT7</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 7</fielddesc>
+</field>
+<field>
+<fieldname>SEGMENT8</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 8</fielddesc>
+</field>
+<field>
+<fieldname>SEGMENT9</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 9</fielddesc>
+</field>
+<field>
+<fieldname>SEGMENT10</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 10</fielddesc>
+</field>
+<field>
+<fieldname>COMMENT1</fieldname>
+<fieldtype>String*80</fieldtype>
+<fielddesc>Comment 1</fielddesc>
+</field>
+<field>
+<fieldname>COMMENT2</fieldname>
+<fieldtype>String*80</fieldtype>
+<fielddesc>Comment 2</fielddesc>
+</field>
+<field>
+<fieldname>COMMENT3</fieldname>
+<fieldtype>String*80</fieldtype>
+<fielddesc>Comment 3</fielddesc>
+</field>
+<field>
+<fieldname>COMMENT4</fieldname>
+<fieldtype>String*80</fieldtype>
+<fielddesc>Comment 4</fielddesc>
+</field>
+<field>
+<fieldname>ALLOWONWEB</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Item in Web Store</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>KITTING</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Kitting Item</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>DEFKITNO</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Kit Number</fielddesc>
+</field>
+<field>
+<fieldname>SELLABLE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Sellable</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>WEIGHTUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Weight Unit of Measure</fielddesc>
+</field>
+<field>
+<fieldname>SERIALMASK</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Serial Number Mask</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>NEXTSERFMT</fieldname>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Next Serial Number</fielddesc>
+<mask>%-40c</mask></field>
+<field>
+<fieldname>SUSEEXPDAY</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Serials Days to Expire</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SEXPDAYS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Serials Days to Expire</fielddesc>
+</field>
+<field>
+<fieldname>SDIFQTYOK</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Different Serial Qty</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SVALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Serials Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>SWARYCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Serial Warranty Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SCONTCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Serial Contract Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SCONTRECE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serial is on Cont. When Received</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWARYSOLD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serial is on Warr. When Sold</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWARYREG</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serial is on Warr. When Registered</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LOTITEM</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lot Numbers</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LOTMASK</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Lot Number Mask</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>NEXTLOTFMT</fieldname>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Next Lot Number</fielddesc>
+<mask>%-40c</mask></field>
+<field>
+<fieldname>LUSEEXPDAY</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Lots Days to Expire</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LEXPDAYS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Lots Days to Expire</fielddesc>
+</field>
+<field>
+<fieldname>LUSEQRNDAY</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Lots Days on Quarantine</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LQRNDAYS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Lots Days on Quarantine</fielddesc>
+</field>
+<field>
+<fieldname>LDIFQTYOK</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Different Lot Qty</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LVALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lots Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>LWARYCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Lot Warranty Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LCONTCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Lot Contract Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LCONTRECE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lot is on Cont. When Received</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LWARYSOLD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lot is on Warr. When Sold</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>PREVENDTY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>SIA Preferred Vendor Type</fielddesc>
+</field>
+<field>
+<fieldname>DEFBOMNO</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default BOM Number</fielddesc>
+</field>
+<field>
+<fieldname>SEASONAL</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Seasonal?</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TARIFFCODE</fieldname>
+<fieldtype>String*20</fieldtype>
+<fielddesc>Tariff Code</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

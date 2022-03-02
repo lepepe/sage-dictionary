@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0031 ARIBC ARIBC</keywords>
+<pagetitle>Invoice Batches</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ARIBC" desc="Invoice Batches">
+<view name="AR0031" desc="Invoice Batches" />
+<recordlength>137</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Batch Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CNTBTCH</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Batch Status</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BTCHSTTS</keyfield><keyfield>CNTBTCH</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CNTBTCH</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Batch Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>DATEBTCH</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Batch Date</fielddesc>
+</field>
+<field>
+<fieldname>BTCHDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>CNTINVCENT</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Number of Entries</fielddesc>
+</field>
+<field>
+<fieldname>AMTENTR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Batch Total</fielddesc>
+</field>
+<field>
+<fieldname>BTCHTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Batch Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Entered" /><fieldpresent index="2" value="Imported" /><fieldpresent index="3" value="Recurring" /><fieldpresent index="4" value="Generated" /><fieldpresent index="5" value="External" /><fieldpresent index="6" value="Retainage" /></fieldpresentlist></field>
+<field>
+<fieldname>BTCHSTTS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Batch Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Open" /><fieldpresent index="3" value="Posted" /><fieldpresent index="4" value="Deleted" /><fieldpresent index="5" value="Post In Progress" /><fieldpresent index="7" value="Ready To Post" /></fieldpresentlist></field>
+<field>
+<fieldname>INVCTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Default Invoice Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Item" /><fieldpresent index="2" value="Summary" /></fieldpresentlist></field>
+<field>
+<fieldname>CNTLSTITEM</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Last Entry Number</fielddesc>
+</field>
+<field>
+<fieldname>POSTSEQNBR</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence No.</fielddesc>
+</field>
+<field>
+<fieldname>NBRERRORS</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Number of Errors</fielddesc>
+</field>
+<field>
+<fieldname>DTELSTEDIT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Edited</fielddesc>
+</field>
+<field>
+<fieldname>SWPRINTED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Batch Printed Flag</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SRCEAPPL</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Application</fielddesc>
+<mask>%-2A</mask></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

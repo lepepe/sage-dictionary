@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0210 ARCCREC</keywords>
+<pagetitle>Create Credit Card Receipts</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Create Credit Card Receipts</title>
+<rotoid>AR0210</rotoid>
+<protocollist>
+<protocol>Superview</protocol></protocollist>
+<dllname>ARCCREC</dllname>
+<compositionlist>
+<composition>
+<comprotoid>AR0211</comprotoid>
+<compdesc>Create Credit Card Receipts Dtl</compdesc>
+<compdll>ARCCRECD</compdll>
+<comptablelist>
+<comptable name="ARCCRECD" desc="Create Credit Card Receipts Dtl" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ASOFDATE</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>As Of Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FROMCUST</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>From Customer</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>TOCUST</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>To Customer</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>FROMGRP</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>From Cust. Group</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>TOGRP</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>To Cust. Group</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>FROMINV</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>From Document</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>TOINV</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>To Document</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>FROMPRCODE</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>From Processing Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TOPRCODE</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>To Processing Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>FROMTERM</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>From Terms Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>TOTERM</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>To Terms Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>FIRSTBTCH</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>First Receipt Batch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LASTBTCH</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Last Receipt Batch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PROCESSCMD</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Process</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="" /><fieldpresent index="1" value="Populate List" /><fieldpresent index="2" value="Process" /><fieldpresent index="3" value="Restore Default" /><fieldpresent index="4" value="Apply None" /><fieldpresent index="5" value="Apply All" /><fieldpresent index="6" value="CNA2 Process" /><fieldpresent index="7" value="CNA2 Quick Charge Part 1" /><fieldpresent index="8" value="CNA2 Quick Charge Part 2" /></fieldpresentlist></field>
+<field>
+<fieldname>TRANSID</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>String*36</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>XMLSTRING</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>String*20000</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RESPIND</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RESPCD</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RESPMSG</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>String*32</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>AUTHCODE</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>AVSRESULT</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CVVRESULT</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VANREF</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LAST4</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PMTDESC</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>String*30</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PMTTYPEID</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc></fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

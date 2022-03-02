@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0001 BKACCT BKACCT</keywords>
+<pagetitle>Banks</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="BKACCT" desc="Banks">
+<view name="BK0001" desc="Banks" />
+<recordlength>1504</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Bank Code</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>BANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>NAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>ADDR1</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 1</fielddesc>
+</field>
+<field>
+<fieldname>ADDR2</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 2</fielddesc>
+</field>
+<field>
+<fieldname>ADDR3</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 3</fielddesc>
+</field>
+<field>
+<fieldname>ADDR4</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 4</fielddesc>
+</field>
+<field>
+<fieldname>CITY</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>City</fielddesc>
+</field>
+<field>
+<fieldname>STATE</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>State/Province</fielddesc>
+</field>
+<field>
+<fieldname>COUNTRY</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Country</fielddesc>
+</field>
+<field>
+<fieldname>POSTAL</fieldname>
+<fieldtype>String*20</fieldtype>
+<fielddesc>Zip/Postal Code</fielddesc>
+</field>
+<field>
+<fieldname>CONTACT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Contact</fielddesc>
+</field>
+<field>
+<fieldname>PHONE</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Phone Number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>FAX</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Fax Number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>TRANSIT</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Transit Number</fielddesc>
+<mask>%-12D</mask></field>
+<field>
+<fieldname>MULTICUR</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Multicurrency</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>CURNSTMT</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Statement Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>INACTIVE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Active" /><fieldpresent index="1" value="Inactive" /></fieldpresentlist></field>
+<field>
+<fieldname>INACTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Inactive Date</fielddesc>
+</field>
+<field>
+<fieldname>BKACCT</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Bank Account Number</fielddesc>
+</field>
+<field>
+<fieldname>IDACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Bank Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>IDACCTERR</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Write-Off Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>ERRSPREAD</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Error Spread</fielddesc>
+</field>
+<field>
+<fieldname>LSTMNTND</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Maintained</fielddesc>
+</field>
+<field>
+<fieldname>RECFY</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>RECFP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="1 " /><fieldpresent index="2" value="2 " /><fieldpresent index="3" value="3 " /><fieldpresent index="4" value="4 " /><fieldpresent index="5" value="5 " /><fieldpresent index="6" value="6 " /><fieldpresent index="7" value="7 " /><fieldpresent index="8" value="8 " /><fieldpresent index="9" value="9 " /><fieldpresent index="10" value="10" /><fieldpresent index="11" value="11" /><fieldpresent index="12" value="12" /></fieldpresentlist></field>
+<field>
+<fieldname>RECLSTFY</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Last Reconciliation Year</fielddesc>
+</field>
+<field>
+<fieldname>RECLSTFP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Last Reconciliation Period</fielddesc>
+</field>
+<field>
+<fieldname>RECLSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Reconciliation Date</fielddesc>
+</field>
+<field>
+<fieldname>RECLSTBAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Closing Statement Balance</fielddesc>
+</field>
+<field>
+<fieldname>RECDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Reconciliation Date</fielddesc>
+</field>
+<field>
+<fieldname>RECSTMTDAT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Statement Date</fielddesc>
+</field>
+<field>
+<fieldname>RECSTMTBAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Statement Balance</fielddesc>
+</field>
+<field>
+<fieldname>RECINTRANS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposits in Transit</fielddesc>
+</field>
+<field>
+<fieldname>RECOUTSTND</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Checks Outstanding</fielddesc>
+</field>
+<field>
+<fieldname>RECBKENT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Not Posted Bank Entries</fielddesc>
+</field>
+<field>
+<fieldname>RECDEPOSIT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Deposits</fielddesc>
+</field>
+<field>
+<fieldname>RECCHECK</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Checks</fielddesc>
+</field>
+<field>
+<fieldname>RECFCDEP</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposits To Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>RECFCCHK</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Checks To Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>RECFCDEPIT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposits In Transit To Fisc.Per.</fielddesc>
+</field>
+<field>
+<fieldname>RECFCCHKOS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Checks Outstanding To Fisc.Per.</fielddesc>
+</field>
+<field>
+<fieldname>RECRECALC</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Calculate Fiscal Period Data</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Fiscal balances are up to date." /><fieldpresent index="1" value="Fiscal balances need to be recalculated." /></fieldpresentlist></field>
+<field>
+<fieldname>RECLSMDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Statement Date</fielddesc>
+</field>
+<field>
+<fieldname>RECFCBKENT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Difference of Bank Entries To Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>RECFCENTRE</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Not Posted Bank Entries To Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>IDACCTCCC</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Charges Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>CCCSPREAD</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Credit Card Charge Spread</fielddesc>
+</field>
+<field>
+<fieldname>EXSPREAD</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Exchange Rate Difference Spread</fielddesc>
+</field>
+<field>
+<fieldname>RECWTERR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Withdrawal Bank Errors</fielddesc>
+</field>
+<field>
+<fieldname>RECWTWO</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Withdrawal Write Offs</fielddesc>
+</field>
+<field>
+<fieldname>RECWTGAIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Withdrawal Exchange Gain</fielddesc>
+</field>
+<field>
+<fieldname>RECWTLOSS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Withdrawal Exchange Loss</fielddesc>
+</field>
+<field>
+<fieldname>RECWTCCC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Withdrawal Credit Card Charges</fielddesc>
+</field>
+<field>
+<fieldname>RECWTCLR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Withdrawal Cleared</fielddesc>
+</field>
+<field>
+<fieldname>RECWTFUNAM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Withdrawal Total</fielddesc>
+</field>
+<field>
+<fieldname>RECWPERR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Withdrawal Bank Errors</fielddesc>
+</field>
+<field>
+<fieldname>RECWPWO</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Withdrawal Write Offs</fielddesc>
+</field>
+<field>
+<fieldname>RECWPGAIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Withdrawal Exchange Gain</fielddesc>
+</field>
+<field>
+<fieldname>RECWPLOSS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Withdrawal Exchange Loss</fielddesc>
+</field>
+<field>
+<fieldname>RECWPCCC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Withdrawal Credit Card Charges</fielddesc>
+</field>
+<field>
+<fieldname>RECWPCLR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Withdrawal Cleared</fielddesc>
+</field>
+<field>
+<fieldname>RECWPFUNAM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Withdrawal Total</fielddesc>
+</field>
+<field>
+<fieldname>RECDTERR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Deposit Bank Errors</fielddesc>
+</field>
+<field>
+<fieldname>RECDTWO</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Deposit Write Offs</fielddesc>
+</field>
+<field>
+<fieldname>RECDTGAIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Deposit Exchange Gain</fielddesc>
+</field>
+<field>
+<fieldname>RECDTLOSS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Deposit Exchange Loss</fielddesc>
+</field>
+<field>
+<fieldname>RECDTCCC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Deposit Credit Card Charges</fielddesc>
+</field>
+<field>
+<fieldname>RECDTCLR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Deposit Cleared</fielddesc>
+</field>
+<field>
+<fieldname>RECDTFUNAM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposit Total</fielddesc>
+</field>
+<field>
+<fieldname>RECDPERR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Deposit Bank Errors</fielddesc>
+</field>
+<field>
+<fieldname>RECDPWO</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Deposit Write Offs</fielddesc>
+</field>
+<field>
+<fieldname>RECDPGAIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Deposit Exchange Gain</fielddesc>
+</field>
+<field>
+<fieldname>RECDPLOSS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Deposit Exchange Loss</fielddesc>
+</field>
+<field>
+<fieldname>RECDPCCC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Deposit Credit Card Charges</fielddesc>
+</field>
+<field>
+<fieldname>RECDPCLR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Deposit Cleared</fielddesc>
+</field>
+<field>
+<fieldname>RECDPFUNAM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Deposit Total</fielddesc>
+</field>
+<field>
+<fieldname>RECWFCLR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Withdrawal Cleared To Future</fielddesc>
+</field>
+<field>
+<fieldname>RECDFCLR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Deposit Cleared To Future</fielddesc>
+</field>
+<field>
+<fieldname>FUNWTAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Withdrawal Functional Total</fielddesc>
+</field>
+<field>
+<fieldname>FUNWPAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Withdrawal Functional Total</fielddesc>
+</field>
+<field>
+<fieldname>FUNDTAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposit Functional Total</fielddesc>
+</field>
+<field>
+<fieldname>FUNDPAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Deposit Functional Total</fielddesc>
+</field>
+<field>
+<fieldname>CODETXGRP</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Group Code</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TAXAUTH1</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authorization 1</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH2</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authorization 2</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH3</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authorization 3</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH4</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authorization 4</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH5</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authorization 5</fielddesc>
+</field>
+<field>
+<fieldname>TXVCLSS1</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Vendor Tax Class 1</fielddesc>
+</field>
+<field>
+<fieldname>TXVCLSS2</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Vendor Tax Class 2</fielddesc>
+</field>
+<field>
+<fieldname>TXVCLSS3</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Vendor Tax Class 3</fielddesc>
+</field>
+<field>
+<fieldname>TXVCLSS4</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Vendor Tax Class 4</fielddesc>
+</field>
+<field>
+<fieldname>TXVCLSS5</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Vendor Tax Class 5</fielddesc>
+</field>
+<field>
+<fieldname>AGEPURGE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Days Before Eligible for Clearing</fielddesc>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Reconciliation Date</fielddesc>
+</field>
+<field>
+<fieldname>LSTPOSTDAT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Reconciliation Date</fielddesc>
+</field>
+<field>
+<fieldname>LSTSTMTBAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Available Statement Balance</fielddesc>
+</field>
+<field>
+<fieldname>RECCOMMENT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Default Reconciliation Description</fielddesc>
+</field>
+<field>
+<fieldname>RECWEXDIFF</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Withdrawals Cleared with Exch. Rate Diff.</fielddesc>
+</field>
+<field>
+<fieldname>RECDEXDIFF</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposit Cleared with Exchange Rate Diff</fielddesc>
+</field>
+<field>
+<fieldname>BCACCT</fieldname>
+<fieldtype>Binary*32</fieldtype>
+<fielddesc>Banking Cloud Account</fielddesc>
+</field>
+<field>
+<fieldname>BCCONNECT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Banking Cloud Connected</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>BCLSTIDX</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Banking Cloud Last Index</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

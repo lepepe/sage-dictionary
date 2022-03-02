@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0041 ARBTA ARBTA</keywords>
+<pagetitle>Receipt and Adjustment Batches</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ARBTA" desc="Receipt and Adjustment Batches">
+<view name="AR0041" desc="Receipt and Adjustment Batches" />
+<recordlength>219</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Batch Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CODEPYMTYP</keyfield><keyfield>CNTBTCH</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Batch Status</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CODEPYMTYP</keyfield><keyfield>BATCHSTAT</keyfield><keyfield>CNTBTCH</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CODEPYMTYP</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Batch Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>CNTBTCH</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Batch Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>DATEBTCH</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Batch Date</fielddesc>
+</field>
+<field>
+<fieldname>BATCHDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>CNTENTER</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Number of Entries</fielddesc>
+</field>
+<field>
+<fieldname>AMTENTER</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Batch Total</fielddesc>
+</field>
+<field>
+<fieldname>BATCHTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Batch Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Entered" /><fieldpresent index="2" value="Imported" /><fieldpresent index="3" value="Generated " /><fieldpresent index="4" value="External" /></fieldpresentlist></field>
+<field>
+<fieldname>BATCHSTAT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Batch Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Open" /><fieldpresent index="3" value="Posted" /><fieldpresent index="4" value="Deleted" /><fieldpresent index="5" value="Post In Progress" /><fieldpresent index="7" value="Ready To Post" /></fieldpresentlist></field>
+<field>
+<fieldname>IDBANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>CODECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Default Bank Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>DATERATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Bank Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>CNTLASTITM</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Last Entry Number</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Bank Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEEXCHHC</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Bank Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>DEPSTNBR</fieldname>
+<fieldtype>BCD*8.0</fieldtype>
+<fielddesc>Deposit Number</fielddesc>
+</field>
+<field>
+<fieldname>DEPSEQ</fieldname>
+<fieldtype>???</fieldtype>
+<fielddesc>Deposit Serial Number</fielddesc>
+</field>
+<field>
+<fieldname>ADJUSTAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Adjustment Amount</fielddesc>
+</field>
+<field>
+<fieldname>REAPLYAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Applied Doc. Amount</fielddesc>
+</field>
+<field>
+<fieldname>FUNCAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Batch Total</fielddesc>
+</field>
+<field>
+<fieldname>POSTSEQNBR</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence No.</fielddesc>
+</field>
+<field>
+<fieldname>NBRERRORS</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Number of Errors</fielddesc>
+</field>
+<field>
+<fieldname>DATELSTEDT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Edited</fielddesc>
+</field>
+<field>
+<fieldname>TYPECLASS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Batch Type Class</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Adjustment" /><fieldpresent index="1" value="Write Off" /><fieldpresent index="2" value="Payment" /></fieldpresentlist></field>
+<field>
+<fieldname>SWPRINTED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Batch Printed Flag</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Bank Rate Operator</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>SWRATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Bank Rate Overridden</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SRCEAPPL</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Application</fielddesc>
+<mask>%-2A</mask></field>
+<field>
+<fieldname>CNTREAPPLY</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Number of Reapplies</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

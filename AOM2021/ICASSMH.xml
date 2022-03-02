@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0182 ICASSMH ICASSMH</keywords>
+<pagetitle>Assembly Audit List Headers</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICASSMH" desc="Assembly Audit List Headers">
+<view name="IC0182" desc="Assembly Audit List Headers" />
+<recordlength>215</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Day End Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DAYENDSEQ</keyfield><keyfield>TRANSSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Assembly Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DOCNUM</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>TRANSSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Transaction Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TRANSDATE</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>TRANSSEQ</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>DAYENDSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Day End Number</fielddesc>
+</field>
+<field>
+<fieldname>TRANSSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Transaction Sequence</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>BOMNO</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>BOM Number</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>DOCNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Assembly Number</fielddesc>
+</field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+</field>
+<field>
+<fieldname>FISCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%4D</mask></field>
+<field>
+<fieldname>FISCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>HDRDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>PRINTED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Printed</fielddesc>
+</field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

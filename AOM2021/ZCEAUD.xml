@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>ZC ZC0009 ZCEAUDV ZCEAUD</keywords>
+<pagetitle>Export Audit</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ZCEAUD" desc="Export Audit">
+<view name="ZC0009" desc="Export Audit" />
+<recordlength>188</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Export Sequence</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EXPSEQNR</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Export Unit</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>UNITID</keyfield><keyfield>PROCESS</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Export Process</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PROCESS</keyfield><keyfield>UNITID</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>EXPSEQNR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Export Sequence Number</fielddesc>
+<mask>%04d</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>UNITID</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Process Unit ID</fielddesc>
+<mask>%-4N</mask></field>
+<field>
+<fieldname>PROCESS</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Process ID</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>DESTCURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Destination Currency</fielddesc>
+</field>
+<field>
+<fieldname>EXPSEGS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Segments</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPSRC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Source Codes</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPACCTS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Accounts</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPBUDS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Budgets</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPTRANS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Transactions</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPMAP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Mapping Table</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPBUD1</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Budget Set 1</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPBUD2</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Budget Set 2</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPBUD3</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Budget Set 3</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPBUD4</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Budget Set 4</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPBUD5</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Budget Set 5</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>MAPTBL</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Mapping Table</fielddesc>
+</field>
+<field>
+<fieldname>EXPMETH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Method</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Net Changes" /><fieldpresent index="1" value="Transactions By Posting Sequence" /><fieldpresent index="2" value="Transactions By Fiscal Period" /><fieldpresent index="3" value="Balances" /></fieldpresentlist></field>
+<field>
+<fieldname>MAPMETH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Mapping Method</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Generate Error For Unmapped Accounts" /><fieldpresent index="1" value="Only Map Accounts In Table" /><fieldpresent index="2" value="Only Transfer Mapped Accounts" /></fieldpresentlist></field>
+<field>
+<fieldname>USESEGS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Use Segments</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>USESRCCODE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Use Source Codes</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>FISCYR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPERD</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<mask>%02D</mask></field>
+<field>
+<fieldname>PSEQFR</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>From Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>PSEQTO</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>To Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>PSEQHI</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Highest Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>PSEQLO</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Lowest Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>FISCYRHI</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Highest Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPERDHI</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Highest Fiscal Period</fielddesc>
+<mask>%02D</mask></field>
+<field>
+<fieldname>FISCYRLO</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Lowest Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPERDLO</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Lowest Fiscal Period</fielddesc>
+<mask>%02D</mask></field>
+<field>
+<fieldname>TOTTRNFILE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Total Tran. Files In Export</fielddesc>
+</field>
+<field>
+<fieldname>TOTTRNRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Tran. Records In Export</fielddesc>
+</field>
+<field>
+<fieldname>TOTACCRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Account Records In Export</fielddesc>
+</field>
+<field>
+<fieldname>TOTSRCRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Src Code Records In Export</fielddesc>
+</field>
+<field>
+<fieldname>TOTSEGRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Segment Records In Export</fielddesc>
+</field>
+<field>
+<fieldname>TOTBDGRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Budget Records In Export</fielddesc>
+</field>
+<field>
+<fieldname>MULTICURN</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Was For Multi Curr. Co.</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Single" /><fieldpresent index="1" value="Multi" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Exported</fielddesc>
+</field>
+<field>
+<fieldname>EXPUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>User That Did Export</fielddesc>
+</field>
+<field>
+<fieldname>EXPCOMP</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Exporting Company</fielddesc>
+</field>
+<field>
+<fieldname>SRCCURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Func. Currency Of Exporting Co.</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>VERSION</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Program Version</fielddesc>
+</field>
+<field>
+<fieldname>EXPOPTFLD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Opt. Field from G/L Setup</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TOTOFDRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total G/L Setup Opt. Flds In Export</fielddesc>
+</field>
+<field>
+<fieldname>EXPACTOPT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Account Opt. Fields</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPTRANOPT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Trans. Opt. Fields</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPCSOFDS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Opt. Field from C/S Setup</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TOTCSOFDS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total C/S Setup Opt. Flds In Export</fielddesc>
+</field>
+<field>
+<fieldname>EXPACCTGRP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Account Groups</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TOTAGPRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Account Groups In Export</fielddesc>
+</field>
+<field>
+<fieldname>PRINTED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Record Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

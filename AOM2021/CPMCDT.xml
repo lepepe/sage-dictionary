@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>CP CP0020 CPMCDT CPMCDT</keywords>
+<pagetitle>Manual Cheque Detail</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="CPMCDT" desc="Manual Cheque Detail">
+<view name="CP0020" desc="Manual Cheque Detail" />
+<recordlength>608</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Employee/Line Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>BANK</keyfield><keyfield>CHECKNUM</keyfield><keyfield>PEREND</keyfield><keyfield>CHECKDATE</keyfield><keyfield>LINENUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Employee/Earn Ded</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>BANK</keyfield><keyfield>CHECKNUM</keyfield><keyfield>PEREND</keyfield><keyfield>CHECKDATE</keyfield><keyfield>EARNDED</keyfield><keyfield>LINENUM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>EMPLOYEE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Employee</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>BANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank ID</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>CHECKNUM</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Cheque Number</fielddesc>
+</field>
+<field>
+<fieldname>PEREND</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Period End Date</fielddesc>
+</field>
+<field>
+<fieldname>CHECKDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Cheque Date</fielddesc>
+</field>
+<field>
+<fieldname>LINENUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>EARNDED</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Earning/Deduction</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Category</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Accrual" /><fieldpresent index="2" value="Earning" /><fieldpresent index="3" value="Advance" /><fieldpresent index="4" value="Deduction" /><fieldpresent index="5" value="Expense Reimbursement" /><fieldpresent index="6" value="Benefit" /><fieldpresent index="7" value="Federal Tax" /><fieldpresent index="8" value="Provincial Tax" /><fieldpresent index="9" value="Local Tax" /><fieldpresent index="10" value="User Tax" /></fieldpresentlist></field>
+<field>
+<fieldname>EARDEDTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Salary &amp; Wages" /><fieldpresent index="2" value="Reported Tips" /><fieldpresent index="3" value="Allocated Tips" /><fieldpresent index="7" value="Vacation" /><fieldpresent index="8" value="Sick" /><fieldpresent index="9" value="Banked Time" /><fieldpresent index="10" value="Disability" /><fieldpresent index="13" value="Cash" /><fieldpresent index="14" value="Noncash" /><fieldpresent index="18" value="Insurance Tax" /><fieldpresent index="19" value="Income Tax" /><fieldpresent index="20" value="Employment Tax" /><fieldpresent index="21" value="Pension Plan Tax" /><fieldpresent index="22" value="Health Tax" /><fieldpresent index="23" value="Other Tax" /><fieldpresent index="25" value="n/a" /></fieldpresentlist></field>
+<field>
+<fieldname>LINETYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Payment" /><fieldpresent index="2" value="Accrual" /><fieldpresent index="3" value="Regular" /><fieldpresent index="4" value="Overtime" /><fieldpresent index="5" value="Shift Diff." /><fieldpresent index="6" value="n/a" /></fieldpresentlist></field>
+<field>
+<fieldname>EARDEDDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date</fielddesc>
+</field>
+<field>
+<fieldname>GLSEG1</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment One</fielddesc>
+<mask>%-15N</mask></field>
+<field>
+<fieldname>GLSEG2</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment Two</fielddesc>
+<mask>%-15N</mask></field>
+<field>
+<fieldname>GLSEG3</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment Three</fielddesc>
+<mask>%-15N</mask></field>
+<field>
+<fieldname>HOURS</fieldname>
+<fieldtype>BCD*4.3</fieldtype>
+<fielddesc>Hours</fielddesc>
+</field>
+<field>
+<fieldname>CALCMETH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Calculation Method</fielddesc>
+</field>
+<field>
+<fieldname>LIMITBASE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Base Limit</fielddesc>
+</field>
+<field>
+<fieldname>CNTBASE</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pieces/Base</fielddesc>
+</field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Rate/Amt/Percent</fielddesc>
+</field>
+<field>
+<fieldname>EXTEND</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Amt</fielddesc>
+</field>
+<field>
+<fieldname>EXPACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Regular Pay Expense G/L Account</fielddesc>
+</field>
+<field>
+<fieldname>LIABACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Liability G/L Account</fielddesc>
+</field>
+<field>
+<fieldname>OTACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Overtime Expense G/L Account</fielddesc>
+</field>
+<field>
+<fieldname>SHIFTACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Shift Diff. Expense G/L Account</fielddesc>
+</field>
+<field>
+<fieldname>ASSETACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Asset G/L Account</fielddesc>
+</field>
+<field>
+<fieldname>WCC</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Workers' Compensation Code</fielddesc>
+</field>
+<field>
+<fieldname>TAXWEEKS</fieldname>
+<fieldtype>BCD*4.3</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+</field>
+<field>
+<fieldname>TAXANNUAL</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+</field>
+<field>
+<fieldname>WEEKLYNTRY</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>INTERNAL USE</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Entry Type</fielddesc>
+</field>
+<field>
+<fieldname>CALCSS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+</field>
+<field>
+<fieldname>CALCMED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+</field>
+<field>
+<fieldname>POOLEDTIPS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pooled Tips</fielddesc>
+</field>
+<field>
+<fieldname>WCCGROUP</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Workers Comp. Group</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>DISTCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Distribution Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>REXPACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Employer Expense G/L Account</fielddesc>
+</field>
+<field>
+<fieldname>RLIABACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Employer Liability G/L Account</fielddesc>
+</field>
+<field>
+<fieldname>JOBS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Jobs</fielddesc>
+</field>
+<field>
+<fieldname>WORKCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Work Classification Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>JOBHOURS</fieldname>
+<fieldtype>BCD*4.3</fieldtype>
+<fielddesc>Total Job Hours</fielddesc>
+</field>
+<field>
+<fieldname>JOBBASE</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Job Pieces/Sales/Amt</fielddesc>
+</field>
+<field>
+<fieldname>RCALCMETH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employer Calc. Method</fielddesc>
+</field>
+<field>
+<fieldname>RLIMITBASE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employer Base Limit</fielddesc>
+</field>
+<field>
+<fieldname>RRATEOVER</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Override Employer Rate/Amt/Pct</fielddesc>
+</field>
+<field>
+<fieldname>RRATE</fieldname>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Employer Rate/Amt/Pct</fielddesc>
+</field>
+<field>
+<fieldname>GLSEG4</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>RESERVED - G/L Segment Four</fielddesc>
+</field>
+<field>
+<fieldname>GLSEG5</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>RESERVED - G/L Segment Five</fielddesc>
+</field>
+<field>
+<fieldname>GLSEG6</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>RESERVED - G/L Segment Six</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

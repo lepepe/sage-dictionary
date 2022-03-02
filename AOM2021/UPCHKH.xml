@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>UP UP0048 UPCHKH UPCHKH</keywords>
+<pagetitle>Check Header</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="UPCHKH" desc="Check Header">
+<view name="UP0048" desc="Check Header" />
+<recordlength>318</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Employee</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Check Date</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TRANSDATE</keyfield><keyfield>EMPLOYEE</keyfield><keyfield>ENTRYSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Post Status</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PRPOSTSTAT</keyfield><keyfield>PEREND</keyfield><keyfield>EMPLOYEE</keyfield><keyfield>ENTRYSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Posting Sequence</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>POSTSEQ</keyfield><keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Bank Code by Check</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>TRANSNUM</keyfield><keyfield>SERIAL</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Pay Frequency</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PRPOSTSTAT</keyfield><keyfield>PAYFREQ</keyfield><keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Class 1</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PRPOSTSTAT</keyfield><keyfield>CLASS1</keyfield><keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Class 2</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PRPOSTSTAT</keyfield><keyfield>CLASS2</keyfield><keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Class 3</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PRPOSTSTAT</keyfield><keyfield>CLASS3</keyfield><keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Class 4</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PRPOSTSTAT</keyfield><keyfield>CLASS4</keyfield><keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Employee by Post Status</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PRPOSTSTAT</keyfield><keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>G/L Drilldown Link</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>GLDRDWNLNK</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>EMPLOYEE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Employee</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>PEREND</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Period End Date</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Entry Sequence</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>ENTRYTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Type of Check</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="System Check" /><fieldpresent index="2" value="Manual Check" /><fieldpresent index="3" value="Adjustment" /><fieldpresent index="4" value="History Entry" /><fieldpresent index="5" value="Reversed Check" /></fieldpresentlist></field>
+<field>
+<fieldname>BANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank ID</fielddesc>
+</field>
+<field>
+<fieldname>TRANSNUM</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Transaction Number</fielddesc>
+</field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>PERSTART</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Period Start Date</fielddesc>
+</field>
+<field>
+<fieldname>TIMESLATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Times Late This Period/Timecard</fielddesc>
+</field>
+<field>
+<fieldname>CHECKSTAT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Align" /><fieldpresent index="2" value="Void" /><fieldpresent index="3" value="Outstanding" /><fieldpresent index="4" value="Reversed" /><fieldpresent index="5" value="Cleared" /><fieldpresent index="6" value="Cleared With Error" /><fieldpresent index="7" value="Non-negotiable" /><fieldpresent index="8" value="Continuation" /></fieldpresentlist></field>
+<field>
+<fieldname>PRPOSTSTAT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>PR Post Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Not Posted" /><fieldpresent index="2" value="Posted" /></fieldpresentlist></field>
+<field>
+<fieldname>GLPOSTSTAT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sent to G/L</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Not sent" /><fieldpresent index="2" value="Sent" /><fieldpresent index="3" value="Not to be sent" /></fieldpresentlist></field>
+<field>
+<fieldname>PAYFREQ</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Pay Frequency</fielddesc>
+<fieldpresentlist><fieldpresent index="2" value="Daily" /><fieldpresent index="3" value="Weekly" /><fieldpresent index="4" value="Biweekly" /><fieldpresent index="5" value="Semimonthly" /><fieldpresent index="10" value="Twenty-two per Year" /><fieldpresent index="9" value="Thirteen per Year" /><fieldpresent index="6" value="Monthly" /><fieldpresent index="8" value="Ten per Year" /><fieldpresent index="7" value="Quarterly" /></fieldpresentlist></field>
+<field>
+<fieldname>CLASS1</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Class 1</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CLASS2</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Class 2</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CLASS3</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Class 3</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CLASS4</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Class 4</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SERIAL</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Bank Serial Number</fielddesc>
+</field>
+<field>
+<fieldname>CALCSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Calculation Sequence</fielddesc>
+</field>
+<field>
+<fieldname>POSTSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>PRPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Payroll Period</fielddesc>
+</field>
+<field>
+<fieldname>TRANSAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transaction Amt</fielddesc>
+</field>
+<field>
+<fieldname>GLSEG1</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment One</fielddesc>
+</field>
+<field>
+<fieldname>GLSEG2</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment Two</fielddesc>
+</field>
+<field>
+<fieldname>GLSEG3</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment Three</fielddesc>
+</field>
+<field>
+<fieldname>BANKACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Bank General Ledger Account</fielddesc>
+</field>
+<field>
+<fieldname>WORKPROV</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>RESERVED - Cdn Only</fielddesc>
+</field>
+<field>
+<fieldname>TAXPLAN</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Employee EI ID</fielddesc>
+</field>
+<field>
+<fieldname>EXRATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operator</fielddesc>
+</field>
+<field>
+<fieldname>EFTSTAT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>EFT Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Not to be EFTed" /><fieldpresent index="1" value="Not EFTed" /><fieldpresent index="2" value="EFTed" /></fieldpresentlist></field>
+<field>
+<fieldname>EFTRUNSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>EFT Run Sequence</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>GLDRDWNLNK</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>G/L Drilldown Link</fielddesc>
+</field>
+<field>
+<fieldname>OTOVERRIDE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Overtime Override</fielddesc>
+</field>
+<field>
+<fieldname>OTCALCTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Overtime Calculation</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Hourly Rate" /><fieldpresent index="1" value="Minimum Wage" /><fieldpresent index="2" value="Shift Rate" /><fieldpresent index="3" value="FLSA-Hourly" /><fieldpresent index="4" value="FLSA-Salary Fixed Hours" /><fieldpresent index="5" value="FLSA-Salary Fluctuating Hours" /></fieldpresentlist></field>
+<field>
+<fieldname>SWEXTERNTC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Based on External Timecards</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWJOB</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Job Related</fielddesc>
+</field>
+<field>
+<fieldname>EXRATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Exchange Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>ORGTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Original Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="System Check" /><fieldpresent index="2" value="Manual Check" /><fieldpresent index="3" value="Adjustment" /><fieldpresent index="4" value="History Entry" /><fieldpresent index="5" value="Reversed Check" /></fieldpresentlist></field>
+<field>
+<fieldname>CSEFTSTAT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Child Support EFT Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Not EFTed" /><fieldpresent index="1" value="EFTed" /></fieldpresentlist></field>
+<field>
+<fieldname>GLSEG4</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment Four</fielddesc>
+</field>
+<field>
+<fieldname>GLSEG5</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment Five</fielddesc>
+</field>
+<field>
+<fieldname>GLSEG6</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment Six</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

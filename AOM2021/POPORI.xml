@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0621 POPORI POPORI</keywords>
+<pagetitle>Purchase Order Postings</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="POPORI" desc="Purchase Order Postings">
+<view name="PO0621" desc="Purchase Order Postings" />
+<recordlength>702</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Master Key</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PORISEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Receipts</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PORHSEQ</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PORISEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Purchase Order Sequence Key</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>OPERATION</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Operation To Post</fielddesc>
+</field>
+<field>
+<fieldname>DATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date</fielddesc>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>ISCOMPLETE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Completed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DTCOMPLETE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Completed</fielddesc>
+</field>
+<field>
+<fieldname>PORHSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Purchase Order Sequence Key</fielddesc>
+</field>
+<field>
+<fieldname>CURRENCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS1</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 1</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS2</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 2</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS3</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 3</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS4</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 4</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS5</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 5</fielddesc>
+</field>
+<field>
+<fieldname>SCDOCTOTAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Source Document Total</fielddesc>
+</field>
+<field>
+<fieldname>ISPRINTED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>PONUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Purchase Order Number</fielddesc>
+</field>
+<field>
+<fieldname>LASTRECEIP</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Last Receipt Number</fielddesc>
+</field>
+<field>
+<fieldname>RCPCOUNT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Number of Posted Receipts</fielddesc>
+</field>
+<field>
+<fieldname>DESCRIPTIO</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+</field>
+<field>
+<fieldname>HASRQNDATA</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Requisitions</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>PORTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Purchase Order Type</fielddesc>
+</field>
+<field>
+<fieldname>ONHOLD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>On Hold</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RQNNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Requisition Number</fielddesc>
+</field>
+<field>
+<fieldname>RQNHSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Requisition Sequence Key</fielddesc>
+</field>
+<field>
+<fieldname>VDCODE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor</fielddesc>
+</field>
+<field>
+<fieldname>VDNAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Name</fielddesc>
+</field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+</field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEOPER</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operation</fielddesc>
+</field>
+<field>
+<fieldname>RATEOVER</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Rate Overridden</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SCURNDECML</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Decimal Places</fielddesc>
+</field>
+<field>
+<fieldname>TAXGROUP</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Group</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH1</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 1</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH2</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 2</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH3</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 3</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH4</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 4</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH5</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 5</fielddesc>
+</field>
+<field>
+<fieldname>SCAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Conversion Source Amount</fielddesc>
+</field>
+<field>
+<fieldname>FCAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Conversion Functional Amount</fielddesc>
+</field>
+<field>
+<fieldname>HASJOB</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Job Related</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>AGENTTTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Agent Transaction Type</fielddesc>
+</field>
+<field>
+<fieldname>AGENTHSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Agent Sequence Key</fielddesc>
+</field>
+<field>
+<fieldname>AGTRANSNUM</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Agent Dayend Transaction Number</fielddesc>
+</field>
+<field>
+<fieldname>AGDOCNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Agent Document Number</fielddesc>
+</field>
+<field>
+<fieldname>AGSRCDOC</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Agent Source Document</fielddesc>
+</field>
+<field>
+<fieldname>AGMULTIDOC</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Agent Is From Multiple Documents</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>AGDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Agent Date</fielddesc>
+</field>
+<field>
+<fieldname>AGFISCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Agent Fiscal Year</fielddesc>
+</field>
+<field>
+<fieldname>AGFISCPER</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Agent Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>AGDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Agent Description</fielddesc>
+</field>
+<field>
+<fieldname>AGREF</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Agent Reference</fielddesc>
+</field>
+<field>
+<fieldname>TRCURRENCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Tax Reporting Currency</fielddesc>
+</field>
+<field>
+<fieldname>RATERC</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Tax Reporting Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPERC</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Tax Reporting Rate Type</fielddesc>
+</field>
+<field>
+<fieldname>RATEDATERC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Tax Reporting Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEOPERRC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Reporting Rate Operation</fielddesc>
+</field>
+<field>
+<fieldname>RATERCOVER</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Tax Reporting Rate Overridden</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RCURNDECML</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Reporting Decimal Places</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>OE OE0637 OEQTOD OEQTOD</keywords>
+<pagetitle>Promote Quote to Order Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Promote Quote to Order Details</title>
+<rotoid>OE0637</rotoid>
+<tablelist>
+<table name="OEQTOD" desc="Promote Quote to Order Details" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>OEQTOD</dllname>
+<compositionlist>
+<composition>
+<comprotoid>OE0638</comprotoid>
+<compdesc>Promote Quote to Order Header</compdesc>
+<compdll>OEQTOH</compdll>
+<comptablelist>
+<comptable name="OEQTOH" desc="Promote Quote to Order Header" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Quote Number</keytitle>
+<keyfieldlist>
+<keyfield>COMPANYID</keyfield>
+<keyfield>OPPOID</keyfield>
+<keyfield>ORDNUMBER</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>COMPANYID</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Company ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OPPOID</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Opportunity ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ORDNUMBER</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Quote Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>ORDUNIQ</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Quote Uniquifier</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PROMOTE</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Promote to Order?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>INCOPPOTOT</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Include in Opportunity Total?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>QUOTEINCL</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Included in Quote?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ORDDATE</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Quote Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTEXPDATE</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Expiration Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>INVNETWTX</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ORDLINES</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Number of Lines on Quote</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COMMENT</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>String*250</fieldtype>
+<fielddesc>Comment</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COMPLETE</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Quote Completed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Incomplete/Not Included" /><fieldpresent index="2" value="Incomplete/Included" /><fieldpresent index="3" value="Complete/Not Included" /><fieldpresent index="4" value="Complete/Included" /><fieldpresent index="5" value="Complete/Day End" /></fieldpresentlist></field>
+<field>
+<fieldname>QTEXPIRED</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Quote Expired</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>QUOORDUNIQ</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Order Uniq. Activated From Quote</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QUOORDNUM</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Order Number Activated From Quote</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

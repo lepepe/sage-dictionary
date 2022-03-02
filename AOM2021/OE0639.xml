@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>OE OE0639 OEQTOP</keywords>
+<pagetitle>Quote-to-Order Processing</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Quote-to-Order Processing</title>
+<rotoid>OE0639</rotoid>
+<protocollist>
+<protocol>Superview</protocol></protocollist>
+<dllname>OEQTOP</dllname>
+<compositionlist>
+<composition>
+<comprotoid>OE0638</comprotoid>
+<compdesc>Promote Quote to Order Header</compdesc>
+<compdll>OEQTOH</compdll>
+<comptablelist>
+<comptable name="OEQTOH" desc="Promote Quote to Order Header" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0637</comprotoid>
+<compdesc>Promote Quote to Order Details</compdesc>
+<compdll>OEQTOD</compdll>
+<comptablelist>
+<comptable name="OEQTOD" desc="Promote Quote to Order Details" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PROCESSCMD</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Process Command</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Populate Quote-to-Order List" /><fieldpresent index="2" value="Promote Quotes" /><fieldpresent index="3" value="Promote to Customer" /></fieldpresentlist></field>
+<field>
+<fieldname>COMPANYID</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Sage CRM Company ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OPPOID</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Sage CRM Opportunity ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CUSTOMER</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12C</mask></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

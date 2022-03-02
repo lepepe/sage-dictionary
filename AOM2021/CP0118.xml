@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>CP CP0118 CPEMCS CPEMCS</keywords>
+<pagetitle>Employee Garnishment</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Employee Garnishment</title>
+<rotoid>CP0118</rotoid>
+<tablelist>
+<table name="CPEMCS" desc="Employee Garnishment" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>CPEMCS</dllname>
+<compositionlist>
+<composition>
+<comprotoid>CP0014</comprotoid>
+<compdesc>Employees</compdesc>
+<compdll>CPEMPL</compdll>
+<comptablelist>
+<comptable name="CPEMPL" desc="Employees" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Employee, Deduction Code</keytitle>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield>
+<keyfield>DEDCODE</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>EMPLOYEE</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Employee</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>DEDCODE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Deduction Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>DEDDESC</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Deduction's Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EFTSTATUS</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>EFT Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="P" desc="Presentation" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Pre-notification" /><fieldpresent index="1" value="Deposit" /><fieldpresent index="2" value="Inactive" /></fieldpresentlist></field>
+<field>
+<fieldname>INSTITUTID</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*9</fieldtype>
+<fielddesc>Institution ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ACCTNUM</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*18</fieldtype>
+<fielddesc>Account Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-18c</mask></field>
+<field>
+<fieldname>TRANSCODE</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transcation Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="P" desc="Presentation" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="22" value="22 - Checking" /><fieldpresent index="32" value="32 - Savings" /></fieldpresentlist></field>
+<field>
+<fieldname>TRNSFRNAME</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Bank Account Holder</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-30c</mask></field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>String*19</fieldtype>
+<fielddesc>Reference</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-19c</mask></field>
+<field>
+<fieldname>DISCREDATA</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CASEID</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*20</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CASESTATE</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="P" desc="Presentation" />
+</attributeflaglist>
+<mask>%-2A</mask></field>
+<field>
+<fieldname>JURISDICTN</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>String*30</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FIPSCODE</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>String*7</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-7d</mask></field>
+<field>
+<fieldname>CUSTPARENT</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*30</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>MEDINSUAVL</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>MEDINSUREQ</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ORDERDATE</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PM PM0995 PMTRANS</keywords>
+<pagetitle>^1 Transactions</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>^1 Transactions</title>
+<rotoid>PM0995</rotoid>
+<protocollist>
+<protocol>Superview</protocol></protocollist>
+<dllname>PMTRANS</dllname>
+<keylist>
+<key>
+<keytitle>Contract/Project/Category/Resour</keytitle>
+<keyfieldlist>
+<keyfield>CONTRACT</keyfield>
+<keyfield>PROJECT</keyfield>
+<keyfield>CATEGORY</keyfield>
+<keyfield>RESOURCE</keyfield>
+<keyfield>TRANSNUM</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CONTRACT</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc>^1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-16C</mask></field>
+<field>
+<fieldname>PROJECT</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc>^2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-16N</mask></field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc>^3</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-16N</mask></field>
+<field>
+<fieldname>RESOURCE</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Resource</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>TRANSNUM</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Transaction Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PROJTYPE</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>^2 Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COSTNUM</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Cost Transaction Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>REVNUM</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Revenue Transaction Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COSTREV</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Cost or Revenue</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DOCNUM</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Document Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DOCTYPE</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Document Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Invoice" /><fieldpresent index="2" value="Debit Note" /><fieldpresent index="3" value="Credit Note" /><fieldpresent index="4" value="Interest" /><fieldpresent index="5" value="Prepayment" /><fieldpresent index="6" value="Unapplied Cash" /><fieldpresent index="7" value="Material Usage" /><fieldpresent index="8" value="Material Return" /><fieldpresent index="9" value="Equipment Usage" /><fieldpresent index="10" value="Timecard" /><fieldpresent index="11" value="Charges" /><fieldpresent index="12" value="Adjustment" /><fieldpresent index="13" value="Retainage Invoice" /><fieldpresent index="14" value="Retainage Credit Note" /><fieldpresent index="15" value="Retainage Debit Note" /><fieldpresent index="16" value="Purchase Order" /><fieldpresent index="17" value="P/O Receipt" /><fieldpresent index="18" value="P/O Return" /><fieldpresent index="19" value="P/O Invoice" /><fieldpresent index="20" value="P/O Credit Note" /><fieldpresent index="21" value="P/O Debit Note" /><fieldpresent index="22" value="Opening Balance" /><fieldpresent index="23" value="Manual Check" /><fieldpresent index="24" value="Cost" /><fieldpresent index="25" value="Check Reversal" /><fieldpresent index="26" value="Material Internal Usage" /><fieldpresent index="27" value="Order Entry" /><fieldpresent index="28" value="O/E Shipment" /><fieldpresent index="29" value="O/E Invoice" /><fieldpresent index="30" value="O/E Debit Note" /><fieldpresent index="31" value="O/E Credit Note" /></fieldpresentlist></field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FISCALYEAR</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCALPER</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="1" /><fieldpresent index="2" value="2" /><fieldpresent index="3" value="3" /><fieldpresent index="4" value="4" /><fieldpresent index="5" value="5" /><fieldpresent index="6" value="6" /><fieldpresent index="7" value="7" /><fieldpresent index="8" value="8" /><fieldpresent index="9" value="9" /><fieldpresent index="10" value="10" /><fieldpresent index="11" value="11" /><fieldpresent index="12" value="12" /><fieldpresent index="13" value="13" /></fieldpresentlist></field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Document Reference</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Document Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BILLTYPE</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Billing Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="2" value="Billable" /><fieldpresent index="3" value="No Charge" /><fieldpresent index="1" value="Non-billable" /></fieldpresentlist></field>
+<field>
+<fieldname>TIMETYPE</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Time Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COSTCCY</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Cost Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ARITEM</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc>A/R Item No.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ARUOM</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>A/R Unit of Measure</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ICUOM</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>^7</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item No.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>I/C Location</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QUANTITY</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>BCD*10.5</fieldtype>
+<fielddesc>Transaction Quantity</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>UNITCOST</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Unit Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BILLRATE</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Billing Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EXTCOSTHM</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Cost Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EXTCOSTSR</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Cost Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EXTBILLHM</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Billing Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EXTBILLSR</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Billing Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BILLCCY</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Billing Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LABOR</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Labor Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="None" /><fieldpresent index="2" value="Flat Rate Per Labor Hour/Unit" /><fieldpresent index="3" value="Percentage of Labor Cost" /></fieldpresentlist></field>
+<field>
+<fieldname>LABORRATE</fieldname>
+<fieldindex>34</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Labor Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LABORPER</fieldname>
+<fieldindex>35</fieldindex>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Labor Percentage</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LABORSR</fieldname>
+<fieldindex>36</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transaction Labor Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LABORHM</fieldname>
+<fieldindex>37</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transaction Labor Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OVERHD</fieldname>
+<fieldindex>38</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Overhead Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="None" /><fieldpresent index="2" value="Flat Rate Per Unit" /><fieldpresent index="5" value="Percentage of Cost" /></fieldpresentlist></field>
+<field>
+<fieldname>OHEADRATE</fieldname>
+<fieldindex>39</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Overhead Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HEADPER</fieldname>
+<fieldindex>40</fieldindex>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Overhead Percentage</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OHSR</fieldname>
+<fieldindex>41</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transaction Overhead Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OHHM</fieldname>
+<fieldindex>42</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transaction Overhead Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>MODULE</fieldname>
+<fieldindex>43</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Source Module</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>REVBILLED</fieldname>
+<fieldindex>44</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Has The Cost Component Been Billed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Not Billed" /><fieldpresent index="2" value="Selected for Processing" /><fieldpresent index="3" value="Invoice Created" /><fieldpresent index="4" value="Posted" /><fieldpresent index="5" value="Deleted" /><fieldpresent index="6" value="Moved" /><fieldpresent index="7" value="On Hold" /></fieldpresentlist></field>
+<field>
+<fieldname>RRCOMPLETE</fieldname>
+<fieldindex>45</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Has Revenue Recognition Been Run</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Not Processed" /><fieldpresent index="2" value="Selected for Processing" /><fieldpresent index="3" value="Posted" /></fieldpresentlist></field>
+<field>
+<fieldname>CVACCT</fieldname>
+<fieldindex>46</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Cost Variance Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>WIPACCT</fieldname>
+<fieldindex>47</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>WIP/COS Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANACCT</fieldname>
+<fieldindex>48</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Transaction Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>REVACCT</fieldname>
+<fieldindex>49</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Revenue Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OHACCT</fieldname>
+<fieldindex>50</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Overhead Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LABACCT</fieldname>
+<fieldindex>51</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Labor Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>REVREC</fieldname>
+<fieldindex>52</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Accounting Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Completed Project" /><fieldpresent index="2" value="Total Cost Percentage Complete" /><fieldpresent index="3" value="Labor Hours Percentage Complete" /><fieldpresent index="4" value="Billings and Costs" /><fieldpresent index="5" value="Project Percentage Complete" /><fieldpresent index="6" value="Category Percentage Complete" /><fieldpresent index="8" value="Accrual-Basis" /></fieldpresentlist></field>
+<field>
+<fieldname>INVTYPE</fieldname>
+<fieldindex>53</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Invoice Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Item" /><fieldpresent index="2" value="Summary" /></fieldpresentlist></field>
+<field>
+<fieldname>EARNINGS</fieldname>
+<fieldindex>54</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Earnings Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldindex>55</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>STAFFCODE</fieldname>
+<fieldindex>56</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Employee No.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

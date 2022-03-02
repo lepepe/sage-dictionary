@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>GL GL0008 GLBCTL GLBCTL</keywords>
+<pagetitle>Batches</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Batches</title>
+<rotoid>GL0008</rotoid>
+<tablelist>
+<table name="GLBCTL" desc="Batches" />
+</tablelist>
+<protocollist>
+<protocol>Batch</protocol><protocol>Key auto generate</protocol></protocollist>
+<dllname>GLBCTL</dllname>
+<compositionlist>
+<composition>
+<comprotoid>GL0006</comprotoid>
+<compdesc>Journal Headers</compdesc>
+<compdll>GLJEH</compdll>
+<comptablelist>
+<comptable name="GLJEH" desc="Journal Headers" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Batch</keytitle>
+<keyfieldlist>
+<keyfield>BATCHID</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Status</keytitle>
+<keyfieldlist>
+<keyfield>BATCHSTAT</keyfield>
+<keyfield>BATCHID</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>BATCHID</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Batch Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%06D</mask></field>
+<field>
+<fieldname>ACTIVESW</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Active Switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Inactive" /><fieldpresent index="1" value="Active" /></fieldpresentlist></field>
+<field>
+<fieldname>BTCHDESC</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SRCELEDGR</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Ledger</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-2A</mask></field>
+<field>
+<fieldname>DATECREAT</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Created</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATEEDIT</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Edited</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BATCHTYPE</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index=" 1" value="Entered" /><fieldpresent index=" 2" value="Subledger" /><fieldpresent index=" 3" value="Imported" /><fieldpresent index=" 4" value="Generated" /><fieldpresent index=" 5" value="Recurring" /></fieldpresentlist></field>
+<field>
+<fieldname>BATCHSTAT</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index=" 1" value="Open" /><fieldpresent index=" 3" value="Deleted" /><fieldpresent index=" 4" value="Posted" /><fieldpresent index=" 6" value="Prov. Posted" /><fieldpresent index=" 8" value="Post In Progress" /><fieldpresent index=" 9" value="Ready To Post" /><fieldpresent index=" A" value="Prov. Post In Progress" /></fieldpresentlist></field>
+<field>
+<fieldname>POSTNGSEQ</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Posting Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DEBITTOT</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Debits</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CREDITTOT</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Credits</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYTOTAL</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Quantity Total</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ENTRYCNT</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Number of Entries</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NEXTENTRY</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Next Entry Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ERRORCNT</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>No. of Errors</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ORIGSTATUS</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Original Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SWPRINTED</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Printed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWICT</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>ICT Related</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWRVRECOG</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Revaluation(Recognized) Batch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ELIGOPEN</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Eligible for Edit Switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ELIGDEL</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Eligible for Delete Switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ELIGPOST</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Eligible for Posting Switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ELIGPRINT</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Eligible for Printing Switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ELIGPVPST</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Eligible for Prov. Post Switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RDYTOPOST</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Ready to Post</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>GSSTATUS</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reserved</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PROCESSCMD</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Lock Batch Switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Unlock Batch Resource" /><fieldpresent index="1" value="Lock Batch Resource Shared" /><fieldpresent index="2" value="Lock Batch Resource Exclusive" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

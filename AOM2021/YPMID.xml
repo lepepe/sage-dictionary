@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>YP YP0500 YPMID YPMID</keywords>
+<pagetitle>Processing Codes</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="YPMID" desc="Processing Codes">
+<view name="YP0500" desc="Processing Codes" />
+<recordlength>135</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Processing Code</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PROCESSCOD</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Bank</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>CURRENCY</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Currency</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CURRENCY</keyfield><keyfield>BANK</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PROCESSCOD</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Processing Code</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>TEXTDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>BANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>CURRENCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency Code</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>MERCHID</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Merchant ID</fielddesc>
+<mask>%-12D</mask></field>
+<field>
+<fieldname>MERCHINFO</fieldname>
+<fieldtype>Binary*16</fieldtype>
+<fielddesc>Merchant Information</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

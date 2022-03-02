@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>OE OE0200 OECOMM OECOMM</keywords>
+<pagetitle>Commissions</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="OECOMM" desc="Commissions">
+<view name="OE0200" desc="Commissions" />
+<recordlength>255</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Salesperson/Customer</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SALESPER</keyfield><keyfield>DAYENDNUM</keyfield><keyfield>ENTRYNUM</keyfield><keyfield>SALESPNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Date/Salesperson/Fiscalyear/Cust</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DATE</keyfield><keyfield>SALESPER</keyfield><keyfield>FISCYR</keyfield><keyfield>FISCPER</keyfield><keyfield>DAYENDNUM</keyfield><keyfield>ENTRYNUM</keyfield><keyfield>SALESPNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>FiscalYear/Salesperson/Date/Cust</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>FISCYR</keyfield><keyfield>FISCPER</keyfield><keyfield>SALESPER</keyfield><keyfield>DATE</keyfield><keyfield>DAYENDNUM</keyfield><keyfield>ENTRYNUM</keyfield><keyfield>SALESPNUM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SALESPER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Salesperson Number</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>DAYENDNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Day End Number</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Entry Number</fielddesc>
+</field>
+<field>
+<fieldname>SALESPNUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Salesperson Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>CUSTOMER</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>CUSTNAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Customer Name</fielddesc>
+</field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Invoice" /><fieldpresent index="2" value="Credit Note" /><fieldpresent index="3" value="Shipment" /><fieldpresent index="4" value="Debit Note" /><fieldpresent index="5" value="Order" /></fieldpresentlist></field>
+<field>
+<fieldname>DOCNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>DATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>TERRITORY</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Territory</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CATSALES</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Category Sales</fielddesc>
+</field>
+<field>
+<fieldname>CATCOST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cost of Category Sales</fielddesc>
+</field>
+<field>
+<fieldname>CATCOMM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Commission on Category Sales</fielddesc>
+</field>
+<field>
+<fieldname>NONCATSALE</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Noncategory Sales</fielddesc>
+</field>
+<field>
+<fieldname>NONCATCOST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cost of Noncategory Sales</fielddesc>
+</field>
+<field>
+<fieldname>NONCATCOM1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Commission on Noncat. Sales 1</fielddesc>
+</field>
+<field>
+<fieldname>NONCATCOM2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Commission on Noncat. Sales 2</fielddesc>
+</field>
+<field>
+<fieldname>NONCATCOM3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Commission on Noncat. Sales 3</fielddesc>
+</field>
+<field>
+<fieldname>NONCATCOM4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Commission on Noncat. Sales 4</fielddesc>
+</field>
+<field>
+<fieldname>NONCATCOM5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Commission on Noncat. Sales 5</fielddesc>
+</field>
+<field>
+<fieldname>FISCYR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%-4d</mask></field>
+<field>
+<fieldname>FISCPER</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiecal Period</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

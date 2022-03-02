@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>CP CP0030 CPEUIC CPEUIC</keywords>
+<pagetitle>Employee EI History</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="CPEUIC" desc="Employee EI History">
+<view name="CP0030" desc="Employee EI History" />
+<recordlength>132</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>EI End Date, Descending</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>DATESORT</keyfield><keyfield>UIENDDATE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Post Status</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>POSTSTAT</keyfield><keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield><keyfield>UIENDDATE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>EI End Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>UIENDDATE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Period End Date, Descending</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>PERENDX</keyfield><keyfield>PPEXCEPT</keyfield><keyfield>DATESORT</keyfield><keyfield>ESTATUS</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Employment Status</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>ESTATUS</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>EMPLOYEE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Employee</fielddesc>
+</field>
+<field>
+<fieldname>DATESORT</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>UIENDDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Insurable Period End Date</fielddesc>
+</field>
+<field>
+<fieldname>PEREND</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Pay Period End Date</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Entry Sequence</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>POSTSTAT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Post Status</fielddesc>
+</field>
+<field>
+<fieldname>UIGROSS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Earnings Subject to EI</fielddesc>
+</field>
+<field>
+<fieldname>HOURS</fieldname>
+<fieldtype>BCD*4.3</fieldtype>
+<fielddesc>Hours Worked</fielddesc>
+</field>
+<field>
+<fieldname>UIEARNINGS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Insurable Earnings</fielddesc>
+</field>
+<field>
+<fieldname>UIPREMIUM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee EI Contribution</fielddesc>
+</field>
+<field>
+<fieldname>PAYFREQ</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employee Pay Frequency</fielddesc>
+</field>
+<field>
+<fieldname>PPEXCEPT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>EI Period Exception</fielddesc>
+</field>
+<field>
+<fieldname>PERENDX</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>GROSSHOURS</fieldname>
+<fieldtype>BCD*4.3</fieldtype>
+<fielddesc>Hours Subject to EI</fielddesc>
+</field>
+<field>
+<fieldname>UIRPREMIUM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer EI Contribution</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check Type</fielddesc>
+</field>
+<field>
+<fieldname>TAXID</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Tax</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>ESTATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employment Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Active" /><fieldpresent index="4" value="Inactive - ROE Pending" /><fieldpresent index="2" value="Inactive" /><fieldpresent index="5" value="Terminated - ROE Pending" /><fieldpresent index="3" value="Terminated" /></fieldpresentlist></field>
+<field>
+<fieldname>ESTATDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Employment Status Date</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

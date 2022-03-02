@@ -1,0 +1,1194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0310 ICITEM ICITEM</keywords>
+<pagetitle>Items</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Items</title>
+<rotoid>IC0310</rotoid>
+<tablelist>
+<table name="ICITEM" desc="Items" />
+</tablelist>
+<protocollist>
+<protocol>Header</protocol></protocollist>
+<dllname>ICITEM</dllname>
+<compositionlist>
+<composition>
+<comprotoid>IC0750</comprotoid>
+<compdesc>Units of Measure</compdesc>
+<compdll>ICUNIT</compdll>
+<comptablelist>
+<comptable name="ICUNIT" desc="Units of Measure" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0330</comprotoid>
+<compdesc>Item Tax Authorities</compdesc>
+<compdll>ICITMTX</compdll>
+<comptablelist>
+<comptable name="ICITMTX" desc="Item Tax Authorities" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0340</comprotoid>
+<compdesc>Vendor Item Numbers</compdesc>
+<compdll>ICITMV</compdll>
+<comptablelist>
+<comptable name="ICITMV" desc="Vendor Item Numbers" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0320</comprotoid>
+<compdesc>Item Structures</compdesc>
+<compdll>ICITMS</compdll>
+<comptablelist>
+<comptable name="ICITMS" desc="Item Structures" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0210</comprotoid>
+<compdesc>Categories</compdesc>
+<compdll>ICCATG</compdll>
+<comptablelist>
+<comptable name="ICCATG" desc="Categories" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0100</comprotoid>
+<compdesc>Account Sets</compdesc>
+<compdll>ICACCT</compdll>
+<comptablelist>
+<comptable name="ICACCT" desc="Account Sets" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0390</comprotoid>
+<compdesc>Price List Codes</compdesc>
+<compdll>ICPCOD</compdll>
+<comptablelist>
+<comptable name="ICPCOD" desc="Price List Codes" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0313</comprotoid>
+<compdesc>Item Optional Fields</compdesc>
+<compdll>ICITEMO</compdll>
+<comptablelist>
+<comptable name="ICITEMO" desc="Item Optional Fields" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0319</comprotoid>
+<compdesc>Customer Item Numbers</compdesc>
+<compdll>ICITMC</compdll>
+<comptablelist>
+<comptable name="ICITMC" desc="Customer Item Numbers" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0314</comprotoid>
+<compdesc>Item Serial Optional Fields</compdesc>
+<compdll>ICITEMSO</compdll>
+<comptablelist>
+<comptable name="ICITEMSO" desc="Item Serial Optional Fields" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0312</comprotoid>
+<compdesc>Item Lot Optional Fields</compdesc>
+<compdll>ICITEMLO</compdll>
+<comptablelist>
+<comptable name="ICITEMLO" desc="Item Lot Optional Fields" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Item Number</keytitle>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Category</keytitle>
+<keyfieldlist>
+<keyfield>CATEGORY</keyfield>
+<keyfield>ITEMNO</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Alternate Item Number</keytitle>
+<keyfieldlist>
+<keyfield>ALTSET</keyfield>
+<keyfield>ITEMNO</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Formatted Item Number</keytitle>
+<keyfieldlist>
+<keyfield>FMTITEMNO</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Item Description</keytitle>
+<keyfieldlist>
+<keyfield>DESC</keyfield>
+<keyfield>ITEMNO</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Allow in Web Store</keytitle>
+<keyfieldlist>
+<keyfield>ALLOWONWEB</keyfield>
+<keyfield>ITEMNO</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Unformatted Item Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>ALTSET</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Alternate Item Set Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATELASTMN</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Maintained</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>INACTIVE</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Active" /><fieldpresent index="1" value="Inactive" /></fieldpresentlist></field>
+<field>
+<fieldname>ITEMBRKID</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Structure Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>FMTITEMNO</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Category</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CNTLACCT</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Account Set Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>STOCKITEM</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Stock Item</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>STOCKUNIT</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Stocking Unit of Measure</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>DEFPRICLST</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Price List Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>UNITWGT</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Unit Weight</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PICKINGSEQ</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Default Picking Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SERIALNO</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serial Numbers</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>COMMODIM</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Commodity Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATEINACTV</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Inactive</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGMENT1</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGMENT2</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGMENT3</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 3</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGMENT4</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 4</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGMENT5</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 5</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGMENT6</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 6</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGMENT7</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 7</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGMENT8</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 8</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGMENT9</fieldname>
+<fieldindex>34</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 9</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEGMENT10</fieldname>
+<fieldindex>35</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Segment 10</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COMMENT1</fieldname>
+<fieldindex>36</fieldindex>
+<fieldtype>String*80</fieldtype>
+<fielddesc>Comment 1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COMMENT2</fieldname>
+<fieldindex>37</fieldindex>
+<fieldtype>String*80</fieldtype>
+<fielddesc>Comment 2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COMMENT3</fieldname>
+<fieldindex>38</fieldindex>
+<fieldtype>String*80</fieldtype>
+<fielddesc>Comment 3</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COMMENT4</fieldname>
+<fieldindex>39</fieldindex>
+<fieldtype>String*80</fieldtype>
+<fielddesc>Comment 4</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ALLOWONWEB</fieldname>
+<fieldindex>40</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Item in Web Store</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>KITTING</fieldname>
+<fieldindex>41</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Kitting Item</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldindex>42</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DEFKITNO</fieldname>
+<fieldindex>43</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Kit Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SELLABLE</fieldname>
+<fieldindex>44</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Sellable</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>WEIGHTUNIT</fieldname>
+<fieldindex>45</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Weight Unit of Measure</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ALTITEMNO</fieldname>
+<fieldindex>56</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Unformatted Alternate Item No.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>FMTALTITEM</fieldname>
+<fieldindex>57</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Alternate Item Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ALTITEMDSC</fieldname>
+<fieldindex>58</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Alternate Item Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COSTMETHOD</fieldname>
+<fieldindex>59</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Costing Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Moving Average" /><fieldpresent index="2" value="FIFO" /><fieldpresent index="3" value="LIFO" /><fieldpresent index="4" value="Standard Cost" /><fieldpresent index="5" value="Most Recent Cost" /><fieldpresent index="6" value="User-Specified" /><fieldpresent index="7" value="Serial" /><fieldpresent index="8" value="Lot" /></fieldpresentlist></field>
+<field>
+<fieldname>PROCESSCMD</fieldname>
+<fieldindex>60</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Process Command</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Nothing to Process" /><fieldpresent index="1" value="Insert Optional Fields" /><fieldpresent index="6" value="Insert Item Serial Optional Fields" /><fieldpresent index="7" value="Insert Item Lot Optional Fields" /></fieldpresentlist></field>
+<field>
+<fieldname>WEIGHTCONV</fieldname>
+<fieldindex>61</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Weight Conversion Factor</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ISBOMCMPN</fieldname>
+<fieldindex>62</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Is Item a BOM Component</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SERIALMASK</fieldname>
+<fieldindex>63</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Serial Number Mask</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>NEXTSERFMT</fieldname>
+<fieldindex>64</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Next Serial Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-40c</mask></field>
+<field>
+<fieldname>SUSEEXPDAY</fieldname>
+<fieldindex>65</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Serials Days to Expire</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SEXPDAYS</fieldname>
+<fieldindex>66</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Serials Days to Expire</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SDIFQTYOK</fieldname>
+<fieldindex>67</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Different Serial Qty</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SVALUES</fieldname>
+<fieldindex>68</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Serials Optional Fields</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SWARYCODE</fieldname>
+<fieldindex>69</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Serial Warranty Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SCONTCODE</fieldname>
+<fieldindex>70</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Serial Contract Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SCONTRECE</fieldname>
+<fieldindex>71</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serial is on Cont. When Received</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWARYSOLD</fieldname>
+<fieldindex>72</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serial is on Warr. When Sold</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWARYREG</fieldname>
+<fieldindex>73</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serial is on Warr. When Registered</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LOTITEM</fieldname>
+<fieldindex>74</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lot Numbers</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LOTMASK</fieldname>
+<fieldindex>75</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Lot Number Mask</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>NEXTLOTFMT</fieldname>
+<fieldindex>76</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Next Lot Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-40c</mask></field>
+<field>
+<fieldname>LUSEEXPDAY</fieldname>
+<fieldindex>77</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Lots Days to Expire</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LEXPDAYS</fieldname>
+<fieldindex>78</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Lots Days to Expire</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LUSEQRNDAY</fieldname>
+<fieldindex>79</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Lots Days on Quarantine</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LQRNDAYS</fieldname>
+<fieldindex>80</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Lots Days on Quarantine</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LDIFQTYOK</fieldname>
+<fieldindex>81</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Different Lot Qty</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LVALUES</fieldname>
+<fieldindex>82</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lots Optional Fields</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LWARYCODE</fieldname>
+<fieldindex>83</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Lot Warranty Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LCONTCODE</fieldname>
+<fieldindex>84</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Lot Contract Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LCONTRECE</fieldname>
+<fieldindex>85</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lot is on Cont. When Received</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LWARYSOLD</fieldname>
+<fieldindex>86</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lot is on Warr. When Sold</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SERIALUSED</fieldname>
+<fieldindex>87</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serial Numbers in Use</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SMSKSTRUCT</fieldname>
+<fieldindex>88</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Serial Mask Structure</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<mask>%-40c</mask></field>
+<field>
+<fieldname>SMSKDESC</fieldname>
+<fieldindex>89</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Serial Mask Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>UNFSERIAL</fieldname>
+<fieldindex>90</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Unformatted Serial Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FMTSERIAL</fieldname>
+<fieldindex>91</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Serial Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NXTAUTOSER</fieldname>
+<fieldindex>92</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Auto-gen Serial Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GENNEWSER</fieldname>
+<fieldindex>93</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Number of Serials to Generate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GENRMNSER</fieldname>
+<fieldindex>94</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Number of Serials not Generated</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SFIRSTGEN</fieldname>
+<fieldindex>95</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>First Generated Serial</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<mask>%-40c</mask></field>
+<field>
+<fieldname>SLASTGEN</fieldname>
+<fieldindex>96</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Last Generated Serial</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<mask>%-40c</mask></field>
+<field>
+<fieldname>LOTUSED</fieldname>
+<fieldindex>97</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lot Numbers in Use</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LMSKSTRUCT</fieldname>
+<fieldindex>98</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Lot Mask Structure</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<mask>%-40c</mask></field>
+<field>
+<fieldname>LMSKDESC</fieldname>
+<fieldindex>99</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Lot Mask Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>UNFLOT</fieldname>
+<fieldindex>100</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Unformatted Lot Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FMTLOT</fieldname>
+<fieldindex>101</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Lot Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NXTAUTOLOT</fieldname>
+<fieldindex>102</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Auto-gen Lot Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GENNEWLOT</fieldname>
+<fieldindex>103</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Number of Lots to Generate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GENRMNLOT</fieldname>
+<fieldindex>104</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Number of Lots not Generated</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LFIRSTGEN</fieldname>
+<fieldindex>105</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>First Generated Lot</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<mask>%-40c</mask></field>
+<field>
+<fieldname>LLASTGEN</fieldname>
+<fieldindex>106</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Last Generated Lot</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<mask>%-40c</mask></field>
+<field>
+<fieldname>PREVENDTY</fieldname>
+<fieldindex>107</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>SIA Preferred Vendor Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DEFBOMNO</fieldname>
+<fieldindex>108</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default BOM Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEASONAL</fieldname>
+<fieldindex>109</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Seasonal?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>QTONHANDA</fieldname>
+<fieldindex>110</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Qty. on Hand</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTONORDERA</fieldname>
+<fieldindex>111</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Qty. on Purchase Order</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTSALORDRA</fieldname>
+<fieldindex>112</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Qty. on Sales Order</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTAVAILA</fieldname>
+<fieldindex>113</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Qty. Available</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QTYCOMMITA</fieldname>
+<fieldindex>114</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Qty. Committed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PREVENDOR</fieldname>
+<fieldindex>115</fieldindex>
+<fieldtype>String*75</fieldtype>
+<fielddesc>Preferred Vendor</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VENDITEM</fieldname>
+<fieldindex>116</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Preferred Vendor Item</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TARIFFCODE</fieldname>
+<fieldindex>117</fieldindex>
+<fieldtype>String*20</fieldtype>
+<fielddesc>Tariff Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

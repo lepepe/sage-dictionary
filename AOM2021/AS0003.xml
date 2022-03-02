@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AS AS0003 A4WUSER</keywords>
+<pagetitle>Users</pagetitle>
+<pagedate>2020-Aug-10</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Users</title>
+<rotoid>AS0003</rotoid>
+<dllname>A4WUSER</dllname>
+<keylist>
+<key>
+<keytitle>User ID</keytitle>
+<keyfieldlist>
+<keyfield>USERID</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>USERID</fieldname>
+<fieldindex>0</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>User ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>USERNAME</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>User Name</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PASSWORD</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Binary*64</fieldtype>
+<fielddesc>Password</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-64N</mask></field>
+<field>
+<fieldname>ACCTTYPE</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Account Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="P" desc="Presentation" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="User" /><fieldpresent index="2" value="Timecard" /></fieldpresentlist></field>
+<field>
+<fieldname>ACCTSTATUS</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Account Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Active" /><fieldpresent index="1" value="Inactive" /></fieldpresentlist></field>
+<field>
+<fieldname>LANGUAGE</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Language Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3A</mask></field>
+<field>
+<fieldname>LANGLIST</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Language</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="English" /><fieldpresent index="1" value="Chinese (Simplified)" /><fieldpresent index="2" value="Chinese (Traditional)" /><fieldpresent index="3" value="Spanish" /><fieldpresent index="4" value="French" /></fieldpresentlist></field>
+<field>
+<fieldname>CHNGEPASS</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Must change password next logon</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>NOCHNGPASS</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>User cannot change password</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>PASSNOEXP</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Password never expires</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DISABLED</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Account is disabled</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LOCKEDOUT</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Account is locked out</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RESTRICTED</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Account is restricted</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>OKMONDAY</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Monday</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>OKTUESDAY</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Tuesday</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>OKWEDNESDY</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Wednesday</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>OKTHURSDAY</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Thursday</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>OKFRIDAY</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Friday</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>OKSATURDAY</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Saturday</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>OKSUNDAY</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Sunday</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TIMEBEGIN</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>Time</fieldtype>
+<fielddesc>Time begin</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TIMEEND</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>Time</fieldtype>
+<fielddesc>Time end</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>AUTHMETH</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Authentication Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Sage 300" /><fieldpresent index="2" value="Windows" /><fieldpresent index="3" value="Both" /></fieldpresentlist></field>
+<field>
+<fieldname>WINDOMAIN</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Windows Domain</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-15C</mask></field>
+<field>
+<fieldname>WINUSER</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>String*256</fieldtype>
+<fielddesc>Windows User Name</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-256C</mask></field>
+<field>
+<fieldname>PHONE</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Phone</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-30c</mask></field>
+<field>
+<fieldname>EMAIL1</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc>E-mail 1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EMAIL2</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc>E-mail 2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ROLE</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Job Role</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Select your job role" /><fieldpresent index="1" value="Owner/Partner/Principal/GM" /><fieldpresent index="2" value="President/CEO" /><fieldpresent index="3" value="CFO/VP of Finance" /><fieldpresent index="4" value="Director/Senior Manager" /><fieldpresent index="5" value="Accounting Manager/Controller" /><fieldpresent index="6" value="Accountant/Bookkeeper/Clerk" /><fieldpresent index="7" value="Admin Assistant/Office Manager" /><fieldpresent index="8" value="Operations/Warehouse Associate" /><fieldpresent index="9" value="Salesperson" /><fieldpresent index="10" value="Marketing Analyst" /><fieldpresent index="11" value="Customer Service Associate" /><fieldpresent index="12" value="Consultant" /><fieldpresent index="13" value="HR/Payroll Administrator" /><fieldpresent index="14" value="IT Analyst" /><fieldpresent index="15" value="Other" /></fieldpresentlist></field>
+<field>
+<fieldname>OPTIN</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>User receives e-mail from Sage</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LOCALEID</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc>Locale ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LOCALELIST</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Language</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="English" /><fieldpresent index="1" value="English (United States)" /><fieldpresent index="2" value="English (Canada)" /><fieldpresent index="3" value="English (Australia)" /><fieldpresent index="4" value="English (South Africa)" /><fieldpresent index="5" value="Chinese (Simplified) (China)" /><fieldpresent index="6" value="Chinese (Simplified) (Singapore)" /><fieldpresent index="7" value="Chinese (Traditional) (Hong Kong SAR)" /><fieldpresent index="8" value="Chinese (Traditional) (Taiwan)" /><fieldpresent index="9" value="Spanish" /><fieldpresent index="10" value="Spanish (Spain)" /><fieldpresent index="11" value="French (Canada)" /></fieldpresentlist></field>
+<field>
+<fieldname>O365USRNAM</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc>E-mail Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

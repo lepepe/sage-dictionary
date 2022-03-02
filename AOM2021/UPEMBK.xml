@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>UP UP0201 UPEMBK UPEMBK</keywords>
+<pagetitle>Employee EFT Banks</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="UPEMBK" desc="Employee EFT Banks">
+<view name="UP0201" desc="Employee EFT Banks" />
+<recordlength>153</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>EFT Banks</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>BKACCTCODE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>EFT Banks by Calculation Type</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>EFTCALCTYP</keyfield><keyfield>BKACCTCODE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>EMPLOYEE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Employee</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>BKACCTCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Employee EFT Bank</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>BKACCTDESC</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Employee EFT Bank Description</fielddesc>
+</field>
+<field>
+<fieldname>INSTITUTID</fieldname>
+<fieldtype>String*9</fieldtype>
+<fielddesc>Receiving DFI ID</fielddesc>
+<mask>%-9d</mask></field>
+<field>
+<fieldname>ACCTNUM</fieldname>
+<fieldtype>String*18</fieldtype>
+<fielddesc>Account Number</fielddesc>
+<mask>%-17c</mask></field>
+<field>
+<fieldname>TRANSCODE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Code</fielddesc>
+<fieldpresentlist><fieldpresent index="22" value="22 - Checking" /><fieldpresent index="32" value="32 - Savings" /></fieldpresentlist></field>
+<field>
+<fieldname>EFTCALCTYP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>EFT Calculation Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Fixed Amount" /><fieldpresent index="2" value="% of Gross Earnings" /><fieldpresent index="3" value="% of Net Pay" /></fieldpresentlist></field>
+<field>
+<fieldname>AMTPCT</fieldname>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Amt/Pct to be deposited</fielddesc>
+</field>
+<field>
+<fieldname>STARTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Start Date</fielddesc>
+</field>
+<field>
+<fieldname>ENDDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>End Date</fielddesc>
+</field>
+<field>
+<fieldname>DCOUNTRY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Destination Country</fielddesc>
+<mask>%-2C</mask></field>
+<field>
+<fieldname>DCURRENCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Destination Currency</fielddesc>
+<mask>%-3C</mask></field>
+<field>
+<fieldname>BKIDQUALIF</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Bank ID Qualifier</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="01- (NACHA) National Clearing System Number" /><fieldpresent index="2" value="02- BIC Bank Identification Number" /><fieldpresent index="3" value="03- IBAN- International Bank Account Number" /></fieldpresentlist></field>
+<field>
+<fieldname>PRENOTE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Prenote Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Not Sent" /><fieldpresent index="1" value="Pending" /><fieldpresent index="2" value="Approved" /><fieldpresent index="3" value="Declined" /></fieldpresentlist></field>
+<field>
+<fieldname>TRANSGUID</fieldname>
+<fieldtype>String*36</fieldtype>
+<fielddesc>Sync Transaction GUID</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

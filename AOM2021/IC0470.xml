@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0470 ICPRCU</keywords>
+<pagetitle>Update Item Pricing</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Update Item Pricing</title>
+<rotoid>IC0470</rotoid>
+<protocollist>
+<protocol>Superview</protocol></protocollist>
+<dllname>ICPRCU</dllname>
+<compositionlist>
+<composition>
+<comprotoid>IC0390</comprotoid>
+<compdesc>Price List Codes</compdesc>
+<compdll>ICPCOD</compdll>
+<comptablelist>
+<comptable name="ICPCOD" desc="Price List Codes" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0395</comprotoid>
+<compdesc>Price List Code Tax Authorities</compdesc>
+<compdll>ICPCTX</compdll>
+<comptablelist>
+<comptable name="ICPCTX" desc="Price List Code Tax Authorities" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0392</comprotoid>
+<compdesc>Price List Codes Checks</compdesc>
+<compdll>ICPCODC</compdll>
+<comptablelist>
+<comptable name="ICPCODC" desc="Price List Codes Checks" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SELECTBY</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Select Price List by</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Item Number" /><fieldpresent index="2" value="Category" /><fieldpresent index="3" value="Item Segment" /><fieldpresent index="4" value="Vendor Number" /><fieldpresent index="9" value="Item's Color" /><fieldpresent index="10" value="Dangerous Item" /><fieldpresent index="11" value="Extended Warranty Available" /><fieldpresent index="12" value="Item Type" /><fieldpresent index="13" value="Item Lead Time" /><fieldpresent index="14" value="Manufacturer" /><fieldpresent index="15" value="Manufacturer Number" /><fieldpresent index="16" value="New Item" /><fieldpresent index="17" value="Price" /><fieldpresent index="18" value="Item Procurement" /><fieldpresent index="19" value="Item Size" /><fieldpresent index="20" value="Item Volume" /><fieldpresent index="21" value="Warranty" /><fieldpresent index="22" value="Warranty Period" /></fieldpresentlist></field>
+<field>
+<fieldname>SEGMENT</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Segment Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Category" /><fieldpresent index="2" value="Style" /><fieldpresent index="3" value="Color" /><fieldpresent index="4" value="Model" /><fieldpresent index="5" value="Series" /><fieldpresent index="6" value="Long" /></fieldpresentlist></field>
+<field>
+<fieldname>FROMSELECT</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Select Range From</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="P" desc="Presentation" />
+</attributeflaglist>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>TOSELECT</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Select Range To</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="P" desc="Presentation" />
+</attributeflaglist>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>FROMCURR</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>From Currency Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>TOCURR</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>To Currency Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>FROMPRICE</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>From Price List Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>TOPRICE</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>To Price List Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CRITERIA</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Update Price List Based on</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="P" desc="Presentation" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Percentage" /><fieldpresent index="2" value="Amount" /><fieldpresent index="3" value="Markup" /><fieldpresent index="4" value="Margin" /><fieldpresent index="5" value="Exchange Rate" /></fieldpresentlist></field>
+<field>
+<fieldname>UPDATEFLD</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Update Field</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Base Price" /><fieldpresent index="2" value="Sale Price" /><fieldpresent index="3" value="Markup Cost" /><fieldpresent index="4" value="Price Check" /><fieldpresent index="5" value="Price List Dates" /></fieldpresentlist></field>
+<field>
+<fieldname>DIRECTION</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Direction</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Increase" /><fieldpresent index="2" value="Decrease" /></fieldpresentlist></field>
+<field>
+<fieldname>PERCNTMRGN</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Percent/Margin</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>AMOUNT</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>EXCHRATE</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SALESTART</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Sale Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SALEEND</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Sale End Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OPTFIELD</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Optional Field</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PCHECKFLD</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Price Check Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="Warning" /><fieldpresent index="2" value="Error" /><fieldpresent index="3" value="Approval" /></fieldpresentlist></field>
+<field>
+<fieldname>PRICESTART</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Price List Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PRICEEND</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Price List End Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

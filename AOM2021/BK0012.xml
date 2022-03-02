@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0012 BKJERR BKJERR</keywords>
+<pagetitle>Bank Posting Error Journal</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Bank Posting Error Journal</title>
+<rotoid>BK0012</rotoid>
+<tablelist>
+<table name="BKJERR" desc="Bank Posting Error Journal" />
+</tablelist>
+<protocollist>
+<protocol>Header</protocol></protocollist>
+<dllname>BKJERR</dllname>
+<compositionlist>
+<composition>
+<comprotoid>BK0020</comprotoid>
+<compdesc>Bank Posting Journal Control</compdesc>
+<compdll>BKJCTL</compdll>
+<comptablelist>
+<comptable name="BKJCTL" desc="Bank Posting Journal Control" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Posting Sequence/Bank Code</keytitle>
+<keyfieldlist>
+<keyfield>PSTSEQ</keyfield>
+<keyfield>BANK</keyfield>
+<keyfield>UNIQUE</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PSTSEQ</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BANK</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>UNIQUE</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Error Uniquifier</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ERRTEXT</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*132</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

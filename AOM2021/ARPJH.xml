@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0408 ARPJH ARPJH</keywords>
+<pagetitle>Posting Journal Entries</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ARPJH" desc="Posting Journal Entries">
+<view name="AR0408" desc="Posting Journal Entries" />
+<recordlength>637</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Batch Type/Post. Seq./Batch/Entr</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TYPEBTCH</keyfield><keyfield>POSTSEQNCE</keyfield><keyfield>CNTBTCH</keyfield><keyfield>CNTITEM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>TYPEBTCH</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Batch Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>POSTSEQNCE</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence No.</fielddesc>
+</field>
+<field>
+<fieldname>CNTBTCH</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Batch No.</fielddesc>
+</field>
+<field>
+<fieldname>CNTITEM</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Entry No.</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>IDCUST</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer No.</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>IDINVC</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document No.</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>CNTPAYM</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Payment No.</fielddesc>
+</field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Document Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Invoice" /><fieldpresent index="2" value="Debit Note" /><fieldpresent index="3" value="Credit Note" /><fieldpresent index="4" value="Interest" /><fieldpresent index="5" value="Unapplied Cash" /><fieldpresent index="10" value="Prepayment" /><fieldpresent index="11" value="Receipt" /><fieldpresent index="14" value="Adjustment" /><fieldpresent index="16" value="Exchange Gain/Loss" /><fieldpresent index="19" value="Refund" /></fieldpresentlist></field>
+<field>
+<fieldname>TRXTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="11" value="Invoice - Item Issued" /><fieldpresent index="12" value="Invoice - Summary Entered" /><fieldpresent index="13" value="Invoice - Recurring Charge" /><fieldpresent index="14" value="Invoice - Summary Issued" /><fieldpresent index="15" value="Invoice - Item Entered" /><fieldpresent index="21" value="Debit Note - Item Issued" /><fieldpresent index="22" value="Debit Note - Summary Entered" /><fieldpresent index="24" value="Debit Note - Summary Issued" /><fieldpresent index="25" value="Debit Note - Item Entered" /><fieldpresent index="31" value="Credit Note - Item Issued" /><fieldpresent index="32" value="Credit Note - Summary Entered" /><fieldpresent index="34" value="Credit Note - Summary Issued" /><fieldpresent index="35" value="Credit Note - Item Entered" /><fieldpresent index="40" value="Interest Charge" /><fieldpresent index="81" value="Adjustment - Posted" /><fieldpresent index="80" value="Write-Off - Posted" /><fieldpresent index="2" value="Unapplied Cash - Posted" /><fieldpresent index="57" value="Prepayment - Posted" /><fieldpresent index="3" value="Unapplied Cash - Applied" /><fieldpresent index="58" value="Prepayment - Applied" /><fieldpresent index="43" value="Credit Note Applied To" /><fieldpresent index="44" value="Applied Credit Note" /><fieldpresent index="51" value="Receipt - Posted" /><fieldpresent index="52" value="Receipt - Applied" /><fieldpresent index="53" value="Receipt - Reversed" /><fieldpresent index="69" value="Unrealized Exchange Gain/Loss" /><fieldpresent index="73" value="Refund - Posted" /><fieldpresent index="75" value="Refund - Reversed" /><fieldpresent index="65" value="Exchange Gain/Loss - Posted" /><fieldpresent index="85" value="Receipt - Invoice Reversed" /></fieldpresentlist></field>
+<field>
+<fieldname>IDGRP</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Group Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>IDACCTSET</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Account Set</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CODETAXGRP</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Group</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>CODETERM</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Terms Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>IDBILLCYC</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Billing Cycle</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>IDCUSTSHP</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Ship-To Location Code</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>DATEINVC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Document Date</fielddesc>
+</field>
+<field>
+<fieldname>DATEDISC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Discount Date</fielddesc>
+</field>
+<field>
+<fieldname>DATEDUE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Due Date</fielddesc>
+</field>
+<field>
+<fieldname>DATEBTCH</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Batch Date</fielddesc>
+</field>
+<field>
+<fieldname>PCTDISC</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Discount Percentage</fielddesc>
+</field>
+<field>
+<fieldname>SWNONRCVBL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Misc. Receipt Flag</fielddesc>
+</field>
+<field>
+<fieldname>GLBATCH</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>G/L Batch No.</fielddesc>
+</field>
+<field>
+<fieldname>GLENTRY</fieldname>
+<fieldtype>String*5</fieldtype>
+<fielddesc>G/L Entry No.</fielddesc>
+</field>
+<field>
+<fieldname>CNTADJNBR</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Adjustment Number</fielddesc>
+</field>
+<field>
+<fieldname>FISCYR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPER</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<mask>%02D</mask></field>
+<field>
+<fieldname>IDINVCAPPL</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Apply-To Doc. No.</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>IDBANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>IDRMIT</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Check/Receipt No.</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>DATEDEPST</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Deposit Date</fielddesc>
+</field>
+<field>
+<fieldname>DEPSTNBR</fieldname>
+<fieldtype>BCD*8.0</fieldtype>
+<fielddesc>Deposit Number</fielddesc>
+</field>
+<field>
+<fieldname>CODECURNTC</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency Code (Source)</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATETYPETC</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type (Source->Functional)</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEDATETC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date (Source->Functional)</fielddesc>
+</field>
+<field>
+<fieldname>RATEEXCHTC</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate (Source->Functional)</fielddesc>
+</field>
+<field>
+<fieldname>RATEOPTC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operator (Source->Functional)</fielddesc>
+</field>
+<field>
+<fieldname>SWRATETC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Override (Source)</fielddesc>
+</field>
+<field>
+<fieldname>CODECURNBC</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency Code (Bank)</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATETYPEBC</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type (Bank->Functional)</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEDATEBC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date (Bank->Functional)</fielddesc>
+</field>
+<field>
+<fieldname>RATEEXCHBC</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate (Bank->Functional)</fielddesc>
+</field>
+<field>
+<fieldname>RATEOPBC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operator (Bank->Functional)</fielddesc>
+</field>
+<field>
+<fieldname>SWRATEBC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Override (Bank)</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVCTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Document Total Less Retainage (Source)</fielddesc>
+</field>
+<field>
+<fieldname>SWJOB</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Job Related</fielddesc>
+</field>
+<field>
+<fieldname>SWRTG</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Retainage Invoice Flag</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RTGTERMS</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Retainage Terms Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>RTGDATEDUE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Retainage Due</fielddesc>
+</field>
+<field>
+<fieldname>SWRTGRATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Retainage Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RTGAPPLYTO</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Original Doc. No.</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>RTGAMTTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Amount (Source)</fielddesc>
+</field>
+<field>
+<fieldname>RTGAMTHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Amount (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>NAMERMIT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Name on Check</fielddesc>
+</field>
+<field>
+<fieldname>AMTTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Customer Amount</fielddesc>
+</field>
+<field>
+<fieldname>AMTHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Functional Amount</fielddesc>
+</field>
+<field>
+<fieldname>AMTBC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Bank Amount</fielddesc>
+</field>
+<field>
+<fieldname>DEPSEQ</fieldname>
+<fieldtype>???</fieldtype>
+<fielddesc>Deposit Serial Number</fielddesc>
+</field>
+<field>
+<fieldname>DEPLINE</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Deposit Line Number</fielddesc>
+</field>
+<field>
+<fieldname>PAYMCODE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Payment Code</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>PAYMTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Payment Type</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="(None)" /><fieldpresent index="1" value="Cash" /><fieldpresent index="2" value="Check" /><fieldpresent index="3" value="Credit Card" /><fieldpresent index="5" value="SPS Credit Card" /><fieldpresent index="4" value="Other" /></fieldpresentlist></field>
+<field>
+<fieldname>TEXTREF</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+</field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>REVINVC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reverse Invoice</fielddesc>
+</field>
+<field>
+<fieldname>ENTEREDBY</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Entered By</fielddesc>
+</field>
+<field>
+<fieldname>EDN</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Export Declaration Number</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

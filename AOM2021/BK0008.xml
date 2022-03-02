@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0008 BKFORM BKFORM</keywords>
+<pagetitle>Check Stocks</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Check Stocks</title>
+<rotoid>BK0008</rotoid>
+<tablelist>
+<table name="BKFORM" desc="Check Stocks" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>BKFORM</dllname>
+<compositionlist>
+<composition>
+<comprotoid>BK0001</comprotoid>
+<compdesc>Banks</compdesc>
+<compdll>BKACCT</compdll>
+<comptablelist>
+<comptable name="BKACCT" desc="Banks" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Bank Check Stock Code</keytitle>
+<keyfieldlist>
+<keyfield>BANK</keyfield>
+<keyfield>FORMID</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>BANK</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>FORMID</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Check Stock Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CHECK</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>BCD*8.0</fieldtype>
+<fielddesc>Next Check Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>STKTYPE</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Stock Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Combined Check and Advice" /><fieldpresent index="2" value="Checks Then Advices" /><fieldpresent index="3" value="Checks Only" /><fieldpresent index="4" value="Advices Only" /></fieldpresentlist></field>
+<field>
+<fieldname>FORMSPEC1</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*20</fieldtype>
+<fielddesc>Check Form</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FORMSPEC2</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*20</fieldtype>
+<fielddesc>Advice Form</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ADVICE</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Advice Lines Per Page</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LANGUAGE</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Language</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="5658" value="English" /><fieldpresent index="7092" value="French" /><fieldpresent index="5845" value="Spanish" /><fieldpresent index="738" value="Australian" /><fieldpresent index="15719" value="Mexican" /><fieldpresent index="2857" value="Chinese (Simplified)" /><fieldpresent index="2863" value="Chinese (Traditional)" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

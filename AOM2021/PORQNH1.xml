@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0760 PORQNH PORQNH1</keywords>
+<pagetitle>Requisitions</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="PORQNH1" desc="Requisitions">
+<view name="PO0760" desc="Requisitions" />
+<recordlength>638</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Master Key</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>RQNHSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Requisitions</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>RQNNUMBER</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Vendor</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>VDCODE</keyfield><keyfield>RQNHSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Request By</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>REQUESTBY</keyfield><keyfield>RQNNUMBER</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Vendor Document Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>VDCODE</keyfield><keyfield>RQNNUMBER</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>RQNHSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Requisition Sequence Key</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>NEXTLSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Next Line Sequence</fielddesc>
+</field>
+<field>
+<fieldname>LINES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines</fielddesc>
+</field>
+<field>
+<fieldname>LINESCMPL</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines Complete</fielddesc>
+</field>
+<field>
+<fieldname>LINESORDER</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines Ordered</fielddesc>
+</field>
+<field>
+<fieldname>ISPRINTED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ISCOMPLETE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Completed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DTCOMPLETE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Completed</fielddesc>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>DATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Requisition Date</fielddesc>
+</field>
+<field>
+<fieldname>RQNNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Requisition Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>VDCODE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>VDEXISTS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Vendor Exists</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>VDNAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Name</fielddesc>
+</field>
+<field>
+<fieldname>ONHOLD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>On Hold</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ORDEREDON</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Order Date</fielddesc>
+</field>
+<field>
+<fieldname>EXPARRIVAL</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Required</fielddesc>
+</field>
+<field>
+<fieldname>EXPIRATION</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Expiration Date</fielddesc>
+</field>
+<field>
+<fieldname>DESCRIPTIO</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+</field>
+<field>
+<fieldname>COMMENT</fieldname>
+<fieldtype>String*250</fieldtype>
+<fielddesc>Comment</fielddesc>
+</field>
+<field>
+<fieldname>OQORDERED</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Ordered</fielddesc>
+</field>
+<field>
+<fieldname>REQUESTBY</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Requested by</fielddesc>
+</field>
+<field>
+<fieldname>DOCSOURCE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Document Source</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Entered" /><fieldpresent index="1" value="Internet" /></fieldpresentlist></field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>JOBLINES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Job Related Lines</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

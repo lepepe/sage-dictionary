@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0482 ICPRICP ICPRICP</keywords>
+<pagetitle>Item Pricing Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Item Pricing Details</title>
+<rotoid>IC0482</rotoid>
+<tablelist>
+<table name="ICPRICP" desc="Item Pricing Details" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>ICPRICP</dllname>
+<compositionlist>
+<composition>
+<comprotoid>IC0480</comprotoid>
+<compdesc>Item Pricing</compdesc>
+<compdll>ICPRIC</compdll>
+<comptablelist>
+<comptable name="ICPRIC" desc="Item Pricing" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0750</comprotoid>
+<compdesc>Units of Measure</compdesc>
+<compdll>ICUNIT</compdll>
+<comptablelist>
+<comptable name="ICUNIT" desc="Units of Measure" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Currency Code</keytitle>
+<keyfieldlist>
+<keyfield>CURRENCY</keyfield>
+<keyfield>ITEMNO</keyfield>
+<keyfield>PRICELIST</keyfield>
+<keyfield>DPRICETYPE</keyfield>
+<keyfield>QTYUNIT</keyfield>
+<keyfield>WEIGHTUNIT</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Item number/Qty.Unit</keytitle>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield>
+<keyfield>QTYUNIT</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CURRENCY</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Unformatted Item Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>PRICELIST</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Price List Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>DPRICETYPE</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Price Detail Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Base Price Quantity" /><fieldpresent index="2" value="Sale Price Quantity" /><fieldpresent index="3" value="Base Price Weight" /><fieldpresent index="4" value="Sale Price Weight" /><fieldpresent index="5" value="Base Price Using Cost" /><fieldpresent index="6" value="Sale Price Using Cost" /></fieldpresentlist></field>
+<field>
+<fieldname>QTYUNIT</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Quantity Unit</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>WEIGHTUNIT</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Weight Unit</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>UNITPRICE</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Unit Price</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CONVERSION</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Conversion Factor</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SALESTART</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Sale Start</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SALEEND</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Sale End</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LASTPRICDT</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Price Change Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PREVPRICE</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Previous Price</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DEFAULT</fieldname>
+<fieldindex>70</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Default Unit</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

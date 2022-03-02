@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0650 BKJTRAND BKJTRAND</keywords>
+<pagetitle>Bank Journal Transaction Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Bank Journal Transaction Details</title>
+<rotoid>BK0650</rotoid>
+<tablelist>
+<table name="BKJTRAND" desc="Bank Journal Transaction Details" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>BKJTRAND</dllname>
+<compositionlist>
+<composition>
+<comprotoid>BK0655</comprotoid>
+<compdesc>Bank Journal Transaction Header</compdesc>
+<compdll>BKJTRANH</compdll>
+<comptablelist>
+<comptable name="BKJTRANH" desc="Bank Journal Transaction Header" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Bank Journal Transaction Detail</keytitle>
+<keyfieldlist>
+<keyfield>PSTSEQ</keyfield>
+<keyfield>BANK</keyfield>
+<keyfield>SERIAL</keyfield>
+<keyfield>LINE</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PSTSEQ</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BANK</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>SERIAL</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>???</fieldtype>
+<fielddesc>Transaction Header Serial</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LINE</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Transaction Detail Line</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SRCEAPP</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Application</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>STATUS</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Detail Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Not Posted" /><fieldpresent index="2" value="Void" /><fieldpresent index="3" value="Outstanding" /><fieldpresent index="4" value="Reversed" /><fieldpresent index="5" value="Cleared" /><fieldpresent index="6" value="Cleared with bank error" /><fieldpresent index="7" value="Non-negotiable" /><fieldpresent index="8" value="Continuation" /><fieldpresent index="9" value="Printed" /><fieldpresent index="10" value="Cleared with write-off" /><fieldpresent index="11" value="Cleared with exchange rate difference" /><fieldpresent index="12" value="Cleared with credit card charge" /></fieldpresentlist></field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Withdrawals" /><fieldpresent index="2" value="Deposits" /></fieldpresentlist></field>
+<field>
+<fieldname>TYPE</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Transaction Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Check" /><fieldpresent index="2" value="EFT" /><fieldpresent index="3" value="Transfer" /><fieldpresent index="4" value="Service Charge" /><fieldpresent index="5" value="Credit Card" /><fieldpresent index="6" value="Cash" /><fieldpresent index="7" value="Other" /></fieldpresentlist></field>
+<field>
+<fieldname>IDREMIT</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Remittance ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATEREMIT</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BTCHNBR</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Batch Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ENTRYNBR</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Entry Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>POSTSEQ</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Transaction Reference</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COMMENT</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Transaction Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PAYORID</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Payer Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>PAYORNAME</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Payee Name</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VENDORNAME</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Vendor Name</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SRCEAMOUNT</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Source Transaction Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FUNCAMOUNT</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Functional Transaction Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Exchange Rate Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCECURN</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Receipt Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Exchange Rate Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RATESPREAD</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Rate Spread</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operation</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /><fieldpresent index="0" value="Not Specified" /></fieldpresentlist></field>
+<field>
+<fieldname>DISTCODE</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Distribution Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>GLACCOUNT</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>G/L Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>GLACCTOVR</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>GL Account Override</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DDTYPE</fieldname>
+<fieldindex>35</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Drilldown Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DDLINK</fieldname>
+<fieldindex>36</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Drilldown Link</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECSTATUS</fieldname>
+<fieldindex>37</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciliation Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Not Posted" /><fieldpresent index="2" value="Void" /><fieldpresent index="3" value="Outstanding" /><fieldpresent index="4" value="Reversed" /><fieldpresent index="5" value="Cleared" /><fieldpresent index="6" value="Cleared with bank error" /><fieldpresent index="7" value="Non-negotiable" /><fieldpresent index="8" value="Continuation" /><fieldpresent index="9" value="Printed" /><fieldpresent index="10" value="Cleared with write-off" /><fieldpresent index="11" value="Cleared with exchange rate difference" /><fieldpresent index="12" value="Cleared with credit card charge" /></fieldpresentlist></field>
+<field>
+<fieldname>RECSTATCHG</fieldname>
+<fieldindex>38</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Status Change Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECCOMMENT</fieldname>
+<fieldindex>39</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reconciliation Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECCLEARED</fieldname>
+<fieldindex>40</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cleared Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldindex>41</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Reconciliation Posting Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>POSTYEAR</fieldname>
+<fieldindex>42</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Reconciliation Posting Year</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%04D</mask></field>
+<field>
+<fieldname>POSTPERIOD</fieldname>
+<fieldindex>43</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciliation Posting Period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECONCILED</fieldname>
+<fieldindex>44</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Reconciled</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPENDING</fieldname>
+<fieldindex>45</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Remaining In Transit Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECERR</fieldname>
+<fieldindex>46</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Error</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECERRPEND</fieldname>
+<fieldindex>47</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Error Pending</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECEXGAIN</fieldname>
+<fieldindex>48</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Exchange Gain</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECEXLOSS</fieldname>
+<fieldindex>49</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Exchange Loss</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECSUGGEST</fieldname>
+<fieldindex>50</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciliation Suggestion</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Not Posted" /><fieldpresent index="2" value="Void" /><fieldpresent index="3" value="Outstanding" /><fieldpresent index="4" value="Reversed" /><fieldpresent index="5" value="Cleared" /><fieldpresent index="6" value="Cleared with bank error" /><fieldpresent index="7" value="Non-negotiable" /><fieldpresent index="8" value="Continuation" /><fieldpresent index="9" value="Printed" /><fieldpresent index="10" value="Cleared with write-off" /><fieldpresent index="11" value="Cleared with exchange rate difference" /><fieldpresent index="12" value="Cleared with credit card charge" /></fieldpresentlist></field>
+<field>
+<fieldname>RECAMOUNT</fieldname>
+<fieldindex>51</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transaction Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECOUTSTND</fieldname>
+<fieldindex>52</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Outstanding Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECTARGET</fieldname>
+<fieldindex>53</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciliation Target</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECCCC</fieldname>
+<fieldindex>54</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Credit Card Charge</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECWOSUM</fieldname>
+<fieldindex>55</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Write-Off Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CURFUNC</fieldname>
+<fieldindex>56</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Functional Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CURSTMT</fieldname>
+<fieldindex>57</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Statement Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SUMAMOUNT</fieldname>
+<fieldindex>58</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Summated Transaction Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECSPREAD</fieldname>
+<fieldindex>59</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Spread</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPAMOUNT</fieldname>
+<fieldindex>60</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Transaction Remaining In Transit</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPOUTSTD</fieldname>
+<fieldindex>61</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Outstanding Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPWO</fieldname>
+<fieldindex>62</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Write Offs</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPERR</fieldname>
+<fieldindex>63</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Bank Errors</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPGAIN</fieldname>
+<fieldindex>64</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Exchange Gain</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPLOSS</fieldname>
+<fieldindex>65</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Exchange Loss</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPCCC</fieldname>
+<fieldindex>66</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Credit Card Charge</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPCLR</fieldname>
+<fieldindex>67</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Cleared</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPFUNAM</fieldname>
+<fieldindex>68</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Functional Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPORIG</fieldname>
+<fieldindex>69</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Original Transaction Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECTBOOK</fieldname>
+<fieldindex>70</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Book Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPBOOK</fieldname>
+<fieldindex>71</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Book Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECTREMAIN</fieldname>
+<fieldindex>72</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Remaining Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECPREMAIN</fieldname>
+<fieldindex>73</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Remaining Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECRWOSUM</fieldname>
+<fieldindex>74</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Write-Off To This Period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECFCLR</fieldname>
+<fieldindex>75</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Cleared To Future</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECRCLR</fieldname>
+<fieldindex>76</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Cleared To Current</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECWOSUMR</fieldname>
+<fieldindex>77</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Current Period's Write-Off</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECFCLRR</fieldname>
+<fieldindex>78</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Posted Fiscal Cleared To Future</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PAYMCODE</fieldname>
+<fieldindex>79</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Payment Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CHKFORM</fieldname>
+<fieldindex>80</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Check Stock Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>OFXTID</fieldname>
+<fieldindex>81</fieldindex>
+<fieldtype>String*50</fieldtype>
+<fielddesc>OFX Transaction ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECDELTAF</fieldname>
+<fieldindex>82</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Future Reconciliation Delta</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FSCYEAR</fieldname>
+<fieldindex>83</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FSCPERIOD</fieldname>
+<fieldindex>84</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>REVDATE</fieldname>
+<fieldindex>85</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Reversal/Return Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SRCEDOCNUM</fieldname>
+<fieldindex>86</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Source Document Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CANREVINVC</fieldname>
+<fieldindex>87</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Can Reverse Invoice</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>REVINVC</fieldname>
+<fieldindex>88</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reverse Invoice</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>COMPLETED</fieldname>
+<fieldindex>89</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciled and Journaled Transaction</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Not Completed" /><fieldpresent index="10" value="Completed" /></fieldpresentlist></field>
+<field>
+<fieldname>ENTRYTYPE</fieldname>
+<fieldindex>90</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Entry Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECDELTA</fieldname>
+<fieldindex>91</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Amount Delta</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>POSTED</fieldname>
+<fieldindex>92</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Document Posted Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RECLEVEL</fieldname>
+<fieldindex>93</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciled By</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Reconciled by Header" /><fieldpresent index="1" value="Reconciled by Detail" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

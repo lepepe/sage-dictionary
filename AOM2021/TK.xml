@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>TK 68A</keywords>
+<pagetitle>United Kingdom Taxes</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<application name="United Kingdom Taxes" version="6.8A">
+<viewlist>
+<view name="TK0200" desc="VAT Configuration Detail" dllname="TKBOXD">
+<viewtablelist>
+<table name="TKBOXD" desc="VAT Configuration Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="TK0300" desc="VAT Configuration Header" /></viewcomplist>
+</view>
+<view name="TK0300" desc="VAT Configuration Header" dllname="TKBOXH">
+<viewtablelist>
+<table name="TKBOXH" desc="VAT Configuration Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="TK0200" desc="VAT Configuration Detail" /></viewcomplist>
+</view>
+<view name="TK0400" desc="Generate VAT Worksheet" dllname="TKGBAS">
+<viewtablelist>
+<table name="TKGBAS" desc="Generate VAT Worksheet" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="TK0580" desc="VAT Worksheet Detail Amounts" /></viewcomplist>
+</view>
+<view name="TK0410" desc="VAT Return Audit Header" dllname="TKAUDH">
+<viewtablelist>
+<table name="TKAUDH" desc="VAT Return Audit Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="TK0414" desc="VAT Return Audit Details - GL" /><viewcomp name="TK0412" desc="VAT Return Audit Details - TX" /></viewcomplist>
+</view>
+<view name="TK0412" desc="VAT Return Audit Details - TX" dllname="TKAUTX">
+<viewtablelist>
+<table name="TKAUTX" desc="VAT Return Audit Details - TX" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="TK0410" desc="VAT Return Audit Header" /></viewcomplist>
+</view>
+<view name="TK0414" desc="VAT Return Audit Details - GL" dllname="TKAUGL">
+<viewtablelist>
+<table name="TKAUGL" desc="VAT Return Audit Details - GL" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="TK0410" desc="VAT Return Audit Header" /></viewcomplist>
+</view>
+<view name="TK0500" desc="UK Tax Activation" dllname="TKINIT">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="TK0580" desc="VAT Worksheet Detail Amounts" dllname="TKTBOXD">
+<viewtablelist>
+<table name="TKTBOXD" desc="VAT Worksheet Detail Amounts" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="TK0400" desc="Generate VAT Worksheet" /></viewcomplist>
+</view>
+<view name="TK0600" desc="UK Tax Activation Upgrade" dllname="TKUPGD">
+<viewtablelist>
+</viewtablelist>
+</view>
+</viewlist>
+<tablelist>
+<table name="TKAUDH" desc="VAT Return Audit Header">
+<view name="TK0410" desc="VAT Return Audit Header" />
+</table>
+<table name="TKAUGL" desc="VAT Return Audit Details - GL">
+<view name="TK0414" desc="VAT Return Audit Details - GL" />
+</table>
+<table name="TKAUTX" desc="VAT Return Audit Details - TX">
+<view name="TK0412" desc="VAT Return Audit Details - TX" />
+</table>
+<table name="TKBOXD" desc="VAT Configuration Detail">
+<view name="TK0200" desc="VAT Configuration Detail" />
+</table>
+<table name="TKBOXH" desc="VAT Configuration Header">
+<view name="TK0300" desc="VAT Configuration Header" />
+</table>
+<table name="TKGBAS" desc="Generate VAT Worksheet">
+<view name="TK0400" desc="Generate VAT Worksheet" />
+</table>
+<table name="TKTBOXD" desc="VAT Worksheet Detail Amounts">
+<view name="TK0580" desc="VAT Worksheet Detail Amounts" />
+</table>
+</tablelist>
+<objectlist>
+<object name="TKBOX">
+<protocolflag type="Protocol" value="SEQUENCE" desc="SEQUENCE" />
+<objectviewlist>
+<objectview name="TK0300" desc="VAT Configuration Header" />
+<objectview name="TK0200" desc="VAT Configuration Detail" />
+</objectviewlist>
+</object>
+<object name="TKINIT">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="TK0500" desc="UK Tax Activation" />
+</objectviewlist>
+</object>
+<object name="TKUPGD">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="TK0600" desc="UK Tax Activation Upgrade" />
+</objectviewlist>
+</object>
+</objectlist>
+</application>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,1453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>CP 73A</keywords>
+<pagetitle>Canadian Payroll</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<application name="Canadian Payroll" version="7.3A">
+<viewlist>
+<view name="CP0001" desc="Payroll Activation" dllname="CPACTV">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0006" desc="Class Codes" dllname="CPCLAS">
+<viewtablelist>
+<table name="CPCLAS" desc="Class Codes" />
+</viewtablelist>
+</view>
+<view name="CP0007" desc="Earnings/Deductions" dllname="CPDTLM">
+<viewtablelist>
+<table name="CPDTLM" desc="Earnings/Deductions" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0015" desc="Include List" /><viewcomp name="CP0015" desc="Include List" /><viewcomp name="CP0015" desc="Include List" /><viewcomp name="CP0015" desc="Include List" /><viewcomp name="CP0015" desc="Include List" /><viewcomp name="CP0009" desc="Distribution" /><viewcomp name="CP0123" desc="Earnings/Deductions Opt Fields" /><viewcomp name="CP0040" desc="Earnings Billing Detail" /></viewcomplist>
+</view>
+<view name="CP0008" desc="Employee Earnings/Deductions" dllname="CPEMPD">
+<viewtablelist>
+<table name="CPEMPD" desc="Employee Earnings/Deductions" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0014" desc="Employees" /><viewcomp name="CP0125" desc="Empl Earn/Ded Optional Fields" /><viewcomp name="CP0041" desc="Employee Billing Details" /></viewcomplist>
+</view>
+<view name="CP0009" desc="Distribution" dllname="CPDIST">
+<viewtablelist>
+<table name="CPDIST" desc="Distribution" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0029" desc="Company Payroll Taxes" /><viewcomp name="CP0007" desc="Earnings/Deductions" /></viewcomplist>
+</view>
+<view name="CP0010" desc="Employee Taxes" dllname="CPEMPT">
+<viewtablelist>
+<table name="CPEMPT" desc="Employee Taxes" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0014" desc="Employees" /><viewcomp name="CP0062" desc="Employee Tax Fields" /><viewcomp name="CP0126" desc="Empl Taxes Optional Fields" /></viewcomplist>
+</view>
+<view name="CP0012" desc="Employee History Control" dllname="CPHSTH">
+<viewtablelist>
+<table name="CPHSTH" desc="Employee History Control" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0013" desc="Employee History Optional Field Values" /></viewcomplist>
+</view>
+<view name="CP0013" desc="Employee History Optional Field Values" dllname="CPHSHO">
+<viewtablelist>
+<table name="CPHSHO" desc="Employee History Optional Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0012" desc="Employee History Control" /></viewcomplist>
+</view>
+<view name="CP0014" desc="Employees" dllname="CPEMPL">
+<viewtablelist>
+<table name="CPEMPL" desc="Employees" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0008" desc="Employee Earnings/Deductions" /><viewcomp name="CP0010" desc="Employee Taxes" /><viewcomp name="CP0053" desc="Employee Notes" /><viewcomp name="CP0201" desc="Employee EFT Banks" /><viewcomp name="CP0122" desc="Employee Optional Field Values" /><viewcomp name="CP0118" desc="Employee Garnishment" /></viewcomplist>
+</view>
+<view name="CP0015" desc="Include List" dllname="CPINCL">
+<viewtablelist>
+<table name="CPINCL" desc="Include List" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0007" desc="Earnings/Deductions" /><viewcomp name="CP0029" desc="Company Payroll Taxes" /></viewcomplist>
+</view>
+<view name="CP0016" desc="Canadian Payroll Integrity Checker" dllname="CPDCHK">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0017" desc="Status" dllname="CPSTAT">
+<viewtablelist>
+<table name="CPSTAT" desc="Status" />
+</viewtablelist>
+</view>
+<view name="CP0018" desc="Delete Inactive Records" dllname="CPMAIN">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0019" desc="Manual Cheque Header" dllname="CPMCHD">
+<viewtablelist>
+<table name="CPMCHD" desc="Manual Cheque Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0020" desc="Manual Cheque Detail" /><viewcomp name="CP0129" desc="Manual Cheque Optional Field Values" /></viewcomplist>
+</view>
+<view name="CP0020" desc="Manual Cheque Detail" dllname="CPMCDT">
+<viewtablelist>
+<table name="CPMCDT" desc="Manual Cheque Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0019" desc="Manual Cheque Header" /><viewcomp name="CP0130" desc="MC Details Opt Field Values" /><viewcomp name="CP0043" desc="Manual Cheque Job Details" /></viewcomplist>
+</view>
+<view name="CP0021" desc="History Audit Headers" dllname="CPHHAU">
+<viewtablelist>
+<table name="CPHHAU" desc="History Audit Headers" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0024" desc="History Audit Details" /><viewcomp name="CP0135" desc="History Audit Header Opt Fields" /></viewcomplist>
+</view>
+<view name="CP0022" desc="Overtime Schedules" dllname="CPOTSC">
+<viewtablelist>
+<table name="CPOTSC" desc="Overtime Schedules" />
+</viewtablelist>
+</view>
+<view name="CP0023" desc="Company Options" dllname="CPOPTS">
+<viewtablelist>
+<table name="CPOPTS" desc="Company Options" />
+</viewtablelist>
+</view>
+<view name="CP0024" desc="History Audit Details" dllname="CPHDAU">
+<viewtablelist>
+<table name="CPHDAU" desc="History Audit Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0021" desc="History Audit Headers" /><viewcomp name="CP0136" desc="History Audit Detail Opt Fields" /></viewcomplist>
+</view>
+<view name="CP0025" desc="Shift Differential Schedule" dllname="CPSHFT">
+<viewtablelist>
+<table name="CPSHFT" desc="Shift Differential Schedule" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0038" desc="Shift Differential Detail" /></viewcomplist>
+</view>
+<view name="CP0026" desc="Concurrency controller" dllname="CPCTRL">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0027" desc="Work Classification Codes" dllname="CPWRKC">
+<viewtablelist>
+<table name="CPWRKC" desc="Work Classification Codes" />
+</viewtablelist>
+</view>
+<view name="CP0029" desc="Company Payroll Taxes" dllname="CPTXMS">
+<viewtablelist>
+<table name="CPTXMS" desc="Company Payroll Taxes" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0015" desc="Include List" /><viewcomp name="CP0015" desc="Include List" /><viewcomp name="CP0015" desc="Include List" /><viewcomp name="CP0009" desc="Distribution" /><viewcomp name="CP0124" desc="Taxes Optional Field Values" /></viewcomplist>
+</view>
+<view name="CP0030" desc="Employee EI History" dllname="CPEUIC">
+<viewtablelist>
+<table name="CPEUIC" desc="Employee EI History" />
+</viewtablelist>
+</view>
+<view name="CP0031" desc="Timecard Header" dllname="CPTCHD">
+<viewtablelist>
+<table name="CPTCHD" desc="Timecard Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0032" desc="Timecard Detail" /><viewcomp name="CP0127" desc="Timecard Optional Field Values" /></viewcomplist>
+</view>
+<view name="CP0032" desc="Timecard Detail" dllname="CPTCDT">
+<viewtablelist>
+<table name="CPTCDT" desc="Timecard Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0031" desc="Timecard Header" /><viewcomp name="CP0128" desc="Timecard Details Optional Field Values" /><viewcomp name="CP0042" desc="Timecard Job Details" /></viewcomplist>
+</view>
+<view name="CP0036" desc="Workers Compensation Master" dllname="CPWCCH">
+<viewtablelist>
+<table name="CPWCCH" desc="Workers Compensation Master" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0037" desc="Workers Compensation Codes" /></viewcomplist>
+</view>
+<view name="CP0037" desc="Workers Compensation Codes" dllname="CPWCCD">
+<viewtablelist>
+<table name="CPWCCD" desc="Workers Compensation Codes" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0036" desc="Workers Compensation Master" /></viewcomplist>
+</view>
+<view name="CP0038" desc="Shift Differential Detail" dllname="CPSHFD">
+<viewtablelist>
+<table name="CPSHFD" desc="Shift Differential Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0025" desc="Shift Differential Schedule" /><viewcomp name="CP0039" desc="Shift Differential Billing Detail" /></viewcomplist>
+</view>
+<view name="CP0039" desc="Shift Differential Billing Detail" dllname="CPSHFB">
+<viewtablelist>
+<table name="CPSHFB" desc="Shift Differential Billing Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0038" desc="Shift Differential Detail" /></viewcomplist>
+</view>
+<view name="CP0040" desc="Earnings Billing Detail" dllname="CPDTLB">
+<viewtablelist>
+<table name="CPDTLB" desc="Earnings Billing Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0007" desc="Earnings/Deductions" /></viewcomplist>
+</view>
+<view name="CP0041" desc="Employee Billing Details" dllname="CPEMDB">
+<viewtablelist>
+<table name="CPEMDB" desc="Employee Billing Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0008" desc="Employee Earnings/Deductions" /></viewcomplist>
+</view>
+<view name="CP0042" desc="Timecard Job Details" dllname="CPTCJB">
+<viewtablelist>
+<table name="CPTCJB" desc="Timecard Job Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0032" desc="Timecard Detail" /><viewcomp name="CP0141" desc="Timecard Jobs Optional Field Values" /></viewcomplist>
+</view>
+<view name="CP0043" desc="Manual Cheque Job Details" dllname="CPMCJB">
+<viewtablelist>
+<table name="CPMCJB" desc="Manual Cheque Job Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0020" desc="Manual Cheque Detail" /><viewcomp name="CP0142" desc="Manual Cheque Jobs Opt Fields" /></viewcomplist>
+</view>
+<view name="CP0044" desc="Employee Timecard Job Details" dllname="CPUTJB">
+<viewtablelist>
+<table name="CPUTJB" desc="Employee Timecard Job Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0103" desc="Employee Timecard Detail" /><viewcomp name="CP0143" desc="Employee TC Jobs Opt Field Values" /></viewcomplist>
+</view>
+<view name="CP0045" desc="Employee Selection Lists" dllname="CPESLH">
+<viewtablelist>
+<table name="CPESLH" desc="Employee Selection Lists" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0046" desc="Employee Selection List Members" /></viewcomplist>
+</view>
+<view name="CP0046" desc="Employee Selection List Members" dllname="CPESLD">
+<viewtablelist>
+<table name="CPESLD" desc="Employee Selection List Members" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0045" desc="Employee Selection Lists" /></viewcomplist>
+</view>
+<view name="CP0047" desc="Employee YTD Summaries" dllname="CPYTDS">
+<viewtablelist>
+<table name="CPYTDS" desc="Employee YTD Summaries" />
+</viewtablelist>
+</view>
+<view name="CP0048" desc="Cheque Header" dllname="CPCHKH">
+<viewtablelist>
+<table name="CPCHKH" desc="Cheque Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0049" desc="Cheque Details" /><viewcomp name="CP0052" desc="Cheque Comment Detail" /><viewcomp name="CP0202" desc="Cheque EFT Details" /><viewcomp name="CP0133" desc="Cheque Header Optional Field Values" /><viewcomp name="CP0134" desc="Cheque Details Optional Fields" /></viewcomplist>
+</view>
+<view name="CP0049" desc="Cheque Details" dllname="CPCHKD">
+<viewtablelist>
+<table name="CPCHKD" desc="Cheque Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0048" desc="Cheque Header" /><viewcomp name="CP0134" desc="Cheque Details Optional Fields" /><viewcomp name="CP0056" desc="Cheque Job Details" /></viewcomplist>
+</view>
+<view name="CP0050" desc="Payroll Posting Superview" dllname="CPPOST">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0051" desc="Globally Modify List" dllname="CPGLBM">
+<viewtablelist>
+<table name="CPGLBM" desc="Globally Modify List" />
+</viewtablelist>
+</view>
+<view name="CP0052" desc="Cheque Comment Detail" dllname="CPCHKC">
+<viewtablelist>
+<table name="CPCHKC" desc="Cheque Comment Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0048" desc="Cheque Header" /></viewcomplist>
+</view>
+<view name="CP0053" desc="Employee Notes" dllname="CPEMPC">
+<viewtablelist>
+<table name="CPEMPC" desc="Employee Notes" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0014" desc="Employees" /></viewcomplist>
+</view>
+<view name="CP0056" desc="Cheque Job Details" dllname="CPCHJB">
+<viewtablelist>
+<table name="CPCHJB" desc="Cheque Job Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0049" desc="Cheque Details" /><viewcomp name="CP0144" desc="Cheque Jobs Optional Fields Values" /></viewcomplist>
+</view>
+<view name="CP0057" desc="G/L Reference Integration" dllname="CPGLREF">
+<viewtablelist>
+<table name="CPGLREF" desc="G/L Reference Integration" />
+</viewtablelist>
+</view>
+<view name="CP0058" desc="Globally Modify Process" dllname="CPGMET">
+<viewtablelist>
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0008" desc="Employee Earnings/Deductions" /><viewcomp name="CP0041" desc="Employee Billing Details" /><viewcomp name="CP0010" desc="Employee Taxes" /></viewcomplist>
+</view>
+<view name="CP0059" desc="G/L Acct Desc Report Extraction" dllname="CPGLDX">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0060" desc="G/L Acct Desc Report List" dllname="CPGLDD">
+<viewtablelist>
+<table name="CPGLDD" desc="G/L Acct Desc Report List" />
+</viewtablelist>
+</view>
+<view name="CP0062" desc="Employee Tax Fields" dllname="CPEMTF">
+<viewtablelist>
+<table name="CPEMTF" desc="Employee Tax Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0010" desc="Employee Taxes" /></viewcomplist>
+</view>
+<view name="CP0064" desc="Calc PR Exceptions" dllname="CPXCPT">
+<viewtablelist>
+<table name="CPXCPT" desc="Calc PR Exceptions" />
+</viewtablelist>
+</view>
+<view name="CP0065" desc="Process Manual Cheques" dllname="CPPMAN">
+<viewtablelist>
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0138" desc="Process Manual Cheque Optional Fields" /></viewcomplist>
+</view>
+<view name="CP0066" desc="User Selection Lists" dllname="CPUSLH">
+<viewtablelist>
+<table name="CPUSLH" desc="User Selection Lists" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0067" desc="User Selection List Detail" /></viewcomplist>
+</view>
+<view name="CP0067" desc="User Selection List Detail" dllname="CPUSLD">
+<viewtablelist>
+<table name="CPUSLD" desc="User Selection List Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0066" desc="User Selection Lists" /></viewcomplist>
+</view>
+<view name="CP0077" desc="Cheque History Summary" dllname="CPCHKS">
+<viewtablelist>
+<table name="CPCHKS" desc="Cheque History Summary" />
+</viewtablelist>
+</view>
+<view name="CP0078" desc="Print Cheques Control" dllname="CPPCKS">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0079" desc="Print Cheques Header Extension" dllname="CPPCKH">
+<viewtablelist>
+<table name="CPPCKH" desc="Print Cheques Header Extension" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0080" desc="Print Cheques Detail Extension" /></viewcomplist>
+</view>
+<view name="CP0080" desc="Print Cheques Detail Extension" dllname="CPPCKD">
+<viewtablelist>
+<table name="CPPCKD" desc="Print Cheques Detail Extension" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0079" desc="Print Cheques Header Extension" /></viewcomplist>
+</view>
+<view name="CP0081" desc="Earnings Hours Report" dllname="CPERHR">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0082" desc="Check Reconciliation" dllname="CPCREC">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0083" desc="Calculate Payroll" dllname="CPCALC">
+<viewtablelist>
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0137" desc="Calculate Payroll Optional Fields" /></viewcomplist>
+</view>
+<view name="CP0084" desc="E/D/T List" dllname="CPCALE">
+<viewtablelist>
+<table name="CPCALE" desc="E/D/T List" />
+</viewtablelist>
+</view>
+<view name="CP0085" desc="Timecard List" dllname="CPCALT">
+<viewtablelist>
+<table name="CPCALT" desc="Timecard List" />
+</viewtablelist>
+</view>
+<view name="CP0086" desc="Cost Center Allocations" dllname="CPCALA">
+<viewtablelist>
+<table name="CPCALA" desc="Cost Center Allocations" />
+</viewtablelist>
+</view>
+<view name="CP0087" desc="Timecard Earnings List" dllname="CPCALO">
+<viewtablelist>
+<table name="CPCALO" desc="Timecard Earnings List" />
+</viewtablelist>
+</view>
+<view name="CP0088" desc="Cheque Run Header" dllname="CPCHKR">
+<viewtablelist>
+<table name="CPCHKR" desc="Cheque Run Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0139" desc="Cheque Run Optional Field Values" /></viewcomplist>
+</view>
+<view name="CP0089" desc="Print Cheques Trans." dllname="CPPCKF">
+<viewtablelist>
+<table name="CPPCKF" desc="Print Cheques Trans." />
+</viewtablelist>
+</view>
+<view name="CP0093" desc="Earnings Hourly Report" dllname="CPEHRP">
+<viewtablelist>
+<table name="CPEHRP" desc="Earnings Hourly Report" />
+</viewtablelist>
+</view>
+<view name="CP0094" desc="Payroll Register G/L Accounts" dllname="CPPREG">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0097" desc="Restart" dllname="PRRSTRT">
+<viewtablelist>
+<table name="PRRSTRT" desc="Restart" />
+</viewtablelist>
+</view>
+<view name="CP0099" desc="Earnings/Deductions (virtual)" dllname="CPDTLX">
+<viewtablelist>
+<table name="CPDTLX" desc="Earnings/Deductions (virtual)" />
+</viewtablelist>
+</view>
+<view name="CP0100" desc="Temporary Tax List" dllname="CPTXMC">
+<viewtablelist>
+<table name="CPTXMC" desc="Temporary Tax List" />
+</viewtablelist>
+</view>
+<view name="CP0101" desc="Empl Timecards Transfer Ctrl" dllname="CPUTTR">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0102" desc="Employee Timecard Header" dllname="CPUTCH">
+<viewtablelist>
+<table name="CPUTCH" desc="Employee Timecard Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0103" desc="Employee Timecard Detail" /><viewcomp name="CP0131" desc="Empl Timecard Optional Fields" /></viewcomplist>
+</view>
+<view name="CP0103" desc="Employee Timecard Detail" dllname="CPUTCD">
+<viewtablelist>
+<table name="CPUTCD" desc="Employee Timecard Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0102" desc="Employee Timecard Header" /><viewcomp name="CP0132" desc="Empl Timecard Details Opt Flds" /><viewcomp name="CP0044" desc="Employee Timecard Job Details" /></viewcomplist>
+</view>
+<view name="CP0104" desc="Employee Activity" dllname="CPEMAC">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0105" desc="Find Duplicate SIN" dllname="CPESIN">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0106" desc="Duplicate SIN" dllname="CPEDUP">
+<viewtablelist>
+<table name="CPEDUP" desc="Duplicate SIN" />
+</viewtablelist>
+</view>
+<view name="CP0107" desc="Create G/L Batch" dllname="CPGLTR">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0108" desc="Copy Timecard" dllname="CPTCCP">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0109" desc="Employee Sel Lists Superview" dllname="CPESLC">
+<viewtablelist>
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0045" desc="Employee Selection Lists" /><viewcomp name="CP0046" desc="Employee Selection List Members" /></viewcomplist>
+</view>
+<view name="CP0110" desc="Include List (virtual)" dllname="CPINCX">
+<viewtablelist>
+<table name="CPINCX" desc="Include List (virtual)" />
+</viewtablelist>
+</view>
+<view name="CP0111" desc="G/L Drill Down" dllname="CPDLDN">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0112" desc="Cheque Selection Superview" dllname="CPCHKX">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0113" desc="Cheque Selection List" dllname="CPCHKL">
+<viewtablelist>
+<table name="CPCHKL" desc="Cheque Selection List" />
+</viewtablelist>
+</view>
+<view name="CP0115" desc="Accrual Carry-over Log File" dllname="CPACCO">
+<viewtablelist>
+<table name="CPACCO" desc="Accrual Carry-over Log File" />
+</viewtablelist>
+</view>
+<view name="CP0116" desc="Deduction Groups" dllname="CPLIMH">
+<viewtablelist>
+<table name="CPLIMH" desc="Deduction Groups" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0117" desc="Deduction Group Details" /></viewcomplist>
+</view>
+<view name="CP0117" desc="Deduction Group Details" dllname="CPLIMD">
+<viewtablelist>
+<table name="CPLIMD" desc="Deduction Group Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0116" desc="Deduction Groups" /></viewcomplist>
+</view>
+<view name="CP0118" desc="Employee Garnishment" dllname="CPEMCS">
+<viewtablelist>
+<table name="CPEMCS" desc="Employee Garnishment" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0014" desc="Employees" /></viewcomplist>
+</view>
+<view name="CP0120" desc="Optional Field Locations" dllname="CPOFH">
+<viewtablelist>
+<table name="CPOFH" desc="Optional Field Locations" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0121" desc="Optional Field Values" /></viewcomplist>
+</view>
+<view name="CP0121" desc="Optional Field Values" dllname="CPOFD">
+<viewtablelist>
+<table name="CPOFD" desc="Optional Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0120" desc="Optional Field Locations" /></viewcomplist>
+</view>
+<view name="CP0122" desc="Employee Optional Field Values" dllname="CPEMPO">
+<viewtablelist>
+<table name="CPEMPO" desc="Employee Optional Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0014" desc="Employees" /></viewcomplist>
+</view>
+<view name="CP0123" desc="Earnings/Deductions Opt Fields" dllname="CPDTLO">
+<viewtablelist>
+<table name="CPDTLO" desc="Earnings/Deductions Opt Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0007" desc="Earnings/Deductions" /></viewcomplist>
+</view>
+<view name="CP0124" desc="Taxes Optional Field Values" dllname="CPTXMO">
+<viewtablelist>
+<table name="CPTXMO" desc="Taxes Optional Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0029" desc="Company Payroll Taxes" /></viewcomplist>
+</view>
+<view name="CP0125" desc="Empl Earn/Ded Optional Fields" dllname="CPEMDO">
+<viewtablelist>
+<table name="CPEMDO" desc="Empl Earn/Ded Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0008" desc="Employee Earnings/Deductions" /></viewcomplist>
+</view>
+<view name="CP0126" desc="Empl Taxes Optional Fields" dllname="CPEMTO">
+<viewtablelist>
+<table name="CPEMTO" desc="Empl Taxes Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0010" desc="Employee Taxes" /></viewcomplist>
+</view>
+<view name="CP0127" desc="Timecard Optional Field Values" dllname="CPTCHO">
+<viewtablelist>
+<table name="CPTCHO" desc="Timecard Optional Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0031" desc="Timecard Header" /></viewcomplist>
+</view>
+<view name="CP0128" desc="Timecard Details Optional Field Values" dllname="CPTCDO">
+<viewtablelist>
+<table name="CPTCDO" desc="Timecard Details Optional Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0032" desc="Timecard Detail" /></viewcomplist>
+</view>
+<view name="CP0129" desc="Manual Cheque Optional Field Values" dllname="CPMCHO">
+<viewtablelist>
+<table name="CPMCHO" desc="Manual Cheque Optional Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0019" desc="Manual Cheque Header" /></viewcomplist>
+</view>
+<view name="CP0130" desc="MC Details Opt Field Values" dllname="CPMCDO">
+<viewtablelist>
+<table name="CPMCDO" desc="MC Details Opt Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0020" desc="Manual Cheque Detail" /></viewcomplist>
+</view>
+<view name="CP0131" desc="Empl Timecard Optional Fields" dllname="CPUTHO">
+<viewtablelist>
+<table name="CPUTHO" desc="Empl Timecard Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0102" desc="Employee Timecard Header" /></viewcomplist>
+</view>
+<view name="CP0132" desc="Empl Timecard Details Opt Flds" dllname="CPUTDO">
+<viewtablelist>
+<table name="CPUTDO" desc="Empl Timecard Details Opt Flds" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0103" desc="Employee Timecard Detail" /></viewcomplist>
+</view>
+<view name="CP0133" desc="Cheque Header Optional Field Values" dllname="CPCHHO">
+<viewtablelist>
+<table name="CPCHHO" desc="Cheque Header Optional Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0048" desc="Cheque Header" /></viewcomplist>
+</view>
+<view name="CP0134" desc="Cheque Details Optional Fields" dllname="CPCHDO">
+<viewtablelist>
+<table name="CPCHDO" desc="Cheque Details Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0049" desc="Cheque Details" /></viewcomplist>
+</view>
+<view name="CP0135" desc="History Audit Header Opt Fields" dllname="CPHHOA">
+<viewtablelist>
+<table name="CPHHOA" desc="History Audit Header Opt Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0021" desc="History Audit Headers" /></viewcomplist>
+</view>
+<view name="CP0136" desc="History Audit Detail Opt Fields" dllname="CPHDOA">
+<viewtablelist>
+<table name="CPHDOA" desc="History Audit Detail Opt Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0024" desc="History Audit Details" /></viewcomplist>
+</view>
+<view name="CP0137" desc="Calculate Payroll Optional Fields" dllname="CPCLCO">
+<viewtablelist>
+<table name="CPCLCO" desc="Calculate Payroll Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0083" desc="Calculate Payroll" /></viewcomplist>
+</view>
+<view name="CP0138" desc="Process Manual Cheque Optional Fields" dllname="CPPMCO">
+<viewtablelist>
+<table name="CPPMCO" desc="Process Manual Cheque Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0065" desc="Process Manual Cheques" /></viewcomplist>
+</view>
+<view name="CP0139" desc="Cheque Run Optional Field Values" dllname="CPCHKO">
+<viewtablelist>
+<table name="CPCHKO" desc="Cheque Run Optional Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0088" desc="Cheque Run Header" /></viewcomplist>
+</view>
+<view name="CP0140" desc="PR Optional Field Callbacks" dllname="CPOFCMD">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="CP0141" desc="Timecard Jobs Optional Field Values" dllname="CPTCJO">
+<viewtablelist>
+<table name="CPTCJO" desc="Timecard Jobs Optional Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0042" desc="Timecard Job Details" /></viewcomplist>
+</view>
+<view name="CP0142" desc="Manual Cheque Jobs Opt Fields" dllname="CPMCJO">
+<viewtablelist>
+<table name="CPMCJO" desc="Manual Cheque Jobs Opt Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0043" desc="Manual Cheque Job Details" /></viewcomplist>
+</view>
+<view name="CP0143" desc="Employee TC Jobs Opt Field Values" dllname="CPUTJO">
+<viewtablelist>
+<table name="CPUTJO" desc="Employee TC Jobs Opt Field Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0044" desc="Employee Timecard Job Details" /></viewcomplist>
+</view>
+<view name="CP0144" desc="Cheque Jobs Optional Fields Values" dllname="CPCHJO">
+<viewtablelist>
+<table name="CPCHJO" desc="Cheque Jobs Optional Fields Values" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0056" desc="Cheque Job Details" /></viewcomplist>
+</view>
+<view name="CP0200" desc="Company EFT Banks" dllname="CPCOBK">
+<viewtablelist>
+<table name="CPCOBK" desc="Company EFT Banks" />
+</viewtablelist>
+</view>
+<view name="CP0201" desc="Employee EFT Banks" dllname="CPEMBK">
+<viewtablelist>
+<table name="CPEMBK" desc="Employee EFT Banks" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0014" desc="Employees" /></viewcomplist>
+</view>
+<view name="CP0202" desc="Cheque EFT Details" dllname="CPCHKE">
+<viewtablelist>
+<table name="CPCHKE" desc="Cheque EFT Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0048" desc="Cheque Header" /></viewcomplist>
+</view>
+<view name="CP0203" desc="EFT Run Superview" dllname="CPERUN">
+<viewtablelist>
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0212" desc="" /></viewcomplist>
+</view>
+<view name="CP0204" desc="EFT Run History Header" dllname="CPEREG">
+<viewtablelist>
+<table name="CPEREG" desc="EFT Run History Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0205" desc="EFT Run History Details" /></viewcomplist>
+</view>
+<view name="CP0205" desc="EFT Run History Details" dllname="CPETRN">
+<viewtablelist>
+<table name="CPETRN" desc="EFT Run History Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0204" desc="EFT Run History Header" /></viewcomplist>
+</view>
+<view name="CP0206" desc="EFT Combine File Header" dllname="CPEMULH">
+<viewtablelist>
+<table name="CPEMULH" desc="EFT Combine File Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0207" desc="EFT Combine File Detail" /></viewcomplist>
+</view>
+<view name="CP0207" desc="EFT Combine File Detail" dllname="CPEMULD">
+<viewtablelist>
+<table name="CPEMULD" desc="EFT Combine File Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0206" desc="EFT Combine File Header" /></viewcomplist>
+</view>
+<view name="CP0208" desc="EFT Combine File List" dllname="CPELST">
+<viewtablelist>
+<table name="CPELST" desc="EFT Combine File List" />
+</viewtablelist>
+</view>
+<view name="CP0209" desc="EFT Files Combine Setup Header" dllname="CPEMRGH">
+<viewtablelist>
+<table name="CPEMRGH" desc="EFT Files Combine Setup Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0210" desc="EFT Files Combine Setup Detail" /></viewcomplist>
+</view>
+<view name="CP0210" desc="EFT Files Combine Setup Detail" dllname="CPEMRGD">
+<viewtablelist>
+<table name="CPEMRGD" desc="EFT Files Combine Setup Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0209" desc="EFT Files Combine Setup Header" /></viewcomplist>
+</view>
+<view name="CP0211" desc="EFT Combine Superview" dllname="CPECOMB">
+<viewtablelist>
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0208" desc="EFT Combine File List" /></viewcomplist>
+</view>
+<view name="CP0220" desc="Delete Inactive Records Audit" dllname="CPAUDM">
+<viewtablelist>
+<table name="CPAUDM" desc="Delete Inactive Records Audit" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0221" desc="Delete Audit Inactive Details" /><viewcomp name="CP0222" desc="Delete Audit Transaction Details" /></viewcomplist>
+</view>
+<view name="CP0221" desc="Delete Audit Inactive Details" dllname="CPAUDMI">
+<viewtablelist>
+<table name="CPAUDMI" desc="Delete Audit Inactive Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0220" desc="Delete Inactive Records Audit" /></viewcomplist>
+</view>
+<view name="CP0222" desc="Delete Audit Transaction Details" dllname="CPAUDMH">
+<viewtablelist>
+<table name="CPAUDMH" desc="Delete Audit Transaction Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0220" desc="Delete Inactive Records Audit" /></viewcomplist>
+</view>
+<view name="CP0223" desc="Update Earn/Ded Audit" dllname="CPAUDE">
+<viewtablelist>
+<table name="CPAUDE" desc="Update Earn/Ded Audit" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0224" desc="Update Earn/Ded Audit Details" /></viewcomplist>
+</view>
+<view name="CP0224" desc="Update Earn/Ded Audit Details" dllname="CPAUDED">
+<viewtablelist>
+<table name="CPAUDED" desc="Update Earn/Ded Audit Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0223" desc="Update Earn/Ded Audit" /></viewcomplist>
+</view>
+<view name="CP0225" desc="Update Taxes Audit" dllname="CPAUDT">
+<viewtablelist>
+<table name="CPAUDT" desc="Update Taxes Audit" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0226" desc="Update Taxes Audit Details" /></viewcomplist>
+</view>
+<view name="CP0226" desc="Update Taxes Audit Details" dllname="CPAUDTD">
+<viewtablelist>
+<table name="CPAUDTD" desc="Update Taxes Audit Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0225" desc="Update Taxes Audit" /></viewcomplist>
+</view>
+<view name="CP0227" desc="Assign Earn/Ded Audit" dllname="CPAUDA">
+<viewtablelist>
+<table name="CPAUDA" desc="Assign Earn/Ded Audit" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0228" desc="Assign Earn/Ded Audit Details" /></viewcomplist>
+</view>
+<view name="CP0228" desc="Assign Earn/Ded Audit Details" dllname="CPAUDAD">
+<viewtablelist>
+<table name="CPAUDAD" desc="Assign Earn/Ded Audit Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0227" desc="Assign Earn/Ded Audit" /><viewcomp name="CP0229" desc="Assign Earn/Ded Audit Billing" /></viewcomplist>
+</view>
+<view name="CP0229" desc="Assign Earn/Ded Audit Billing" dllname="CPAUDAB">
+<viewtablelist>
+<table name="CPAUDAB" desc="Assign Earn/Ded Audit Billing" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="CP0228" desc="Assign Earn/Ded Audit Details" /></viewcomplist>
+</view>
+</viewlist>
+<tablelist>
+<table name="CPACCO" desc="Accrual Carry-over Log File">
+<view name="CP0115" desc="Accrual Carry-over Log File" />
+</table>
+<table name="CPAUDA" desc="Assign Earn/Ded Audit">
+<view name="CP0227" desc="Assign Earn/Ded Audit" />
+</table>
+<table name="CPAUDAB" desc="Assign Earn/Ded Audit Billing">
+<view name="CP0229" desc="Assign Earn/Ded Audit Billing" />
+</table>
+<table name="CPAUDAD" desc="Assign Earn/Ded Audit Details">
+<view name="CP0228" desc="Assign Earn/Ded Audit Details" />
+</table>
+<table name="CPAUDE" desc="Update Earn/Ded Audit">
+<view name="CP0223" desc="Update Earn/Ded Audit" />
+</table>
+<table name="CPAUDED" desc="Update Earn/Ded Audit Details">
+<view name="CP0224" desc="Update Earn/Ded Audit Details" />
+</table>
+<table name="CPAUDM" desc="Delete Inactive Records Audit">
+<view name="CP0220" desc="Delete Inactive Records Audit" />
+</table>
+<table name="CPAUDMH" desc="Delete Audit Transaction Details">
+<view name="CP0222" desc="Delete Audit Transaction Details" />
+</table>
+<table name="CPAUDMI" desc="Delete Audit Inactive Details">
+<view name="CP0221" desc="Delete Audit Inactive Details" />
+</table>
+<table name="CPAUDT" desc="Update Taxes Audit">
+<view name="CP0225" desc="Update Taxes Audit" />
+</table>
+<table name="CPAUDTD" desc="Update Taxes Audit Details">
+<view name="CP0226" desc="Update Taxes Audit Details" />
+</table>
+<table name="CPCALA" desc="Cost Center Allocations">
+<view name="CP0086" desc="Cost Center Allocations" />
+</table>
+<table name="CPCHDO" desc="Cheque Details Optional Fields">
+<view name="CP0134" desc="Cheque Details Optional Fields" />
+</table>
+<table name="CPCHHO" desc="Cheque Header Optional Field Values">
+<view name="CP0133" desc="Cheque Header Optional Field Values" />
+</table>
+<table name="CPCHJB" desc="Cheque Job Details">
+<view name="CP0056" desc="Cheque Job Details" />
+</table>
+<table name="CPCHJO" desc="Cheque Jobs Optional Fields Values">
+<view name="CP0144" desc="Cheque Jobs Optional Fields Values" />
+</table>
+<table name="CPCHKC" desc="Cheque Comment Detail">
+<view name="CP0052" desc="Cheque Comment Detail" />
+</table>
+<table name="CPCHKD" desc="Cheque Details">
+<view name="CP0049" desc="Cheque Details" />
+</table>
+<table name="CPCHKE" desc="Cheque EFT Details">
+<view name="CP0202" desc="Cheque EFT Details" />
+</table>
+<table name="CPCHKH" desc="Cheque Header">
+<view name="CP0048" desc="Cheque Header" />
+</table>
+<table name="CPCHKL" desc="Cheque Selection List">
+<view name="CP0113" desc="Cheque Selection List" />
+</table>
+<table name="CPCHKO" desc="Cheque Run Optional Field Values">
+<view name="CP0139" desc="Cheque Run Optional Field Values" />
+</table>
+<table name="CPCHKR" desc="Cheque Run Header">
+<view name="CP0088" desc="Cheque Run Header" />
+</table>
+<table name="CPCHKS" desc="Cheque History Summary">
+<view name="CP0077" desc="Cheque History Summary" />
+</table>
+<table name="CPCLAS" desc="Class Codes">
+<view name="CP0006" desc="Class Codes" />
+</table>
+<table name="CPCLCO" desc="Calculate Payroll Optional Fields">
+<view name="CP0137" desc="Calculate Payroll Optional Fields" />
+</table>
+<table name="CPCOBK" desc="Company EFT Banks">
+<view name="CP0200" desc="Company EFT Banks" />
+</table>
+<table name="CPDIST" desc="Distribution">
+<view name="CP0009" desc="Distribution" />
+</table>
+<table name="CPDTLB" desc="Earnings Billing Detail">
+<view name="CP0040" desc="Earnings Billing Detail" />
+</table>
+<table name="CPDTLM" desc="Earnings/Deductions">
+<view name="CP0007" desc="Earnings/Deductions" />
+</table>
+<table name="CPDTLO" desc="Earnings/Deductions Opt Fields">
+<view name="CP0123" desc="Earnings/Deductions Opt Fields" />
+</table>
+<table name="CPEDUP" desc="Duplicate SIN">
+<view name="CP0106" desc="Duplicate SIN" />
+</table>
+<table name="CPEHRP" desc="Earnings Hourly Report">
+<view name="CP0093" desc="Earnings Hourly Report" />
+</table>
+<table name="CPELST" desc="EFT Combine File List">
+<view name="CP0208" desc="EFT Combine File List" />
+</table>
+<table name="CPEMBK" desc="Employee EFT Banks">
+<view name="CP0201" desc="Employee EFT Banks" />
+</table>
+<table name="CPEMCS" desc="Employee Garnishment">
+<view name="CP0118" desc="Employee Garnishment" />
+</table>
+<table name="CPEMDB" desc="Employee Billing Details">
+<view name="CP0041" desc="Employee Billing Details" />
+</table>
+<table name="CPEMDO" desc="Empl Earn/Ded Optional Fields">
+<view name="CP0125" desc="Empl Earn/Ded Optional Fields" />
+</table>
+<table name="CPEMPC" desc="Employee Notes">
+<view name="CP0053" desc="Employee Notes" />
+</table>
+<table name="CPEMPD" desc="Employee Earnings/Deductions">
+<view name="CP0008" desc="Employee Earnings/Deductions" />
+</table>
+<table name="CPEMPL" desc="Employees">
+<view name="CP0014" desc="Employees" />
+</table>
+<table name="CPEMPO" desc="Employee Optional Field Values">
+<view name="CP0122" desc="Employee Optional Field Values" />
+</table>
+<table name="CPEMPT" desc="Employee Taxes">
+<view name="CP0010" desc="Employee Taxes" />
+</table>
+<table name="CPEMRGD" desc="EFT Files Combine Setup Detail">
+<view name="CP0210" desc="EFT Files Combine Setup Detail" />
+</table>
+<table name="CPEMRGH" desc="EFT Files Combine Setup Header">
+<view name="CP0209" desc="EFT Files Combine Setup Header" />
+</table>
+<table name="CPEMTF" desc="Employee Tax Fields">
+<view name="CP0062" desc="Employee Tax Fields" />
+</table>
+<table name="CPEMTO" desc="Empl Taxes Optional Fields">
+<view name="CP0126" desc="Empl Taxes Optional Fields" />
+</table>
+<table name="CPEMULD" desc="EFT Combine File Detail">
+<view name="CP0207" desc="EFT Combine File Detail" />
+</table>
+<table name="CPEMULH" desc="EFT Combine File Header">
+<view name="CP0206" desc="EFT Combine File Header" />
+</table>
+<table name="CPEREG" desc="EFT Run History Header">
+<view name="CP0204" desc="EFT Run History Header" />
+</table>
+<table name="CPESLD" desc="Employee Selection List Members">
+<view name="CP0046" desc="Employee Selection List Members" />
+</table>
+<table name="CPESLH" desc="Employee Selection Lists">
+<view name="CP0045" desc="Employee Selection Lists" />
+</table>
+<table name="CPETRN" desc="EFT Run History Details">
+<view name="CP0205" desc="EFT Run History Details" />
+</table>
+<table name="CPEUIC" desc="Employee EI History">
+<view name="CP0030" desc="Employee EI History" />
+</table>
+<table name="CPGLBM" desc="Globally Modify List">
+<view name="CP0051" desc="Globally Modify List" />
+</table>
+<table name="CPGLDD" desc="G/L Acct Desc Report List">
+<view name="CP0060" desc="G/L Acct Desc Report List" />
+</table>
+<table name="CPGLREF" desc="G/L Reference Integration">
+<view name="CP0057" desc="G/L Reference Integration" />
+</table>
+<table name="CPHDAU" desc="History Audit Details">
+<view name="CP0024" desc="History Audit Details" />
+</table>
+<table name="CPHDOA" desc="History Audit Detail Opt Fields">
+<view name="CP0136" desc="History Audit Detail Opt Fields" />
+</table>
+<table name="CPHHAU" desc="History Audit Headers">
+<view name="CP0021" desc="History Audit Headers" />
+</table>
+<table name="CPHHOA" desc="History Audit Header Opt Fields">
+<view name="CP0135" desc="History Audit Header Opt Fields" />
+</table>
+<table name="CPINCL" desc="Include List">
+<view name="CP0015" desc="Include List" />
+</table>
+<table name="CPLIMD" desc="Deduction Group Details">
+<view name="CP0117" desc="Deduction Group Details" />
+</table>
+<table name="CPLIMH" desc="Deduction Groups">
+<view name="CP0116" desc="Deduction Groups" />
+</table>
+<table name="CPMCDO" desc="MC Details Opt Field Values">
+<view name="CP0130" desc="MC Details Opt Field Values" />
+</table>
+<table name="CPMCDT" desc="Manual Cheque Detail">
+<view name="CP0020" desc="Manual Cheque Detail" />
+</table>
+<table name="CPMCHD" desc="Manual Cheque Header">
+<view name="CP0019" desc="Manual Cheque Header" />
+</table>
+<table name="CPMCHO" desc="Manual Cheque Optional Field Values">
+<view name="CP0129" desc="Manual Cheque Optional Field Values" />
+</table>
+<table name="CPMCJB" desc="Manual Cheque Job Details">
+<view name="CP0043" desc="Manual Cheque Job Details" />
+</table>
+<table name="CPMCJO" desc="Manual Cheque Jobs Opt Fields">
+<view name="CP0142" desc="Manual Cheque Jobs Opt Fields" />
+</table>
+<table name="CPOFD" desc="Optional Field Values">
+<view name="CP0121" desc="Optional Field Values" />
+</table>
+<table name="CPOFH" desc="Optional Field Locations">
+<view name="CP0120" desc="Optional Field Locations" />
+</table>
+<table name="CPOPTS" desc="Company Options">
+<view name="CP0023" desc="Company Options" />
+</table>
+<table name="CPOTSC" desc="Overtime Schedules">
+<view name="CP0022" desc="Overtime Schedules" />
+</table>
+<table name="CPPCKD" desc="Print Cheques Detail Extension">
+<view name="CP0080" desc="Print Cheques Detail Extension" />
+</table>
+<table name="CPPCKH" desc="Print Cheques Header Extension">
+<view name="CP0079" desc="Print Cheques Header Extension" />
+</table>
+<table name="CPPMCO" desc="Process Manual Cheque Optional Fields">
+<view name="CP0138" desc="Process Manual Cheque Optional Fields" />
+</table>
+<table name="CPSHFB" desc="Shift Differential Billing Detail">
+<view name="CP0039" desc="Shift Differential Billing Detail" />
+</table>
+<table name="CPSHFD" desc="Shift Differential Detail">
+<view name="CP0038" desc="Shift Differential Detail" />
+</table>
+<table name="CPSHFT" desc="Shift Differential Schedule">
+<view name="CP0025" desc="Shift Differential Schedule" />
+</table>
+<table name="CPSTAT" desc="Status">
+<view name="CP0017" desc="Status" />
+</table>
+<table name="CPTCDO" desc="Timecard Details Optional Field Values">
+<view name="CP0128" desc="Timecard Details Optional Field Values" />
+</table>
+<table name="CPTCDT" desc="Timecard Detail">
+<view name="CP0032" desc="Timecard Detail" />
+</table>
+<table name="CPTCHD" desc="Timecard Header">
+<view name="CP0031" desc="Timecard Header" />
+</table>
+<table name="CPTCHO" desc="Timecard Optional Field Values">
+<view name="CP0127" desc="Timecard Optional Field Values" />
+</table>
+<table name="CPTCJB" desc="Timecard Job Details">
+<view name="CP0042" desc="Timecard Job Details" />
+</table>
+<table name="CPTCJO" desc="Timecard Jobs Optional Field Values">
+<view name="CP0141" desc="Timecard Jobs Optional Field Values" />
+</table>
+<table name="CPTXMO" desc="Taxes Optional Field Values">
+<view name="CP0124" desc="Taxes Optional Field Values" />
+</table>
+<table name="CPTXMS" desc="Company Payroll Taxes">
+<view name="CP0029" desc="Company Payroll Taxes" />
+</table>
+<table name="CPUSLD" desc="User Selection List Detail">
+<view name="CP0067" desc="User Selection List Detail" />
+</table>
+<table name="CPUSLH" desc="User Selection Lists">
+<view name="CP0066" desc="User Selection Lists" />
+</table>
+<table name="CPUTCD" desc="Employee Timecard Detail">
+<view name="CP0103" desc="Employee Timecard Detail" />
+</table>
+<table name="CPUTCH" desc="Employee Timecard Header">
+<view name="CP0102" desc="Employee Timecard Header" />
+</table>
+<table name="CPUTDO" desc="Empl Timecard Details Opt Flds">
+<view name="CP0132" desc="Empl Timecard Details Opt Flds" />
+</table>
+<table name="CPUTHO" desc="Empl Timecard Optional Fields">
+<view name="CP0131" desc="Empl Timecard Optional Fields" />
+</table>
+<table name="CPUTJB" desc="Employee Timecard Job Details">
+<view name="CP0044" desc="Employee Timecard Job Details" />
+</table>
+<table name="CPUTJO" desc="Employee TC Jobs Opt Field Values">
+<view name="CP0143" desc="Employee TC Jobs Opt Field Values" />
+</table>
+<table name="CPWCCD" desc="Workers Compensation Codes">
+<view name="CP0037" desc="Workers Compensation Codes" />
+</table>
+<table name="CPWCCH" desc="Workers Compensation Master">
+<view name="CP0036" desc="Workers Compensation Master" />
+</table>
+<table name="CPWRKC" desc="Work Classification Codes">
+<view name="CP0027" desc="Work Classification Codes" />
+</table>
+<table name="CPXCPT" desc="Calc PR Exceptions">
+<view name="CP0064" desc="Calc PR Exceptions" />
+</table>
+<table name="CPYTDS" desc="Employee YTD Summaries">
+<view name="CP0047" desc="Employee YTD Summaries" />
+</table>
+</tablelist>
+<objectlist>
+<object name="CPCALCULAT">
+<protocolflag type="Protocol" value="ORDERED" desc="ORDERED" />
+<objectviewlist>
+<objectview name="CP0083" desc="Calculate Payroll" />
+<objectview name="CP0137" desc="Calculate Payroll Optional Fields" />
+</objectviewlist>
+</object>
+<object name="CPCHECKS">
+<protocolflag type="Protocol" value="ORD5" desc="ORD5" />
+<objectviewlist>
+<objectview name="CP0048" desc="Cheque Header" />
+<objectview name="CP0049" desc="Cheque Details" />
+<objectview name="CP0052" desc="Cheque Comment Detail" />
+<objectview name="CP0202" desc="Cheque EFT Details" />
+<objectview name="CP0133" desc="Cheque Header Optional Field Values" />
+<objectview name="CP0134" desc="Cheque Details Optional Fields" />
+</objectviewlist>
+</object>
+<object name="CPCLASSIDS">
+<protocolflag type="Protocol" value="SET" desc="SET" />
+<objectviewlist>
+<objectview name="CP0006" desc="Class Codes" />
+</objectviewlist>
+</object>
+<object name="CPCONTROL">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="CP0026" desc="Concurrency controller" />
+</objectviewlist>
+</object>
+<object name="CPCPYTCARD">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="CP0108" desc="Copy Timecard" />
+</objectviewlist>
+</object>
+<object name="CPDCHK">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="CP0016" desc="Canadian Payroll Integrity Checker" />
+</objectviewlist>
+</object>
+<object name="CPDELINREC">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="CP0018" desc="Delete Inactive Records" />
+</objectviewlist>
+</object>
+<object name="CPDISTCODE">
+<protocolflag type="Protocol" value="SET" desc="SET" />
+<objectviewlist>
+<objectview name="CP0009" desc="Distribution" />
+</objectviewlist>
+</object>
+<object name="CPEARNDED">
+<protocolflag type="Protocol" value="ORD4" desc="ORD4" />
+<objectviewlist>
+<objectview name="CP0007" desc="Earnings/Deductions" />
+<objectview name="CP0009" desc="Distribution" />
+<objectview name="CP0015" desc="Include List" />
+<objectview name="CP0123" desc="Earnings/Deductions Opt Fields" />
+<objectview name="CP0040" desc="Earnings Billing Detail" />
+</objectviewlist>
+</object>
+<object name="CPEFTCOBK">
+<protocolflag type="Protocol" value="SET" desc="SET" />
+<objectviewlist>
+<objectview name="CP0200" desc="Company EFT Banks" />
+</objectviewlist>
+</object>
+<object name="CPEFTMERGE">
+<protocolflag type="Protocol" value="ORDERED" desc="ORDERED" />
+<objectviewlist>
+<objectview name="CP0211" desc="EFT Combine Superview" />
+<objectview name="CP0208" desc="EFT Combine File List" />
+</objectviewlist>
+</object>
+<object name="CPEFTMERGESTP">
+<protocolflag type="Protocol" value="ORDERED" desc="ORDERED" />
+<objectviewlist>
+<objectview name="CP0209" desc="EFT Files Combine Setup Header" />
+<objectview name="CP0210" desc="EFT Files Combine Setup Detail" />
+</objectviewlist>
+</object>
+<object name="CPEFTTRANS">
+<protocolflag type="Protocol" value="ORDERED" desc="ORDERED" />
+<objectviewlist>
+<objectview name="CP0204" desc="EFT Run History Header" />
+<objectview name="CP0205" desc="EFT Run History Details" />
+</objectviewlist>
+</object>
+<object name="CPEMASTER">
+<protocolflag type="Protocol" value="ORD9" desc="ORD9" />
+<objectviewlist>
+<objectview name="CP0014" desc="Employees" />
+<objectview name="CP0008" desc="Employee Earnings/Deductions" />
+<objectview name="CP0010" desc="Employee Taxes" />
+<objectview name="CP0053" desc="Employee Notes" />
+<objectview name="CP0201" desc="Employee EFT Banks" />
+<objectview name="CP0062" desc="Employee Tax Fields" />
+<objectview name="CP0122" desc="Employee Optional Field Values" />
+<objectview name="CP0125" desc="Empl Earn/Ded Optional Fields" />
+<objectview name="CP0126" desc="Empl Taxes Optional Fields" />
+<objectview name="CP0041" desc="Employee Billing Details" />
+</objectviewlist>
+</object>
+<object name="CPERNGHRS">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="CP0081" desc="Earnings Hours Report" />
+</objectviewlist>
+</object>
+<object name="CPESELECT">
+<protocolflag type="Protocol" value="ORDERED" desc="ORDERED" />
+<objectviewlist>
+<objectview name="CP0045" desc="Employee Selection Lists" />
+<objectview name="CP0046" desc="Employee Selection List Members" />
+</objectviewlist>
+</object>
+<object name="CPEUIHST">
+<protocolflag type="Protocol" value="SET" desc="SET" />
+<objectviewlist>
+<objectview name="CP0030" desc="Employee EI History" />
+</objectviewlist>
+</object>
+<object name="CPGENEFT">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="CP0203" desc="EFT Run Superview" />
+</objectviewlist>
+</object>
+<object name="CPGMET">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="CP0058" desc="Globally Modify Process" />
+</objectviewlist>
+</object>
+<object name="CPINCLIST">
+<protocolflag type="Protocol" value="SET" desc="SET" />
+<objectviewlist>
+<objectview name="CP0015" desc="Include List" />
+</objectviewlist>
+</object>
+<object name="CPMANCHK">
+<protocolflag type="Protocol" value="ORD5" desc="ORD5" />
+<objectviewlist>
+<objectview name="CP0019" desc="Manual Cheque Header" />
+<objectview name="CP0020" desc="Manual Cheque Detail" />
+<objectview name="CP0129" desc="Manual Cheque Optional Field Values" />
+<objectview name="CP0130" desc="MC Details Opt Field Values" />
+<objectview name="CP0043" desc="Manual Cheque Job Details" />
+<objectview name="CP0142" desc="Manual Cheque Jobs Opt Fields" />
+</objectviewlist>
+</object>
+<object name="CPMANCKDTL">
+<protocolflag type="Protocol" value="ORD3" desc="ORD3" />
+<objectviewlist>
+<objectview name="CP0020" desc="Manual Cheque Detail" />
+<objectview name="CP0130" desc="MC Details Opt Field Values" />
+<objectview name="CP0043" desc="Manual Cheque Job Details" />
+<objectview name="CP0142" desc="Manual Cheque Jobs Opt Fields" />
+</objectviewlist>
+</object>
+<object name="CPOPTFLDS">
+<protocolflag type="Protocol" value="ORDERED" desc="ORDERED" />
+<objectviewlist>
+<objectview name="CP0120" desc="Optional Field Locations" />
+<objectview name="CP0121" desc="Optional Field Values" />
+</objectviewlist>
+</object>
+<object name="CPOPTIONS">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="CP0023" desc="Company Options" />
+</objectviewlist>
+</object>
+<object name="CPOTSCHED">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="CP0022" desc="Overtime Schedules" />
+</objectviewlist>
+</object>
+<object name="CPPRCHECKS">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="CP0078" desc="Print Cheques Control" />
+</objectviewlist>
+</object>
+<object name="CPPRMANCHK">
+<protocolflag type="Protocol" value="ORDERED" desc="ORDERED" />
+<objectviewlist>
+<objectview name="CP0065" desc="Process Manual Cheques" />
+<objectview name="CP0138" desc="Process Manual Cheque Optional Fields" />
+</objectviewlist>
+</object>
+<object name="CPREGISTER">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="CP0094" desc="Payroll Register G/L Accounts" />
+</objectviewlist>
+</object>
+<object name="CPSECURITY">
+<protocolflag type="Protocol" value="ORDERED" desc="ORDERED" />
+<objectviewlist>
+<objectview name="CP0066" desc="User Selection Lists" />
+<objectview name="CP0067" desc="User Selection List Detail" />
+</objectviewlist>
+</object>
+<object name="CPSHFTSCH">
+<protocolflag type="Protocol" value="ORD2" desc="ORD2" />
+<objectviewlist>
+<objectview name="CP0025" desc="Shift Differential Schedule" />
+<objectview name="CP0038" desc="Shift Differential Detail" />
+<objectview name="CP0039" desc="Shift Differential Billing Detail" />
+</objectviewlist>
+</object>
+<object name="CPTAXFLD">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="CP0062" desc="Employee Tax Fields" />
+</objectviewlist>
+</object>
+<object name="CPTAXMASTR">
+<protocolflag type="Protocol" value="ORD3" desc="ORD3" />
+<objectviewlist>
+<objectview name="CP0029" desc="Company Payroll Taxes" />
+<objectview name="CP0009" desc="Distribution" />
+<objectview name="CP0015" desc="Include List" />
+<objectview name="CP0124" desc="Taxes Optional Field Values" />
+</objectviewlist>
+</object>
+<object name="CPTIMECARD">
+<protocolflag type="Protocol" value="ORD5" desc="ORD5" />
+<objectviewlist>
+<objectview name="CP0031" desc="Timecard Header" />
+<objectview name="CP0032" desc="Timecard Detail" />
+<objectview name="CP0127" desc="Timecard Optional Field Values" />
+<objectview name="CP0128" desc="Timecard Details Optional Field Values" />
+<objectview name="CP0042" desc="Timecard Job Details" />
+<objectview name="CP0141" desc="Timecard Jobs Optional Field Values" />
+</objectviewlist>
+</object>
+<object name="CPTMCRDDTL">
+<protocolflag type="Protocol" value="ORD3" desc="ORD3" />
+<objectviewlist>
+<objectview name="CP0032" desc="Timecard Detail" />
+<objectview name="CP0128" desc="Timecard Details Optional Field Values" />
+<objectview name="CP0042" desc="Timecard Job Details" />
+<objectview name="CP0141" desc="Timecard Jobs Optional Field Values" />
+</objectviewlist>
+</object>
+<object name="CPUTCARD">
+<protocolflag type="Protocol" value="ORD5" desc="ORD5" />
+<objectviewlist>
+<objectview name="CP0102" desc="Employee Timecard Header" />
+<objectview name="CP0103" desc="Employee Timecard Detail" />
+<objectview name="CP0131" desc="Empl Timecard Optional Fields" />
+<objectview name="CP0132" desc="Empl Timecard Details Opt Flds" />
+<objectview name="CP0044" desc="Employee Timecard Job Details" />
+<objectview name="CP0143" desc="Employee TC Jobs Opt Field Values" />
+</objectviewlist>
+</object>
+<object name="CPUTCTRF">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="CP0101" desc="Empl Timecards Transfer Ctrl" />
+</objectviewlist>
+</object>
+<object name="CPWORKCODE">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="CP0027" desc="Work Classification Codes" />
+</objectviewlist>
+</object>
+<object name="CPWORKCOMP">
+<protocolflag type="Protocol" value="ORDERED" desc="ORDERED" />
+<objectviewlist>
+<objectview name="CP0036" desc="Workers Compensation Master" />
+<objectview name="CP0037" desc="Workers Compensation Codes" />
+</objectviewlist>
+</object>
+<object name="CPYTDSUM">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="CP0047" desc="Employee YTD Summaries" />
+</objectviewlist>
+</object>
+</objectlist>
+</application>
+<footer />
+</pagebody>
+</page>

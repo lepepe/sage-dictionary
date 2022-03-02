@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>CP CP0047 CPYTDS CPYTDS</keywords>
+<pagetitle>Employee YTD Summaries</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Employee YTD Summaries</title>
+<rotoid>CP0047</rotoid>
+<tablelist>
+<table name="CPYTDS" desc="Employee YTD Summaries" />
+</tablelist>
+<protocollist>
+<protocol>Flat</protocol></protocollist>
+<dllname>CPYTDS</dllname>
+<keylist>
+<key>
+<keytitle>Year Summaries</keytitle>
+<keyfieldlist>
+<keyfield>YEARYTDS</keyfield>
+<keyfield>EMPLOYEE</keyfield>
+<keyfield>EARNDED</keyfield>
+<keyfield>EARDEDCLAS</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>YTD Summaries by Category</keytitle>
+<keyfieldlist>
+<keyfield>YEARYTDS</keyfield>
+<keyfield>EMPLOYEE</keyfield>
+<keyfield>CATEGORY</keyfield>
+<keyfield>EARNDED</keyfield>
+<keyfield>EARDEDCLAS</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>YTD Summaries by Employee</keytitle>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield>
+<keyfield>YEARYTDS</keyfield>
+<keyfield>EARNDED</keyfield>
+<keyfield>EARDEDCLAS</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>YTD by Earning/Deduction</keytitle>
+<keyfieldlist>
+<keyfield>EARNDED</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>YEARYTDS</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Year</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EMPLOYEE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Employee</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>EARNDED</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Earning/Deduction</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>EARDEDCLAS</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Earning/Deduction Class</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="YTD Amount" /><fieldpresent index="2" value="Employer Contribution" /><fieldpresent index="3" value="Wages Subject To" /><fieldpresent index="4" value="Wages Subject To, Ceiling" /><fieldpresent index="5" value="Not Withheld" /><fieldpresent index="6" value="Tips Subject To" /><fieldpresent index="7" value="Tips Subject To, Ceiling" /><fieldpresent index="8" value="Tax On Tips" /><fieldpresent index="9" value="Base Hours" /><fieldpresent index="10" value="Base Count" /><fieldpresent index="11" value="Base Amount" /><fieldpresent index="12" value="Base Sales" /><fieldpresent index="16" value="Weeks Worked" /><fieldpresent index="17" value="Hours Worked" /><fieldpresent index="18" value="Backup Withholding" /><fieldpresent index="13" value="Accrued Dollars" /><fieldpresent index="14" value="Accrued Hours" /><fieldpresent index="15" value="Accrued Hours Paid" /><fieldpresent index="19" value="Taxable Non-periodic Earnings" /><fieldpresent index="20" value="Subject to Income tax before deductions" /><fieldpresent index="21" value="WC Base" /><fieldpresent index="22" value="Non-Periodic Deduction Before Tax" /><fieldpresent index="23" value="Repayment deductions before Income Tax" /></fieldpresentlist></field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Category</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Accrual" /><fieldpresent index="2" value="Earning" /><fieldpresent index="3" value="Advance" /><fieldpresent index="4" value="Deduction" /><fieldpresent index="5" value="Expense Reimbursement" /><fieldpresent index="6" value="Benefit" /><fieldpresent index="7" value="Federal Tax" /><fieldpresent index="8" value="Provincial Tax" /><fieldpresent index="9" value="Local Tax" /><fieldpresent index="10" value="User Tax" /><fieldpresent index="11" value="n/a" /></fieldpresentlist></field>
+<field>
+<fieldname>EARDEDTYPE</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Earning/Deduction Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Salary &amp; Wages" /><fieldpresent index="2" value="Reported Tips" /><fieldpresent index="3" value="Allocated Tips" /><fieldpresent index="7" value="Vacation" /><fieldpresent index="8" value="Sick" /><fieldpresent index="9" value="Banked Time" /><fieldpresent index="10" value="Disability" /><fieldpresent index="13" value="Cash" /><fieldpresent index="14" value="Noncash" /><fieldpresent index="18" value="Insurance Tax" /><fieldpresent index="19" value="Income Tax" /><fieldpresent index="20" value="Employment Tax" /><fieldpresent index="21" value="Pension Plan Tax" /><fieldpresent index="22" value="Health Tax" /><fieldpresent index="23" value="Other Tax" /><fieldpresent index="25" value="n/a" /></fieldpresentlist></field>
+<field>
+<fieldname>UNPSTEDAMT</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Sum of All Unposted Amounts</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>POSTEDAMT</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Sum of All YTD Posted Amounts</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

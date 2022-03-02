@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>ZC ZC0010 ZCIAUDV ZCIAUD</keywords>
+<pagetitle>Import Audit</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ZCIAUD" desc="Import Audit">
+<view name="ZC0010" desc="Import Audit" />
+<recordlength>215</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Import Sequence</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IMPSEQNR</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Export Unit And Sequence</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>UNITID</keyfield><keyfield>EXPSEQNR</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Unit, Fiscal Year And Period</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>UNITID</keyfield><keyfield>FISCYR</keyfield><keyfield>FISCPERD</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Import Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IMPDATE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>IMPSEQNR</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Import Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>EXPSEQNR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Export Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>UNITID</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Process Unit ID</fielddesc>
+<mask>%-4N</mask></field>
+<field>
+<fieldname>PROCESS</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Process ID</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>DESTCURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Destination Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>IMPSEGS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Segments</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPSRC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Source Codes</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPACCTS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Accounts</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUDS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budgets</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPTRANS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Transactions</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Different Method" /><fieldpresent index="4" value="Different Period" /><fieldpresent index="5" value="Missing" /><fieldpresent index="6" value="Aborted" /><fieldpresent index="7" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPMAP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Mapping Table</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUD1</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budget Set 1</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUD2</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budget Set 2</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUD3</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budget Set 3</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUD4</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budget Set 4</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPBUD5</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Budget Set 5</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>MAPTBL</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Mapping Table</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>IMPMETH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Method</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Net Changes" /><fieldpresent index="1" value="Transactions By Posting Sequence" /><fieldpresent index="2" value="Transactions By Fiscal Period" /><fieldpresent index="3" value="Balances" /><fieldpresent index="4" value="N/A" /></fieldpresentlist></field>
+<field>
+<fieldname>MAPMETH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Mapping Method</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Generate Error For Unmapped Accounts" /><fieldpresent index="1" value="Only Map Accounts In Table" /><fieldpresent index="2" value="Only Transfer Mapped Accounts" /></fieldpresentlist></field>
+<field>
+<fieldname>USESEGS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Use Segments</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>USESRCCODE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Use Source Codes</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>FISCYR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPERD</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<mask>%02D</mask></field>
+<field>
+<fieldname>PSEQFR</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>From Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>PSEQTO</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>To Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>PSEQHI</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Highest Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>PSEQLO</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Lowest Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>FISCYRHI</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Highest Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPERDHI</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Highest Fiscal Period</fielddesc>
+<mask>%02D</mask></field>
+<field>
+<fieldname>FISCYRLO</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Lowest Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPERDLO</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Lowest Fiscal Period</fielddesc>
+<mask>%02D</mask></field>
+<field>
+<fieldname>TOTTRNFILE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Total Trans. Files In Import</fielddesc>
+</field>
+<field>
+<fieldname>TOTTRNRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Trans. Records In Import</fielddesc>
+</field>
+<field>
+<fieldname>TOTACCRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Account Records In Import</fielddesc>
+</field>
+<field>
+<fieldname>TOTSRCRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Src Code Records In Import</fielddesc>
+</field>
+<field>
+<fieldname>TOTSEGRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Segment Records In Import</fielddesc>
+</field>
+<field>
+<fieldname>TOTBDGRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Budget Records In Import</fielddesc>
+</field>
+<field>
+<fieldname>MULTICURN</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Export Was For Multi Curr. Co.</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Single" /><fieldpresent index="1" value="Multi" /></fieldpresentlist></field>
+<field>
+<fieldname>EXPDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Exported</fielddesc>
+</field>
+<field>
+<fieldname>IMPUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>User That Did Import</fielddesc>
+</field>
+<field>
+<fieldname>EXPCOMP</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Exporting Company</fielddesc>
+</field>
+<field>
+<fieldname>SRCCURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Func. Currency Of Exporting Co.</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>VERSION</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Program Version</fielddesc>
+</field>
+<field>
+<fieldname>IMPOFDS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Opt. Flds from G/L Setup</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>TOTOFDRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Opt. Flds Recs In Import</fielddesc>
+</field>
+<field>
+<fieldname>IMPACTOPT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Account Opt. Fields</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPTRANOPT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Trans. Opt. Fields</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPCSOFDS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Opt. Field from C/S Setup</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>TOTCSOFDS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total C/S Setup Opt. Flds In Import</fielddesc>
+</field>
+<field>
+<fieldname>IMPACCTGRP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import Account Groups</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Imported Successfully" /><fieldpresent index="2" value="Not Available" /><fieldpresent index="3" value="Missing" /><fieldpresent index="4" value="Aborted" /><fieldpresent index="5" value="Previously Imported" /></fieldpresentlist></field>
+<field>
+<fieldname>TOTAGPRECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Total Account Groups In Import</fielddesc>
+</field>
+<field>
+<fieldname>PRINTED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Record Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Actually Imported</fielddesc>
+</field>
+<field>
+<fieldname>FIRBTCH</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>First Batch Created For Import</fielddesc>
+</field>
+<field>
+<fieldname>LSTBTCH</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Last Batch Created For Import</fielddesc>
+</field>
+<field>
+<fieldname>CLRSEL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Clear Deselected Data</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DUPL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Duplication Type</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="Same Posting Seq." /><fieldpresent index="2" value="Same Fiscal Period" /></fieldpresentlist></field>
+<field>
+<fieldname>IMPSTATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Import State</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Aborted" /><fieldpresent index="1" value="Deleted" /><fieldpresent index="2" value="Imported" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

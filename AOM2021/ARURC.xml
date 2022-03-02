@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0081 ARURC ARURC</keywords>
+<pagetitle>Update Recurring Chrgs Instrns</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ARURC" desc="Update Recurring Chrgs Instrns">
+<view name="AR0081" desc="Update Recurring Chrgs Instrns" />
+<recordlength>119</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Instruction Counter</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CNTNUM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CNTNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Key</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>RCCODE</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Recurring Charge Code</fielddesc>
+<mask>%-16C</mask></field>
+<field>
+<fieldname>IDCUSTFR</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>From Customer Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>IDCUSTTO</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>To Customer Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>CHANGEBY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Change By Percentage Or Amount?</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Percentage" /><fieldpresent index="2" value="Amount" /></fieldpresentlist></field>
+<field>
+<fieldname>INCDEC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Increase Or Decrease RC Value?</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Increase" /><fieldpresent index="2" value="Decrease" /></fieldpresentlist></field>
+<field>
+<fieldname>CODECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Customer Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>PCTCHANGE</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Percentage To Change By</fielddesc>
+</field>
+<field>
+<fieldname>AMTCHANGE</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Money Amount To Change By</fielddesc>
+</field>
+<field>
+<fieldname>DISTMETHOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Money Distribution Method</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="All Details" /><fieldpresent index="2" value="Specific Distribution Code" /></fieldpresentlist></field>
+<field>
+<fieldname>IDDISTCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Distribution Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>PCTMAXCHG</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Percent To Change Max Amount By</fielddesc>
+</field>
+<field>
+<fieldname>AMTMAXCHG</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount To Change Max. Amount By</fielddesc>
+</field>
+<field>
+<fieldname>PROCESSED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Has Instruction Been Processed?</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>NUMSIARECS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of RC Records Processed</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

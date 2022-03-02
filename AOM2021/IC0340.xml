@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0340 ICITMV ICITMV</keywords>
+<pagetitle>Vendor Item Numbers</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Vendor Item Numbers</title>
+<rotoid>IC0340</rotoid>
+<tablelist>
+<table name="ICITMV" desc="Vendor Item Numbers" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>ICITMV</dllname>
+<compositionlist>
+<composition>
+<comprotoid>IC0310</comprotoid>
+<compdesc>Items</compdesc>
+<compdll>ICITEM</compdll>
+<comptablelist>
+<comptable name="ICITEM" desc="Items" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>AP0015</comprotoid>
+<compdesc>Vendors</compdesc>
+<compdll>APVEN</compdll>
+<comptablelist>
+<comptable name="APVEN" desc="Vendors" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>IC0750</comprotoid>
+<compdesc>Units of Measure</compdesc>
+<compdll>ICUNIT</compdll>
+<comptablelist>
+<comptable name="ICUNIT" desc="Units of Measure" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Item Number</keytitle>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield>
+<keyfield>VENDTYPE</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Vendor Type</keytitle>
+<keyfieldlist>
+<keyfield>VENDTYPE</keyfield>
+<keyfield>ITEMNO</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Vendor Code</keytitle>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield>
+<keyfield>VENDNUM</keyfield>
+<keyfield>VENDTYPE</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>VENDTYPE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Vendor Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Vendor 1" /><fieldpresent index="2" value="Vendor 2" /><fieldpresent index="3" value="Vendor 3" /><fieldpresent index="4" value="Vendor 4" /><fieldpresent index="5" value="Vendor 5" /><fieldpresent index="6" value="Vendor 6" /><fieldpresent index="7" value="Vendor 7" /><fieldpresent index="8" value="Vendor 8" /><fieldpresent index="9" value="Vendor 9" /></fieldpresentlist></field>
+<field>
+<fieldname>VENDNUM</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>VENDNAME</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Vendor Name</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VENDITEM</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Vendor Item Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VENDCONT</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Vendor Contact</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VENDCNCY</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Vendor Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>VENDCOST</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Vendor Cost</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VENDEXISTS</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Vendor Exists</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FACTOR</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Cost Unit Conv. Factor</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COSTUNIT</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Cost Unit</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>QTYMINORD</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Order Minimum (SIA)</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PREFERRED</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Preferred Vendor (SIA)</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

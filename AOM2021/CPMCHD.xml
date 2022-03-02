@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>CP CP0019 CPMCHD CPMCHD</keywords>
+<pagetitle>Manual Cheque Header</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="CPMCHD" desc="Manual Cheque Header">
+<view name="CP0019" desc="Manual Cheque Header" />
+<recordlength>151</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Cheque Date</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>BANK</keyfield><keyfield>CHECKNUM</keyfield><keyfield>PEREND</keyfield><keyfield>CHECKDATE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Cheque Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>BANK</keyfield><keyfield>CHECKNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Period End Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>CHECKNUM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>EMPLOYEE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Employee</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>BANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>CHECKNUM</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Cheque Number</fielddesc>
+</field>
+<field>
+<fieldname>PEREND</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Period End Date</fielddesc>
+</field>
+<field>
+<fieldname>CHECKDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Cheque Date</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>CHECKDESC</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>PERSTART</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Period Start Date</fielddesc>
+</field>
+<field>
+<fieldname>TIMESLATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Times Late</fielddesc>
+</field>
+<field>
+<fieldname>ACTIVE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Cheque Active</fielddesc>
+</field>
+<field>
+<fieldname>PRINT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Print Cheque</fielddesc>
+</field>
+<field>
+<fieldname>BANKFORM</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Cheque Stock Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>PROCESSED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Processed</fielddesc>
+</field>
+<field>
+<fieldname>GROSSPAY</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Gross Pay</fielddesc>
+</field>
+<field>
+<fieldname>CONTRIBS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Benefits</fielddesc>
+</field>
+<field>
+<fieldname>DEDUCTIONS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deductions</fielddesc>
+</field>
+<field>
+<fieldname>TAXES</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Taxes</fielddesc>
+</field>
+<field>
+<fieldname>NETPAY</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Net Pay</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>MCDLINES</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Manual Cheque Lines</fielddesc>
+</field>
+<field>
+<fieldname>SWJOB</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Job Related</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

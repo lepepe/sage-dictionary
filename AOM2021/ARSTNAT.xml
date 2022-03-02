@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0114 ARSTNAT ARSTNAT</keywords>
+<pagetitle>Reprint Statement NAT Customers</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ARSTNAT" desc="Reprint Statement NAT Customers">
+<view name="AR0114" desc="Reprint Statement NAT Customers" />
+<recordlength>989</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Statement Run No./NAT Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>STMTSEQ</keyfield><keyfield>IDNATACCT</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>NAT Number/Statement Run Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDNATACCT</keyfield><keyfield>STMTDATE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>STMTSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Statement Run Number</fielddesc>
+</field>
+<field>
+<fieldname>IDNATACCT</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>National Account Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>STMTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Statement Run Date</fielddesc>
+</field>
+<field>
+<fieldname>SWPRINTED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Statement Printed Flag</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>NAMEACCT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>National Account Name</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE1</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>NAT Address Line 1</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE2</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>NAT Address Line 2</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE3</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>NAT Address Line 3</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE4</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>NAT Address Line 4</fielddesc>
+</field>
+<field>
+<fieldname>NAMECITY</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>NAT City</fielddesc>
+</field>
+<field>
+<fieldname>CODESTATE</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>NAT State/Prov.</fielddesc>
+</field>
+<field>
+<fieldname>CODEPOST</fieldname>
+<fieldtype>String*20</fieldtype>
+<fielddesc>NAT Zip/Postal Code</fielddesc>
+</field>
+<field>
+<fieldname>CODECTRY</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>NAT Country</fielddesc>
+</field>
+<field>
+<fieldname>NAMECTAC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>NAT Contact Name</fielddesc>
+</field>
+<field>
+<fieldname>TEXTPHON1</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>NAT Phone Number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>TEXTPHON2</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>NAT Fax Number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>TEXTSTMT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>NAT Dunning Message</fielddesc>
+</field>
+<field>
+<fieldname>EMAIL</fieldname>
+<fieldtype>String*50</fieldtype>
+<fielddesc>E-mail</fielddesc>
+</field>
+<field>
+<fieldname>WEBSITE</fieldname>
+<fieldtype>String*100</fieldtype>
+<fielddesc>National Accounts's Web Site</fielddesc>
+</field>
+<field>
+<fieldname>CTACPHONE</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Contact's Phone</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>CTACFAX</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Contact's Fax</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>CTACEMAIL</fieldname>
+<fieldtype>String*50</fieldtype>
+<fielddesc>Contact's E-mail</fielddesc>
+</field>
+<field>
+<fieldname>DELMETHOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Delivery Method</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Mail" /><fieldpresent index="2" value="Email (national account)" /><fieldpresent index="4" value="Email (contact)" /><fieldpresent index="5" value="Email (multiple contacts)" /></fieldpresentlist></field>
+<field>
+<fieldname>SWBALFWD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Account Type</fielddesc>
+</field>
+<field>
+<fieldname>AMTBGNBLF</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>NAT Amount Beginning Balance Forward</fielddesc>
+</field>
+<field>
+<fieldname>AMTEBALFD</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>NAT Amount Ending Balance Forward</fielddesc>
+</field>
+<field>
+<fieldname>AMTSTMTBL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>NAT Amount Statement Balance</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUECUR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>NAT Amount Due Current Period</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUEAG1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>NAT Amount Due 1st Period</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUEAG2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>NAT Amount Due 2nd Period</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUEAG3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>NAT Amount Due 3rd Period</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUEAG4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>NAT Amount Due 4th Period</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUEFWD</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>NAT Amount Due Forward Balance</fielddesc>
+</field>
+<field>
+<fieldname>AMTCRLIMIT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Credit Limit</fielddesc>
+</field>
+<field>
+<fieldname>CODECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency Code</fielddesc>
+<mask>%-3N</mask></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

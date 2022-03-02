@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0415 POINVD POINVD</keywords>
+<pagetitle>Invoice Cost Distributions</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Invoice Cost Distributions</title>
+<rotoid>PO0415</rotoid>
+<tablelist>
+<table name="POINVD" desc="Invoice Cost Distributions" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>POINVD</dllname>
+<compositionlist>
+<composition>
+<comprotoid>PO0440</comprotoid>
+<compdesc>Invoice Additional Costs</compdesc>
+<compdll>POINVS</compdll>
+<comptablelist>
+<comptable name="POINVS" desc="Invoice Additional Costs" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0420</comprotoid>
+<compdesc>Invoices</compdesc>
+<compdll>POINVH</compdll>
+<comptablelist>
+<comptable name="POINVH1" desc="Invoices" />
+<comptable name="POINVH2" desc="Invoices" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0419</comprotoid>
+<compdesc>Invoice Functions</compdesc>
+<compdll>POINVG</compdll>
+<comptablelist>
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0417</comprotoid>
+<compdesc>Invoice Posting Cost Distribs.</compdesc>
+<compdll>POINVE</compdll>
+<comptablelist>
+<comptable name="POINVE" desc="Invoice Posting Cost Distribs." />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Detail Key</keytitle>
+<keyfieldlist>
+<keyfield>INVHSEQ</keyfield>
+<keyfield>INVSREV</keyfield>
+<keyfield>LSEQ</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>INVHSEQ</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Invoice Sequence Key</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>INVSREV</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Line Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LSEQ</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Line Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>AMOUNT</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BILLRATE</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Billing Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>INDBTABLE</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Stored in Database Table</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>FROMPRED</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>From Predecessor</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>MANDIST</fieldname>
+<fieldindex>101</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Manual Cost Distribution</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EXTDIST</fieldname>
+<fieldindex>102</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Extraneous Cost Distribution</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COSTDIST</fieldname>
+<fieldindex>103</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Cost Distribution</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

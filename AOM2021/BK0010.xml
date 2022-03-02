@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0010 BKOPT BKOPT</keywords>
+<pagetitle>Bank Options</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Bank Options</title>
+<rotoid>BK0010</rotoid>
+<tablelist>
+<table name="BKOPT" desc="Bank Options" />
+</tablelist>
+<protocollist>
+<protocol>Flat</protocol></protocollist>
+<dllname>BKOPT</dllname>
+<keylist>
+<key>
+<keytitle>Bank Option</keytitle>
+<keyfieldlist>
+<keyfield>OPTIONNBR</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>OPTIONNBR</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Bank Option</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NXTSEQ</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Next Posting Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLDEFER</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Create G/L Batches</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="During Posting" /><fieldpresent index="1" value="On Request Using Create G/L Batch Icon" /></fieldpresentlist></field>
+<field>
+<fieldname>GLCONSOL</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Consolidate G/L Batches</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Do Not Consolidate" /><fieldpresent index="3" value="Consolidate by Account and Fiscal Period" /><fieldpresent index="2" value="Consolidate by Account, Fiscal Period, and Source" /></fieldpresentlist></field>
+<field>
+<fieldname>GLAPPEND</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Create G/L Transactions By</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Adding to an Existing Batch" /><fieldpresent index="0" value="Creating a New Batch" /><fieldpresent index="2" value="Creating and Posting a New Batch" /></fieldpresentlist></field>
+<field>
+<fieldname>TFRACCT</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Transfer Adjustment G/L Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>TFRNUMBER</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Next Bank Transfer Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OFXNOPOST</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Suppress Unmatched OFX Posting</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CONTACT</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Contact Name</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PHONE</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Telephone</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="P" desc="Presentation" />
+</attributeflaglist>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>FAX</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Fax Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="P" desc="Presentation" />
+</attributeflaglist>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>BANK</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Default Bank Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>SWRDATE</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Clear in Future Period list</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="Warning" /><fieldpresent index="2" value="Error" /></fieldpresentlist></field>
+<field>
+<fieldname>SWDMETH</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Deposit Write-Off Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="Prorate" /><fieldpresent index="2" value="Top Down" /></fieldpresentlist></field>
+<field>
+<fieldname>TFRDISTCOD</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Distribution Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>TFRSRVCACT</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Default G/L Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>TFRPFX</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Bank Transfer Prefix</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>TFRDOCLEN</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>BCD*2.0</fieldtype>
+<fielddesc>Bank Transfer Length</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ENTRYPFX</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Bank Entry Prefix</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>ENTDOCLEN</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>BCD*2.0</fieldtype>
+<fielddesc>Bank Entry Length</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ENTRYNUM</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Next Bank Entry Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEQTFR</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Bank Transfer Doc. Seq.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SEQENTRY</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Bank Entry Doc. Seq.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SWRECONCIL</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconcile List</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Bank Services Balance" /><fieldpresent index="1" value="General Ledger Balance" /></fieldpresentlist></field>
+<field>
+<fieldname>NEXTRUNID</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Run Id</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DTLSORTBY</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Default Reconcile Detail Sort By</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Date" /><fieldpresent index="1" value="Receipt No." /></fieldpresentlist></field>
+<field>
+<fieldname>BCCOMP</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>Binary*32</fieldtype>
+<fielddesc>Banking Cloud Company</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TFRACCTD</fieldname>
+<fieldindex>70</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Transfer Adj. Account Desc.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DISTCODED</fieldname>
+<fieldindex>71</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Default Distribution Code Desc.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SRVCACCTD</fieldname>
+<fieldindex>72</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Default G/L Account Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BANKD</fieldname>
+<fieldindex>73</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Default Bank Code Desc</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DISTACCT</fieldname>
+<fieldindex>74</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Default G/L Distribution Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VDISTCODE</fieldname>
+<fieldindex>75</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Error in Default Dist. Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VSRVCACCNT</fieldname>
+<fieldindex>76</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Error in Default Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

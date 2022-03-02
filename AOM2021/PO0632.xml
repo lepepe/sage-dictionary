@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0632 POPORR POPORR</keywords>
+<pagetitle>Purchase Order Requisitions</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Purchase Order Requisitions</title>
+<rotoid>PO0632</rotoid>
+<tablelist>
+<table name="POPORR" desc="Purchase Order Requisitions" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Sequenced revisions</protocol><protocol>Key auto generate</protocol></protocollist>
+<dllname>POPORR</dllname>
+<compositionlist>
+<composition>
+<comprotoid>PO0620</comprotoid>
+<compdesc>Purchase Orders</compdesc>
+<compdll>POPORH</compdll>
+<comptablelist>
+<comptable name="POPORH1" desc="Purchase Orders" />
+<comptable name="POPORH2" desc="Purchase Orders" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0619</comprotoid>
+<compdesc>Purchase Order Functions</compdesc>
+<compdll>POPORG</compdll>
+<comptablelist>
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Detail Key</keytitle>
+<keyfieldlist>
+<keyfield>PORHSEQ</keyfield>
+<keyfield>PORRREV</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Requisition Key</keytitle>
+<keyfieldlist>
+<keyfield>RQNHSEQ</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PORHSEQ</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Purchase Order Sequence Key</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PORRREV</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Line Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RQNHSEQ</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Requisition Sequence Key</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RQNNUMBER</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Requisition Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>COMPLETION</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Completion Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="No" /><fieldpresent index="2" value="Yes" /><fieldpresent index="3" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DTCOMPLETE</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Ordered</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BLNKVDCODE</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Blank Vendors</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>USEVDTYPE</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Use I/C Vendor</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Vendor 1" /><fieldpresent index="2" value="Vendor 2" /><fieldpresent index="3" value="Vendor 3" /><fieldpresent index="4" value="Vendor 4" /><fieldpresent index="5" value="Vendor 5" /><fieldpresent index="6" value="Vendor 6" /><fieldpresent index="7" value="Vendor 7" /><fieldpresent index="8" value="Vendor 8" /><fieldpresent index="9" value="Vendor 9" /></fieldpresentlist></field>
+<field>
+<fieldname>INDBTABLE</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Stored in Database Table</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ISCOMPLETE</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Ordered</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RQNCMPL</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Requisition Ordered</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RQN</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Line</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

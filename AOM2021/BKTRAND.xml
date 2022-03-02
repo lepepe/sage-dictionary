@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0840 BKTRAND BKTRAND</keywords>
+<pagetitle>Bank Transaction Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="BKTRAND" desc="Bank Transaction Details">
+<view name="BK0840" desc="Bank Transaction Details" />
+<recordlength>681</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Bank Transaction Detail</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>SERIAL</keyfield><keyfield>LINE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Bank Reconciliation Fiscal Trans</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>SERIAL</keyfield><keyfield>POSTYEAR</keyfield><keyfield>POSTPERIOD</keyfield><keyfield>LINE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Bank Fiscal Period Transaction</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>SERIAL</keyfield><keyfield>FSCYEAR</keyfield><keyfield>FSCPERIOD</keyfield><keyfield>LINE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Header Context Remittance Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>SERIAL</keyfield><keyfield>DATEREMIT</keyfield><keyfield>IDREMIT</keyfield><keyfield>LINE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Header Context Remittance ID</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>SERIAL</keyfield><keyfield>IDREMIT</keyfield><keyfield>DATEREMIT</keyfield><keyfield>LINE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Transaction Remittance Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>DATEREMIT</keyfield><keyfield>IDREMIT</keyfield><keyfield>SERIAL</keyfield><keyfield>LINE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Transaction Remittance ID</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>IDREMIT</keyfield><keyfield>DATEREMIT</keyfield><keyfield>SERIAL</keyfield><keyfield>LINE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Payer Code Remittance ID</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>SRCEAPP</keyfield><keyfield>PAYORID</keyfield><keyfield>IDREMIT</keyfield><keyfield>SERIAL</keyfield><keyfield>LINE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>BANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>SERIAL</fieldname>
+<fieldtype>???</fieldtype>
+<fielddesc>Transaction Header Serial</fielddesc>
+</field>
+<field>
+<fieldname>LINE</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Transaction Detail Line</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>SRCEAPP</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Application</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>STATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Detail Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Not Posted" /><fieldpresent index="2" value="Void" /><fieldpresent index="3" value="Outstanding" /><fieldpresent index="6" value="Cleared with bank error" /><fieldpresent index="4" value="Reversed" /><fieldpresent index="7" value="Non-negotiable" /><fieldpresent index="8" value="Continuation" /><fieldpresent index="9" value="Printed" /></fieldpresentlist></field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Withdrawals" /><fieldpresent index="2" value="Deposits" /></fieldpresentlist></field>
+<field>
+<fieldname>TYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Check" /><fieldpresent index="2" value="EFT" /><fieldpresent index="3" value="Transfer" /><fieldpresent index="4" value="Service Charge" /><fieldpresent index="5" value="Credit Card" /><fieldpresent index="6" value="Cash" /><fieldpresent index="7" value="Other" /></fieldpresentlist></field>
+<field>
+<fieldname>IDREMIT</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Remittance ID</fielddesc>
+</field>
+<field>
+<fieldname>DATEREMIT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>BTCHNBR</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Batch Number</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYNBR</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Entry Number</fielddesc>
+</field>
+<field>
+<fieldname>POSTSEQ</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Transaction Reference</fielddesc>
+</field>
+<field>
+<fieldname>COMMENT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Transaction Description</fielddesc>
+</field>
+<field>
+<fieldname>PAYORID</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Payer Code</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>PAYORNAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Payee Name</fielddesc>
+</field>
+<field>
+<fieldname>VENDORNAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Vendor Name</fielddesc>
+</field>
+<field>
+<fieldname>SRCEAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Source Transaction Amount</fielddesc>
+</field>
+<field>
+<fieldname>FUNCAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Functional Transaction Amount</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Exchange Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Receipt Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Exchange Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATESPREAD</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Rate Spread</fielddesc>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operation</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /><fieldpresent index="0" value="Not Specified" /></fieldpresentlist></field>
+<field>
+<fieldname>DISTCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Distribution Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>GLACCOUNT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>G/L Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>DDTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Drilldown Type</fielddesc>
+</field>
+<field>
+<fieldname>DDLINK</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Drilldown Link</fielddesc>
+</field>
+<field>
+<fieldname>RECSTATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciliation Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Not Posted" /><fieldpresent index="2" value="Void" /><fieldpresent index="3" value="Outstanding" /></fieldpresentlist></field>
+<field>
+<fieldname>RECSTATCHG</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Status Change Date</fielddesc>
+</field>
+<field>
+<fieldname>RECCOMMENT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reconciliation Description</fielddesc>
+</field>
+<field>
+<fieldname>RECCLEARED</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cleared Amount</fielddesc>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Reconciliation Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>POSTYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Reconciliation Posting Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>POSTPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciliation Posting Period</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="  " /></fieldpresentlist></field>
+<field>
+<fieldname>RECONCILED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Reconciled</fielddesc>
+</field>
+<field>
+<fieldname>RECPENDING</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Remaining In Transit Amount</fielddesc>
+</field>
+<field>
+<fieldname>PAYMCODE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Payment Code</fielddesc>
+</field>
+<field>
+<fieldname>CHKFORM</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Check Stock Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>OFXTID</fieldname>
+<fieldtype>String*50</fieldtype>
+<fielddesc>OFX Transaction ID</fielddesc>
+</field>
+<field>
+<fieldname>FSCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FSCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="1 " /><fieldpresent index="2" value="2 " /><fieldpresent index="3" value="3 " /><fieldpresent index="4" value="4 " /><fieldpresent index="5" value="5 " /><fieldpresent index="6" value="6 " /><fieldpresent index="7" value="7 " /><fieldpresent index="8" value="8 " /><fieldpresent index="9" value="9 " /><fieldpresent index="10" value="10" /><fieldpresent index="11" value="11" /><fieldpresent index="12" value="12" /><fieldpresent index="13" value="13" /></fieldpresentlist></field>
+<field>
+<fieldname>REVDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Reversal/Return Date</fielddesc>
+</field>
+<field>
+<fieldname>SRCEDOCNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Source Document Number</fielddesc>
+</field>
+<field>
+<fieldname>CANREVINVC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Can Reverse Invoice</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>REVINVC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reverse Invoice</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>COMPLETED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciled and Journaled Transaction</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Not Completed" /><fieldpresent index="10" value="Completed" /></fieldpresentlist></field>
+<field>
+<fieldname>PSTSEQ</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Entry Type</fielddesc>
+</field>
+<field>
+<fieldname>POSTED</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Document Posted Date</fielddesc>
+</field>
+<field>
+<fieldname>LSTRECSTAT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Last Reconciliation Status</fielddesc>
+</field>
+<field>
+<fieldname>RECLEVEL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciled By</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Reconciled by Header" /><fieldpresent index="1" value="Reconciled by Detail" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

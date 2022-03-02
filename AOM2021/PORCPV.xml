@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0718 PORCPV PORCPV</keywords>
+<pagetitle>Receipt Vendors</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="PORCPV" desc="Receipt Vendors">
+<view name="PO0718" desc="Receipt Vendors" />
+<recordlength>2003</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Master Key</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>RCPHSEQ</keyfield><keyfield>VDCODE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>RCPHSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Receipt Sequence Key</fielddesc>
+</field>
+<field>
+<fieldname>VDCODE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>COSTS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Costs</fielddesc>
+</field>
+<field>
+<fieldname>COSTSPRORA</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Costs Prorated</fielddesc>
+</field>
+<field>
+<fieldname>COSTSCMPL</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Costs Complete</fielddesc>
+</field>
+<field>
+<fieldname>INDBTABLE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Stored in Database Table</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TAXAUTOCAL</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Auto. tax calculation on save</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ISINVOICED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Invoiced</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>INVNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Invoice Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>VDEXISTS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Vendor Exists</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>VDNAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Name</fielddesc>
+</field>
+<field>
+<fieldname>VDADDRESS1</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address 1</fielddesc>
+</field>
+<field>
+<fieldname>VDADDRESS2</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address 2</fielddesc>
+</field>
+<field>
+<fieldname>VDADDRESS3</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address 3</fielddesc>
+</field>
+<field>
+<fieldname>VDADDRESS4</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address 4</fielddesc>
+</field>
+<field>
+<fieldname>VDCITY</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>City</fielddesc>
+</field>
+<field>
+<fieldname>VDSTATE</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>State/Province</fielddesc>
+</field>
+<field>
+<fieldname>VDZIP</fieldname>
+<fieldtype>String*20</fieldtype>
+<fielddesc>Zip/Postal Code</fielddesc>
+</field>
+<field>
+<fieldname>VDCOUNTRY</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Country</fielddesc>
+</field>
+<field>
+<fieldname>VDPHONE</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Phone Number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>VDFAX</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Fax Number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>VDCONTACT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Contact</fielddesc>
+</field>
+<field>
+<fieldname>TERMSCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Terms Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CURRENCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>SPREAD</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Rate Spread</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEMATCH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Match Type</fielddesc>
+</field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEOPER</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operation</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>RATEOVER</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Rate Overridden</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SCURNDECML</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Decimal Places</fielddesc>
+</field>
+<field>
+<fieldname>DOCTOTAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total</fielddesc>
+</field>
+<field>
+<fieldname>AMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount</fielddesc>
+</field>
+<field>
+<fieldname>TAXGROUP</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Group</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TAXAUTH1</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 1</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH2</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 2</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH3</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 3</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH4</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 4</fielddesc>
+</field>
+<field>
+<fieldname>TAXAUTH5</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 5</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS1</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 1</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS2</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 2</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS3</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 3</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS4</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 4</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS5</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 5</fielddesc>
+</field>
+<field>
+<fieldname>TAXBASE1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Base 1</fielddesc>
+</field>
+<field>
+<fieldname>TAXBASE2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Base 2</fielddesc>
+</field>
+<field>
+<fieldname>TAXBASE3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Base 3</fielddesc>
+</field>
+<field>
+<fieldname>TAXBASE4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Base 4</fielddesc>
+</field>
+<field>
+<fieldname>TAXBASE5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Base 5</fielddesc>
+</field>
+<field>
+<fieldname>TXINCLUDE1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Included Tax Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>TXINCLUDE2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Included Tax Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>TXINCLUDE3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Included Tax Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>TXINCLUDE4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Included Tax Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>TXINCLUDE5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Included Tax Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>TXEXCLUDE1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Excluded Tax Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>TXEXCLUDE2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Excluded Tax Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>TXEXCLUDE3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Excluded Tax Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>TXEXCLUDE4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Excluded Tax Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>TXEXCLUDE5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Excluded Tax Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>TAXAMOUNT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>TAXAMOUNT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>TAXAMOUNT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>TAXAMOUNT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>TAXAMOUNT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>TXALLOAMT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Allocated Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>TXALLOAMT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Allocated Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>TXALLOAMT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Allocated Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>TXALLOAMT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Allocated Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>TXALLOAMT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Allocated Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>TXRECVAMT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Recoverable Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>TXRECVAMT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Recoverable Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>TXRECVAMT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Recoverable Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>TXRECVAMT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Recoverable Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>TXRECVAMT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Recoverable Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>TXEXPSAMT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Expense Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>TXEXPSAMT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Expense Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>TXEXPSAMT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Expense Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>TXEXPSAMT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Expense Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>TXEXPSAMT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Expense Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>TXBASEALLO</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Net of Tax</fielddesc>
+</field>
+<field>
+<fieldname>TXINCLUDED</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Included</fielddesc>
+</field>
+<field>
+<fieldname>TXEXCLUDED</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Excluded</fielddesc>
+</field>
+<field>
+<fieldname>TAXAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Tax</fielddesc>
+</field>
+<field>
+<fieldname>TXRECVAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Tax Recoverable</fielddesc>
+</field>
+<field>
+<fieldname>TXEXPSAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Tax Expensed</fielddesc>
+</field>
+<field>
+<fieldname>TXALLOAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Tax Allocated</fielddesc>
+</field>
+<field>
+<fieldname>SCAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Conversion Source Amount</fielddesc>
+</field>
+<field>
+<fieldname>FCAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Conversion Functional Amount</fielddesc>
+</field>
+<field>
+<fieldname>MTOPRORATE</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Manual To Prorate</fielddesc>
+</field>
+<field>
+<fieldname>TAXLINES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines Tax Calculation Sees</fielddesc>
+</field>
+<field>
+<fieldname>ISCOMPLETE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Completed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DTCOMPLETE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Completed</fielddesc>
+</field>
+<field>
+<fieldname>VDEMAIL</fieldname>
+<fieldtype>String*50</fieldtype>
+<fielddesc>E-mail</fielddesc>
+</field>
+<field>
+<fieldname>VDPHONEC</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Contact Phone</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>VDFAXC</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Contact Fax</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>VDEMAILC</fieldname>
+<fieldtype>String*50</fieldtype>
+<fielddesc>Contact E-mail</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>JOBCOSTS</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Job Related Costs</fielddesc>
+</field>
+<field>
+<fieldname>COSTSBLPRO</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Cost Billing Rates Prorated</fielddesc>
+</field>
+<field>
+<fieldname>HASRTG</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Has Retainage</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RTGRATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Retainage Exchange Rate</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Use Original Document Exchange Rate" /><fieldpresent index="1" value="Use Current Exchange Rate" /></fieldpresentlist></field>
+<field>
+<fieldname>RTGTERMS</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Retainage Terms Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>RTGAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Amount</fielddesc>
+</field>
+<field>
+<fieldname>TRCURRENCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Tax Reporting Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATERC</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Tax Reporting Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>SPREADRC</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Tax Reporting Rate Spread</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPERC</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Tax Reporting Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEMTCHRC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Reporting Rate Match Type</fielddesc>
+</field>
+<field>
+<fieldname>RATEDATERC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Tax Reporting Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEOPERRC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Reporting Rate Operation</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>RATERCOVER</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Tax Reporting Rate Overridden</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RCURNDECML</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Reporting Decimal Places</fielddesc>
+</field>
+<field>
+<fieldname>TARAMOUNT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>TARAMOUNT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>TARAMOUNT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>TARAMOUNT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>TARAMOUNT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>TRINCLUDE1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Included Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>TRINCLUDE2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Included Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>TRINCLUDE3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Included Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>TRINCLUDE4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Included Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>TRINCLUDE5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Included Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>TREXCLUDE1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Excluded Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>TREXCLUDE2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Excluded Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>TREXCLUDE3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Excluded Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>TREXCLUDE4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Excluded Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>TREXCLUDE5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Excluded Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>TRRECVAMT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Recoverable Amt. 1</fielddesc>
+</field>
+<field>
+<fieldname>TRRECVAMT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Recoverable Amt. 2</fielddesc>
+</field>
+<field>
+<fieldname>TRRECVAMT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Recoverable Amt. 3</fielddesc>
+</field>
+<field>
+<fieldname>TRRECVAMT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Recoverable Amt. 4</fielddesc>
+</field>
+<field>
+<fieldname>TRRECVAMT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Recoverable Amt. 5</fielddesc>
+</field>
+<field>
+<fieldname>TREXPSAMT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Expense Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>TREXPSAMT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Expense Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>TREXPSAMT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Expense Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>TREXPSAMT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Expense Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>TREXPSAMT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Expense Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>TRALLOAMT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Allocated Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>TRALLOAMT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Allocated Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>TRALLOAMT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Allocated Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>TRALLOAMT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Allocated Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>TRALLOAMT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Reporting Allocated Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>RAXBASE1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Base 1</fielddesc>
+</field>
+<field>
+<fieldname>RAXBASE2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Base 2</fielddesc>
+</field>
+<field>
+<fieldname>RAXBASE3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Base 3</fielddesc>
+</field>
+<field>
+<fieldname>RAXBASE4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Base 4</fielddesc>
+</field>
+<field>
+<fieldname>RAXBASE5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Base 5</fielddesc>
+</field>
+<field>
+<fieldname>RAXAMOUNT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>RAXAMOUNT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>RAXAMOUNT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>RAXAMOUNT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>RAXAMOUNT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>RXRECVAMT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Recoverable Amt. 1</fielddesc>
+</field>
+<field>
+<fieldname>RXRECVAMT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Recoverable Amt. 2</fielddesc>
+</field>
+<field>
+<fieldname>RXRECVAMT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Recoverable Amt. 3</fielddesc>
+</field>
+<field>
+<fieldname>RXRECVAMT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Recoverable Amt. 4</fielddesc>
+</field>
+<field>
+<fieldname>RXRECVAMT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Recoverable Amt. 5</fielddesc>
+</field>
+<field>
+<fieldname>RXEXPSAMT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Expense Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>RXEXPSAMT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Expense Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>RXEXPSAMT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Expense Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>RXEXPSAMT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Expense Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>RXEXPSAMT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Expense Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>RXALLOAMT1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Allocated Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>RXALLOAMT2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Allocated Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>RXALLOAMT3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Allocated Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>RXALLOAMT4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Allocated Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>RXALLOAMT5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Tax Allocated Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>VDACCTSET</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Vendor Account Set</fielddesc>
+<mask>%-6N</mask></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

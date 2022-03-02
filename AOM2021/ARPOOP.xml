@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0061 ARPOOP ARPOOP</keywords>
+<pagetitle>Create Open Document List</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ARPOOP" desc="Create Open Document List">
+<view name="AR0061" desc="Create Open Document List" />
+<recordlength>700</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Open Document List Key</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PAYMTYPE</keyfield><keyfield>CNTBTCH</keyfield><keyfield>CNTITEM</keyfield><keyfield>CNTKEY</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PAYMTYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Batch Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>CNTBTCH</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Batch Number</fielddesc>
+</field>
+<field>
+<fieldname>CNTITEM</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Entry Number</fielddesc>
+</field>
+<field>
+<fieldname>CNTKEY</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Count key</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>PAYMSCHD</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Count payments scheduled</fielddesc>
+</field>
+<field>
+<fieldname>PROTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Process Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Select" /><fieldpresent index="2" value="Autocash" /></fieldpresentlist></field>
+<field>
+<fieldname>SHOWTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Show Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="All" /><fieldpresent index="2" value="Invoice" /><fieldpresent index="3" value="Debit Note" /><fieldpresent index="4" value="Credit Note" /></fieldpresentlist></field>
+<field>
+<fieldname>ORDERBY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Order By</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Document Number" /><fieldpresent index="2" value="PO Number" /><fieldpresent index="3" value="Due Date" /><fieldpresent index="4" value="Order Number" /><fieldpresent index="7" value="Shipment Number" /><fieldpresent index="5" value="Document Date" /><fieldpresent index="6" value="Current Balance" /><fieldpresent index="8" value="Original Doc. No." /></fieldpresentlist></field>
+<field>
+<fieldname>IDCUST</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>ID Customer</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>IDINVC</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>ID Invc</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>IDRMIT</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Receipt ID</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>CUSTPO</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>PO Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>ORDRNBR</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Order Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>IDSHIPNBR</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Shipment Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>TRXTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Text transaction type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Invoice" /><fieldpresent index="2" value="Debit Note" /><fieldpresent index="3" value="Credit Note" /><fieldpresent index="4" value="Interest" /><fieldpresent index="5" value="Unapplied Cash" /><fieldpresent index="10" value="Prepayment" /><fieldpresent index="11" value="Receipt" /></fieldpresentlist></field>
+<field>
+<fieldname>DATEDUE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Due Date</fielddesc>
+</field>
+<field>
+<fieldname>DATEDISC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Discount date</fielddesc>
+</field>
+<field>
+<fieldname>DATEINVC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Invoice date</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUE</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Payment Amount Due</fielddesc>
+</field>
+<field>
+<fieldname>AMTNET</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Payment Amount Net</fielddesc>
+</field>
+<field>
+<fieldname>AMTDISC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Payment Amount Discount</fielddesc>
+</field>
+<field>
+<fieldname>PAYMAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Receipt Amount</fielddesc>
+</field>
+<field>
+<fieldname>DISCAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Discount Taken Amount</fielddesc>
+</field>
+<field>
+<fieldname>APPLY</fieldname>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Apply</fielddesc>
+</field>
+<field>
+<fieldname>MODE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>IDTRXTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Text Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="11" value="Invoice - Item Issued" /><fieldpresent index="13" value="Invoice - Recurring Charge" /><fieldpresent index="14" value="Invoice - Summary Issued" /><fieldpresent index="21" value="Debit Note - Item Issued" /><fieldpresent index="24" value="Debit Note - Summary Issued" /><fieldpresent index="31" value="Credit Note - Item Issued" /><fieldpresent index="34" value="Credit Note - Summary Issued" /><fieldpresent index="40" value="Interest Charge" /><fieldpresent index="1" value="Unapplied Cash - Posted" /><fieldpresent index="50" value="Prepayment - Posted" /></fieldpresentlist></field>
+<field>
+<fieldname>ADJAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Adjustment Amount</fielddesc>
+</field>
+<field>
+<fieldname>STDOCSTR</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Starting Doc. Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>STDOCDTE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Starting Date</fielddesc>
+</field>
+<field>
+<fieldname>STDOCAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Starting Amount</fielddesc>
+</field>
+<field>
+<fieldname>AMTRMIT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Receipt Amount</fielddesc>
+</field>
+<field>
+<fieldname>OBSDISC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Payment Discount Available</fielddesc>
+</field>
+<field>
+<fieldname>TCPLINE</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>TCP line count</fielddesc>
+</field>
+<field>
+<fieldname>STRTCUST</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Starting  Customer No.</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>ORIGAPLY</fieldname>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Original Apply</fielddesc>
+</field>
+<field>
+<fieldname>PNDPAYTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pending Receipt Amount</fielddesc>
+</field>
+<field>
+<fieldname>PNDDSCTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pending Discount Amount</fielddesc>
+</field>
+<field>
+<fieldname>PNDADJTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pending Adjustment Amount</fielddesc>
+</field>
+<field>
+<fieldname>PENDNGBAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pending Balance</fielddesc>
+</field>
+<field>
+<fieldname>ORGDOCAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Original Document Amount</fielddesc>
+</field>
+<field>
+<fieldname>SWJOB</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Job Related</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RTGAPPLYTO</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Original Doc. No.</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>TEXTDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>TEXTREF</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+</field>
+<field>
+<fieldname>AMTWHD1TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Withheld Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>AMTWHD2TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Withheld Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>AMTWHD3TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Withheld Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>AMTWHD4TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Withheld Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>AMTWHD5TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Withheld Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>AMTWHDTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Withheld Amount Total</fielddesc>
+</field>
+<field>
+<fieldname>PNDWHD1TOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pending Tax Withheld Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>PNDWHD2TOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pending Tax Withheld Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>PNDWHD3TOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pending Tax Withheld Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>PNDWHD4TOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pending Tax Withheld Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>PNDWHD5TOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pending Tax Withheld Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>PNDWHDTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pending Tax Withheld Total</fielddesc>
+</field>
+<field>
+<fieldname>CODETAX1</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Document Tax Authority 1</fielddesc>
+</field>
+<field>
+<fieldname>CODETAX2</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Document Tax Authority 2</fielddesc>
+</field>
+<field>
+<fieldname>CODETAX3</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Document Tax Authority 3</fielddesc>
+</field>
+<field>
+<fieldname>CODETAX4</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Document Tax Authority 4</fielddesc>
+</field>
+<field>
+<fieldname>CODETAX5</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Document Tax Authority 5</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

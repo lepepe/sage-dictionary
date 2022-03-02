@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>TW 67A</keywords>
+<pagetitle>Australia Tax Reports</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<application name="Australia Tax Reports" version="6.7A">
+<viewlist>
+<view name="TW0200" desc="GST Configuration Detail" dllname="TWBOXD">
+<viewtablelist>
+<table name="TWBOXD" desc="GST Configuration Detail" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="TW0300" desc="GST Configuration Header" /></viewcomplist>
+</view>
+<view name="TW0300" desc="GST Configuration Header" dllname="TWBOXH">
+<viewtablelist>
+<table name="TWBOXH" desc="GST Configuration Header" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="TW0200" desc="GST Configuration Detail" /></viewcomplist>
+</view>
+<view name="TW0400" desc="Generate BAS Worksheet" dllname="TWGBAS">
+<viewtablelist>
+<table name="TWGBAS" desc="Generate BAS Worksheet" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="TW0580" desc="BAS Worksheet Detail Amounts" /></viewcomplist>
+</view>
+<view name="TW0500" desc="Australian Tax Activation" dllname="TWINIT">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="TW0580" desc="BAS Worksheet Detail Amounts" dllname="TWTBOXD">
+<viewtablelist>
+<table name="TWTBOXD" desc="BAS Worksheet Detail Amounts" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="TW0400" desc="Generate BAS Worksheet" /></viewcomplist>
+</view>
+<view name="TW0600" desc="Australian Tax Activation Upgrade" dllname="TWUPGD">
+<viewtablelist>
+</viewtablelist>
+</view>
+</viewlist>
+<tablelist>
+<table name="TWBOXD" desc="GST Configuration Detail">
+<view name="TW0200" desc="GST Configuration Detail" />
+</table>
+<table name="TWBOXH" desc="GST Configuration Header">
+<view name="TW0300" desc="GST Configuration Header" />
+</table>
+<table name="TWGBAS" desc="Generate BAS Worksheet">
+<view name="TW0400" desc="Generate BAS Worksheet" />
+</table>
+<table name="TWTBOXD" desc="BAS Worksheet Detail Amounts">
+<view name="TW0580" desc="BAS Worksheet Detail Amounts" />
+</table>
+</tablelist>
+<objectlist>
+<object name="TWBOX">
+<protocolflag type="Protocol" value="SEQUENCE" desc="SEQUENCE" />
+<objectviewlist>
+<objectview name="TW0300" desc="GST Configuration Header" />
+<objectview name="TW0200" desc="GST Configuration Detail" />
+</objectviewlist>
+</object>
+<object name="TWINIT">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="TW0500" desc="Australian Tax Activation" />
+</objectviewlist>
+</object>
+<object name="TWUPGD">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="TW0600" desc="Australian Tax Activation Upgrade" />
+</objectviewlist>
+</object>
+</objectlist>
+</application>
+<footer />
+</pagebody>
+</page>

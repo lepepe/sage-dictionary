@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>TK TK0580 TKTBOXD TKTBOXD</keywords>
+<pagetitle>VAT Worksheet Detail Amounts</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>VAT Worksheet Detail Amounts</title>
+<rotoid>TK0580</rotoid>
+<tablelist>
+<table name="TKTBOXD" desc="VAT Worksheet Detail Amounts" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>TKTBOXD</dllname>
+<compositionlist>
+<composition>
+<comprotoid>TK0400</comprotoid>
+<compdesc>Generate VAT Worksheet</compdesc>
+<compdll>TKGBAS</compdll>
+<comptablelist>
+<comptable name="TKGBAS" desc="Generate VAT Worksheet" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Box Number/Detail Number</keytitle>
+<keyfieldlist>
+<keyfield>FROMDATE</keyfield>
+<keyfield>TODATE</keyfield>
+<keyfield>BOX</keyfield>
+<keyfield>DETAILNUM</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>FROMDATE</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>From Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TODATE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>To Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BOX</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Box Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="1 - VAT due in this period on sales and other outputs" /><fieldpresent index="2" value="2 - VAT due in this period on acquisitions from other EC member states" /><fieldpresent index="4" value="4 - VAT reclaimed in this period on purchases and other inputs (including acquisitions from the EC)" /><fieldpresent index="6" value="6 - Total value of sales and all other outputs excluding any VAT" /><fieldpresent index="7" value="7 - Total value of purchases and all other inputs excluding any VAT" /><fieldpresent index="8" value="8 - Total sales of goods/related services, excluding VAT, to EC member states" /><fieldpresent index="9" value="9 - Total goods/related services acquisitions, excluding VAT, from EC member states" /></fieldpresentlist></field>
+<field>
+<fieldname>DETAILNUM</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Detail Line Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FROM</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>From GL or TX?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="General Ledger" /><fieldpresent index="2" value="Tax Services" /></fieldpresentlist></field>
+<field>
+<fieldname>GLACCT</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>GL Account Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>TAXAUTH</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>BUYERCLASS</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Customer/Vendor Tax Class</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ITEMCLASS</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Item Tax Class</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>AMOUNT</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TTYPE</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Sales" /><fieldpresent index="2" value="Purchases" /><fieldpresent index="3" value="Not Applicable" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

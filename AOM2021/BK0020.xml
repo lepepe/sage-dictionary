@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0020 BKJCTL BKJCTL</keywords>
+<pagetitle>Bank Posting Journal Control</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Bank Posting Journal Control</title>
+<rotoid>BK0020</rotoid>
+<tablelist>
+<table name="BKJCTL" desc="Bank Posting Journal Control" />
+</tablelist>
+<protocollist>
+<protocol>Batch</protocol><protocol>Key auto generate</protocol></protocollist>
+<dllname>BKJCTL</dllname>
+<compositionlist>
+<composition>
+<comprotoid>BK0011</comprotoid>
+<compdesc>Bank Posting Journal</compdesc>
+<compdll>BKJRNL</compdll>
+<comptablelist>
+<comptable name="BKJRNL" desc="Bank Posting Journal" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>BK0033</comprotoid>
+<compdesc>Transfer Audit</compdesc>
+<compdll>BKJTFR</compdll>
+<comptablelist>
+<comptable name="BKJTFR" desc="Transfer Audit" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>BK0012</comprotoid>
+<compdesc>Bank Posting Error Journal</compdesc>
+<compdll>BKJERR</compdll>
+<comptablelist>
+<comptable name="BKJERR" desc="Bank Posting Error Journal" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>BK0665</comprotoid>
+<compdesc>Bank Entries Journal Header</compdesc>
+<compdll>BKJENTH</compdll>
+<comptablelist>
+<comptable name="BKJENTH" desc="Bank Entries Journal Header" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Posting Sequence</keytitle>
+<keyfieldlist>
+<keyfield>PSTSEQ</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PSTSEQ</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FROMBANK</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>From Bank</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TOBANK</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>To Bank</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Posted to GL</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>POSTUSER</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Posting User</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>POSTSTAT</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Posting Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Posting" /><fieldpresent index="2" value="Pending print" /><fieldpresent index="3" value="Printed" /><fieldpresent index="5" value="Pending purge" /><fieldpresent index="4" value="Purging" /></fieldpresentlist></field>
+<field>
+<fieldname>PRINTDATE</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Date Journal Printed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLDEFER</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Create G/L Batches</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="During Posting" /><fieldpresent index="1" value="On Request Using Create G/L Batch Icon" /></fieldpresentlist></field>
+<field>
+<fieldname>GLCONSOL</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Consolidate G/L Batches</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Post all details" /><fieldpresent index="2" value="Account/Fiscal Period/Source Code" /><fieldpresent index="3" value="Account/Fiscal Period" /></fieldpresentlist></field>
+<field>
+<fieldname>GLAPPEND</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Create G/L Transactions By</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Adding to an Existing Batch" /><fieldpresent index="0" value="Creating a New Batch" /><fieldpresent index="2" value="Creating and Posting a New Batch" /></fieldpresentlist></field>
+<field>
+<fieldname>GLBATCH</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>G/L Batch Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLTRANS</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>G/L Batch Transferred</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>POSTTYPE</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Posting Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Reconciliation" /><fieldpresent index="2" value="Transfer" /><fieldpresent index="3" value="Bank Entries" /></fieldpresentlist></field>
+<field>
+<fieldname>BANKSEQ</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Bank Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PRINTED</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Printed?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

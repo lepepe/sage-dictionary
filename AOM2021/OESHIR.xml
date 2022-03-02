@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>OE OE0694 OESHIR OESHIR</keywords>
+<pagetitle>Multiple Orders to Shipment</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="OESHIR" desc="Multiple Orders to Shipment">
+<view name="OE0694" desc="Multiple Orders to Shipment" />
+<recordlength>90</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Shipment Uniquifier/Line Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SHIUNIQ</keyfield><keyfield>LINENUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Shipment Uniquifier/Order Uniqui</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SHIUNIQ</keyfield><keyfield>ORDUNIQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Order Uniquifier</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ORDUNIQ</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SHIUNIQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Shipment Uniquifier</fielddesc>
+</field>
+<field>
+<fieldname>LINENUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>ORDUNIQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Order Uniquifier</fielddesc>
+</field>
+<field>
+<fieldname>ORDNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Order Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>PONUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>PO Number</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

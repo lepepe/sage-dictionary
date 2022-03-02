@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0160 ICASEN ICASEN</keywords>
+<pagetitle>Assemblies</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICASEN" desc="Assemblies">
+<view name="IC0160" desc="Assemblies" />
+<recordlength>476</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Sequence Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ASSMENSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Transaction Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TRANSNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Type and Sequence Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TRANSTYPE</keyfield><keyfield>ASSMENSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Type and Document Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TRANSTYPE</keyfield><keyfield>DOCNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Record Status</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>STATUS</keyfield><keyfield>TRANSNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Document Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DOCNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>IC-Unique Document Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DOCUNIQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Status by Document Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>STATUS</keyfield><keyfield>DOCNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Master Assembly Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>MASTASSNUM</keyfield><keyfield>DOCNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Master Assembly/Multilevel Seq.</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>MASTASSNUM</keyfield><keyfield>MULTSEQ</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ASSMENSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>TRANSNUM</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Transaction Number</fielddesc>
+</field>
+<field>
+<fieldname>DOCNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Assembly Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>FISCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%4D</mask></field>
+<field>
+<fieldname>FISCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="1 " /><fieldpresent index="2" value="2 " /><fieldpresent index="3" value="3 " /><fieldpresent index="4" value="4 " /><fieldpresent index="5" value="5 " /><fieldpresent index="6" value="6 " /><fieldpresent index="7" value="7 " /><fieldpresent index="8" value="8 " /><fieldpresent index="9" value="9 " /><fieldpresent index="10" value="10" /><fieldpresent index="11" value="11" /><fieldpresent index="12" value="12" /></fieldpresentlist></field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+</field>
+<field>
+<fieldname>HDRDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>BOMNO</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>BOM Number</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>QUANTITY</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity</fielddesc>
+</field>
+<field>
+<fieldname>UNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Unit of Measure</fielddesc>
+</field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Assembly" /><fieldpresent index="2" value="Disassembly" /></fieldpresentlist></field>
+<field>
+<fieldname>DOCUNIQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>IC-Unique Document Number</fielddesc>
+</field>
+<field>
+<fieldname>STATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Record Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Entered" /><fieldpresent index="2" value="Posted" /><fieldpresent index="3" value="Costed" /><fieldpresent index="20" value="Day End Completed" /></fieldpresentlist></field>
+<field>
+<fieldname>DELETED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Record Deleted</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>MANITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Manufacturer's Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>UNITCOST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Unit Cost</fielddesc>
+</field>
+<field>
+<fieldname>FROMASSNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>From Assembly Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>FROMASSQTY</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>From Assembly Quantity</fielddesc>
+</field>
+<field>
+<fieldname>DISASSCOST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Disassembly Cost</fielddesc>
+</field>
+<field>
+<fieldname>PRINTED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Record Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>MASTASSNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Master Assembly Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>COMPASSMTD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Component Assembly Method</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="All Component Master Items" /><fieldpresent index="2" value="Component Master Items with Insufficient Quantity" /></fieldpresentlist></field>
+<field>
+<fieldname>USEDQTY</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Used</fielddesc>
+</field>
+<field>
+<fieldname>NEEDQTYSTK</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Qty Needed (Stocking UOM)</fielddesc>
+</field>
+<field>
+<fieldname>MULTLEVEL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Multilevel Level</fielddesc>
+</field>
+<field>
+<fieldname>MULTSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Multilevel Seq. No.</fielddesc>
+</field>
+<field>
+<fieldname>PRNMULTSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Multilevel Parent Seq. No.</fielddesc>
+</field>
+<field>
+<fieldname>PRNASSNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Multilevel Parent Assembly No.</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>CMPMASTITM</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Component's Master Item No.</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>ENTEREDBY</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Entered By</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>SITEMCOUNT</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Serial Items in Assembly</fielddesc>
+</field>
+<field>
+<fieldname>LITEMCOUNT</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lot Items in Assembly</fielddesc>
+</field>
+<field>
+<fieldname>REMAINASSD</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Assembly Quantity Remaining</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

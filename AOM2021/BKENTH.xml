@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0450 BKENTH BKENTH</keywords>
+<pagetitle>Bank Entries Header</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="BKENTH" desc="Bank Entries Header">
+<view name="BK0450" desc="Bank Entries Header" />
+<recordlength>610</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Bank Entry by Sequence</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SEQUENCENO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Bank Entry by Entry No.</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ENTRYNBR</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Bank Entry by Bank, Entry No.</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>ENTRYNBR</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Bank Reconciliation Fiscal Entry</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ENTRYNBR</keyfield><keyfield>POSTYEAR</keyfield><keyfield>POSTPERIOD</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Bank Entry by Bank, Serial No.</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>SERIAL</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SEQUENCENO</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>ENTRYNBR</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Bank Entry Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>BANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Created</fielddesc>
+</field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Bank Entry Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Withdrawals" /><fieldpresent index="2" value="Deposits" /></fieldpresentlist></field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Entry Description</fielddesc>
+</field>
+<field>
+<fieldname>COMMENT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Comment(Reserved)</fielddesc>
+</field>
+<field>
+<fieldname>TOTSRCEAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Entry Total Without Tax</fielddesc>
+</field>
+<field>
+<fieldname>TOTFUNCAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Entry Total Without Tax</fielddesc>
+</field>
+<field>
+<fieldname>TOTSRCEGRO</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Entry Total</fielddesc>
+</field>
+<field>
+<fieldname>TOTFUNCGRO</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Entry Total</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Exchange Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Bank Entry Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Exchange Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATESPREAD</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Rate Spread</fielddesc>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operation</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /><fieldpresent index="0" value="Not Specified" /></fieldpresentlist></field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Bank Entry Date</fielddesc>
+</field>
+<field>
+<fieldname>POSTYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Bank Entry Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>POSTPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Bank Entry Period</fielddesc>
+</field>
+<field>
+<fieldname>COMPLETED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Completed Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Not Completed" /><fieldpresent index="10" value="Completed" /></fieldpresentlist></field>
+<field>
+<fieldname>BIGCOMMENT</fieldname>
+<fieldtype>String*250</fieldtype>
+<fielddesc>Comments</fielddesc>
+</field>
+<field>
+<fieldname>STATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Not posted" /><fieldpresent index="1" value="Posted" /><fieldpresent index="2" value="Reversed" /><fieldpresent index="3" value="Cleared" /></fieldpresentlist></field>
+<field>
+<fieldname>RECDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Reconcilation Date</fielddesc>
+</field>
+<field>
+<fieldname>RECYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Reconcilation Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>RECPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconcilation Period</fielddesc>
+</field>
+<field>
+<fieldname>LINES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Lines</fielddesc>
+</field>
+<field>
+<fieldname>SERIAL</fieldname>
+<fieldtype>???</fieldtype>
+<fielddesc>Bank Entry Serial Number</fielddesc>
+</field>
+<field>
+<fieldname>RUNID</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Run Id</fielddesc>
+</field>
+<field>
+<fieldname>TYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Payment Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Check" /><fieldpresent index="5" value="Credit Card" /><fieldpresent index="6" value="Cash" /><fieldpresent index="7" value="Other" /></fieldpresentlist></field>
+<field>
+<fieldname>OFXTID</fieldname>
+<fieldtype>String*50</fieldtype>
+<fielddesc>OFX Transaction ID</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Entry Type</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="User-entered" /><fieldpresent index="10" value="Unmatched OFX" /><fieldpresent index="19" value="Unmatched OFX correction" /><fieldpresent index="20" value="Unmatched OFX error" /></fieldpresentlist></field>
+<field>
+<fieldname>DSETCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Distribution Set</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>PSTSEQ</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

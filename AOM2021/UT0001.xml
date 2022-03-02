@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>UT UT0001 UTTTMC UTTTMC</keywords>
+<pagetitle>Federal and State Taxes</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Federal and State Taxes</title>
+<rotoid>UT0001</rotoid>
+<tablelist>
+<table name="UTTTMC" desc="Federal and State Taxes" />
+</tablelist>
+<protocollist>
+<protocol>Flat</protocol></protocollist>
+<dllname>UTTTMC</dllname>
+<keylist>
+<key>
+<keytitle>Tax</keytitle>
+<keyfieldlist>
+<keyfield>TAXID</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>TAXID</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Tax</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Category</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="7" value="Federal Tax" /><fieldpresent index="8" value="State Tax" /><fieldpresent index="9" value="Local Tax" /></fieldpresentlist></field>
+<field>
+<fieldname>TAXTYPE</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="19" value="Income Tax" /><fieldpresent index="20" value="Unemployment Tax" /><fieldpresent index="18" value="Insurance Tax" /><fieldpresent index="21" value="Pension Plan Tax" /><fieldpresent index="22" value="Health Tax" /><fieldpresent index="23" value="Other Tax" /></fieldpresentlist></field>
+<field>
+<fieldname>LONGDESC</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SHORTDESC</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Short Name</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EFFECTDATE</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Effective Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CALCATTRIB</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Calculation Attributes</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRAKATTRIB</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Historical Amounts Attributes</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ECALCMTHD</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employee Tax Calculation Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="None" /><fieldpresent index="2" value="Flat" /><fieldpresent index="5" value="Amount Per Hour" /><fieldpresent index="7" value="Percentage Of Base" /><fieldpresent index="13" value="Tax Bracket Table" /><fieldpresent index="14" value="Percentage Of Another Tax" /><fieldpresent index="15" value="Percentage Of Employee Contribution" /></fieldpresentlist></field>
+<field>
+<fieldname>RCALCMTHD</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employer Tax Calculation Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="None" /><fieldpresent index="2" value="Flat" /><fieldpresent index="5" value="Amount Per Hour" /><fieldpresent index="7" value="Percentage Of Base" /><fieldpresent index="13" value="Tax Bracket Table" /><fieldpresent index="14" value="Percentage Of Another Tax" /><fieldpresent index="15" value="Percentage Of Employee Contribution" /></fieldpresentlist></field>
+<field>
+<fieldname>FIPSNBR</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>FIPS Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FIPSCODE</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>FIPS Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CFGPARMVER</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Configuration Fields Version</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CFGPARMCNT</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Configuration Field Count</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EMPPARMVER</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employee Fields Version</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EMPPARMCNT</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Employee Field Count</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BASEMULT</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Base Multiplier</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SURTAXMULT</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Surtax Multiplier</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ROUNDTAXSW</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Round Tax Flag</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DAILYPPY</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Daily Pay Periods Per Year</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ANNMAXWAGE</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Annual Maximum Earnings</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EAMTORPCT</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Employee Amount/Percent</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EANNMAXWH</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Annual Max Withholding</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RAMTORPCT</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Employer Amount/Percent</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RANNMAXWH</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Annual Max Withholding</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDCNT</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Count of Fields to Suppress</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX1</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 1 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX2</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 2 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX3</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 3 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX4</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 4 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX5</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 5 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX6</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 6 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX7</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 7 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX8</fieldname>
+<fieldindex>34</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 8 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX9</fieldname>
+<fieldindex>35</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 9 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX10</fieldname>
+<fieldindex>36</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 10 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX11</fieldname>
+<fieldindex>37</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 11 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX12</fieldname>
+<fieldindex>38</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 12 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX13</fieldname>
+<fieldindex>39</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 13 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX14</fieldname>
+<fieldindex>40</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 14 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX15</fieldname>
+<fieldindex>41</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 15 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX16</fieldname>
+<fieldindex>42</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 16 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX17</fieldname>
+<fieldindex>43</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 17 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX18</fieldname>
+<fieldindex>44</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 18 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX19</fieldname>
+<fieldindex>45</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 19 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX20</fieldname>
+<fieldindex>46</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 20 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX21</fieldname>
+<fieldindex>47</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 21 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX22</fieldname>
+<fieldindex>48</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 22 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX23</fieldname>
+<fieldindex>49</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 23 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX24</fieldname>
+<fieldindex>50</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 24 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NOFLDIDX25</fieldname>
+<fieldindex>51</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Suppressed Field 25 Index</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FORMID</fieldname>
+<fieldindex>52</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Dynamic Fields Form ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PRVMAXWAGE</fieldname>
+<fieldindex>53</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Maximum Wage Base</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PRVEAMTPCT</fieldname>
+<fieldindex>54</fieldindex>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Employee Default Amount/Percent</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PRVEAMAXWH</fieldname>
+<fieldindex>55</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employee Maximum W/H Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PRVRAMTPCT</fieldname>
+<fieldindex>56</fieldindex>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Employer Default Amount/Percent</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PRVRAMAXWH</fieldname>
+<fieldindex>57</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Employer Maximum W/H Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BASETAX</fieldname>
+<fieldindex>58</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Base Tax</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TCALCORDER</fieldname>
+<fieldindex>59</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Calculation Order</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>OE OE0535 OEPAUTH OEPAUTH</keywords>
+<pagetitle>Order Pre-Authorization</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="OEPAUTH" desc="Order Pre-Authorization">
+<view name="OE0535" desc="Order Pre-Authorization" />
+<recordlength>237</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Order Uniquifier</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ORDUNIQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Transaction Status</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TRANSTATUS</keyfield><keyfield>ORDUNIQ</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ORDUNIQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Order Uniquifier</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>CUSTOMER</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>TRANIDPRE</fieldname>
+<fieldtype>String*36</fieldtype>
+<fielddesc>Preauth Transaction ID</fielddesc>
+</field>
+<field>
+<fieldname>TRANIDCAP</fieldname>
+<fieldtype>String*36</fieldtype>
+<fielddesc>Capture Transaction ID</fielddesc>
+</field>
+<field>
+<fieldname>TRANIDVOID</fieldname>
+<fieldtype>String*36</fieldtype>
+<fielddesc>Void Transaction ID</fielddesc>
+</field>
+<field>
+<fieldname>TRANSTATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="Preauth Pending" /><fieldpresent index="2" value="Capture Pending" /><fieldpresent index="3" value="Void Pending" /><fieldpresent index="4" value="Success" /><fieldpresent index="5" value="Captured" /><fieldpresent index="6" value="Voided" /><fieldpresent index="7" value="Card Declined" /><fieldpresent index="8" value="Card Error" /></fieldpresentlist></field>
+<field>
+<fieldname>YPPROCCODE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>YP Process Code</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>BANKCODE</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>PAYMCODE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Payment Code</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>PAYMTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Payment Type</fielddesc>
+</field>
+<field>
+<fieldname>PAUTHCURR</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Pre-Auth Amount Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>SOURCURR</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Source Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>SPREAD</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Rate Spread</fielddesc>
+</field>
+<field>
+<fieldname>DATEMTCH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Date Matching</fielddesc>
+</field>
+<field>
+<fieldname>RATEREP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operator</fielddesc>
+</field>
+<field>
+<fieldname>RATEOVER</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Rate Override Falg</fielddesc>
+</field>
+<field>
+<fieldname>ORDPOSTED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Order Posted</fielddesc>
+</field>
+<field>
+<fieldname>PAUTHAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Pre-Auth Amount</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

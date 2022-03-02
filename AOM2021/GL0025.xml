@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>GL GL0025 GLCSL</keywords>
+<pagetitle>Consolidate Posted Transactions</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Consolidate Posted Transactions</title>
+<rotoid>GL0025</rotoid>
+<protocollist>
+<protocol>Superview</protocol></protocollist>
+<dllname>GLCSL</dllname>
+<keylist>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SELECTCODE</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Account/segment selection code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index=" 1" value="Consolidate by Account" /><fieldpresent index=" 2" value="Consolidate by Segment" /></fieldpresentlist></field>
+<field>
+<fieldname>ABLKID</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Account segment selected</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%06D</mask></field>
+<field>
+<fieldname>ACCTFROM</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>From Account Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>ACCTTO</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>To Account Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>CONSLYR</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Year to consolidate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CONSLPERD</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Period to consolidate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CONSLTYPE</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Type of consolidation</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index=" 1" value="Consolidate by Account/Fiscal Period" /><fieldpresent index=" 2" value="Consolidate by Account/Fiscal Period/Source Code" /><fieldpresent index=" 3" value="Consolidate by Account/Fiscal Period/Source Ledger" /></fieldpresentlist></field>
+<field>
+<fieldname>SRCETYPE</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCELEDGER</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Ledger</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2A</mask></field>
+<field>
+<fieldname>SWCONSOL</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Consolidate Switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RTVSRCLDGR</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Retrieve Src Ledger Switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RTVTOTAL</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Total Retrieved Ledgers</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RTVLDGRFR</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>List Ledger Codes From</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RTVLIST</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>String*20</fieldtype>
+<fielddesc>Retrieved Ledgers Codes</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

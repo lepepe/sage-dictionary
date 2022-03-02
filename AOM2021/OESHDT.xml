@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>OE OE0685 OESHDT OESHDT</keywords>
+<pagetitle>Sales History Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="OESHDT" desc="Sales History Details">
+<view name="OE0685" desc="Sales History Details" />
+<recordlength>322</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Customer</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CUSTOMER</keyfield><keyfield>ITEM</keyfield><keyfield>YR</keyfield><keyfield>PERIOD</keyfield><keyfield>TRANDATE</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>TRANSSEQ</keyfield><keyfield>LINENO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Item</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEM</keyfield><keyfield>CUSTOMER</keyfield><keyfield>YR</keyfield><keyfield>PERIOD</keyfield><keyfield>TRANDATE</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>TRANSSEQ</keyfield><keyfield>LINENO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Salesperson</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SALESPER</keyfield><keyfield>YR</keyfield><keyfield>PERIOD</keyfield><keyfield>CUSTOMER</keyfield><keyfield>TRANTYPE</keyfield><keyfield>TRANNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Customer/Transaction Date</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CUSTOMER</keyfield><keyfield>ITEM</keyfield><keyfield>TRANDATE</keyfield><keyfield>YR</keyfield><keyfield>PERIOD</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>TRANSSEQ</keyfield><keyfield>LINENO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Item/Transaction Date</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEM</keyfield><keyfield>CUSTOMER</keyfield><keyfield>TRANDATE</keyfield><keyfield>YR</keyfield><keyfield>PERIOD</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>TRANSSEQ</keyfield><keyfield>LINENO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Salesperson/Transaction Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SALESPER</keyfield><keyfield>TRANDATE</keyfield><keyfield>YR</keyfield><keyfield>PERIOD</keyfield><keyfield>CUSTOMER</keyfield><keyfield>TRANTYPE</keyfield><keyfield>TRANNUM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CUSTOMER</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>ITEM</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>YR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Year</fielddesc>
+<mask>%-4d</mask></field>
+<field>
+<fieldname>PERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Period</fielddesc>
+</field>
+<field>
+<fieldname>TRANDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Trans. Date</fielddesc>
+</field>
+<field>
+<fieldname>DAYENDSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Day End Number</fielddesc>
+</field>
+<field>
+<fieldname>TRANSSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Entry Number</fielddesc>
+</field>
+<field>
+<fieldname>LINENO</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>TRANNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Trans. Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>TRANTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Trans. Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Invoice" /><fieldpresent index="2" value="Credit Note" /><fieldpresent index="4" value="Debit Note" /></fieldpresentlist></field>
+<field>
+<fieldname>ORDDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Order Date</fielddesc>
+</field>
+<field>
+<fieldname>ORDNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Order Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>SHIPDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Ship Date</fielddesc>
+</field>
+<field>
+<fieldname>SALESPER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Salesperson</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>TERRITORY</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Territory</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Category</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>QTYSOLD</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Sold</fielddesc>
+</field>
+<field>
+<fieldname>SCURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Cust. Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>FCSTSALES</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Cost of Sales</fielddesc>
+</field>
+<field>
+<fieldname>SCSTSALES</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Srce. Cost of Sales</fielddesc>
+</field>
+<field>
+<fieldname>FAMTSALES</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Sales Amount</fielddesc>
+</field>
+<field>
+<fieldname>SAMTSALES</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Srce. Sales Amount</fielddesc>
+</field>
+<field>
+<fieldname>FRETSALES</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Return Amount</fielddesc>
+</field>
+<field>
+<fieldname>SRETSALES</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Srce. Return Amount</fielddesc>
+</field>
+<field>
+<fieldname>PONUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Purchase Order Number</fielddesc>
+</field>
+<field>
+<fieldname>FAMTTRAN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Functional Amount</fielddesc>
+</field>
+<field>
+<fieldname>SAMTTRAN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Source Amount</fielddesc>
+</field>
+<field>
+<fieldname>FAMTDISC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Functional Discount Amount</fielddesc>
+</field>
+<field>
+<fieldname>SAMTDISC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Source Discount Amount</fielddesc>
+</field>
+<field>
+<fieldname>SHINUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Shipment Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>SHIDTLNUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Shipment Detail Number</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

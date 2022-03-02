@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>UP UP0206 UPEMULH UPEMULH</keywords>
+<pagetitle>EFT Combine File Header</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="UPEMULH" desc="EFT Combine File Header">
+<view name="UP0206" desc="EFT Combine File Header" />
+<recordlength>244</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Bank/Combine Run Seq</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANKID</keyfield><keyfield>COMBRUNSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Bank/Combine File Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANKID</keyfield><keyfield>MULTINUM</keyfield><keyfield>COMBRUNSEQ</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>BANKID</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank ID</fielddesc>
+</field>
+<field>
+<fieldname>COMBRUNSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Combine Run Sequence</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>MULTINUM</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Combine File Number</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>MULTIDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Combine File Date</fielddesc>
+</field>
+<field>
+<fieldname>MULTINAME</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Combine File Name</fielddesc>
+</field>
+<field>
+<fieldname>MULTIPATH</fieldname>
+<fieldtype>String*128</fieldtype>
+<fielddesc>Combine File Path</fielddesc>
+</field>
+<field>
+<fieldname>EXTENSION</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Extension</fielddesc>
+</field>
+<field>
+<fieldname>MULTIDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0046 ARSIA ARSIA</keywords>
+<pagetitle>Recurring Charges</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ARSIA" desc="Recurring Charges">
+<view name="AR0046" desc="Recurring Charges" />
+<recordlength>954</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Recurring Charge Code</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDSTDINVC</keyfield><keyfield>IDCUST</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Customer Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDCUST</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Billing Cycle</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDBILL</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Schedule</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SCHEDKEY</keyfield><keyfield>SCHEDLINK</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>IDSTDINVC</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Recurring Charge Code</fielddesc>
+<mask>%-16C</mask></field>
+<field>
+<fieldname>IDCUST</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>IDBILL</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>TEXTDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>SWACTV</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Inactive" /><fieldpresent index="1" value="Active" /></fieldpresentlist></field>
+<field>
+<fieldname>DATEINAC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Inactive Date</fielddesc>
+</field>
+<field>
+<fieldname>DATELSTMTN</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Maintained</fielddesc>
+</field>
+<field>
+<fieldname>DATELSTPRC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Invoice Date Generated</fielddesc>
+</field>
+<field>
+<fieldname>DATEEFF</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Effective Date</fielddesc>
+</field>
+<field>
+<fieldname>DATEEXPR</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Expiration Date</fielddesc>
+</field>
+<field>
+<fieldname>AMTTOTCHRG</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Maximum Total Invoice Amount</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>YTD Total Invoice Amount</fielddesc>
+</field>
+<field>
+<fieldname>DATEINVDAY</fieldname>
+<fieldtype>BCD*2.0</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>SWLASTDAY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>IDCUSTSHPT</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Ship-To Location</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>TEXTSHIP</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>TEXTINST</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Special Instructions</fielddesc>
+</field>
+<field>
+<fieldname>IDORDENBR</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Order Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>IDCUSTPO</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>PO Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>IDJOBNBR</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>INVCDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Invoice Description</fielddesc>
+</field>
+<field>
+<fieldname>SWPRTINVC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>CODECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency Code</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>IDRATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>CODETERM</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Terms</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>CNTLSTLINE</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Last Line Number</fielddesc>
+</field>
+<field>
+<fieldname>CODESLSP1</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Salesperson 1</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>CODESLSP2</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Salesperson 2</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>CODESLSP3</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Salesperson 3</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>CODESLSP4</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Salesperson 4</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>CODESLSP5</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Salesperson 5</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>PCTSASPLT1</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Sales-Split Percentage 1</fielddesc>
+</field>
+<field>
+<fieldname>PCTSASPLT2</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Sales-Split Percentage 2</fielddesc>
+</field>
+<field>
+<fieldname>PCTSASPLT3</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Sales-Split Percentage 3</fielddesc>
+</field>
+<field>
+<fieldname>PCTSASPLT4</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Sales-Split Percentage 4</fielddesc>
+</field>
+<field>
+<fieldname>PCTSASPLT5</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Sales-Split Percentage 5</fielddesc>
+</field>
+<field>
+<fieldname>SWTXBL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Taxable</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWMANLTX</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Override</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>CODETAXGRP</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Group</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>CODETAX1</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 1</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>CODETAX2</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 2</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>CODETAX3</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 3</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>CODETAX4</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 4</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>CODETAX5</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 5</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TAXSTTS1</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 1</fielddesc>
+</field>
+<field>
+<fieldname>TAXSTTS2</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 2</fielddesc>
+</field>
+<field>
+<fieldname>TAXSTTS3</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 3</fielddesc>
+</field>
+<field>
+<fieldname>TAXSTTS4</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 4</fielddesc>
+</field>
+<field>
+<fieldname>TAXSTTS5</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 5</fielddesc>
+</field>
+<field>
+<fieldname>BASETAX1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Base 1</fielddesc>
+</field>
+<field>
+<fieldname>BASETAX2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Base 2</fielddesc>
+</field>
+<field>
+<fieldname>BASETAX3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Base 3</fielddesc>
+</field>
+<field>
+<fieldname>BASETAX4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Base 4</fielddesc>
+</field>
+<field>
+<fieldname>BASETAX5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Base 5</fielddesc>
+</field>
+<field>
+<fieldname>AMTTAX1</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>AMTTAX2</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>AMTTAX3</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>AMTTAX4</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>AMTTAX5</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>AMTTXBL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Taxable Amount</fielddesc>
+</field>
+<field>
+<fieldname>AMTNOTTXBL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Non-Taxable Amount</fielddesc>
+</field>
+<field>
+<fieldname>AMTTAXTOTL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Tax Amount</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVTOTL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Invoice Amount Posted</fielddesc>
+</field>
+<field>
+<fieldname>CNTPAYMTOT</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>AMTPAYMSCD</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Invoice Subtotal</fielddesc>
+</field>
+<field>
+<fieldname>MAXCOUNT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Maximum Number of Invoices</fielddesc>
+</field>
+<field>
+<fieldname>YTDCOUNT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>YTD Number of Invoices</fielddesc>
+</field>
+<field>
+<fieldname>SCHEDKEY</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Schedule</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>SCHEDLINK</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Schedule Link</fielddesc>
+</field>
+<field>
+<fieldname>EXPIRETYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Expiration Type</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No Expiration" /><fieldpresent index="1" value="Specific Date" /><fieldpresent index="2" value="Maximum Amount" /><fieldpresent index="3" value="Number of Invoices" /></fieldpresentlist></field>
+<field>
+<fieldname>SHPVIACODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Ship Via Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SHPVIADESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Ship Via Description</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVCTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Invoice Total Before Tax</fielddesc>
+</field>
+<field>
+<fieldname>AMTNETTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Invoice Total Including Tax</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>AMTTAXTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Tax Amount</fielddesc>
+</field>
+<field>
+<fieldname>INVCTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Invoice Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Item" /><fieldpresent index="2" value="Summary" /></fieldpresentlist></field>
+<field>
+<fieldname>SWJOB</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Job Related</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATENEXT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Next Scheduled Date</fielddesc>
+</field>
+<field>
+<fieldname>OPENCOUNT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Unposted Number of Invoices</fielddesc>
+</field>
+<field>
+<fieldname>OPENAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Unposted Total Invoice Amount</fielddesc>
+</field>
+<field>
+<fieldname>POSTCOUNT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Posted Number of Invoices</fielddesc>
+</field>
+<field>
+<fieldname>POSTAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Posted Total Invoice Amount</fielddesc>
+</field>
+<field>
+<fieldname>LSTDATEINV</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Invoice Date Posted</fielddesc>
+</field>
+<field>
+<fieldname>LSTIDINVC</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Last Invoice Number Posted</fielddesc>
+</field>
+<field>
+<fieldname>LSTCNTBTCH</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Last Batch Number Posted</fielddesc>
+</field>
+<field>
+<fieldname>LSTCNTITEM</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Last Entry Number Posted</fielddesc>
+</field>
+<field>
+<fieldname>LSTPOSTSEQ</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Last Posting Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>IDACCTSET</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Account Set</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>AMTWHT1TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Withheld 1</fielddesc>
+</field>
+<field>
+<fieldname>AMTWHT2TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Withheld 2</fielddesc>
+</field>
+<field>
+<fieldname>AMTWHT3TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Withheld 3</fielddesc>
+</field>
+<field>
+<fieldname>AMTWHT4TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Withheld 4</fielddesc>
+</field>
+<field>
+<fieldname>AMTWHT5TC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax Withheld 5</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

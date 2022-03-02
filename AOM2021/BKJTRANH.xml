@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0655 BKJTRANH BKJTRANH</keywords>
+<pagetitle>Bank Journal Transaction Header</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="BKJTRANH" desc="Bank Journal Transaction Header">
+<view name="BK0655" desc="Bank Journal Transaction Header" />
+<recordlength>898</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Bank Journal Transaction Uniquif</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PSTSEQ</keyfield><keyfield>BANK</keyfield><keyfield>SERIAL</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle></keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PSTSEQ</keyfield><keyfield>BANK</keyfield><keyfield>TRANSTYPE</keyfield><keyfield>SERIAL</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PSTSEQ</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>BANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>SERIAL</fieldname>
+<fieldtype>???</fieldtype>
+<fielddesc>Transaction Header Serial</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>TRANSNUM</fieldname>
+<fieldtype>BCD*8.0</fieldtype>
+<fielddesc>Transaction Number</fielddesc>
+</field>
+<field>
+<fieldname>SRCEAPP</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Application</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Withdrawals" /><fieldpresent index="2" value="Deposits" /></fieldpresentlist></field>
+<field>
+<fieldname>OLDSERIAL</fieldname>
+<fieldtype>???</fieldtype>
+<fielddesc>Old Serial Number</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Entry Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Bank Entered" /><fieldpresent index="2" value="Miscellaneous" /><fieldpresent index="3" value="Subledger" /><fieldpresent index="4" value="Transfer" /><fieldpresent index="5" value="Returned Customer Check" /><fieldpresent index="6" value="Alignment" /><fieldpresent index="7" value="Non Negotiable" /></fieldpresentlist></field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Transaction Reference</fielddesc>
+</field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Transaction Description</fielddesc>
+</field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>FSCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FSCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>PRINTED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Slip Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TOTAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transaction Total</fielddesc>
+</field>
+<field>
+<fieldname>TOTBALAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transaction Remaining Balance Amount</fielddesc>
+</field>
+<field>
+<fieldname>TOTCLEARED</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Transaction Total</fielddesc>
+</field>
+<field>
+<fieldname>NXTLINE</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Transaction Detail Line</fielddesc>
+</field>
+<field>
+<fieldname>LINES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines</fielddesc>
+</field>
+<field>
+<fieldname>LINESPOST</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines In Transit</fielddesc>
+</field>
+<field>
+<fieldname>LINESREC</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines Reconciled</fielddesc>
+</field>
+<field>
+<fieldname>STATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Not posted" /><fieldpresent index="2" value="Partially Outstanding" /><fieldpresent index="3" value="Outstanding" /><fieldpresent index="4" value="Partially Reconciled" /><fieldpresent index="5" value="Reconciled" /><fieldpresent index="6" value="Pending Journal" /><fieldpresent index="7" value="Posted" /><fieldpresent index="8" value="Purged" /></fieldpresentlist></field>
+<field>
+<fieldname>RECERR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Error</fielddesc>
+</field>
+<field>
+<fieldname>RECERRPEND</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Error Pending</fielddesc>
+</field>
+<field>
+<fieldname>RECEXGAIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Exchange Gain</fielddesc>
+</field>
+<field>
+<fieldname>RECEXLOSS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Exchange Loss</fielddesc>
+</field>
+<field>
+<fieldname>RECAMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Deposit Amount</fielddesc>
+</field>
+<field>
+<fieldname>RECOUTSTND</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation In Transit Amt</fielddesc>
+</field>
+<field>
+<fieldname>SUMMARY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Recorded in Summary</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Detail" /><fieldpresent index="1" value="Summary" /><fieldpresent index="2" value="Transfer" /><fieldpresent index="3" value="Bank Error" /></fieldpresentlist></field>
+<field>
+<fieldname>RECCCC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Credit Card Charge</fielddesc>
+</field>
+<field>
+<fieldname>RECCLEARED</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount Cleared</fielddesc>
+</field>
+<field>
+<fieldname>RECFUNCAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Functional Transaction Amount</fielddesc>
+</field>
+<field>
+<fieldname>TOTFUNCAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Functional Transaction Total</fielddesc>
+</field>
+<field>
+<fieldname>TOCLEAR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Cleared Amount</fielddesc>
+</field>
+<field>
+<fieldname>TOWRITEOFF</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Write-Off Amount</fielddesc>
+</field>
+<field>
+<fieldname>TOREMAIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>In Transit Amount</fielddesc>
+</field>
+<field>
+<fieldname>VARIANCE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Variance Type</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="Outstanding amount" /><fieldpresent index="2" value="Amount to write off" /><fieldpresent index="3" value="Bank error" /><fieldpresent index="4" value="Exchange rate difference" /><fieldpresent index="5" value="Credit card charge" /></fieldpresentlist></field>
+<field>
+<fieldname>LINESREVIN</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines Can Reverse Invoice</fielddesc>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Default Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>RECSTATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Default Reconciliation Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Not Posted" /><fieldpresent index="2" value="Void" /><fieldpresent index="3" value="Outstanding" /><fieldpresent index="4" value="Reversed" /><fieldpresent index="5" value="Cleared" /><fieldpresent index="6" value="Cleared with bank error" /><fieldpresent index="7" value="Non-negotiable" /><fieldpresent index="8" value="Continuation" /><fieldpresent index="9" value="Printed" /><fieldpresent index="10" value="Cleared with write-off" /><fieldpresent index="11" value="Cleared with exchange rate difference" /><fieldpresent index="12" value="Cleared with credit card charge" /><fieldpresent index="13" value="Deleted" /><fieldpresent index="14" value="Reconcile by deposit detail" /></fieldpresentlist></field>
+<field>
+<fieldname>RECCOMMENT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Default Reconciliation Desc.</fielddesc>
+</field>
+<field>
+<fieldname>LINESJOUR</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines Journalled</fielddesc>
+</field>
+<field>
+<fieldname>LINESPUR</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines Purged</fielddesc>
+</field>
+<field>
+<fieldname>TOCLEARF</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Clear To Future Period</fielddesc>
+</field>
+<field>
+<fieldname>RECFCLR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Cleared To Future</fielddesc>
+</field>
+<field>
+<fieldname>RECRCLR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Cleared To Current</fielddesc>
+</field>
+<field>
+<fieldname>COMPLETED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciled and Journaled Transaction</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Not Completed" /><fieldpresent index="10" value="Completed" /></fieldpresentlist></field>
+<field>
+<fieldname>RECWOSUMR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Current Period's Write-Off</fielddesc>
+</field>
+<field>
+<fieldname>TOCLEARR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Clear To Reconciliation Period</fielddesc>
+</field>
+<field>
+<fieldname>RECRWOSUM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Write-Off To This Period</fielddesc>
+</field>
+<field>
+<fieldname>RECPREM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Remaining Outstanding</fielddesc>
+</field>
+<field>
+<fieldname>RECTWO</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Delta Write Offs</fielddesc>
+</field>
+<field>
+<fieldname>RECTERR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Delta Bank Errors</fielddesc>
+</field>
+<field>
+<fieldname>RECTGAIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Delta Exchange Gain</fielddesc>
+</field>
+<field>
+<fieldname>RECTLOSS</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Delta Exchange Loss</fielddesc>
+</field>
+<field>
+<fieldname>RECTCCC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Delta Credit Card Charge</fielddesc>
+</field>
+<field>
+<fieldname>RECTCLR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Delta Cleared</fielddesc>
+</field>
+<field>
+<fieldname>RECTFUNAM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Delta Functional Amount</fielddesc>
+</field>
+<field>
+<fieldname>CURFUNC</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Functional Currency</fielddesc>
+</field>
+<field>
+<fieldname>CURSTMT</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Statement Currency</fielddesc>
+</field>
+<field>
+<fieldname>RECWOSUM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Write Off Sum</fielddesc>
+</field>
+<field>
+<fieldname>POSTYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Reconciliation posting Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>POSTPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciliation posting Period</fielddesc>
+</field>
+<field>
+<fieldname>RECDELTA</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconciliation Delta</fielddesc>
+</field>
+<field>
+<fieldname>RECFCMISC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Fiscal Miscellaneous Entry</fielddesc>
+</field>
+<field>
+<fieldname>RECFCWMISC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Withdrawal Misc. Entries To Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>RECFCDMISC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposit Misc. Entries To Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>RECFWMISC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Withdrawal Misc. Entries To Future Period</fielddesc>
+</field>
+<field>
+<fieldname>RECFDMISC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposit Misc. Entries To Future Period</fielddesc>
+</field>
+<field>
+<fieldname>PAYORNAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Payment Payee Name</fielddesc>
+</field>
+<field>
+<fieldname>VENDORNAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Payment Vendor Name</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYNBR</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Bank Entry/Transfer Number</fielddesc>
+</field>
+<field>
+<fieldname>LINESPROC</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Lines Processed</fielddesc>
+</field>
+<field>
+<fieldname>REVINVC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reverse Invoice</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>GLACCOUNT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>G/L Account of Discrepancy</fielddesc>
+</field>
+<field>
+<fieldname>AMTDTLREC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconcile by Detail Reconciled</fielddesc>
+</field>
+<field>
+<fieldname>AMTDTLOUT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reconcile by Detail Outstanding</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

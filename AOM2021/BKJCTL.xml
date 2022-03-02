@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0020 BKJCTL BKJCTL</keywords>
+<pagetitle>Bank Posting Journal Control</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="BKJCTL" desc="Bank Posting Journal Control">
+<view name="BK0020" desc="Bank Posting Journal Control" />
+<recordlength>89</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Posting Sequence</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PSTSEQ</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PSTSEQ</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>FROMBANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>From Bank</fielddesc>
+</field>
+<field>
+<fieldname>TOBANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>To Bank</fielddesc>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Posted to GL</fielddesc>
+</field>
+<field>
+<fieldname>POSTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Posting User</fielddesc>
+</field>
+<field>
+<fieldname>POSTSTAT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Posting Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Posting" /><fieldpresent index="2" value="Pending print" /><fieldpresent index="3" value="Printed" /><fieldpresent index="5" value="Pending purge" /><fieldpresent index="4" value="Purging" /></fieldpresentlist></field>
+<field>
+<fieldname>PRINTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Date Journal Printed</fielddesc>
+</field>
+<field>
+<fieldname>GLDEFER</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Create G/L Batches</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="During Posting" /><fieldpresent index="1" value="On Request Using Create G/L Batch Icon" /></fieldpresentlist></field>
+<field>
+<fieldname>GLCONSOL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Consolidate G/L Batches</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Post all details" /><fieldpresent index="2" value="Account/Fiscal Period/Source Code" /><fieldpresent index="3" value="Account/Fiscal Period" /></fieldpresentlist></field>
+<field>
+<fieldname>GLAPPEND</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Create G/L Transactions By</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Adding to an Existing Batch" /><fieldpresent index="0" value="Creating a New Batch" /><fieldpresent index="2" value="Creating and Posting a New Batch" /></fieldpresentlist></field>
+<field>
+<fieldname>GLBATCH</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>G/L Batch Number</fielddesc>
+</field>
+<field>
+<fieldname>GLTRANS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>G/L Batch Transferred</fielddesc>
+</field>
+<field>
+<fieldname>POSTTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Posting Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Reconciliation" /><fieldpresent index="2" value="Transfer" /><fieldpresent index="3" value="Bank Entries" /></fieldpresentlist></field>
+<field>
+<fieldname>BANKSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Bank Sequence</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

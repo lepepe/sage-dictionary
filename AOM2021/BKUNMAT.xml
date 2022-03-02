@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0870 BKUNMAT BKUNMAT</keywords>
+<pagetitle>OFX Transactions</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="BKUNMAT" desc="OFX Transactions">
+<view name="BK0870" desc="OFX Transactions" />
+<recordlength>676</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Bank Entry</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BANK</keyfield><keyfield>UNIQUE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>BANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc> Bank Code</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>UNIQUE</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc> Unique ID</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>SERIAL</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc> Serial Number of Bank Transaction</fielddesc>
+</field>
+<field>
+<fieldname>LINE</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc> Line Number of Bank Transaction</fielddesc>
+</field>
+<field>
+<fieldname>DATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc> Posted Date</fielddesc>
+</field>
+<field>
+<fieldname>TYPE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc> Distribution Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>NUMBER</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc> Withdrawal Number</fielddesc>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc> Reference</fielddesc>
+</field>
+<field>
+<fieldname>COMMENT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc> Comment 1</fielddesc>
+</field>
+<field>
+<fieldname>AMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc> Amount</fielddesc>
+</field>
+<field>
+<fieldname>SRCEAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc> Source Amount</fielddesc>
+</field>
+<field>
+<fieldname>STMTCURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc> Statement Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>AMTINSTMT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc> Is Amount in Statment Currency?</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>PAYEEID</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc> Payee Code</fielddesc>
+</field>
+<field>
+<fieldname>PAYEENAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc> Payee Name</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc> Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc> Source Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc> Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc> Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATESPREAD</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc> Rate Spread</fielddesc>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc> Rate Operator</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /><fieldpresent index="0" value="Not Specified" /></fieldpresentlist></field>
+<field>
+<fieldname>GLACCOUNT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc> G/L Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>POSTNOW</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc> Post Now?</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ENTRYTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc> Entry Type</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="User-entered" /></fieldpresentlist></field>
+<field>
+<fieldname>TRXTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc> Distribution Code</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Withdrawal" /><fieldpresent index="2" value="Deposit" /></fieldpresentlist></field>
+<field>
+<fieldname>OFXTID</fieldname>
+<fieldtype>String*50</fieldtype>
+<fielddesc> OFX Transaction ID</fielddesc>
+</field>
+<field>
+<fieldname>RECYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc> Reconciliation Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>RECPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc> Reconciliation Period</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="1 " /><fieldpresent index="2" value="2 " /><fieldpresent index="3" value="3 " /><fieldpresent index="4" value="4 " /><fieldpresent index="5" value="5 " /><fieldpresent index="6" value="6 " /><fieldpresent index="7" value="7 " /><fieldpresent index="8" value="8 " /><fieldpresent index="9" value="9 " /><fieldpresent index="10" value="10" /><fieldpresent index="11" value="11" /><fieldpresent index="12" value="12" /></fieldpresentlist></field>
+<field>
+<fieldname>RECONCILED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc> Match Found?</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>MEMO</fieldname>
+<fieldtype>String*255</fieldtype>
+<fielddesc> Comment 2</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

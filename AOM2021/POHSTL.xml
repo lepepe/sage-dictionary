@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0384 POHSTL POHSTL</keywords>
+<pagetitle>Purchase History Detail</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="POHSTL" desc="Purchase History Detail">
+<view name="PO0384" desc="Purchase History Detail" />
+<recordlength>324</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Vendor</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>VENDOR</keyfield><keyfield>ITEMNO</keyfield><keyfield>FISCYEAR</keyfield><keyfield>FISCPERIOD</keyfield><keyfield>TRANSDATE</keyfield><keyfield>POSTSEQNUM</keyfield><keyfield>ENTRYNUM</keyfield><keyfield>LINESEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Item Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield><keyfield>VENDOR</keyfield><keyfield>FISCYEAR</keyfield><keyfield>FISCPERIOD</keyfield><keyfield>TRANSDATE</keyfield><keyfield>POSTSEQNUM</keyfield><keyfield>ENTRYNUM</keyfield><keyfield>LINESEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Vendor</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>VENDOR</keyfield><keyfield>ITEMNO</keyfield><keyfield>TRANSDATE</keyfield><keyfield>FISCYEAR</keyfield><keyfield>FISCPERIOD</keyfield><keyfield>POSTSEQNUM</keyfield><keyfield>ENTRYNUM</keyfield><keyfield>LINESEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Item Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield><keyfield>VENDOR</keyfield><keyfield>TRANSDATE</keyfield><keyfield>FISCYEAR</keyfield><keyfield>FISCPERIOD</keyfield><keyfield>POSTSEQNUM</keyfield><keyfield>ENTRYNUM</keyfield><keyfield>LINESEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Detail Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield><keyfield>VENDOR</keyfield><keyfield>TRANSDATE</keyfield><keyfield>FISCYEAR</keyfield><keyfield>FISCPERIOD</keyfield><keyfield>POSTSEQNUM</keyfield><keyfield>ENTRYNUM</keyfield><keyfield>DETAILNUM</keyfield><keyfield>LINESEQ</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>VENDOR</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>FISCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%4D</mask></field>
+<field>
+<fieldname>FISCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>POSTSEQNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Day End Number</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Transaction Sequence</fielddesc>
+</field>
+<field>
+<fieldname>LINESEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>HEADSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Header Sequence</fielddesc>
+</field>
+<field>
+<fieldname>CURRENCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Requisition" /><fieldpresent index="2" value="Purchase Order" /><fieldpresent index="3" value="Receipt" /><fieldpresent index="4" value="Return" /><fieldpresent index="5" value="Invoice" /><fieldpresent index="6" value="Credit Note" /><fieldpresent index="7" value="Debit Note" /></fieldpresentlist></field>
+<field>
+<fieldname>DOCNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>RQPOSTED</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity</fielddesc>
+</field>
+<field>
+<fieldname>SQPOSTED</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Stocking Quantity</fielddesc>
+</field>
+<field>
+<fieldname>UNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Unit of Measure</fielddesc>
+<mask>%-10c</mask></field>
+<field>
+<fieldname>CONV</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Conversion Factor</fielddesc>
+</field>
+<field>
+<fieldname>SCEXTENDED</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Srce. Cost</fielddesc>
+</field>
+<field>
+<fieldname>FCEXTENDED</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Cost</fielddesc>
+</field>
+<field>
+<fieldname>RCPDAYS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Days To Receive</fielddesc>
+</field>
+<field>
+<fieldname>RQTOTAL</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Total Quantity</fielddesc>
+</field>
+<field>
+<fieldname>SQTOTAL</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Stocking Total Quantity</fielddesc>
+</field>
+<field>
+<fieldname>SCTOTAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Srce. Total Cost</fielddesc>
+</field>
+<field>
+<fieldname>FCTOTAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Total Cost</fielddesc>
+</field>
+<field>
+<fieldname>SCDISCOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Discount Amount</fielddesc>
+</field>
+<field>
+<fieldname>FCDISCOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Discount Amount</fielddesc>
+</field>
+<field>
+<fieldname>SCDISCTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Discount</fielddesc>
+</field>
+<field>
+<fieldname>FCDISCTOT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Functional Total Discount</fielddesc>
+</field>
+<field>
+<fieldname>CONTRACT</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Contract</fielddesc>
+<mask>%-16C</mask></field>
+<field>
+<fieldname>PROJECT</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Project</fielddesc>
+<mask>%-16N</mask></field>
+<field>
+<fieldname>CCATEGORY</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>(Cost) Category</fielddesc>
+<mask>%-16N</mask></field>
+<field>
+<fieldname>DETAILNUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Number</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

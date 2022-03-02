@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0036 BKTFRH</keywords>
+<pagetitle>Transfers</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Transfers</title>
+<rotoid>BK0036</rotoid>
+<protocollist>
+<protocol>Header</protocol></protocollist>
+<dllname>BKTFRH</dllname>
+<compositionlist>
+<composition>
+<comprotoid>BK0835</comprotoid>
+<compdesc>Transfer Details</compdesc>
+<compdll>BKTFRD</compdll>
+<comptablelist>
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Transfer Number</keytitle>
+<keyfieldlist>
+<keyfield>TRANSFERNR</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>TRANSFERNR</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Transfer Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>DATE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FISCYEAR</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPERIOD</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="P" desc="Presentation" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="1 " /><fieldpresent index="2" value="2 " /><fieldpresent index="3" value="3 " /><fieldpresent index="4" value="4 " /><fieldpresent index="5" value="5 " /><fieldpresent index="6" value="6 " /><fieldpresent index="7" value="7 " /><fieldpresent index="8" value="8 " /><fieldpresent index="9" value="9 " /><fieldpresent index="10" value="10" /><fieldpresent index="11" value="11" /><fieldpresent index="12" value="12" /><fieldpresent index="13" value="13" /></fieldpresentlist></field>
+<field>
+<fieldname>OBANK</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Transfer Bank</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>OSRCECURN</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Transfer Source Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>ORATEDATE</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transfer Rate Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ORATETYPE</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Transfer Rate Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>ORATE</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Transfer Rate Factor</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ORATESPREA</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Transfer Rate Spread</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ORATEOP</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transfer Rate Operator</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>OSAMOUNT</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transfer Source Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OFAMOUNT</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transfer Functional Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DBANK</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Deposit Bank</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>DSRCECURN</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Deposit Source Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>DRATEDATE</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Deposit Rate Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DRATETYPE</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Deposit Rate Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>DRATE</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Deposit Rate Factor</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DRATESPREA</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Deposit Rate Spread</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DRATEOP</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Deposit Rate Operator</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>DSAMOUNT</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposit Source Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DFAMOUNT</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposit Functional Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Post Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OFFIXREL</fieldname>
+<fieldindex>101</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Transfer - Functional Fixed?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DFFIXREL</fieldname>
+<fieldindex>102</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Deposit - Functional Fixed?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ODFIXREL</fieldname>
+<fieldindex>103</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Transfer - Deposit Fixed?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OBANKD</fieldname>
+<fieldindex>111</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Transfer Bank Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OSRCECURND</fieldname>
+<fieldindex>112</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Transfer Bank Currency Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OCURNSTMT</fieldname>
+<fieldindex>116</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Transfer Currency Statement</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>OMULTICUR</fieldname>
+<fieldindex>117</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Transfer Multicurrency?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DBANKD</fieldname>
+<fieldindex>121</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Deposit Bank Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DSRCECURND</fieldname>
+<fieldindex>122</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Deposit Bank Currency Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCURNSTMT</fieldname>
+<fieldindex>126</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Deposit Currency Statement</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>DMULTICUR</fieldname>
+<fieldindex>127</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Deposit Multicurrency?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRATE</fieldname>
+<fieldindex>136</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Transfer - Deposit Conversion</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRATEOP</fieldname>
+<fieldindex>137</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transfer - Deposit Rate Operation</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>FUNCTCURN</fieldname>
+<fieldindex>138</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Functional Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>DFDEFAULT</fieldname>
+<fieldindex>139</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposit Functional Default Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DSDEFAULT</fieldname>
+<fieldindex>140</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposit Source Default Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ORATETYPED</fieldname>
+<fieldindex>146</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Transfer Rate Type Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DRATETYPED</fieldname>
+<fieldindex>147</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Deposit Rate Type Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANSFERNN</fieldname>
+<fieldindex>148</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Numeric Transfer Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TTYPED</fieldname>
+<fieldindex>149</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Transfer Type Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLACCOUNTD</fieldname>
+<fieldindex>150</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>G/L Account Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OBANKACCT</fieldname>
+<fieldindex>151</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Transfer Bank Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DBANKACCT</fieldname>
+<fieldindex>152</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Deposit Bank Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

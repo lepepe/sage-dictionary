@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0142 ARRFD ARRFD</keywords>
+<pagetitle>Refund Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ARRFD" desc="Refund Details">
+<view name="AR0142" desc="Refund Details" />
+<recordlength>141</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Refund Detail Seq. Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CNTBTCH</keyfield><keyfield>CNTITEM</keyfield><keyfield>CNTLINE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Doc./Payment/Batch/Entry No.</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDINVC</keyfield><keyfield>CNTPAYM</keyfield><keyfield>CNTBTCH</keyfield><keyfield>CNTITEM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CNTBTCH</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Batch Number</fielddesc>
+</field>
+<field>
+<fieldname>CNTITEM</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Entry Number</fielddesc>
+</field>
+<field>
+<fieldname>CNTLINE</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>IDINVC</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>CNTPAYM</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Payment Number</fielddesc>
+</field>
+<field>
+<fieldname>PAYMTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Payment Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Cash" /><fieldpresent index="2" value="Check" /><fieldpresent index="3" value="Credit Card" /><fieldpresent index="5" value="SPS Credit Card" /></fieldpresentlist></field>
+<field>
+<fieldname>IDBANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>C.C. Bank Account</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>LONGSERIAL</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>C.C. Bank Serial Number</fielddesc>
+</field>
+<field>
+<fieldname>CODECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>C.C. Payment Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>C.C. Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>C.C. Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEEXCH</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>C.C. Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>C.C. Rate Operator</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>SWRATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>C.C. Rate Override Flag</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>AMTPC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount (Payment)</fielddesc>
+</field>
+<field>
+<fieldname>AMTTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount (Customer)</fielddesc>
+</field>
+<field>
+<fieldname>AMTHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>SWJOB</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Job Related</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>APPLYMETH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Job Apply Method</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Prorate by Amount" /><fieldpresent index="1" value="Top Down" /></fieldpresentlist></field>
+<field>
+<fieldname>AMTJOB</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Job Applied Amount</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

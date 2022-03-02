@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0100 ICACCT ICACCT</keywords>
+<pagetitle>Account Sets</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Account Sets</title>
+<rotoid>IC0100</rotoid>
+<tablelist>
+<table name="ICACCT" desc="Account Sets" />
+</tablelist>
+<protocollist>
+<protocol>Flat</protocol></protocollist>
+<dllname>ICACCT</dllname>
+<compositionlist>
+<composition>
+<comprotoid>GL0001</comprotoid>
+<compdesc>Accounts</compdesc>
+<compdll>GLAMF</compdll>
+<comptablelist>
+<comptable name="GLAMF" desc="Accounts" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Account Set Code</keytitle>
+<keyfieldlist>
+<keyfield>CNTLACCT</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CNTLACCT</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Account Set Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>COSTMETHOD</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Costing Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Moving Average" /><fieldpresent index="2" value="FIFO" /><fieldpresent index="3" value="LIFO" /><fieldpresent index="4" value="Standard Cost" /><fieldpresent index="5" value="Most Recent Cost" /><fieldpresent index="6" value="User-Specified" /><fieldpresent index="7" value="Serial" /><fieldpresent index="8" value="Lot" /></fieldpresentlist></field>
+<field>
+<fieldname>INVACCT</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Inventory Control Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>PAYABLACCT</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Payables Clearing Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>ADJWRTACCT</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Adjustment/Write-Off Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>ASSMACCT</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Assembly Cost Credit Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>NONSTKACCT</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Non-stock Clearing Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>INACTIVE</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Active" /><fieldpresent index="1" value="Inactive" /></fieldpresentlist></field>
+<field>
+<fieldname>DATELASTMN</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Maintained</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATEINACTV</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Inactive</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANSACCT</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Transfer Clearing Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>SHIPACCT</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Shipment Clearing Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>DISEXPACCT</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Disassembly Expense Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>PHINVAACCT</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Physical Inventory Adj. Acct.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>CRNCLRACCT</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Credit/Debit Note Clearing Acct.</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

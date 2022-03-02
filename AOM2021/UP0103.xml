@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>UP UP0103 UPUTCD UPUTCD</keywords>
+<pagetitle>Employee Timecard Detail</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Employee Timecard Detail</title>
+<rotoid>UP0103</rotoid>
+<tablelist>
+<table name="UPUTCD" desc="Employee Timecard Detail" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>UPUTCD</dllname>
+<compositionlist>
+<composition>
+<comprotoid>UP0102</comprotoid>
+<compdesc>Employee Timecard Header</compdesc>
+<compdll>UPUTCH</compdll>
+<comptablelist>
+<comptable name="UPUTCH" desc="Employee Timecard Header" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>UP0132</comprotoid>
+<compdesc>Empl Timecard Details Opt Flds</compdesc>
+<compdll>UPUTDO</compdll>
+<comptablelist>
+<comptable name="UPUTDO" desc="Empl Timecard Details Opt Flds" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>UP0044</comprotoid>
+<compdesc>Employee Timecard Job Details</compdesc>
+<compdll>UPUTJB</compdll>
+<comptablelist>
+<comptable name="UPUTJB" desc="Employee Timecard Job Details" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Timecard Date</keytitle>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield>
+<keyfield>ENDDATE</keyfield>
+<keyfield>PAYDATE</keyfield>
+<keyfield>EARNDED</keyfield>
+<keyfield>UNIQUE</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Timecard Earning</keytitle>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield>
+<keyfield>ENDDATE</keyfield>
+<keyfield>EARNDED</keyfield>
+<keyfield>UNIQUE</keyfield>
+<keyfield>PAYDATE</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>EMPLOYEE</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Employee</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>ENDDATE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>End Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PAYDATE</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Pay Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EARNDED</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Earning/Exp/Tip/Accrual Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>UNIQUE</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Unique Key Field</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Category</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Hours" /><fieldpresent index="1" value="Tips" /><fieldpresent index="2" value="Expense" /><fieldpresent index="3" value="Piece Rate" /><fieldpresent index="4" value="Sales Commissions" /><fieldpresent index="5" value="Sick Accrual Payment" /><fieldpresent index="6" value="Vacation Accrual Payment" /></fieldpresentlist></field>
+<field>
+<fieldname>STARTTIME</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Start Time</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>STOPTIME</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Stop Time</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HOURS</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>BCD*4.3</fieldtype>
+<fielddesc>Hours Worked</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TIPSEXP</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Tips/Expense/Pieces/Sales Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SHIFTSCHED</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Shift Differential Schedule</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SHIFTNUM</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Shift Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Optional Fields</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>POOLEDTIPS</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>RESERVED - Cdn Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TIPSBASE</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>RESERVED - Cdn Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>JOBS</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Jobs</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>WORKCODE</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Work Classification Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>JOBHOURS</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>BCD*4.3</fieldtype>
+<fielddesc>Total Job Hours</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>JOBBASE</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Job Pieces/Sales/Amt</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DOW</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Day of the Week</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Sunday" /><fieldpresent index="2" value="Monday" /><fieldpresent index="3" value="Tuesday" /><fieldpresent index="4" value="Wednesday" /><fieldpresent index="5" value="Thursday" /><fieldpresent index="6" value="Friday" /><fieldpresent index="7" value="Saturday" /></fieldpresentlist></field>
+<field>
+<fieldname>PROCESSCMD</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Process Command Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No Action" /><fieldpresent index="1" value="Insert Optional Fields" /><fieldpresent index="2" value="Update Info to Match Jobs" /></fieldpresentlist></field>
+<field>
+<fieldname>CALCMETH</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Calculation Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EDCATEGORY</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Earn/Ded Category</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EARDEDTYPE</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Earn/Ded Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLSEG1</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment One</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLSEG2</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment Two</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLSEG3</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>G/L Segment Three</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLSEGID1</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>G/L Segment Name One</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLSEGDESC1</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>G/L Segment Description One</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLSEGID2</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>G/L Segment Name Two</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLSEGDESC2</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>G/L Segment Description Two</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLSEGID3</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>G/L Segment Name Three</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>GLSEGDESC3</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>G/L Segment Description Three</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

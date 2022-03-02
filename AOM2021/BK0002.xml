@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0002 BKCUR BKCUR</keywords>
+<pagetitle>Bank Currencies</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Bank Currencies</title>
+<rotoid>BK0002</rotoid>
+<tablelist>
+<table name="BKCUR" desc="Bank Currencies" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>BKCUR</dllname>
+<compositionlist>
+<composition>
+<comprotoid>BK0001</comprotoid>
+<compdesc>Banks</compdesc>
+<compdll>BKACCT</compdll>
+<comptablelist>
+<comptable name="BKACCT" desc="Banks" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>CS0003</comprotoid>
+<compdesc>Currency Codes</compdesc>
+<compdll>CSCCD</compdll>
+<comptablelist>
+<comptable name="CSCCD" desc="Currency Codes" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>CS0004</comprotoid>
+<compdesc>Rate Types</compdesc>
+<compdll>CSCRT</compdll>
+<comptablelist>
+<comptable name="CSCRT" desc="Rate Types" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>GL0001</comprotoid>
+<compdesc>Accounts</compdesc>
+<compdll>GLAMF</compdll>
+<comptablelist>
+<comptable name="GLAMF" desc="Accounts" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Bank Currency</keytitle>
+<keyfieldlist>
+<keyfield>BANK</keyfield>
+<keyfield>CURN</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>BANK</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>CURN</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RTYPCHK</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Check Rate Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RTYPDEP</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Deposit Rate Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>GAINACCT</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Exchange Gain Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>LOSSACCT</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Exchange Loss Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>ROUNDACCT</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Rounding Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>CURDESC</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Currency Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

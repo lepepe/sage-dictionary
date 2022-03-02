@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>UP UP0202 UPCHKE UPCHKE</keywords>
+<pagetitle>Check EFT Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="UPCHKE" desc="Check EFT Details">
+<view name="UP0202" desc="Check EFT Details" />
+<recordlength>92</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Employee</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield><keyfield>CATEGORY</keyfield><keyfield>LINENO</keyfield><keyfield>BKACCTCODE</keyfield><keyfield>LINETYPE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Print Order</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>PEREND</keyfield><keyfield>ENTRYSEQ</keyfield><keyfield>PCATEGORY</keyfield><keyfield>PLINETYPE</keyfield><keyfield>LINENO</keyfield><keyfield>BKACCTCODE</keyfield><keyfield>LINETYPE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>EMPLOYEE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Employee</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>PEREND</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Period End Date</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Entry Sequence By Employee</fielddesc>
+</field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Category code</fielddesc>
+<fieldpresentlist><fieldpresent index="11" value="EFT Entry" /></fieldpresentlist></field>
+<field>
+<fieldname>LINENO</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Unique Key Field</fielddesc>
+</field>
+<field>
+<fieldname>BKACCTCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Bank Account Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LINETYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Presentation List Type Pay</fielddesc>
+<fieldpresentlist><fieldpresent index="6" value="n/a" /></fieldpresentlist></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>BASEAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Base Amount</fielddesc>
+</field>
+<field>
+<fieldname>AMTPCT</fieldname>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Amt/Pct to be deposited</fielddesc>
+</field>
+<field>
+<fieldname>DEPOSITAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Deposit Amount</fielddesc>
+</field>
+<field>
+<fieldname>PCATEGORY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Print Category</fielddesc>
+<fieldpresentlist><fieldpresent index="6" value="CHKE EFT Entries" /></fieldpresentlist></field>
+<field>
+<fieldname>PLINETYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Print Line Type</fielddesc>
+<fieldpresentlist><fieldpresent index="91" value="CHKE EFT Entry - Fixed Amount" /><fieldpresent index="92" value="CHKE EFT Entry - % of Gross Earnings" /><fieldpresent index="93" value="CHKE EFT Entry - % of Net Pay" /></fieldpresentlist></field>
+<field>
+<fieldname>PCONTENTS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Print Line Contents</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="CHKD Employee Only" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

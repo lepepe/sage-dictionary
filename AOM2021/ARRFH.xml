@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0141 ARRFH ARRFH</keywords>
+<pagetitle>Refund Entries</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ARRFH" desc="Refund Entries">
+<view name="AR0141" desc="Refund Entries" />
+<recordlength>959</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Entry Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CNTBTCH</keyfield><keyfield>CNTITEM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Customer Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDCUST</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Document Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDINVC</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CNTBTCH</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Batch Number</fielddesc>
+</field>
+<field>
+<fieldname>CNTITEM</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Entry Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>DOCDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Document Description</fielddesc>
+</field>
+<field>
+<fieldname>DOCDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Document Date</fielddesc>
+</field>
+<field>
+<fieldname>FISCYR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPER</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<mask>%02D</mask></field>
+<field>
+<fieldname>IDCUST</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>IDINVC</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>AMTTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Refund Amount (Customer)</fielddesc>
+</field>
+<field>
+<fieldname>AMTHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Refund Amount (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>CODECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Customer Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEEXCH</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operator</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>SWRATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Override Flag</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATECREATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Created</fielddesc>
+</field>
+<field>
+<fieldname>DATELSTEDT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Edited</fielddesc>
+</field>
+<field>
+<fieldname>DETAILCNT</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Details</fielddesc>
+</field>
+<field>
+<fieldname>APPLYMETH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Job Apply Method</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Prorate by Amount" /><fieldpresent index="1" value="Top Down" /></fieldpresentlist></field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>SRCEAPPL</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Application</fielddesc>
+<mask>%-2A</mask></field>
+<field>
+<fieldname>ERRBATCH</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Error Batch</fielddesc>
+</field>
+<field>
+<fieldname>ERRENTRY</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Error Entry</fielddesc>
+</field>
+<field>
+<fieldname>IDBANKCA</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Cash Bank Account</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>IDACCTCA</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Cash GL Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>CODECURNCA</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Cash Payment Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATETYPECA</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Cash Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEDATECA</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Cash Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEEXCHCA</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Cash Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATEOPCA</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Cash Rate Operator</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>SWRATECA</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Cash Rate Override Flag</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>AMTPCCA</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cash Amount (Payment)</fielddesc>
+</field>
+<field>
+<fieldname>AMTTCCA</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cash Amount (Customer)</fielddesc>
+</field>
+<field>
+<fieldname>AMTHCCA</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cash Amount (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>IDBANKCK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Check Bank Account</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>SWPRINT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check Printing Required</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWPRINTED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check Has Been Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Not Printed" /><fieldpresent index="1" value="Printed" /></fieldpresentlist></field>
+<field>
+<fieldname>CHECKNUM</fieldname>
+<fieldtype>BCD*8.0</fieldtype>
+<fielddesc>Check Number</fielddesc>
+</field>
+<field>
+<fieldname>LONGSERIAL</fieldname>
+<fieldtype>???</fieldtype>
+<fielddesc>Check Serial Number</fielddesc>
+</field>
+<field>
+<fieldname>CODECURNCK</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Check Payment Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATETYPECK</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Check Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEDATECK</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Check Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEEXCHCK</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Check Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATEOPCK</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check Rate Operator</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>SWRATECK</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check Rate Override Flag</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>AMTPCCK</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Check Amount (Payment)</fielddesc>
+</field>
+<field>
+<fieldname>AMTTCCK</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Check Amount (Customer)</fielddesc>
+</field>
+<field>
+<fieldname>AMTHCCK</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Check Amount (Functional)</fielddesc>
+</field>
+<field>
+<fieldname>NAMERMIT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Remit-To Name</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE1</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 1</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE2</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 2</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE3</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 3</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE4</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 4</fielddesc>
+</field>
+<field>
+<fieldname>NAMECITY</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>City</fielddesc>
+</field>
+<field>
+<fieldname>CODESTTE</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>State/Prov.</fielddesc>
+</field>
+<field>
+<fieldname>CODEPSTL</fieldname>
+<fieldtype>String*20</fieldtype>
+<fielddesc>Zip/Postal Code</fielddesc>
+</field>
+<field>
+<fieldname>CODECTRY</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Country</fielddesc>
+</field>
+<field>
+<fieldname>CHECKLANG</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Check Language</fielddesc>
+<fieldpresentlist><fieldpresent index=" 1" value="ENG" /><fieldpresent index=" 2" value="FRA" /><fieldpresent index=" 3" value="ESN" /><fieldpresent index=" 4" value="AUS" /><fieldpresent index=" 5" value="MEX" /><fieldpresent index=" 6" value="CHN" /><fieldpresent index=" 7" value="CHT" /></fieldpresentlist></field>
+<field>
+<fieldname>AMTTCCC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>C.C. Amount (Customer)</fielddesc>
+</field>
+<field>
+<fieldname>ENTEREDBY</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Entered By</fielddesc>
+</field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>CCSPSCNT</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of SPS C.C. Details</fielddesc>
+</field>
+<field>
+<fieldname>CCORIGID</fieldname>
+<fieldtype>String*36</fieldtype>
+<fielddesc>Original C.C. Transaction Number</fielddesc>
+</field>
+<field>
+<fieldname>CCPREVID</fieldname>
+<fieldtype>String*36</fieldtype>
+<fielddesc>Previous C.C. Transaction Number</fielddesc>
+</field>
+<field>
+<fieldname>CCPREVSTTS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Previous C.C. Process Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="SPS Transaction Not Started" /><fieldpresent index="9" value="SPS Credit Transaction Pending" /><fieldpresent index="10" value="SPS Credit Transaction Completed" /><fieldpresent index="7" value="SPS Void Transaction Pending" /><fieldpresent index="8" value="SPS Void Transaction Completed" /></fieldpresentlist></field>
+<field>
+<fieldname>CCTRANID</fieldname>
+<fieldtype>String*36</fieldtype>
+<fielddesc>Current C.C. Transaction Number</fielddesc>
+</field>
+<field>
+<fieldname>CCTRANSTTS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Current C.C. Process Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="SPS Transaction Not Started" /><fieldpresent index="9" value="SPS Credit Transaction Pending" /><fieldpresent index="10" value="SPS Credit Transaction Completed" /><fieldpresent index="7" value="SPS Void Transaction Pending" /><fieldpresent index="8" value="SPS Void Transaction Completed" /></fieldpresentlist></field>
+<field>
+<fieldname>PROCESSCOD</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Processing Code</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

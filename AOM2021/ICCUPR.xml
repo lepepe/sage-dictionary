@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0274 ICCUPR ICCUPR</keywords>
+<pagetitle>Contract Pricing</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICCUPR" desc="Contract Pricing">
+<view name="IC0274" desc="Contract Pricing" />
+<recordlength>132</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Customer Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CUSTNO</keyfield><keyfield>PRICEBY</keyfield><keyfield>CATEGORY</keyfield><keyfield>ITEMNO</keyfield><keyfield>PRICELIST</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Price By</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PRICEBY</keyfield><keyfield>ITEMNO</keyfield><keyfield>CATEGORY</keyfield><keyfield>CUSTNO</keyfield><keyfield>PRICELIST</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Item Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield><keyfield>PRICEBY</keyfield><keyfield>CUSTNO</keyfield><keyfield>PRICELIST</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Category</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CATEGORY</keyfield><keyfield>PRICEBY</keyfield><keyfield>CUSTNO</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CUSTNO</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>PRICEBY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Price By</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Category Code" /><fieldpresent index="2" value="Item Number" /></fieldpresentlist></field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Category Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>PRICELIST</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Price List</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>EXPIRE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Expiration Date</fielddesc>
+</field>
+<field>
+<fieldname>PRICETYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Price Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Customer Type" /><fieldpresent index="2" value="Discount Percentage" /><fieldpresent index="3" value="Discount Amount" /><fieldpresent index="4" value="Cost Plus a Percentage" /><fieldpresent index="5" value="Cost Plus Fixed Amount" /><fieldpresent index="6" value="Fixed Price" /></fieldpresentlist></field>
+<field>
+<fieldname>CUSTTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Customer Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Base" /><fieldpresent index="2" value="A" /><fieldpresent index="3" value="B" /><fieldpresent index="4" value="C" /><fieldpresent index="5" value="D" /><fieldpresent index="6" value="E" /></fieldpresentlist></field>
+<field>
+<fieldname>DISCPER</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Discount Percentage</fielddesc>
+</field>
+<field>
+<fieldname>DISCAMT</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Discount Amount</fielddesc>
+</field>
+<field>
+<fieldname>COSTMETHOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Costing Method</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Markup Cost" /><fieldpresent index="2" value="Standard Cost" /><fieldpresent index="3" value="Most Recent Cost" /><fieldpresent index="4" value="Average Cost" /><fieldpresent index="5" value="Last Unit Cost" /><fieldpresent index="6" value="Landed" /></fieldpresentlist></field>
+<field>
+<fieldname>PLUSAMT</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Plus Amount</fielddesc>
+</field>
+<field>
+<fieldname>PLUSPER</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Plus Percentage</fielddesc>
+</field>
+<field>
+<fieldname>FIXPRICE</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Fixed Price</fielddesc>
+</field>
+<field>
+<fieldname>STARTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Start Date</fielddesc>
+</field>
+<field>
+<fieldname>USELOWEST</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Lowest Price</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

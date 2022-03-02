@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0304 POCRNAH POCRNAH</keywords>
+<pagetitle>Credit/Debit Note Audit Headers</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="POCRNAH" desc="Credit/Debit Note Audit Headers">
+<view name="PO0304" desc="Credit/Debit Note Audit Headers" />
+<recordlength>638</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Master Key</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DAYENDSEQ</keyfield><keyfield>CRNAHSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Vendor</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>VENDOR</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>CRNAHSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Transaction Date</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TRANSDATE</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>CRNAHSEQ</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Document Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CRNNUMBER</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>CRNAHSEQ</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>DAYENDSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Day End Number</fielddesc>
+</field>
+<field>
+<fieldname>CRNAHSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Processing Sequence</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>ISPRINTED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>CRNHSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Credit/Debit Note Sequence Key</fielddesc>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>DAYENDDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Day End Processing Date</fielddesc>
+</field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+</field>
+<field>
+<fieldname>FISCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%4D</mask></field>
+<field>
+<fieldname>FISCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>DESCRIPTIO</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Credit" /><fieldpresent index="2" value="Debit" /><fieldpresent index="6" value="Adjustment" /></fieldpresentlist></field>
+<field>
+<fieldname>FROMDOC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>From Document</fielddesc>
+<fieldpresentlist><fieldpresent index="4" value="Return" /><fieldpresent index="5" value="Invoice" /></fieldpresentlist></field>
+<field>
+<fieldname>VENDOR</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>VENDORNAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Name</fielddesc>
+</field>
+<field>
+<fieldname>TAXGROUP</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Group</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TAXAUTH1</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 1</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TAXAUTH2</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 2</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TAXAUTH3</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 3</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TAXAUTH4</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 4</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TAXAUTH5</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority 5</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TAXCLASS1</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 1</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS2</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 2</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS3</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 3</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS4</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 4</fielddesc>
+</field>
+<field>
+<fieldname>TAXCLASS5</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Class 5</fielddesc>
+</field>
+<field>
+<fieldname>CRNNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Credit/Debit Note Number</fielddesc>
+</field>
+<field>
+<fieldname>PONUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Purchase Order Number</fielddesc>
+</field>
+<field>
+<fieldname>RCPNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Receipt Number</fielddesc>
+</field>
+<field>
+<fieldname>RETNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Return Number</fielddesc>
+</field>
+<field>
+<fieldname>INVNUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Invoice Number</fielddesc>
+</field>
+<field>
+<fieldname>RETCURR</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>EXRATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEOPER</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operation</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>RATEOVER</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Rate Overridden</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SCURNDECML</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Decimal Places</fielddesc>
+</field>
+<field>
+<fieldname>FCDOCTOTAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Functional Total Cost</fielddesc>
+</field>
+<field>
+<fieldname>SCDOCTOTAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Source Document Total</fielddesc>
+</field>
+<field>
+<fieldname>FCAPTOTAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Functional Transferred Cost</fielddesc>
+</field>
+<field>
+<fieldname>SCAPTOTAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transferred Cost</fielddesc>
+</field>
+<field>
+<fieldname>F1099CLASS</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>1099/CPRS Class</fielddesc>
+</field>
+<field>
+<fieldname>F1099AMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>The 1099/CPRS Amount</fielddesc>
+</field>
+<field>
+<fieldname>COMPLETE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Completed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>PRINTED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>ONHOLD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>On Hold</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>PGMVER</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Program Version</fielddesc>
+</field>
+<field>
+<fieldname>VERPRORATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Proration Version</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="3.0A" /><fieldpresent index="2" value="5.3B" /></fieldpresentlist></field>
+<field>
+<fieldname>HASRTG</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Has Retainage</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RTGRATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Retainage Exchange Rate</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Use Original Document Exchange Rate" /><fieldpresent index="1" value="Use Current Exchange Rate" /></fieldpresentlist></field>
+<field>
+<fieldname>RTGBASE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Retainage Base</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Total After Taxes" /><fieldpresent index="1" value="Total Before Taxes" /></fieldpresentlist></field>
+<field>
+<fieldname>SCRTGAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Retainage Amount</fielddesc>
+</field>
+<field>
+<fieldname>SCAPRTGAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Transferred Retainage Amount</fielddesc>
+</field>
+<field>
+<fieldname>RTGPERCENT</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Retainage Percentage</fielddesc>
+</field>
+<field>
+<fieldname>HASJOB</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Job Related</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>FCAPRTGAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Transferred Rtg. Amount</fielddesc>
+</field>
+<field>
+<fieldname>TRCURRENCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Tax Reporting Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>EXRATERC</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Tax Reporting Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATEDATERC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Tax Reporting Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPERC</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Tax Reporting Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEOPERRC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Reporting Rate Operation</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>RATERCOVER</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Tax Reporting Rate Overridden</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RCURNDECML</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Reporting Decimal Places</fielddesc>
+</field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>VDACCTSET</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Vendor Account Set</fielddesc>
+<mask>%-6N</mask></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

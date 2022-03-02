@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>TX TX0002 TXAUTH TXAUTH</keywords>
+<pagetitle>Tax Authorities</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="TXAUTH" desc="Tax Authorities">
+<view name="TX0002" desc="Tax Authorities" />
+<recordlength>630</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Tax Authority</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>AUTHORITY</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>AUTHORITY</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>SCURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Tax Reporting Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>MAXTAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Maximum Tax Allowable</fielddesc>
+</field>
+<field>
+<fieldname>MINTAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>No Tax Charged Below</fielddesc>
+</field>
+<field>
+<fieldname>TXBASE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Base</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Selling price" /><fieldpresent index="2" value="Standard cost" /><fieldpresent index="3" value="Most recent cost" /><fieldpresent index="4" value="Alternate amount 1" /><fieldpresent index="5" value="Alternate amount 2" /></fieldpresentlist></field>
+<field>
+<fieldname>INCLUDABLE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Tax In Price</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>LIABTIMING</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>LIABILITY</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Tax Liability Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>DEFER</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>DEFERRECOV</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>DISCBASE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDITLEVEL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Report Level</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="At invoice level" /><fieldpresent index="0" value="No reporting" /></fieldpresentlist></field>
+<field>
+<fieldname>RECOVERABL</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Tax Recoverable</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RATERECOV</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Recoverable Rate</fielddesc>
+</field>
+<field>
+<fieldname>ACCTRECOV</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Recoverable Tax Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>EXPSEPARTE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Expense Separately</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ACCTEXP</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Expense Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>LASTMAINT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Maintained</fielddesc>
+</field>
+<field>
+<fieldname>TAXTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Type</fielddesc>
+<fieldpresentlist><fieldpresent index="10" value="Federal Tax" /><fieldpresent index="20" value="State Tax" /><fieldpresent index="30" value="County Tax" /><fieldpresent index="40" value="City Tax" /><fieldpresent index="0" value="Other" /><fieldpresent index="60" value="GST" /><fieldpresent index="70" value="PST" /><fieldpresent index="80" value="HST" /><fieldpresent index="90" value="VAT" /></fieldpresentlist></field>
+<field>
+<fieldname>TXRTGCTL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Report Tax on Retainage Document</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No Reporting" /><fieldpresent index="1" value="At Time of Retainage Document" /><fieldpresent index="2" value="At Time of Original Document" /></fieldpresentlist></field>
+<field>
+<fieldname>REFNUMBER</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference Number</fielddesc>
+</field>
+<field>
+<fieldname>REFNAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference Name</fielddesc>
+</field>
+<field>
+<fieldname>ACCTWHT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Withholding Tax Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>INPUTACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Reverse Charge Input Tax Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>OUTPUTACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Reverse Charge Output Tax Account</fielddesc>
+<mask>%-45C</mask></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

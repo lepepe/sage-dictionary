@@ -1,0 +1,1665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>TX TX0014 TXSTATED TXSTATED</keywords>
+<pagetitle>Tax State Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Tax State Details</title>
+<rotoid>TX0014</rotoid>
+<tablelist>
+<table name="TXSTATED" desc="Tax State Details" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>TXSTATED</dllname>
+<compositionlist>
+<composition>
+<comprotoid>TX0013</comprotoid>
+<compdesc>Tax State Headers</compdesc>
+<compdll>TXSTATEH</compdll>
+<comptablelist>
+<comptable name="TXSTATEH" desc="Tax State Headers" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Tax Group/Tran. Type/Version</keytitle>
+<keyfieldlist>
+<keyfield>GROUPID</keyfield>
+<keyfield>TTYPE</keyfield>
+<keyfield>VERSION</keyfield>
+<keyfield>TXAUTHNUM</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>GROUPID</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Group</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TTYPE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Sales" /><fieldpresent index="2" value="Purchases" /></fieldpresentlist></field>
+<field>
+<fieldname>VERSION</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Version</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXAUTHNUM</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Authority Line Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>AUTHORITY</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>AUDITLEVEL</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Report Level</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="At invoice level" /><fieldpresent index="0" value="No reporting" /></fieldpresentlist></field>
+<field>
+<fieldname>TAXABLE</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Taxable</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SURTAX</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Surtax</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SURAUTH</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Surtax On Authority</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>MINTAX</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Maximum Tax Allowable</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>MAXTAX</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>No Tax Charged Below</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXBASE</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Base</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Selling price" /><fieldpresent index="2" value="Standard cost" /><fieldpresent index="3" value="Most recent cost" /><fieldpresent index="4" value="Alternate amount 1" /><fieldpresent index="5" value="Alternate amount 2" /></fieldpresentlist></field>
+<field>
+<fieldname>INCLUDABLE</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Allow Tax In Price</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TXRTGCTL</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Report Tax on Retainage Document</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No Reporting" /><fieldpresent index="1" value="At Time of Retainage Document" /><fieldpresent index="2" value="At Time of Original Document" /></fieldpresentlist></field>
+<field>
+<fieldname>RECOVERABL</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Recoverable</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RATERECOV</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Recoverable Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ACCTRECOV</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Recoverable Tax Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>EXPSEPARTE</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Expense Separately</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ACCTEXP</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Expense Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>LIABILITY</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Tax Liability Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>HCLASS01</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS02</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS03</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 3</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS04</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 4</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS05</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 5</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS06</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 6</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS07</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 7</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS08</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 8</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS09</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 9</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS10</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class10</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS01</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS02</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS03</fieldname>
+<fieldindex>34</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 3</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS04</fieldname>
+<fieldindex>35</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 4</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS05</fieldname>
+<fieldindex>36</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 5</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS06</fieldname>
+<fieldindex>37</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 6</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS07</fieldname>
+<fieldindex>38</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 7</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS08</fieldname>
+<fieldindex>39</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 8</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS09</fieldname>
+<fieldindex>40</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 9</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS10</fieldname>
+<fieldindex>41</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class10</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLS01DESC</fieldname>
+<fieldindex>42</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 1 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HCLS02DESC</fieldname>
+<fieldindex>43</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 2 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HCLS03DESC</fieldname>
+<fieldindex>44</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 3 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HCLS04DESC</fieldname>
+<fieldindex>45</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 4 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HCLS05DESC</fieldname>
+<fieldindex>46</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 5 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HCLS06DESC</fieldname>
+<fieldindex>47</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 6 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HCLS07DESC</fieldname>
+<fieldindex>48</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 7 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HCLS08DESC</fieldname>
+<fieldindex>49</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 8 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HCLS09DESC</fieldname>
+<fieldindex>50</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 9 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HCLS10DESC</fieldname>
+<fieldindex>51</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class10 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCLS01DESC</fieldname>
+<fieldindex>52</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 1 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCLS02DESC</fieldname>
+<fieldindex>53</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 2 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCLS03DESC</fieldname>
+<fieldindex>54</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 3 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCLS04DESC</fieldname>
+<fieldindex>55</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 4 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCLS05DESC</fieldname>
+<fieldindex>56</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 5 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCLS06DESC</fieldname>
+<fieldindex>57</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 6 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCLS07DESC</fieldname>
+<fieldindex>58</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 7 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCLS08DESC</fieldname>
+<fieldindex>59</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 8 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCLS09DESC</fieldname>
+<fieldindex>60</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 9 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCLS10DESC</fieldname>
+<fieldindex>61</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class10 Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0101</fieldname>
+<fieldindex>62</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 1 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0102</fieldname>
+<fieldindex>63</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 2 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0103</fieldname>
+<fieldindex>64</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 3 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0104</fieldname>
+<fieldindex>65</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 4 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0105</fieldname>
+<fieldindex>66</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 5 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0106</fieldname>
+<fieldindex>67</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 6 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0107</fieldname>
+<fieldindex>68</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 7 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0108</fieldname>
+<fieldindex>69</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 8 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0109</fieldname>
+<fieldindex>70</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 9 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0110</fieldname>
+<fieldindex>71</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class10 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0201</fieldname>
+<fieldindex>72</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 1 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0202</fieldname>
+<fieldindex>73</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 2 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0203</fieldname>
+<fieldindex>74</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 3 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0204</fieldname>
+<fieldindex>75</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 4 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0205</fieldname>
+<fieldindex>76</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 5 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0206</fieldname>
+<fieldindex>77</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 6 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0207</fieldname>
+<fieldindex>78</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 7 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0208</fieldname>
+<fieldindex>79</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 8 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0209</fieldname>
+<fieldindex>80</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 9 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0210</fieldname>
+<fieldindex>81</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class10 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0301</fieldname>
+<fieldindex>82</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 1 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0302</fieldname>
+<fieldindex>83</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 2 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0303</fieldname>
+<fieldindex>84</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 3 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0304</fieldname>
+<fieldindex>85</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 4 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0305</fieldname>
+<fieldindex>86</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 5 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0306</fieldname>
+<fieldindex>87</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 6 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0307</fieldname>
+<fieldindex>88</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 7 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0308</fieldname>
+<fieldindex>89</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 8 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0309</fieldname>
+<fieldindex>90</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 9 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0310</fieldname>
+<fieldindex>91</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class10 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0401</fieldname>
+<fieldindex>92</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 1 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0402</fieldname>
+<fieldindex>93</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 2 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0403</fieldname>
+<fieldindex>94</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 3 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0404</fieldname>
+<fieldindex>95</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 4 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0405</fieldname>
+<fieldindex>96</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 5 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0406</fieldname>
+<fieldindex>97</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 6 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0407</fieldname>
+<fieldindex>98</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 7 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0408</fieldname>
+<fieldindex>99</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 8 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0409</fieldname>
+<fieldindex>100</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 9 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0410</fieldname>
+<fieldindex>101</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class10 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0501</fieldname>
+<fieldindex>102</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 1 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0502</fieldname>
+<fieldindex>103</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 2 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0503</fieldname>
+<fieldindex>104</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 3 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0504</fieldname>
+<fieldindex>105</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 4 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0505</fieldname>
+<fieldindex>106</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 5 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0506</fieldname>
+<fieldindex>107</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 6 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0507</fieldname>
+<fieldindex>108</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 7 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0508</fieldname>
+<fieldindex>109</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 8 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0509</fieldname>
+<fieldindex>110</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 9 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0510</fieldname>
+<fieldindex>111</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class10 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0601</fieldname>
+<fieldindex>112</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 1 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0602</fieldname>
+<fieldindex>113</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 2 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0603</fieldname>
+<fieldindex>114</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 3 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0604</fieldname>
+<fieldindex>115</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 4 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0605</fieldname>
+<fieldindex>116</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 5 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0606</fieldname>
+<fieldindex>117</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 6 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0607</fieldname>
+<fieldindex>118</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 7 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0608</fieldname>
+<fieldindex>119</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 8 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0609</fieldname>
+<fieldindex>120</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 9 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0610</fieldname>
+<fieldindex>121</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class10 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0701</fieldname>
+<fieldindex>122</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 1 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0702</fieldname>
+<fieldindex>123</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 2 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0703</fieldname>
+<fieldindex>124</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 3 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0704</fieldname>
+<fieldindex>125</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 4 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0705</fieldname>
+<fieldindex>126</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 5 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0706</fieldname>
+<fieldindex>127</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 6 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0707</fieldname>
+<fieldindex>128</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 7 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0708</fieldname>
+<fieldindex>129</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 8 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0709</fieldname>
+<fieldindex>130</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 9 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0710</fieldname>
+<fieldindex>131</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class10 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0801</fieldname>
+<fieldindex>132</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 1 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0802</fieldname>
+<fieldindex>133</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 2 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0803</fieldname>
+<fieldindex>134</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 3 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0804</fieldname>
+<fieldindex>135</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 4 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0805</fieldname>
+<fieldindex>136</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 5 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0806</fieldname>
+<fieldindex>137</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 6 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0807</fieldname>
+<fieldindex>138</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 7 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0808</fieldname>
+<fieldindex>139</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 8 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0809</fieldname>
+<fieldindex>140</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 9 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0810</fieldname>
+<fieldindex>141</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class10 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0901</fieldname>
+<fieldindex>142</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 1 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0902</fieldname>
+<fieldindex>143</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 2 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0903</fieldname>
+<fieldindex>144</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 3 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0904</fieldname>
+<fieldindex>145</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 4 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0905</fieldname>
+<fieldindex>146</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 5 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0906</fieldname>
+<fieldindex>147</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 6 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0907</fieldname>
+<fieldindex>148</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 7 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0908</fieldname>
+<fieldindex>149</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 8 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0909</fieldname>
+<fieldindex>150</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 9 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE0910</fieldname>
+<fieldindex>151</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class10 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE1001</fieldname>
+<fieldindex>152</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 1 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE1002</fieldname>
+<fieldindex>153</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 2 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE1003</fieldname>
+<fieldindex>154</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 3 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE1004</fieldname>
+<fieldindex>155</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 4 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE1005</fieldname>
+<fieldindex>156</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 5 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE1006</fieldname>
+<fieldindex>157</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 6 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE1007</fieldname>
+<fieldindex>158</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 7 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE1008</fieldname>
+<fieldindex>159</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 8 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE1009</fieldname>
+<fieldindex>160</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 9 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXRATE1010</fieldname>
+<fieldindex>161</fieldindex>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class10 Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

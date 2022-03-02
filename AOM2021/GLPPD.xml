@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>GL GL0014 GLPPD GLPPD</keywords>
+<pagetitle>Prov. Posting Journal Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="GLPPD" desc="Prov. Posting Journal Details">
+<view name="GL0014" desc="Prov. Posting Journal Details" />
+<recordlength>323</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Prov. Posting Journal Detail</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>POSTINGSEQ</keyfield><keyfield>BATCHNBR</keyfield><keyfield>ENTRYNBR</keyfield><keyfield>TRANSNBR</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Unformatted account</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ACCTID</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Posting Journal Dtl-Entry Perd</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>POSTINGSEQ</keyfield><keyfield>BATCHNBR</keyfield><keyfield>ENTRYNBR</keyfield><keyfield>FISCALYR</keyfield><keyfield>FISCALPERD</keyfield><keyfield>TRANSNBR</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>POSTINGSEQ</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Prov. Posting sequence number</fielddesc>
+</field>
+<field>
+<fieldname>BATCHNBR</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Batch Number</fielddesc>
+<mask>%06D</mask></field>
+<field>
+<fieldname>ENTRYNBR</fieldname>
+<fieldtype>String*5</fieldtype>
+<fielddesc>Journal entry number</fielddesc>
+<mask>%05D</mask></field>
+<field>
+<fieldname>TRANSNBR</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Journal transaction number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>JRNLDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Journal date</fielddesc>
+</field>
+<field>
+<fieldname>FISCALYR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCALPERD</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Fiscal period</fielddesc>
+<mask>%02D</mask></field>
+<field>
+<fieldname>SRCELEDGER</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Ledger Code</fielddesc>
+<mask>%-2A</mask></field>
+<field>
+<fieldname>SRCETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Type Code</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>EDITALLOWD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>CONSOLIDAT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Consolidation occurred on post</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ACCTID</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Account Number</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>COMPANYID</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Company ID</fielddesc>
+</field>
+<field>
+<fieldname>JNLDTLDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Journal detail description</fielddesc>
+</field>
+<field>
+<fieldname>JNLDTLREF</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Journal detail reference</fielddesc>
+</field>
+<field>
+<fieldname>TRANSAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Journal transaction amount</fielddesc>
+</field>
+<field>
+<fieldname>TRANSQTY</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Journal transaction quantity</fielddesc>
+</field>
+<field>
+<fieldname>SCURNDEC</fieldname>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Nbr of source currency decimals</fielddesc>
+</field>
+<field>
+<fieldname>SCURNAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Source currency amount</fielddesc>
+</field>
+<field>
+<fieldname>HCURNCODE</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Home currency code</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Currency rate table type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SCURNCODE</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Source currency code</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of currency rate selected</fielddesc>
+</field>
+<field>
+<fieldname>CONVRATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Currency rate for conversion</fielddesc>
+</field>
+<field>
+<fieldname>RATESPREAD</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Currency rate spread allowed</fielddesc>
+</field>
+<field>
+<fieldname>DATEMTCHCD</fieldname>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Code for rate date matching</fielddesc>
+</field>
+<field>
+<fieldname>RATEOPER</fieldname>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Currency rate operator</fielddesc>
+</field>
+<field>
+<fieldname>CODESTATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Printed status code</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Not Printed" /><fieldpresent index="1" value="Printed" /></fieldpresentlist></field>
+<field>
+<fieldname>DATEENTRY</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>RPTAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Report currency amount</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>DOCDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Document Date</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

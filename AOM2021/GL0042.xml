@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>GL GL0042 GLRED GLRED</keywords>
+<pagetitle>Recurring Entry Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Recurring Entry Details</title>
+<rotoid>GL0042</rotoid>
+<tablelist>
+<table name="GLRED" desc="Recurring Entry Details" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Sequenced revisions</protocol><protocol>Key auto generate</protocol></protocollist>
+<dllname>GLRED</dllname>
+<compositionlist>
+<composition>
+<comprotoid>GL0041</comprotoid>
+<compdesc>Recurring Journal Headers</compdesc>
+<compdll>GLREH</compdll>
+<comptablelist>
+<comptable name="GLREH" desc="Recurring Journal Headers" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>GL0403</comprotoid>
+<compdesc>Recur. Entry Optional Fields</compdesc>
+<compdll>GLREDO</compdll>
+<comptablelist>
+<comptable name="GLREDO" desc="Recur. Entry Optional Fields" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Reccuring Code / Sequence</keytitle>
+<keyfieldlist>
+<keyfield>RECID</keyfield>
+<keyfield>TRANSNBR</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>RECID</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Recurring Entry Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-16C</mask></field>
+<field>
+<fieldname>TRANSNBR</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Sequence Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%C%09D</mask></field>
+<field>
+<fieldname>ACCTID</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Account Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>COMPANYID</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Company ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANSAMT</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANSQTY</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Quantity</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SCURNDEC</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Source Currency Decimals</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SCURNAMT</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Source Currency Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>HCURNCODE</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Home Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Currency Rate Table</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SCURNCODE</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Source Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Currency Rate Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CONVRATE</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Currency Rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RATESPREAD</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Currency Rate Spread</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DATEMTCHCD</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Currency Rate Date Matching</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>RATEOPER</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Currency Rate Operator</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANSDESC</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANSREF</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Recurring Entry Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SRCELDGR</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Ledger</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2A</mask></field>
+<field>
+<fieldname>SRCETYPE</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>COMMENT</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>String*250</fieldtype>
+<fielddesc>Comment</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ZEROSRCFG</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Zero Source Amount Flag</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PROCESSCMD</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Process switches</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Insert Recurring Entry Optional Fields" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

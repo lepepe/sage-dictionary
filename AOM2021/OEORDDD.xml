@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>OE OE0502 OEORDDD OEORDDD</keywords>
+<pagetitle>Order Kitting Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="OEORDDD" desc="Order Kitting Details">
+<view name="OE0502" desc="Order Kitting Details" />
+<recordlength>517</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Uniq./Line Number/Parent Cmp. Nu</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ORDUNIQ</keyfield><keyfield>LINENUM</keyfield><keyfield>PRNCOMPNUM</keyfield><keyfield>COMPNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Uniq./Line Number/Component Numb</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ORDUNIQ</keyfield><keyfield>LINENUM</keyfield><keyfield>COMPNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Uniq./Detail Number/Component Nu</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ORDUNIQ</keyfield><keyfield>DETAILNUM</keyfield><keyfield>COMPNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Component Number/Uniq./Detail Nu</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>COMPONENT</keyfield><keyfield>ORDUNIQ</keyfield><keyfield>LINENUM</keyfield><keyfield>PRNCOMPNUM</keyfield><keyfield>COMPNUM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ORDUNIQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Order Uniquifier</fielddesc>
+</field>
+<field>
+<fieldname>LINENUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Line Number</fielddesc>
+</field>
+<field>
+<fieldname>PRNCOMPNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Parent Component Number</fielddesc>
+</field>
+<field>
+<fieldname>COMPNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Component Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>DETAILNUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Number</fielddesc>
+</field>
+<field>
+<fieldname>COMPONENT</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Component Item</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>ACCTSET</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Item Account Set</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>USERCOSTMD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>User-Specified Costing Method</fielddesc>
+</field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>PICKSEQ</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Picking Sequence</fielddesc>
+</field>
+<field>
+<fieldname>STOCKITEM</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Stock Item</fielddesc>
+</field>
+<field>
+<fieldname>QTY</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Kitting Quantity</fielddesc>
+</field>
+<field>
+<fieldname>PRNQTYORD</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Parent Quantity Ordered</fielddesc>
+</field>
+<field>
+<fieldname>PRNQTYSHIP</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Parent Quantity Shipped</fielddesc>
+</field>
+<field>
+<fieldname>PRNUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Parent Unit of Measure</fielddesc>
+<mask>%-10c</mask></field>
+<field>
+<fieldname>PRNUNTCONV</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Parent Unit Conversion</fielddesc>
+</field>
+<field>
+<fieldname>QTYORDERED</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Ordered</fielddesc>
+</field>
+<field>
+<fieldname>QTYSHIPPED</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Shipped</fielddesc>
+</field>
+<field>
+<fieldname>QTYPO</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>P/O Quantity Ordered</fielddesc>
+</field>
+<field>
+<fieldname>ORDUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Order Unit of Measure</fielddesc>
+<mask>%-10c</mask></field>
+<field>
+<fieldname>UNITCONV</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Order Unit Conversion</fielddesc>
+</field>
+<field>
+<fieldname>UNITCOST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Order Unit Cost</fielddesc>
+</field>
+<field>
+<fieldname>MOSTREC</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Most Recent Unit Cost</fielddesc>
+</field>
+<field>
+<fieldname>STDCOST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Standard Unit Cost</fielddesc>
+</field>
+<field>
+<fieldname>COST1</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Alternate Unit Cost 1</fielddesc>
+</field>
+<field>
+<fieldname>COST2</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Alternate Unit Cost 2</fielddesc>
+</field>
+<field>
+<fieldname>AVGCOST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Average Unit Cost</fielddesc>
+</field>
+<field>
+<fieldname>LASTCOST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Last Unit Cost</fielddesc>
+</field>
+<field>
+<fieldname>COSTUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Costing Unit of Measure</fielddesc>
+<mask>%-10c</mask></field>
+<field>
+<fieldname>COSUNTCST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Costing Unit Cost</fielddesc>
+</field>
+<field>
+<fieldname>COSUNTCONV</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Costing Unit Conversion</fielddesc>
+</field>
+<field>
+<fieldname>EXTOCOST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Order Cost</fielddesc>
+</field>
+<field>
+<fieldname>UNITWEIGHT</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Unit Weight</fielddesc>
+</field>
+<field>
+<fieldname>EXTWEIGHT</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Extended Weight</fielddesc>
+</field>
+<field>
+<fieldname>GLNONSTKCR</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Non-stock Clearing Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>WEIGHTUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Weight Unit of Measure</fielddesc>
+</field>
+<field>
+<fieldname>WEIGHTCONV</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Weight Conversion Factor</fielddesc>
+</field>
+<field>
+<fieldname>PRNWGTCONV</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Parent Weight Conversion Factor</fielddesc>
+</field>
+<field>
+<fieldname>PRNUWEIGHT</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Parent Weight UOM Unit Weight</fielddesc>
+</field>
+<field>
+<fieldname>PRNEXTWGHT</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Parent WUOM Extended Unit Weight</fielddesc>
+</field>
+<field>
+<fieldname>DDTLNO</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Kit No.</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SERIALQTY</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Serial Quantity</fielddesc>
+</field>
+<field>
+<fieldname>LOTQTY</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Lot Quantity</fielddesc>
+</field>
+<field>
+<fieldname>SQTYMOVED</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Serial Qty. Shipped</fielddesc>
+</field>
+<field>
+<fieldname>LQTYMOVED</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Lot Qty. Shipped</fielddesc>
+</field>
+<field>
+<fieldname>SLITEM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Item Serialized/Lotted?</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="Serialized" /><fieldpresent index="2" value="Lotted" /><fieldpresent index="3" value="Both" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

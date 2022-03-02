@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0260 ICCOST ICCOST</keywords>
+<pagetitle>Receipt Cost</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICCOST" desc="Receipt Cost">
+<view name="IC0260" desc="Receipt Cost" />
+<recordlength>187</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Item/Location/Date/Seq</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield><keyfield>LOCATION</keyfield><keyfield>TRANSDATE</keyfield><keyfield>SEQUENCE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Item/Location/Doc/Date/Seq</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield><keyfield>LOCATION</keyfield><keyfield>RECEIPTNUM</keyfield><keyfield>TRANSDATE</keyfield><keyfield>SEQUENCE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Doc/Line/Item/Loc/Date/Seq</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>RECEIPTNUM</keyfield><keyfield>LINENUMBER</keyfield><keyfield>ITEMNO</keyfield><keyfield>LOCATION</keyfield><keyfield>TRANSDATE</keyfield><keyfield>SEQUENCE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>SEQUENCE</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+</field>
+<field>
+<fieldname>RECEIPTNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>LINENUMBER</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>QTY</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Original Quantity</fielddesc>
+</field>
+<field>
+<fieldname>COST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Original Cost</fielddesc>
+</field>
+<field>
+<fieldname>SHIPQTY</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Shipped</fielddesc>
+</field>
+<field>
+<fieldname>SHIPCOST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Shipped Cost</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

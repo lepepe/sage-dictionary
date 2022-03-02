@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0009 BKREG BKREG</keywords>
+<pagetitle>Bank Check Register</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="BKREG" desc="Bank Check Register">
+<view name="BK0009" desc="Bank Check Register" />
+<recordlength>558</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Bank Check</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SRCEAPP</keyfield><keyfield>APPRUNNUM</keyfield><keyfield>BANK</keyfield><keyfield>SORTCODE</keyfield><keyfield>PAYEEID</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Bank Language Check</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SRCEAPP</keyfield><keyfield>APPRUNNUM</keyfield><keyfield>BANK</keyfield><keyfield>LANGUAGE</keyfield><keyfield>SORTCODE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SRCEAPP</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Application</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>APPRUNNUM</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Application Run Number</fielddesc>
+</field>
+<field>
+<fieldname>BANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>SORTCODE</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Sort Code</fielddesc>
+</field>
+<field>
+<fieldname>PAYEEID</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Payee Code</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>SERIAL</fieldname>
+<fieldtype>???</fieldtype>
+<fielddesc>Serial Number</fielddesc>
+</field>
+<field>
+<fieldname>CHECK</fieldname>
+<fieldtype>BCD*8.0</fieldtype>
+<fielddesc>Check Number</fielddesc>
+</field>
+<field>
+<fieldname>STATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check Status</fielddesc>
+<fieldpresentlist><fieldpresent index="-2" value="Not Printed" /><fieldpresent index="-1" value="Advice Not Printed" /><fieldpresent index="9" value="Printed" /><fieldpresent index="999" value="Posted" /></fieldpresentlist></field>
+<field>
+<fieldname>CHKTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Check" /><fieldpresent index="2" value="EFT" /></fieldpresentlist></field>
+<field>
+<fieldname>CHKFORM</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Check Stock Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>PAYEENAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Payee Name</fielddesc>
+</field>
+<field>
+<fieldname>VENDORNAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Vendor Name</fielddesc>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Check Reference</fielddesc>
+</field>
+<field>
+<fieldname>COMMENT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Check Description</fielddesc>
+</field>
+<field>
+<fieldname>POSTED</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Check Printed</fielddesc>
+</field>
+<field>
+<fieldname>CHKDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Check Date</fielddesc>
+</field>
+<field>
+<fieldname>ISSUED</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Check Amount</fielddesc>
+</field>
+<field>
+<fieldname>SISSUED</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Check Source Amount</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Exchange Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Payment Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Exchange Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATESPREAD</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Rate Spread</fielddesc>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operation</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /><fieldpresent index="0" value="Not Specified" /></fieldpresentlist></field>
+<field>
+<fieldname>EXTRA</fieldname>
+<fieldtype>Binary*102</fieldtype>
+<fielddesc>Extra Application Data</fielddesc>
+</field>
+<field>
+<fieldname>LANGUAGE</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Language Code</fielddesc>
+<mask>%-3C</mask></field>
+<field>
+<fieldname>ADVICE</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Advice Lines</fielddesc>
+</field>
+<field>
+<fieldname>FSCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FSCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>LANGCODE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Language</fielddesc>
+<fieldpresentlist><fieldpresent index="5658" value="English" /><fieldpresent index="7092" value="French" /><fieldpresent index="5845" value="Spanish" /><fieldpresent index="738" value="Australian" /><fieldpresent index="15719" value="Mexican" /><fieldpresent index="2857" value="Chinese (Simplified)" /><fieldpresent index="2863" value="Chinese (Traditional)" /></fieldpresentlist></field>
+<field>
+<fieldname>SDECIMALS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Source Currency Decimals</fielddesc>
+</field>
+<field>
+<fieldname>DDTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Drilldown Type</fielddesc>
+</field>
+<field>
+<fieldname>DDLINK</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Drilldown Link</fielddesc>
+</field>
+<field>
+<fieldname>PAYMCODE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Payment Code</fielddesc>
+</field>
+<field>
+<fieldname>SRCEDOCNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Source Document Number</fielddesc>
+</field>
+<field>
+<fieldname>CANREVINVC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Can Reverse Invoice</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

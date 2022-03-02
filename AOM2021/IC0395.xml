@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0395 ICPCTX ICPCTX</keywords>
+<pagetitle>Price List Code Tax Authorities</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Price List Code Tax Authorities</title>
+<rotoid>IC0395</rotoid>
+<tablelist>
+<table name="ICPCTX" desc="Price List Code Tax Authorities" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>ICPCTX</dllname>
+<compositionlist>
+<composition>
+<comprotoid>IC0390</comprotoid>
+<compdesc>Price List Codes</compdesc>
+<compdll>ICPCOD</compdll>
+<comptablelist>
+<comptable name="ICPCOD" desc="Price List Codes" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>TX0002</comprotoid>
+<compdesc>Tax Authorities</compdesc>
+<compdll>TXAUTH</compdll>
+<comptablelist>
+<comptable name="TXAUTH" desc="Tax Authorities" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>TX0001</comprotoid>
+<compdesc>Tax Classes</compdesc>
+<compdll>TXCLASS</compdll>
+<comptablelist>
+<comptable name="TXCLASS" desc="Tax Classes" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Tax Authority</keytitle>
+<keyfieldlist>
+<keyfield>PRICELIST</keyfield>
+<keyfield>AUTHORITY</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>PRICELIST</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Price List Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>AUTHORITY</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TAXINCL</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Tax Included in Price</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TAXCLASS</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Customer Tax Class</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXCLSDESC</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Customer Tax Class Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TXAUTHDESC</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Tax Authority Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

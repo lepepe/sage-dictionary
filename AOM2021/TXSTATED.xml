@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>TX TX0014 TXSTATED TXSTATED</keywords>
+<pagetitle>Tax State Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="TXSTATED" desc="Tax State Details">
+<view name="TX0014" desc="Tax State Details" />
+<recordlength>2347</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Tax Group/Tran. Type/Version</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>GROUPID</keyfield><keyfield>TTYPE</keyfield><keyfield>VERSION</keyfield><keyfield>TXAUTHNUM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>GROUPID</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Group</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Sales" /><fieldpresent index="2" value="Purchases" /></fieldpresentlist></field>
+<field>
+<fieldname>VERSION</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Version</fielddesc>
+</field>
+<field>
+<fieldname>TXAUTHNUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Authority Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUTHORITY</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>AUDITLEVEL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Report Level</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="At invoice level" /><fieldpresent index="0" value="No reporting" /></fieldpresentlist></field>
+<field>
+<fieldname>TAXABLE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Taxable</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SURTAX</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Surtax</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SURAUTH</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Surtax On Authority</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>MINTAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Maximum Tax Allowable</fielddesc>
+</field>
+<field>
+<fieldname>MAXTAX</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>No Tax Charged Below</fielddesc>
+</field>
+<field>
+<fieldname>TXBASE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Base</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Selling price" /><fieldpresent index="2" value="Standard cost" /><fieldpresent index="3" value="Most recent cost" /><fieldpresent index="4" value="Alternate amount 1" /><fieldpresent index="5" value="Alternate amount 2" /></fieldpresentlist></field>
+<field>
+<fieldname>INCLUDABLE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Allow Tax In Price</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TXRTGCTL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Report Tax on Retainage Document</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No Reporting" /><fieldpresent index="1" value="At Time of Retainage Document" /><fieldpresent index="2" value="At Time of Original Document" /></fieldpresentlist></field>
+<field>
+<fieldname>RECOVERABL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Recoverable</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>RATERECOV</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Recoverable Rate</fielddesc>
+</field>
+<field>
+<fieldname>ACCTRECOV</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Recoverable Tax Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>EXPSEPARTE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Expense Separately</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>ACCTEXP</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Expense Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>LIABILITY</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Tax Liability Account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>HCLASS01</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 1</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS02</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 2</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS03</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 3</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS04</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 4</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS05</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 5</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS06</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 6</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS07</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 7</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS08</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 8</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS09</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class 9</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLASS10</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Header Class10</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /><fieldpresent index="3" value="Rates Defined" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS01</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 1</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS02</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 2</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS03</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 3</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS04</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 4</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS05</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 5</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS06</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 6</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS07</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 7</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS08</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 8</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS09</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class 9</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>DCLASS10</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Class10</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Undefined" /><fieldpresent index="1" value="Exists" /><fieldpresent index="2" value="Exempt" /></fieldpresentlist></field>
+<field>
+<fieldname>HCLS01DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 1 Description</fielddesc>
+</field>
+<field>
+<fieldname>HCLS02DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 2 Description</fielddesc>
+</field>
+<field>
+<fieldname>HCLS03DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 3 Description</fielddesc>
+</field>
+<field>
+<fieldname>HCLS04DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 4 Description</fielddesc>
+</field>
+<field>
+<fieldname>HCLS05DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 5 Description</fielddesc>
+</field>
+<field>
+<fieldname>HCLS06DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 6 Description</fielddesc>
+</field>
+<field>
+<fieldname>HCLS07DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 7 Description</fielddesc>
+</field>
+<field>
+<fieldname>HCLS08DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 8 Description</fielddesc>
+</field>
+<field>
+<fieldname>HCLS09DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class 9 Description</fielddesc>
+</field>
+<field>
+<fieldname>HCLS10DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Header Class10 Description</fielddesc>
+</field>
+<field>
+<fieldname>DCLS01DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 1 Description</fielddesc>
+</field>
+<field>
+<fieldname>DCLS02DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 2 Description</fielddesc>
+</field>
+<field>
+<fieldname>DCLS03DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 3 Description</fielddesc>
+</field>
+<field>
+<fieldname>DCLS04DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 4 Description</fielddesc>
+</field>
+<field>
+<fieldname>DCLS05DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 5 Description</fielddesc>
+</field>
+<field>
+<fieldname>DCLS06DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 6 Description</fielddesc>
+</field>
+<field>
+<fieldname>DCLS07DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 7 Description</fielddesc>
+</field>
+<field>
+<fieldname>DCLS08DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 8 Description</fielddesc>
+</field>
+<field>
+<fieldname>DCLS09DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class 9 Description</fielddesc>
+</field>
+<field>
+<fieldname>DCLS10DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Detail Class10 Description</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0101</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 1 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0102</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 2 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0103</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 3 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0104</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 4 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0105</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 5 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0106</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 6 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0107</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 7 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0108</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 8 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0109</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class 9 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0110</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 1 Item Class10 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0201</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 1 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0202</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 2 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0203</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 3 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0204</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 4 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0205</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 5 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0206</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 6 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0207</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 7 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0208</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 8 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0209</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class 9 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0210</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 2 Item Class10 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0301</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 1 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0302</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 2 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0303</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 3 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0304</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 4 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0305</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 5 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0306</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 6 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0307</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 7 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0308</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 8 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0309</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class 9 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0310</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 3 Item Class10 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0401</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 1 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0402</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 2 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0403</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 3 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0404</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 4 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0405</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 5 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0406</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 6 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0407</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 7 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0408</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 8 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0409</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class 9 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0410</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 4 Item Class10 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0501</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 1 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0502</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 2 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0503</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 3 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0504</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 4 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0505</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 5 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0506</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 6 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0507</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 7 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0508</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 8 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0509</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class 9 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0510</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 5 Item Class10 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0601</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 1 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0602</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 2 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0603</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 3 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0604</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 4 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0605</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 5 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0606</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 6 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0607</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 7 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0608</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 8 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0609</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class 9 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0610</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 6 Item Class10 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0701</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 1 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0702</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 2 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0703</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 3 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0704</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 4 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0705</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 5 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0706</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 6 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0707</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 7 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0708</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 8 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0709</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class 9 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0710</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 7 Item Class10 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0801</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 1 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0802</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 2 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0803</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 3 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0804</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 4 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0805</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 5 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0806</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 6 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0807</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 7 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0808</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 8 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0809</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class 9 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0810</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 8 Item Class10 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0901</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 1 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0902</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 2 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0903</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 3 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0904</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 4 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0905</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 5 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0906</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 6 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0907</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 7 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0908</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 8 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0909</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class 9 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE0910</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class 9 Item Class10 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE1001</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 1 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE1002</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 2 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE1003</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 3 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE1004</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 4 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE1005</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 5 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE1006</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 6 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE1007</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 7 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE1008</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 8 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE1009</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class 9 Rate</fielddesc>
+</field>
+<field>
+<fieldname>TXRATE1010</fieldname>
+<fieldtype>BCD*8.5</fieldtype>
+<fielddesc>Buyer Class10 Item Class10 Rate</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

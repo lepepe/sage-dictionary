@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>UP UP0083 UPCALC</keywords>
+<pagetitle>Calculate Payroll</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Calculate Payroll</title>
+<rotoid>UP0083</rotoid>
+<protocollist>
+<protocol>Header</protocol></protocollist>
+<dllname>UPCALC</dllname>
+<compositionlist>
+<composition>
+<comprotoid>UP0137</comprotoid>
+<compdesc>Calculate Payroll Optional Fields</compdesc>
+<compdll>UPCLCO</compdll>
+<comptablelist>
+<comptable name="UPCLCO" desc="Calculate Payroll Optional Fields" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Dummy Key</keytitle>
+<keyfieldlist>
+<keyfield>DUMMY</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>BEGEMP</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Beginning employee</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>ENDEMP</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Ending employee</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>BEGCLASS1</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Beginning Class 1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>ENDCLASS1</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Ending Class 1</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>BEGCLASS2</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Beginning Class 2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>ENDCLASS2</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Ending Class 2</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>BEGCLASS3</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Beginning Class 3</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>ENDCLASS3</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Ending Class 3</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>BEGCLASS4</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Beginning Class 4</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>ENDCLASS4</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Ending Class 4</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SELECTLIST</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Selection List</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>RUNDATE</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Payroll Run Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ENDDATE</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Period End Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CHECKDATE</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Check Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PRPERIOD</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Payroll Period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ADVANCERUN</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Advances Only</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>UNPOST</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Delete Current Activity</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EDAILY</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Emp Daily</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EWEEKLY</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Emp Weekly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EBIWEEKLY</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Emp Biweekly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ESEMIMONTH</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Emp Semimonthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>E22PERIODS</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Emp 22 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>E13PERIODS</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Emp 13 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EMONTHLY</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Emp Monthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>E10PERIODS</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Emp 10 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EQUARTERLY</fieldname>
+<fieldindex>26</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Emp Quarterly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EDDAILY</fieldname>
+<fieldindex>27</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Daily E/D - Daily</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EDWEEKLY</fieldname>
+<fieldindex>28</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Daily E/D - Weekly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EDBIWEEKLY</fieldname>
+<fieldindex>29</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Daily E/D - Biweekly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EDSEMIMTH</fieldname>
+<fieldindex>30</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Daily E/D - Semimonthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ED22PERIOD</fieldname>
+<fieldindex>31</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Daily E/D - 22 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ED13PERIOD</fieldname>
+<fieldindex>32</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Daily E/D - 13 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EDMONTHLY</fieldname>
+<fieldindex>33</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Daily E/D - Monthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ED10PERIOD</fieldname>
+<fieldindex>34</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Daily E/D - 10 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EDQTRLY</fieldname>
+<fieldindex>35</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Daily E/D - Quarterly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EWWEEKLY</fieldname>
+<fieldindex>36</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Weekly E/D - Weekly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EWBIWEEKLY</fieldname>
+<fieldindex>37</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Weekly E/D - Biweekly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EWSEMIMTH</fieldname>
+<fieldindex>38</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Weekly E/D - Semimonthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EW22PERIOD</fieldname>
+<fieldindex>39</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Weekly E/D - 22 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EW13PERIOD</fieldname>
+<fieldindex>40</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Weekly E/D - 13 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EWMONTHLY</fieldname>
+<fieldindex>41</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Weekly E/D - Monthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EW10PERIOD</fieldname>
+<fieldindex>42</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Weekly E/D - 10 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EWQTRLY</fieldname>
+<fieldindex>43</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Weekly E/D - Quarterly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EBBIWEEKLY</fieldname>
+<fieldindex>44</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Biweekly E/D - Biweekly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EBSEMIMTH</fieldname>
+<fieldindex>45</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Biweekly E/D - Semimonthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EB22PERIOD</fieldname>
+<fieldindex>46</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Biweekly E/D - 22 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EB13PERIOD</fieldname>
+<fieldindex>47</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Biweekly E/D - 13 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EBMONTHLY</fieldname>
+<fieldindex>48</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Biweekly E/D - Monthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EB10PERIOD</fieldname>
+<fieldindex>49</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Biweekly E/D - 10 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EBQTRLY</fieldname>
+<fieldindex>50</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Biweekly E/D - Quarterly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ESSEMIMTH</fieldname>
+<fieldindex>51</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Semimonthly E/D - Semimonthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ES22PERIOD</fieldname>
+<fieldindex>52</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Semimonthly E/D - 22 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ES13PERIOD</fieldname>
+<fieldindex>53</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Semimonthly E/D - 13 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ESMONTHLY</fieldname>
+<fieldindex>54</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Semimonthly E/D - Monthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ES10PERIOD</fieldname>
+<fieldindex>55</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Semimonthly E/D - 10 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ESQTRLY</fieldname>
+<fieldindex>56</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Semimonthly E/D - Quarterly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EC22PERIOD</fieldname>
+<fieldindex>57</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>22 Periods E/D - 22 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EC13PERIOD</fieldname>
+<fieldindex>58</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>22 Periods E/D - 13 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ECMONTHLY</fieldname>
+<fieldindex>59</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>22 Periods E/D - Monthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EC10PERIOD</fieldname>
+<fieldindex>60</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>22 Periods E/D - 10 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ECQTRLY</fieldname>
+<fieldindex>61</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>22 Periods E/D - Quarterly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EX13PERIOD</fieldname>
+<fieldindex>62</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>13 Periods E/D - 13 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EXMONTHLY</fieldname>
+<fieldindex>63</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>13 Periods E/D - Monthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EX10PERIOD</fieldname>
+<fieldindex>64</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>13 Periods E/D - 10 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EXQTRLY</fieldname>
+<fieldindex>65</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>13 Periods E/D - Quarterly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EMMONTHLY</fieldname>
+<fieldindex>66</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Monthly Periods E/D - Monthly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EM10PERIOD</fieldname>
+<fieldindex>67</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Monthly Periods E/D - 10 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EMQTRLY</fieldname>
+<fieldindex>68</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Monthly Periods E/D - Quarterly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EA10PERIOD</fieldname>
+<fieldindex>69</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>10 Periods E/D - 10 Periods</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EAQTRLY</fieldname>
+<fieldindex>70</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>10 Periods E/D - Quarterly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>EQQTRLY</fieldname>
+<fieldindex>71</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Quarterly E/D - Quarterly</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BDDAILY</fieldname>
+<fieldindex>72</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Daily Period Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BDWEEKLY</fieldname>
+<fieldindex>73</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Weekly Period Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BDBIWEEKLY</fieldname>
+<fieldindex>74</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Biweekly Period Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BDSEMIMTH</fieldname>
+<fieldindex>75</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Semimonthly Period Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BD22PERIOD</fieldname>
+<fieldindex>76</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>22 Periods Period Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BD13PERIOD</fieldname>
+<fieldindex>77</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>13 Periods Period Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BDMONTHLY</fieldname>
+<fieldindex>78</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Monthly Period Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BD10PERIOD</fieldname>
+<fieldindex>79</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>10 Periods Period Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>BDQTRLY</fieldname>
+<fieldindex>80</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Quarterly Period Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DOEFTCALC</fieldname>
+<fieldindex>81</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Do EFT Calculation?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CALCOPTION</fieldname>
+<fieldindex>82</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Calculation Option</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="All Checks" /><fieldpresent index="2" value="Advance Only" /><fieldpresent index="3" value="Ignore Zero and Negative Checks" /><fieldpresent index="4" value="Ignore Negative Checks" /></fieldpresentlist></field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldindex>83</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Optional Fields</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DUMMY</fieldname>
+<fieldindex>84</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Dummy Field</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>PROCESSCMD</fieldname>
+<fieldindex>85</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Process Command Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Calculate Payroll" /><fieldpresent index="1" value="Insert Optional Fields" /></fieldpresentlist></field>
+<field>
+<fieldname>TAXVERSION</fieldname>
+<fieldindex>86</fieldindex>
+<fieldtype>String*80</fieldtype>
+<fielddesc>Tax Version</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

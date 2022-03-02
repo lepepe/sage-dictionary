@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>GL GL0104 GLRVL GLRVL</keywords>
+<pagetitle>Revaluation Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Revaluation Details</title>
+<rotoid>GL0104</rotoid>
+<tablelist>
+<table name="GLRVL" desc="Revaluation Details" />
+</tablelist>
+<protocollist>
+<protocol>Header</protocol></protocollist>
+<dllname>GLRVL</dllname>
+<compositionlist>
+<composition>
+<comprotoid>GL0410</comprotoid>
+<compdesc>Reval. Dtls Gain Optional Flds</compdesc>
+<compdll>GLRVLGO</compdll>
+<comptablelist>
+<comptable name="GLRVLGO" desc="Reval. Dtls Gain Optional Flds" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>GL0411</comprotoid>
+<compdesc>Reval. Dtls Loss Optional Flds</compdesc>
+<compdll>GLRVLLO</compdll>
+<comptablelist>
+<comptable name="GLRVLLO" desc="Reval. Dtls Loss Optional Flds" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Currency and Revaluation Codes</keytitle>
+<keyfieldlist>
+<keyfield>CURNCYCODE</keyfield>
+<keyfield>DFLTRVLCD</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CURNCYCODE</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency code to revalue</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>DFLTRVLCD</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default revaluation code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>BATCHDESC</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Batch Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FORCEREVAL</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Force revaluation switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Revalue accounts which wish it" /><fieldpresent index="1" value="Force accounts which do not wish it" /></fieldpresentlist></field>
+<field>
+<fieldname>SGMTSLCT</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Select segment type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index=" 1" value="Full account" /><fieldpresent index=" 2" value="Any segment" /></fieldpresentlist></field>
+<field>
+<fieldname>SGMTID</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Select segment ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%06D</mask></field>
+<field>
+<fieldname>FROMACCTID</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>From Account Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>TOACCTID</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>To Account Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>FROMPERIOD</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>From fiscal period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%02D</mask></field>
+<field>
+<fieldname>TOPERIOD</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>String*2</fieldtype>
+<fielddesc>To fiscal period</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%02D</mask></field>
+<field>
+<fieldname>FSCSYR</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal year</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%04D</mask></field>
+<field>
+<fieldname>JRNLDATE</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Journal date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CONVDATE</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date used for conversion</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CONVRATE</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Conversion rate</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ACCTGAIN</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Unreal. Ex. Gain Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>ACCTLOSS</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Unreal. Ex. Loss Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>GVALUES</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Unreal. Ex. Gain Optional Flds</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LVALUES</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Unreal. Ex. Loss Optional Flds</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>GL 68A</keywords>
+<pagetitle>General Ledger</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<application name="General Ledger" version="6.8A">
+<viewlist>
+<view name="GL0001" desc="Accounts" dllname="GLAMF">
+<viewtablelist>
+<table name="GLAMF" desc="Accounts" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0003" desc="Fiscal Sets" /><viewcomp name="GL0004" desc="Account Allocation Instructions" /><viewcomp name="GL0012" desc="Account Valid Currencies" /><viewcomp name="GL0023" desc="Structure Codes" /><viewcomp name="GL0107" desc="Control Account Subledgers" /><viewcomp name="GL0400" desc="Account Optional Fields" /><viewcomp name="GL0401" desc="Account Trans. Optional Fields" /><viewcomp name="GL0057" desc="Rollup Groups" /><viewcomp name="GL0063" desc="Rollup Member Preview" /></viewcomplist>
+</view>
+<view name="GL0002" desc="Source Codes" dllname="GLSRCE">
+<viewtablelist>
+<table name="GLSRCE" desc="Source Codes" />
+</viewtablelist>
+</view>
+<view name="GL0003" desc="Fiscal Sets" dllname="GLFISC">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0004" desc="Account Allocation Instructions" dllname="GLAIS">
+<viewtablelist>
+<table name="GLAIS" desc="Account Allocation Instructions" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0001" desc="Accounts" /></viewcomplist>
+</view>
+<view name="GL0005" desc="General Ledger Options" dllname="GLOPT">
+<viewtablelist>
+<table name="GL01" desc="General Ledger Options" />
+</viewtablelist>
+</view>
+<view name="GL0006" desc="Journal Headers" dllname="GLJEH">
+<viewtablelist>
+<table name="GLJEH" desc="Journal Headers" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0008" desc="Batches" /><viewcomp name="GL0010" desc="Journal Details" /></viewcomplist>
+</view>
+<view name="GL0007" desc="Journal Comments" dllname="GLJEC">
+<viewtablelist>
+<table name="GLJEC" desc="Journal Comments" />
+</viewtablelist>
+</view>
+<view name="GL0008" desc="Batches" dllname="GLBCTL">
+<viewtablelist>
+<table name="GLBCTL" desc="Batches" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0006" desc="Journal Headers" /></viewcomplist>
+</view>
+<view name="GL0009" desc="Account Budget Calculator" dllname="GLBGT">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0010" desc="Journal Details" dllname="GLJED">
+<viewtablelist>
+<table name="GLJED" desc="Journal Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0006" desc="Journal Headers" /><viewcomp name="GL0402" desc="Journal Detail Optional Fields" /></viewcomplist>
+</view>
+<view name="GL0011" desc="Compute Fiscal Set Comparison" dllname="GLCFSC">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0012" desc="Account Valid Currencies" dllname="GLAVC">
+<viewtablelist>
+<table name="GLAVC" desc="Account Valid Currencies" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0001" desc="Accounts" /><viewcomp name="GL0020" desc="Revaluation Codes" /></viewcomplist>
+</view>
+<view name="GL0013" desc="Provisional Posting Errors" dllname="GLPPER">
+<viewtablelist>
+<table name="GLPPER" desc="Provisional Posting Errors" />
+</viewtablelist>
+</view>
+<view name="GL0014" desc="Prov. Posting Journal Details" dllname="GLPPD">
+<viewtablelist>
+<table name="GLPPD" desc="Prov. Posting Journal Details" />
+</viewtablelist>
+</view>
+<view name="GL0015" desc="Posting Errors" dllname="GLPERR">
+<viewtablelist>
+<table name="GLPERR" desc="Posting Errors" />
+</viewtablelist>
+</view>
+<view name="GL0016" desc="Posting Journal Details" dllname="GLPJD">
+<viewtablelist>
+<table name="GLPJD" desc="Posting Journal Details" />
+</viewtablelist>
+</view>
+<view name="GL0017" desc="Posting Journal Comments" dllname="GLPJC">
+<viewtablelist>
+<table name="GLPJC" desc="Posting Journal Comments" />
+</viewtablelist>
+</view>
+<view name="GL0018" desc="Posted Transactions" dllname="GLPOST">
+<viewtablelist>
+<table name="GLPOST" desc="Posted Transactions" />
+</viewtablelist>
+</view>
+<view name="GL0019" desc="Source Journal Profiles" dllname="GLSJN">
+<viewtablelist>
+<table name="GLSJN" desc="Source Journal Profiles" />
+</viewtablelist>
+</view>
+<view name="GL0020" desc="Revaluation Codes" dllname="GLRVAL">
+<viewtablelist>
+<table name="GLRVAL" desc="Revaluation Codes" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0001" desc="Accounts" /></viewcomplist>
+</view>
+<view name="GL0021" desc="Segment Codes" dllname="GLASV">
+<viewtablelist>
+<table name="GLASV" desc="Segment Codes" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0001" desc="Accounts" /><viewcomp name="GL0022" desc="Account Segments" /></viewcomplist>
+</view>
+<view name="GL0022" desc="Account Segments" dllname="GLABK">
+<viewtablelist>
+<table name="GLABK" desc="Account Segments" />
+</viewtablelist>
+</view>
+<view name="GL0023" desc="Structure Codes" dllname="GLABRX">
+<viewtablelist>
+<table name="GLABRX" desc="Structure Codes" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0022" desc="Account Segments" /></viewcomplist>
+</view>
+<view name="GL0024" desc="Period End Maintenance" dllname="GLYRM">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0025" desc="Consolidate Posted Transactions" dllname="GLCSL">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0026" desc="Create New Year" dllname="GLYRN">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0027" desc="Currency Revaluation" dllname="GLRVLU">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0028" desc="Prov. Posting Journal Comments" dllname="GLPPC">
+<viewtablelist>
+<table name="GLPPC" desc="Prov. Posting Journal Comments" />
+</viewtablelist>
+</view>
+<view name="GL0029" desc="Auto Allocation Processor" dllname="GLJAL">
+<viewtablelist>
+<table name="GLJAL" desc="Auto Allocation Processor" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0409" desc="Auto Alloc. Optional Fields" /></viewcomplist>
+</view>
+<view name="GL0030" desc="Post Journal" dllname="GLJPST">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0031" desc="Financial Report Information" dllname="FRFISC">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0032" desc="Batch Status" dllname="GLBCTU">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0033" desc="Posting Journal Update/Clear" dllname="GLPJDU">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0034" desc="Integrity Checker" dllname="GLINTCK">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0038" desc="Posted Transaction Totals" dllname="GLPSTT">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0039" desc="Drill Downs" dllname="GLDRDN">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0040" desc="General Ledger Restart" dllname="GLRSTRT">
+<viewtablelist>
+<table name="GLRSTRT" desc="General Ledger Restart" />
+</viewtablelist>
+</view>
+<view name="GL0041" desc="Recurring Journal Headers" dllname="GLREH">
+<viewtablelist>
+<table name="GLREH" desc="Recurring Journal Headers" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0042" desc="Recurring Entry Details" /></viewcomplist>
+</view>
+<view name="GL0042" desc="Recurring Entry Details" dllname="GLRED">
+<viewtablelist>
+<table name="GLRED" desc="Recurring Entry Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0041" desc="Recurring Journal Headers" /><viewcomp name="GL0403" desc="Recur. Entry Optional Fields" /></viewcomplist>
+</view>
+<view name="GL0043" desc="Create Recurring Entries Batch" dllname="GLCRE">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0044" desc="Scheduler Interface" dllname="GLSCHED">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0045" desc="Create Accounts" dllname="GLCAMF">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0046" desc="Preview Accounts" dllname="GLWAMF">
+<viewtablelist>
+<table name="GLWAMF" desc="Preview Accounts" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0047" desc="Preview A/C Valid Currencies" /><viewcomp name="GL0048" desc="Preview Control A/C Subledgers" /><viewcomp name="GL0407" desc="Account Optional Fields" /><viewcomp name="GL0408" desc="Account Trans. Optional Fields" /></viewcomplist>
+</view>
+<view name="GL0047" desc="Preview A/C Valid Currencies" dllname="GLWAVC">
+<viewtablelist>
+<table name="GLWAVC" desc="Preview A/C Valid Currencies" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0046" desc="Preview Accounts" /><viewcomp name="GL0020" desc="Revaluation Codes" /></viewcomplist>
+</view>
+<view name="GL0048" desc="Preview Control A/C Subledgers" dllname="GLWCAS">
+<viewtablelist>
+<table name="GLWCAS" desc="Preview Control A/C Subledgers" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0046" desc="Preview Accounts" /></viewcomplist>
+</view>
+<view name="GL0049" desc="Create Accounts Input Criteria" dllname="GLPAMF">
+<viewtablelist>
+<table name="GLPAMF" desc="Create Accounts Input Criteria" />
+</viewtablelist>
+</view>
+<view name="GL0050" desc="FRFISC Helper" dllname="FR2FISC">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0051" desc="Create Reverse Entry" dllname="GLRJNL">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0052" desc="Segment Permissions" dllname="GLGSSEG">
+<viewtablelist>
+<table name="GLGSSEG" desc="Segment Permissions" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0054" desc="Users" /></viewcomplist>
+</view>
+<view name="GL0053" desc="Account Permissions" dllname="GLGSACC">
+<viewtablelist>
+<table name="GLGSACC" desc="Account Permissions" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0054" desc="Users" /></viewcomplist>
+</view>
+<view name="GL0054" desc="Users" dllname="GLGSUSR">
+<viewtablelist>
+<table name="GLGSUSR" desc="Users" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0052" desc="Segment Permissions" /><viewcomp name="GL0053" desc="Account Permissions" /></viewcomplist>
+</view>
+<view name="GL0055" desc="Account Groups" dllname="GLACGRP">
+<viewtablelist>
+<table name="GLACGRP" desc="Account Groups" />
+</viewtablelist>
+</view>
+<view name="GL0056" desc="Account Group-Sort Orders" dllname="GLCHAGP">
+<viewtablelist>
+<table name="GLCHAGP" desc="Account Group-Sort Orders" />
+</viewtablelist>
+</view>
+<view name="GL0057" desc="Rollup Groups" dllname="GLACHD">
+<viewtablelist>
+<table name="GLACHD" desc="Rollup Groups" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0001" desc="Accounts" /></viewcomplist>
+</view>
+<view name="GL0058" desc="Rollup Group Relationship" dllname="GLADSD">
+<viewtablelist>
+<table name="GLADSD" desc="Rollup Group Relationship" />
+</viewtablelist>
+</view>
+<view name="GL0059" desc="Rollup Group Processor" dllname="GLACHDU">
+<viewtablelist>
+<table name="GLACHDU" desc="Rollup Group Processor" />
+</viewtablelist>
+</view>
+<view name="GL0060" desc="Source Currency Inq. Processor" dllname="GLSCURI">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0061" desc="Recognized Revaluation Restart" dllname="GLRVNET">
+<viewtablelist>
+<table name="GLRVNET" desc="Recognized Revaluation Restart" />
+</viewtablelist>
+</view>
+<view name="GL0062" desc="Recognized Reval. Rate Restart" dllname="GLRVRAT">
+<viewtablelist>
+<table name="GLRVRAT" desc="Recognized Reval. Rate Restart" />
+</viewtablelist>
+</view>
+<view name="GL0063" desc="Rollup Member Preview" dllname="GLPACHD">
+<viewtablelist>
+<table name="GLPACHD" desc="Rollup Member Preview" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0001" desc="Accounts" /></viewcomplist>
+</view>
+<view name="GL0065" desc="FR RollUP Tester" dllname="FRRAMF">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0066" desc="Rollup Posted Transactions" dllname="GLRPOST">
+<viewtablelist>
+<table name="GLRPOST" desc="Rollup Posted Transactions" />
+</viewtablelist>
+</view>
+<view name="GL0067" desc="Financial Summary Processor" dllname="GLFSUM">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0100" desc="Accounts" dllname="GLAMF">
+<viewtablelist>
+<table name="GLAMF" desc="Accounts" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0003" desc="Fiscal Sets" /><viewcomp name="GL0004" desc="Account Allocation Instructions" /><viewcomp name="GL0012" desc="Account Valid Currencies" /><viewcomp name="GL0023" desc="Structure Codes" /><viewcomp name="GL0107" desc="Control Account Subledgers" /><viewcomp name="GL0400" desc="Account Optional Fields" /><viewcomp name="GL0401" desc="Account Trans. Optional Fields" /><viewcomp name="GL0057" desc="Rollup Groups" /><viewcomp name="GL0063" desc="Rollup Member Preview" /></viewcomplist>
+</view>
+<view name="GL0101" desc="Fiscal Sets" dllname="GLFISC">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0102" desc="General Ledger Options" dllname="GLOPT">
+<viewtablelist>
+<table name="GL01" desc="General Ledger Options" />
+</viewtablelist>
+</view>
+<view name="GL0103" desc="Account Fiscal Sets" dllname="GLAFS">
+<viewtablelist>
+<table name="GLAFS" desc="Account Fiscal Sets" />
+</viewtablelist>
+</view>
+<view name="GL0104" desc="Revaluation Details" dllname="GLRVL">
+<viewtablelist>
+<table name="GLRVL" desc="Revaluation Details" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0410" desc="Reval. Dtls Gain Optional Flds" /><viewcomp name="GL0411" desc="Reval. Dtls Loss Optional Flds" /></viewcomplist>
+</view>
+<view name="GL0106" desc="General Ledger Activation" dllname="GLINIT">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0107" desc="Control Account Subledgers" dllname="GLCAS">
+<viewtablelist>
+<table name="GLCAS" desc="Control Account Subledgers" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0001" desc="Accounts" /></viewcomplist>
+</view>
+<view name="GL0108" desc="Posting Journal ICT Generated Headers" dllname="GLPJIH">
+<viewtablelist>
+<table name="GLPJIH" desc="Posting Journal ICT Generated Headers" />
+</viewtablelist>
+</view>
+<view name="GL0109" desc="Posting Journal ICT Generated Details" dllname="GLPJID">
+<viewtablelist>
+<table name="GLPJID" desc="Posting Journal ICT Generated Details" />
+</viewtablelist>
+</view>
+<view name="GL0110" desc="Accounts" dllname="FRAMF">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0111" desc="Drill Down From FR" dllname="FRDRILL">
+<viewtablelist>
+</viewtablelist>
+</view>
+<view name="GL0400" desc="Account Optional Fields" dllname="GLAMFO">
+<viewtablelist>
+<table name="GLAMFO" desc="Account Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0001" desc="Accounts" /></viewcomplist>
+</view>
+<view name="GL0401" desc="Account Trans. Optional Fields" dllname="GLAMFTO">
+<viewtablelist>
+<table name="GLAMFTO" desc="Account Trans. Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0001" desc="Accounts" /></viewcomplist>
+</view>
+<view name="GL0402" desc="Journal Detail Optional Fields" dllname="GLJEDO">
+<viewtablelist>
+<table name="GLJEDO" desc="Journal Detail Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0010" desc="Journal Details" /></viewcomplist>
+</view>
+<view name="GL0403" desc="Recur. Entry Optional Fields" dllname="GLREDO">
+<viewtablelist>
+<table name="GLREDO" desc="Recur. Entry Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0042" desc="Recurring Entry Details" /></viewcomplist>
+</view>
+<view name="GL0404" desc="Posting Journal Optional Fields" dllname="GLPJDO">
+<viewtablelist>
+<table name="GLPJDO" desc="Posting Journal Optional Fields" />
+</viewtablelist>
+</view>
+<view name="GL0405" desc="Posted Trans. Optional Fields" dllname="GLPOSTO">
+<viewtablelist>
+<table name="GLPOSTO" desc="Posted Trans. Optional Fields" />
+</viewtablelist>
+</view>
+<view name="GL0406" desc="Prov. Post Journal Opt. Fields" dllname="GLPPDO">
+<viewtablelist>
+<table name="GLPPDO" desc="Prov. Post Journal Opt. Fields" />
+</viewtablelist>
+</view>
+<view name="GL0407" desc="Account Optional Fields" dllname="GLWAMFO">
+<viewtablelist>
+<table name="GLWAMFO" desc="Account Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0046" desc="Preview Accounts" /></viewcomplist>
+</view>
+<view name="GL0408" desc="Account Trans. Optional Fields" dllname="GLWAMTO">
+<viewtablelist>
+<table name="GLWAMTO" desc="Account Trans. Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0046" desc="Preview Accounts" /></viewcomplist>
+</view>
+<view name="GL0409" desc="Auto Alloc. Optional Fields" dllname="GLJALO">
+<viewtablelist>
+<table name="GLJALO" desc="Auto Alloc. Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0029" desc="Auto Allocation Processor" /></viewcomplist>
+</view>
+<view name="GL0410" desc="Reval. Dtls Gain Optional Flds" dllname="GLRVLGO">
+<viewtablelist>
+<table name="GLRVLGO" desc="Reval. Dtls Gain Optional Flds" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0104" desc="Revaluation Details" /></viewcomplist>
+</view>
+<view name="GL0411" desc="Reval. Dtls Loss Optional Flds" dllname="GLRVLLO">
+<viewtablelist>
+<table name="GLRVLLO" desc="Reval. Dtls Loss Optional Flds" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0104" desc="Revaluation Details" /></viewcomplist>
+</view>
+<view name="GL0500" desc="Optional Fields" dllname="GLOFD">
+<viewtablelist>
+<table name="GLOFD" desc="Optional Fields" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0501" desc="Optional Field Locations" /></viewcomplist>
+</view>
+<view name="GL0501" desc="Optional Field Locations" dllname="GLOFH">
+<viewtablelist>
+<table name="GLOFH" desc="Optional Field Locations" />
+</viewtablelist>
+<viewcomplist>
+<viewcomp name="GL0500" desc="Optional Fields" /></viewcomplist>
+</view>
+<view name="GL0502" desc="GL Optional Field Callbacks" dllname="GLOFCMD">
+<viewtablelist>
+</viewtablelist>
+</view>
+</viewlist>
+<tablelist>
+<table name="GL01" desc="General Ledger Options">
+<view name="GL0005" desc="General Ledger Options" />
+</table>
+<table name="GLABK" desc="Account Segments">
+<view name="GL0022" desc="Account Segments" />
+</table>
+<table name="GLABRX" desc="Structure Codes">
+<view name="GL0023" desc="Structure Codes" />
+</table>
+<table name="GLACGRP" desc="Account Groups">
+<view name="GL0055" desc="Account Groups" />
+</table>
+<table name="GLACHD" desc="Rollup Groups">
+<view name="GL0057" desc="Rollup Groups" />
+</table>
+<table name="GLACHDU" desc="Rollup Group Processor">
+<view name="GL0059" desc="Rollup Group Processor" />
+</table>
+<table name="GLADSD" desc="Rollup Group Relationship">
+<view name="GL0058" desc="Rollup Group Relationship" />
+</table>
+<table name="GLAFS" desc="Account Fiscal Sets">
+<view name="GL0103" desc="Account Fiscal Sets" />
+</table>
+<table name="GLAIS" desc="Account Allocation Instructions">
+<view name="GL0004" desc="Account Allocation Instructions" />
+</table>
+<table name="GLAMF" desc="Accounts">
+<view name="GL0001" desc="Accounts" />
+</table>
+<table name="GLAMFO" desc="Account Optional Fields">
+<view name="GL0400" desc="Account Optional Fields" />
+</table>
+<table name="GLAMFTO" desc="Account Trans. Optional Fields">
+<view name="GL0401" desc="Account Trans. Optional Fields" />
+</table>
+<table name="GLASV" desc="Segment Codes">
+<view name="GL0021" desc="Segment Codes" />
+</table>
+<table name="GLAVC" desc="Account Valid Currencies">
+<view name="GL0012" desc="Account Valid Currencies" />
+</table>
+<table name="GLBCTL" desc="Batches">
+<view name="GL0008" desc="Batches" />
+</table>
+<table name="GLCAS" desc="Control Account Subledgers">
+<view name="GL0107" desc="Control Account Subledgers" />
+</table>
+<table name="GLCHAGP" desc="Account Group-Sort Orders">
+<view name="GL0056" desc="Account Group-Sort Orders" />
+</table>
+<table name="GLGSACC" desc="Account Permissions">
+<view name="GL0053" desc="Account Permissions" />
+</table>
+<table name="GLGSSEG" desc="Segment Permissions">
+<view name="GL0052" desc="Segment Permissions" />
+</table>
+<table name="GLGSUSR" desc="Users">
+<view name="GL0054" desc="Users" />
+</table>
+<table name="GLJAL" desc="Auto Allocation Processor">
+<view name="GL0029" desc="Auto Allocation Processor" />
+</table>
+<table name="GLJALO" desc="Auto Alloc. Optional Fields">
+<view name="GL0409" desc="Auto Alloc. Optional Fields" />
+</table>
+<table name="GLJEC" desc="Journal Comments">
+<view name="GL0007" desc="Journal Comments" />
+</table>
+<table name="GLJED" desc="Journal Details">
+<view name="GL0010" desc="Journal Details" />
+</table>
+<table name="GLJEDO" desc="Journal Detail Optional Fields">
+<view name="GL0402" desc="Journal Detail Optional Fields" />
+</table>
+<table name="GLJEH" desc="Journal Headers">
+<view name="GL0006" desc="Journal Headers" />
+</table>
+<table name="GLOFD" desc="Optional Fields">
+<view name="GL0500" desc="Optional Fields" />
+</table>
+<table name="GLOFH" desc="Optional Field Locations">
+<view name="GL0501" desc="Optional Field Locations" />
+</table>
+<table name="GLPACHD" desc="Rollup Member Preview">
+<view name="GL0063" desc="Rollup Member Preview" />
+</table>
+<table name="GLPAMF" desc="Create Accounts Input Criteria">
+<view name="GL0049" desc="Create Accounts Input Criteria" />
+</table>
+<table name="GLPERR" desc="Posting Errors">
+<view name="GL0015" desc="Posting Errors" />
+</table>
+<table name="GLPJC" desc="Posting Journal Comments">
+<view name="GL0017" desc="Posting Journal Comments" />
+</table>
+<table name="GLPJD" desc="Posting Journal Details">
+<view name="GL0016" desc="Posting Journal Details" />
+</table>
+<table name="GLPJDO" desc="Posting Journal Optional Fields">
+<view name="GL0404" desc="Posting Journal Optional Fields" />
+</table>
+<table name="GLPJID" desc="Posting Journal ICT Generated Details">
+<view name="GL0109" desc="Posting Journal ICT Generated Details" />
+</table>
+<table name="GLPJIH" desc="Posting Journal ICT Generated Headers">
+<view name="GL0108" desc="Posting Journal ICT Generated Headers" />
+</table>
+<table name="GLPOST" desc="Posted Transactions">
+<view name="GL0018" desc="Posted Transactions" />
+</table>
+<table name="GLPOSTO" desc="Posted Trans. Optional Fields">
+<view name="GL0405" desc="Posted Trans. Optional Fields" />
+</table>
+<table name="GLPPC" desc="Prov. Posting Journal Comments">
+<view name="GL0028" desc="Prov. Posting Journal Comments" />
+</table>
+<table name="GLPPD" desc="Prov. Posting Journal Details">
+<view name="GL0014" desc="Prov. Posting Journal Details" />
+</table>
+<table name="GLPPDO" desc="Prov. Post Journal Opt. Fields">
+<view name="GL0406" desc="Prov. Post Journal Opt. Fields" />
+</table>
+<table name="GLPPER" desc="Provisional Posting Errors">
+<view name="GL0013" desc="Provisional Posting Errors" />
+</table>
+<table name="GLRED" desc="Recurring Entry Details">
+<view name="GL0042" desc="Recurring Entry Details" />
+</table>
+<table name="GLREDO" desc="Recur. Entry Optional Fields">
+<view name="GL0403" desc="Recur. Entry Optional Fields" />
+</table>
+<table name="GLREH" desc="Recurring Journal Headers">
+<view name="GL0041" desc="Recurring Journal Headers" />
+</table>
+<table name="GLRPOST" desc="Rollup Posted Transactions">
+<view name="GL0066" desc="Rollup Posted Transactions" />
+</table>
+<table name="GLRSTRT" desc="General Ledger Restart">
+<view name="GL0040" desc="General Ledger Restart" />
+</table>
+<table name="GLRVAL" desc="Revaluation Codes">
+<view name="GL0020" desc="Revaluation Codes" />
+</table>
+<table name="GLRVL" desc="Revaluation Details">
+<view name="GL0104" desc="Revaluation Details" />
+</table>
+<table name="GLRVLGO" desc="Reval. Dtls Gain Optional Flds">
+<view name="GL0410" desc="Reval. Dtls Gain Optional Flds" />
+</table>
+<table name="GLRVLLO" desc="Reval. Dtls Loss Optional Flds">
+<view name="GL0411" desc="Reval. Dtls Loss Optional Flds" />
+</table>
+<table name="GLRVNET" desc="Recognized Revaluation Restart">
+<view name="GL0061" desc="Recognized Revaluation Restart" />
+</table>
+<table name="GLRVRAT" desc="Recognized Reval. Rate Restart">
+<view name="GL0062" desc="Recognized Reval. Rate Restart" />
+</table>
+<table name="GLSJN" desc="Source Journal Profiles">
+<view name="GL0019" desc="Source Journal Profiles" />
+</table>
+<table name="GLSRCE" desc="Source Codes">
+<view name="GL0002" desc="Source Codes" />
+</table>
+<table name="GLWAMF" desc="Preview Accounts">
+<view name="GL0046" desc="Preview Accounts" />
+</table>
+<table name="GLWAMFO" desc="Account Optional Fields">
+<view name="GL0407" desc="Account Optional Fields" />
+</table>
+<table name="GLWAMTO" desc="Account Trans. Optional Fields">
+<view name="GL0408" desc="Account Trans. Optional Fields" />
+</table>
+<table name="GLWAVC" desc="Preview A/C Valid Currencies">
+<view name="GL0047" desc="Preview A/C Valid Currencies" />
+</table>
+<table name="GLWCAS" desc="Preview Control A/C Subledgers">
+<view name="GL0048" desc="Preview Control A/C Subledgers" />
+</table>
+</tablelist>
+<objectlist>
+<object name="GLACCOUNT">
+<protocolflag type="Protocol" value="ORD7" desc="ORD7" />
+<objectviewlist>
+<objectview name="GL0001" desc="Accounts" />
+<objectview name="GL0004" desc="Account Allocation Instructions" />
+<objectview name="GL0012" desc="Account Valid Currencies" />
+<objectview name="GL0107" desc="Control Account Subledgers" />
+<objectview name="GL0400" desc="Account Optional Fields" />
+<objectview name="GL0401" desc="Account Trans. Optional Fields" />
+<objectview name="GL0057" desc="Rollup Groups" />
+<objectview name="GL0063" desc="Rollup Member Preview" />
+</objectviewlist>
+</object>
+<object name="GLACCOUNTI">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="GL0001" desc="Accounts" />
+</objectviewlist>
+</object>
+<object name="GLACCTGRP">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="GL0055" desc="Account Groups" />
+</objectviewlist>
+</object>
+<object name="GLALLOCJE">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="GL0029" desc="Auto Allocation Processor" />
+</objectviewlist>
+</object>
+<object name="GLBATCH">
+<protocolflag type="Protocol" value="BATCH2" desc="BATCH2" />
+<objectviewlist>
+<objectview name="GL0008" desc="Batches" />
+<objectview name="GL0006" desc="Journal Headers" />
+<objectview name="GL0010" desc="Journal Details" />
+<objectview name="GL0402" desc="Journal Detail Optional Fields" />
+</objectviewlist>
+</object>
+<object name="GLBCTU">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="GL0032" desc="Batch Status" />
+</objectviewlist>
+</object>
+<object name="GLBREAKOUT">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="GL0023" desc="Structure Codes" />
+</objectviewlist>
+</object>
+<object name="GLCONSOL">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="GL0025" desc="Consolidate Posted Transactions" />
+</objectviewlist>
+</object>
+<object name="GLCRE">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="GL0043" desc="Create Recurring Entries Batch" />
+</objectviewlist>
+</object>
+<object name="GLFISCSET">
+<protocolflag type="Protocol" value="SET" desc="SET" />
+<objectviewlist>
+<objectview name="GL0003" desc="Fiscal Sets" />
+</objectviewlist>
+</object>
+<object name="GLINTCHK">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="GL0034" desc="Integrity Checker" />
+</objectviewlist>
+</object>
+<object name="GLJRNLPROF">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="GL0019" desc="Source Journal Profiles" />
+</objectviewlist>
+</object>
+<object name="GLNEWYEAR">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="GL0026" desc="Create New Year" />
+</objectviewlist>
+</object>
+<object name="GLOPTFLDS">
+<protocolflag type="Protocol" value="ORDERED" desc="ORDERED" />
+<objectviewlist>
+<objectview name="GL0501" desc="Optional Field Locations" />
+<objectview name="GL0500" desc="Optional Fields" />
+</objectviewlist>
+</object>
+<object name="GLOPTIONS">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="GL0005" desc="General Ledger Options" />
+</objectviewlist>
+</object>
+<object name="GLPJDU">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="GL0033" desc="Posting Journal Update/Clear" />
+</objectviewlist>
+</object>
+<object name="GLPOST">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="GL0030" desc="Post Journal" />
+</objectviewlist>
+</object>
+<object name="GLREH">
+<protocolflag type="Protocol" value="ORD2" desc="ORD2" />
+<objectviewlist>
+<objectview name="GL0041" desc="Recurring Journal Headers" />
+<objectview name="GL0042" desc="Recurring Entry Details" />
+<objectview name="GL0403" desc="Recur. Entry Optional Fields" />
+</objectviewlist>
+</object>
+<object name="GLREVALUE">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="GL0027" desc="Currency Revaluation" />
+</objectviewlist>
+</object>
+<object name="GLRVALCODE">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="GL0020" desc="Revaluation Codes" />
+</objectviewlist>
+</object>
+<object name="GLSEGMENT">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="GL0022" desc="Account Segments" />
+</objectviewlist>
+</object>
+<object name="GLSOURCE">
+<protocolflag type="Protocol" value="FLAT" desc="FLAT" />
+<objectviewlist>
+<objectview name="GL0002" desc="Source Codes" />
+</objectviewlist>
+</object>
+<object name="GLVALIDSEG">
+<protocolflag type="Protocol" value="SET" desc="SET" />
+<objectviewlist>
+<objectview name="GL0021" desc="Segment Codes" />
+</objectviewlist>
+</object>
+<object name="GLYRMAINT">
+<protocolflag type="Protocol" value="SUPER" desc="SUPER" />
+<objectviewlist>
+<objectview name="GL0024" desc="Period End Maintenance" />
+</objectviewlist>
+</object>
+</objectlist>
+</application>
+<footer />
+</pagebody>
+</page>

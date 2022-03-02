@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0190 ICBOMD ICBOMD</keywords>
+<pagetitle>Bills of Material Components</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICBOMD" desc="Bills of Material Components">
+<view name="IC0190" desc="Bills of Material Components" />
+<recordlength>118</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Bills of Material Component</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield><keyfield>BOMNO</keyfield><keyfield>LINENO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Component Item Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>COMPONENT</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Comp. Item/Comp. BOM Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>COMPONENT</keyfield><keyfield>COMPBOMNO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Comp. Item, ItemNo, BOM Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>COMPONENT</keyfield><keyfield>ITEMNO</keyfield><keyfield>BOMNO</keyfield><keyfield>LINENO</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Master Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>BOMNO</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>BOM Number</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LINENO</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>COMPONENT</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Component Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>QTY</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity</fielddesc>
+</field>
+<field>
+<fieldname>UNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Unit of Measure</fielddesc>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>UNITCOST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Unit Cost</fielddesc>
+</field>
+<field>
+<fieldname>COMPBOMNO</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Component BOM Number</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>COPYDETAIL</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Copy Detail</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PM PM0120 PMRES PMRES</keywords>
+<pagetitle>^1 Resources</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="PMRES" desc="^1 Resources">
+<view name="PM0120" desc="^1 Resources" />
+<recordlength>731</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Contract Uniquifier/Line Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CTUNIQ</keyfield><keyfield>PLINENUM</keyfield><keyfield>CLINENUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Contract Uniquifier/Detail Numbe</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CTUNIQ</keyfield><keyfield>DNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Contract/Project/Category</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CONTRACT</keyfield><keyfield>PROJECT</keyfield><keyfield>RESOURCE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Type/Contract/Project/Category</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TYPE</keyfield><keyfield>CONTRACT</keyfield><keyfield>PROJECT</keyfield><keyfield>RESOURCE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CTUNIQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>^1 Uniq</fielddesc>
+</field>
+<field>
+<fieldname>PLINENUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Project Line Number</fielddesc>
+</field>
+<field>
+<fieldname>CLINENUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>CONTRACT</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>^1</fielddesc>
+<mask>%-16C</mask></field>
+<field>
+<fieldname>PROJECT</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>^2</fielddesc>
+<mask>%-16N</mask></field>
+<field>
+<fieldname>DETAILNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>^2 Detail Number</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTMN</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Maintained</fielddesc>
+</field>
+<field>
+<fieldname>DNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Detail Number</fielddesc>
+</field>
+<field>
+<fieldname>TYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Cost Class</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Labor" /><fieldpresent index="2" value="Material" /><fieldpresent index="3" value="Equipment" /><fieldpresent index="4" value="Subcontractor" /><fieldpresent index="5" value="Overhead" /><fieldpresent index="6" value="Miscellaneous" /></fieldpresentlist></field>
+<field>
+<fieldname>RESOURCE</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc></fielddesc>
+<mask>%-16N</mask></field>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Unformatted Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>NAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Name</fielddesc>
+</field>
+<field>
+<fieldname>COMMENT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>ORJQTY</fieldname>
+<fieldtype>BCD*10.5</fieldtype>
+<fielddesc>Quantity</fielddesc>
+</field>
+<field>
+<fieldname>CURQTY</fieldname>
+<fieldtype>BCD*10.5</fieldtype>
+<fielddesc>Current Quantity Estimate</fielddesc>
+</field>
+<field>
+<fieldname>ACTQTY</fieldname>
+<fieldtype>BCD*10.5</fieldtype>
+<fielddesc>Actual Quantity</fielddesc>
+</field>
+<field>
+<fieldname>ORJCOSTSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>ORJCOSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Cost</fielddesc>
+</field>
+<field>
+<fieldname>CURCOSTSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>CURCOSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Current Cost Estimate</fielddesc>
+</field>
+<field>
+<fieldname>ACTCOSTSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>ACTCOSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Actual Cost</fielddesc>
+</field>
+<field>
+<fieldname>ORJOHSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>ORJOHHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Original Overhead Estimate</fielddesc>
+</field>
+<field>
+<fieldname>CUROHSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>CUROHHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Current Overhead Estimate</fielddesc>
+</field>
+<field>
+<fieldname>ACTOHSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>ACTOHHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Actual Overhead</fielddesc>
+</field>
+<field>
+<fieldname>ORJBILLSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Revenue</fielddesc>
+</field>
+<field>
+<fieldname>ORJBILLHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Revenue</fielddesc>
+</field>
+<field>
+<fieldname>CURBILLSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Current Revenue Estimate</fielddesc>
+</field>
+<field>
+<fieldname>CURBILLHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Current Revenue Estimate</fielddesc>
+</field>
+<field>
+<fieldname>ACTBILLSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Actual Revenue</fielddesc>
+</field>
+<field>
+<fieldname>ACTBILLHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Actual Revenue</fielddesc>
+</field>
+<field>
+<fieldname>ORJLABORSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>ORJLABORHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Original Labor Amount Estimate</fielddesc>
+</field>
+<field>
+<fieldname>CURLABORSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>CURLABORHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Current Labor Amount Estimate</fielddesc>
+</field>
+<field>
+<fieldname>ACTLABORSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>ACTLABORHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Actual Labor Amount</fielddesc>
+</field>
+<field>
+<fieldname>BILLAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Expected Billings</fielddesc>
+</field>
+<field>
+<fieldname>ODATEFROM</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Projected Start Date</fielddesc>
+</field>
+<field>
+<fieldname>ODATETO</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Projected End Date</fielddesc>
+</field>
+<field>
+<fieldname>CDATEFROM</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Current Start Date</fielddesc>
+</field>
+<field>
+<fieldname>CDATETO</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Current End Date</fielddesc>
+</field>
+<field>
+<fieldname>POQTY</fieldname>
+<fieldtype>BCD*10.5</fieldtype>
+<fielddesc>Committed P/O Quantity</fielddesc>
+</field>
+<field>
+<fieldname>POCOSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Committed P/O Cost</fielddesc>
+</field>
+<field>
+<fieldname>POOHHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Committed P/O Overhead</fielddesc>
+</field>
+<field>
+<fieldname>POLABORHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Committed P/O Labor</fielddesc>
+</field>
+<field>
+<fieldname>POTCOSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Committed P/O Total Cost</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>TCUNITCOST</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc></fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Use Default PJC Option" /><fieldpresent index="1" value="Payroll" /><fieldpresent index="2" value="PJC Employee Setup" /><fieldpresent index="6" value="Resource Category" /></fieldpresentlist></field>
+<field>
+<fieldname>TCBILLRATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc></fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Use Default PJC Option" /><fieldpresent index="2" value="PJC Employee Setup" /><fieldpresent index="6" value="Resource Category" /></fieldpresentlist></field>
+<field>
+<fieldname>STRDQTY</fieldname>
+<fieldtype>BCD*10.5</fieldtype>
+<fielddesc>Stored Quantity</fielddesc>
+</field>
+<field>
+<fieldname>STRDCOSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Stored Cost</fielddesc>
+</field>
+<field>
+<fieldname>STRDBILLSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Stored Billable Amount</fielddesc>
+</field>
+<field>
+<fieldname>PRECOLEDSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Previous Completed Work</fielddesc>
+</field>
+<field>
+<fieldname>STRDOHHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Overhead Amount</fielddesc>
+</field>
+<field>
+<fieldname>STRDTCSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Stored Cost</fielddesc>
+</field>
+<field>
+<fieldname>TXEXPCOMHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax (exp) Committed (func)</fielddesc>
+</field>
+<field>
+<fieldname>TXALLCOMHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Tax (all) Committed (func)</fielddesc>
+</field>
+<field>
+<fieldname>PREAIAPAY</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Previous Certificates for Payment</fielddesc>
+</field>
+<field>
+<fieldname>PRESTORED</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>G703 Column F from Last AIA Report</fielddesc>
+</field>
+<field>
+<fieldname>PRERETAIN</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>G703 Column I from Last AIA Report</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>GL GL0103 GLAFS GLAFS</keywords>
+<pagetitle>Account Fiscal Sets</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Account Fiscal Sets</title>
+<rotoid>GL0103</rotoid>
+<tablelist>
+<table name="GLAFS" desc="Account Fiscal Sets" />
+</tablelist>
+<protocollist>
+<protocol>Flat</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>GLAFS</dllname>
+<keylist>
+<key>
+<keytitle>Account Fiscal Set</keytitle>
+<keyfieldlist>
+<keyfield>ACCTID</keyfield>
+<keyfield>FSCSYR</keyfield>
+<keyfield>FSCSDSG</keyfield>
+<keyfield>FSCSCURN</keyfield>
+<keyfield>CURNTYPE</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Fiscal Set Designator</keytitle>
+<keyfieldlist>
+<keyfield>FSCSDSG</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ACCTID</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Account Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>FSCSYR</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal set year</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FSCSDSG</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Fiscal set Designator</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index=" A" value="Actuals" /><fieldpresent index=" Q" value="Quantity" /><fieldpresent index=" R" value="Reporting" /><fieldpresent index=" P" value="Provisional Actuals" /><fieldpresent index=" O" value="Provisional Quantity" /><fieldpresent index=" T" value="Provisional Reporting" /><fieldpresent index=" 1" value="Budget 1" /><fieldpresent index=" 2" value="Budget 2" /><fieldpresent index=" 3" value="Budget 3" /><fieldpresent index=" 4" value="Budget 4" /><fieldpresent index=" 5" value="Budget 5" /></fieldpresentlist></field>
+<field>
+<fieldname>FSCSCURN</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>CURNTYPE</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Currency type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index=" S" value="Source" /><fieldpresent index=" E" value="Equivalent" /><fieldpresent index=" F" value="Functional" /></fieldpresentlist></field>
+<field>
+<fieldname>SWRVL</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>RESERVED Revaluation switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>CODERVL</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>RESERVED Revaluation code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SCURNDEC</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Source currency decimals</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>OPENBAL</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Beginning balance</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD1</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 01 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD2</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 02 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD3</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 03 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD4</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 04 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD5</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 05 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD6</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 06 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD7</fieldname>
+<fieldindex>16</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 07 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD8</fieldname>
+<fieldindex>17</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 08 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD9</fieldname>
+<fieldindex>18</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 09 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD10</fieldname>
+<fieldindex>19</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 10 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD11</fieldname>
+<fieldindex>20</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 11 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD12</fieldname>
+<fieldindex>21</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 12 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD13</fieldname>
+<fieldindex>22</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 13 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD14</fieldname>
+<fieldindex>23</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 14 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>NETPERD15</fieldname>
+<fieldindex>24</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Period 15 net amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="T" desc="Type" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ACTIVITYSW</fieldname>
+<fieldindex>25</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Activity switch</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Inactive" /><fieldpresent index="1" value="Periods Active" /><fieldpresent index="2" value="Balance Forward Active" /></fieldpresentlist></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

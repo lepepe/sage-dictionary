@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0419 POINVG</keywords>
+<pagetitle>Invoice Functions</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Invoice Functions</title>
+<rotoid>PO0419</rotoid>
+<protocollist>
+<protocol>Superview</protocol></protocollist>
+<dllname>POINVG</dllname>
+<compositionlist>
+<composition>
+<comprotoid>PO0420</comprotoid>
+<compdesc>Invoices</compdesc>
+<compdll>POINVH</compdll>
+<comptablelist>
+<comptable name="POINVH1" desc="Invoices" />
+<comptable name="POINVH2" desc="Invoices" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0416</comprotoid>
+<compdesc>Invoice Comments</compdesc>
+<compdll>POINVC</compdll>
+<comptablelist>
+<comptable name="POINVC" desc="Invoice Comments" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0430</comprotoid>
+<compdesc>Invoice Lines</compdesc>
+<compdll>POINVL</compdll>
+<comptablelist>
+<comptable name="POINVL" desc="Invoice Lines" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0436</comprotoid>
+<compdesc>Invoice Payment Schedules</compdesc>
+<compdll>POINVP</compdll>
+<comptablelist>
+<comptable name="POINVP" desc="Invoice Payment Schedules" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0440</comprotoid>
+<compdesc>Invoice Additional Costs</compdesc>
+<compdll>POINVS</compdll>
+<comptablelist>
+<comptable name="POINVS" desc="Invoice Additional Costs" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0438</comprotoid>
+<compdesc>Invoice Receipts</compdesc>
+<compdll>POINVR</compdll>
+<comptablelist>
+<comptable name="POINVR" desc="Invoice Receipts" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0444</comprotoid>
+<compdesc>Inv. Add. Costs Superview</compdesc>
+<compdll>POINVW</compdll>
+<comptablelist>
+<comptable name="POINVS" desc="Inv. Add. Costs Superview" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0415</comprotoid>
+<compdesc>Invoice Cost Distributions</compdesc>
+<compdll>POINVD</compdll>
+<comptablelist>
+<comptable name="POINVD" desc="Invoice Cost Distributions" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>INVHSEQ</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Invoice Sequence Key</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LOADSEQ</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Sequence to Retrieve</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>VDCODE</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>LOADRCPNUM</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Receipt Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>LOADRETNUM</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Return Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>NEWTERMS</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>New Terms Code Entered?</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>TERMSCALC</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Schedule Calculation Method</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Calculate Terms Dates Only" /><fieldpresent index="2" value="Calculate Terms Amounts Only" /><fieldpresent index="3" value="Calculate Terms Dates and Amounts" /></fieldpresentlist></field>
+<field>
+<fieldname>PREADTSTMP</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Predecessor Time-stamp</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>FUNCTION</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Function</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

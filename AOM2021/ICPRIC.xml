@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0480 ICPRIC ICPRIC</keywords>
+<pagetitle>Item Pricing</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICPRIC" desc="Item Pricing">
+<view name="IC0480" desc="Item Pricing" />
+<recordlength>537</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Currency Code</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CURRENCY</keyfield><keyfield>ITEMNO</keyfield><keyfield>PRICELIST</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Item Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield><keyfield>CURRENCY</keyfield><keyfield>PRICELIST</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Price List Code</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>CURRENCY</keyfield><keyfield>PRICELIST</keyfield><keyfield>ITEMNO</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>CURRENCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency Code</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Unformatted Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>PRICELIST</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Price List Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>PRICEDECS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Decimals in Price</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value=" 0" /><fieldpresent index="1" value=" 1" /><fieldpresent index="2" value=" 2" /><fieldpresent index="3" value=" 3" /><fieldpresent index="4" value=" 4" /><fieldpresent index="5" value=" 5" /><fieldpresent index="6" value=" 6" /></fieldpresentlist></field>
+<field>
+<fieldname>MARKUPCOST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Markup Cost</fielddesc>
+</field>
+<field>
+<fieldname>MARKUPUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Markup Unit of Measure</fielddesc>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>MARKUPCONV</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Markup Conversion Factor</fielddesc>
+</field>
+<field>
+<fieldname>PRICETYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Selling Price Based on</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Discount" /><fieldpresent index="2" value="Markup on Markup Cost" /><fieldpresent index="3" value="Markup on Standard Cost" /><fieldpresent index="4" value="Markup on Most Recent Cost" /><fieldpresent index="5" value="Markup on Average Cost" /><fieldpresent index="6" value="Markup on Last Unit Cost" /><fieldpresent index="7" value="Markup on Landed" /></fieldpresentlist></field>
+<field>
+<fieldname>PRICEFMT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Discount/Markup Price by</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Percentage" /><fieldpresent index="2" value="Amount" /></fieldpresentlist></field>
+<field>
+<fieldname>PRCNTLVL1</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Discount/Markup Percentage 1</fielddesc>
+</field>
+<field>
+<fieldname>PRCNTLVL2</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Discount/Markup Percentage 2</fielddesc>
+</field>
+<field>
+<fieldname>PRCNTLVL3</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Discount/Markup Percentage 3</fielddesc>
+</field>
+<field>
+<fieldname>PRCNTLVL4</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Discount/Markup Percentage 4</fielddesc>
+</field>
+<field>
+<fieldname>PRCNTLVL5</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Discount/Markup Percentage 5</fielddesc>
+</field>
+<field>
+<fieldname>PRICEBASE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Price Determined by</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Customer Type" /><fieldpresent index="2" value="Volume Discounts" /></fieldpresentlist></field>
+<field>
+<fieldname>PRICEQTY1</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Level 1</fielddesc>
+</field>
+<field>
+<fieldname>PRICEQTY2</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Level 2</fielddesc>
+</field>
+<field>
+<fieldname>PRICEQTY3</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Level 3</fielddesc>
+</field>
+<field>
+<fieldname>PRICEQTY4</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Level 4</fielddesc>
+</field>
+<field>
+<fieldname>PRICEQTY5</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Level 5</fielddesc>
+</field>
+<field>
+<fieldname>MARKUP</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Markup Factor</fielddesc>
+</field>
+<field>
+<fieldname>LASTMKPDT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Markup Cost Change Date</fielddesc>
+</field>
+<field>
+<fieldname>PREVMKPCST</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Previous Markup Cost</fielddesc>
+</field>
+<field>
+<fieldname>LASTEXCHDT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Last Exchange Rate Change Date</fielddesc>
+</field>
+<field>
+<fieldname>PREVEXCHRT</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Previous Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>ROUNDMETHD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rounding Method</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="No Rounding" /><fieldpresent index="2" value="Round Up" /><fieldpresent index="3" value="Round Down" /></fieldpresentlist></field>
+<field>
+<fieldname>ROUNDAMT</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Round to a Multiple of</fielddesc>
+</field>
+<field>
+<fieldname>AMOUNTLVL1</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Discount/Markup Amount 1</fielddesc>
+</field>
+<field>
+<fieldname>AMOUNTLVL2</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Discount/Markup Amount 2</fielddesc>
+</field>
+<field>
+<fieldname>AMOUNTLVL3</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Discount/Markup Amount 3</fielddesc>
+</field>
+<field>
+<fieldname>AMOUNTLVL4</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Discount/Markup Amount 4</fielddesc>
+</field>
+<field>
+<fieldname>AMOUNTLVL5</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Discount/Markup Amount 5</fielddesc>
+</field>
+<field>
+<fieldname>PRICEBY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Price By</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Quantity" /><fieldpresent index="2" value="Weight" /></fieldpresentlist></field>
+<field>
+<fieldname>MRKUPWUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Markup Weight Unit of Measure</fielddesc>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>PRICEWGHT1</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Weight Level 1</fielddesc>
+</field>
+<field>
+<fieldname>PRICEWGHT2</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Weight Level 2</fielddesc>
+</field>
+<field>
+<fieldname>PRICEWGHT3</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Weight Level 3</fielddesc>
+</field>
+<field>
+<fieldname>PRICEWGHT4</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Weight Level 4</fielddesc>
+</field>
+<field>
+<fieldname>PRICEWGHT5</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Weight Level 5</fielddesc>
+</field>
+<field>
+<fieldname>CPRICETYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Price Check Type</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="Warning" /><fieldpresent index="2" value="Error" /><fieldpresent index="3" value="Approval" /></fieldpresentlist></field>
+<field>
+<fieldname>CCHECK</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Unit Price" /><fieldpresent index="2" value="Sales Margin" /></fieldpresentlist></field>
+<field>
+<fieldname>CCHECKBASE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check Base</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Cost Plus a Percentage" /><fieldpresent index="2" value="Cost Plus a Fixed Amount" /><fieldpresent index="3" value="Fixed Amount" /></fieldpresentlist></field>
+<field>
+<fieldname>CBASE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Cost/Margin Base</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Markup Cost" /><fieldpresent index="2" value="Standard Cost" /><fieldpresent index="3" value="Most Recent Cost" /><fieldpresent index="4" value="Average Cost" /><fieldpresent index="5" value="Last Unit Cost" /><fieldpresent index="6" value="Landed" /></fieldpresentlist></field>
+<field>
+<fieldname>DEFBUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Default Base Unit</fielddesc>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>DEFBWUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Default Base Weight Unit</fielddesc>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>DEFSUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Default Sale Unit</fielddesc>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>DEFSWUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Default Sale Weight Unit</fielddesc>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>BPRICETYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Base Price Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Base Price for Single Unit of Measure" /><fieldpresent index="2" value="Base Price for Multiple Units of Measure" /><fieldpresent index="3" value="Base Price Calculated Using a Cost" /></fieldpresentlist></field>
+<field>
+<fieldname>BDEFUSING</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Default Base Price Using</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No Default" /><fieldpresent index="1" value="Cost Plus a Percentage" /><fieldpresent index="2" value="Cost Plus an Amount" /></fieldpresentlist></field>
+<field>
+<fieldname>BLOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Base Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>BBASE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Base Cost Base</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Standard Cost" /><fieldpresent index="2" value="Most Recent Cost" /><fieldpresent index="3" value="Average Cost" /><fieldpresent index="4" value="Last Unit Cost" /><fieldpresent index="5" value="Landed" /></fieldpresentlist></field>
+<field>
+<fieldname>BPERCENT</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Base Percentage</fielddesc>
+</field>
+<field>
+<fieldname>BAMOUNT</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Base Amount</fielddesc>
+</field>
+<field>
+<fieldname>BRATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Base Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>BRATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Base Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>BEXCHRATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Base Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>BRATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Base Rate Operator</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>BRATEOVRRD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Base Rate Overidden</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SPRICETYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sale Price Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Sale Price for Single Unit of Measure" /><fieldpresent index="2" value="Sale Price for Multiple Units of Measure" /><fieldpresent index="3" value="Sale Price Calculated Using a Cost" /></fieldpresentlist></field>
+<field>
+<fieldname>SDEFUSING</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Default Sale Price Using</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No Default" /><fieldpresent index="1" value="Cost Plus a Percentage" /><fieldpresent index="2" value="Cost Plus an Amount" /></fieldpresentlist></field>
+<field>
+<fieldname>SLOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Sale Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SBASE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sale Cost Base</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Standard Cost" /><fieldpresent index="2" value="Most Recent Cost" /><fieldpresent index="3" value="Average Cost" /><fieldpresent index="4" value="Last Unit Cost" /><fieldpresent index="5" value="Landed" /></fieldpresentlist></field>
+<field>
+<fieldname>SPERCENT</fieldname>
+<fieldtype>BCD*5.5</fieldtype>
+<fielddesc>Sale Percentage</fielddesc>
+</field>
+<field>
+<fieldname>SAMOUNT</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Sale Amount</fielddesc>
+</field>
+<field>
+<fieldname>SRATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Sale Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Sale Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>SEXCHRATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Sale Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>SRATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sale Rate Operator</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>SRATEOVRRD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Sale Rate Overidden</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>PRICESTART</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Price List Start Date</fielddesc>
+</field>
+<field>
+<fieldname>PRICEEND</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Price List End Date</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

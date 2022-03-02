@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0380 ICOPT ICOPT</keywords>
+<pagetitle>I/C Options</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICOPT" desc="I/C Options">
+<view name="IC0380" desc="I/C Options" />
+<recordlength>938</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Dummy Key</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DUMMY</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>DUMMY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Dummy Field</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>CONTACT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Contact Name</fielddesc>
+</field>
+<field>
+<fieldname>PHONE</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Phone Number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>FAX</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Fax Number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>FRACTQTY</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Fractional Quantities</fielddesc>
+</field>
+<field>
+<fieldname>NEGQTY</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Negative Quantities</fielddesc>
+</field>
+<field>
+<fieldname>TRANSHIST</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Keep Transaction History</fielddesc>
+</field>
+<field>
+<fieldname>JOBCOST</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Interface With Job Cost</fielddesc>
+</field>
+<field>
+<fieldname>REFCHOICE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>G/L Reference Field</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Document Number" /><fieldpresent index="2" value="Reference Number" /><fieldpresent index="3" value="Source Code/Day End Number/Entry Number" /><fieldpresent index="4" value="Header Description" /><fieldpresent index="5" value="Customer/Vendor Number" /><fieldpresent index="6" value="Customer/Vendor Name" /></fieldpresentlist></field>
+<field>
+<fieldname>DESCCHOICE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>G/L Description Field</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Document Number" /><fieldpresent index="2" value="Reference Number" /><fieldpresent index="3" value="Source Code/Day End Number/Entry Number" /><fieldpresent index="4" value="Header Description" /><fieldpresent index="5" value="Customer/Vendor Number" /><fieldpresent index="6" value="Customer/Vendor Name" /></fieldpresentlist></field>
+<field>
+<fieldname>WEIGHTUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Default Weight Unit of Measure</fielddesc>
+</field>
+<field>
+<fieldname>COST1NAME</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Cost 1 Name</fielddesc>
+</field>
+<field>
+<fieldname>COST2NAME</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Cost 2 Name</fielddesc>
+</field>
+<field>
+<fieldname>DAYEND</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Day End Transactions Outstanding</fielddesc>
+</field>
+<field>
+<fieldname>TRANSNUM</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Next Transaction Number</fielddesc>
+</field>
+<field>
+<fieldname>NXTALTSET</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Alternate Item Set Number</fielddesc>
+</field>
+<field>
+<fieldname>GLDAYEND</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>G/L Trans Created Thru Day End</fielddesc>
+</field>
+<field>
+<fieldname>ADJENSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Adjustment Entry Seq.</fielddesc>
+</field>
+<field>
+<fieldname>ASSMENSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Assembly Entry Seq.</fielddesc>
+</field>
+<field>
+<fieldname>RECENSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Receipt Entry Seq.</fielddesc>
+</field>
+<field>
+<fieldname>SHIPENSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Shipment Entry Seq.</fielddesc>
+</field>
+<field>
+<fieldname>TRANFENSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Transfer Entry Seq.</fielddesc>
+</field>
+<field>
+<fieldname>HISTENSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next History Entry Seq.</fielddesc>
+</field>
+<field>
+<fieldname>DAYENDSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Day End Posting Seq.</fielddesc>
+</field>
+<field>
+<fieldname>MULTICURR</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Multicurrency</fielddesc>
+</field>
+<field>
+<fieldname>DEFERGLPST</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Deferred G/L Posting</fielddesc>
+</field>
+<field>
+<fieldname>APPENDGL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Append To G/L Batch</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Adding to an Existing Batch" /><fieldpresent index="0" value="Creating a New Batch" /><fieldpresent index="2" value="Creating and Posting a New Batch" /></fieldpresentlist></field>
+<field>
+<fieldname>CONSOLGL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Consolidate G/L Batch</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Do Not Consolidate" /><fieldpresent index="9" value="Consolidate Transaction Details by Account" /><fieldpresent index="2" value="Consolidate by Account and Fiscal Period" /><fieldpresent index="3" value="Consolidate by Account, Fiscal Period, and Source" /></fieldpresentlist></field>
+<field>
+<fieldname>STATCALNDR</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Statistics Calendar</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Calendar Year" /><fieldpresent index="2" value="Fiscal Year" /></fieldpresentlist></field>
+<field>
+<fieldname>STATPRD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Statistics Period</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Weekly" /><fieldpresent index="2" value="Seven Days" /><fieldpresent index="3" value="Bi-weekly" /><fieldpresent index="4" value="Four Weeks" /><fieldpresent index="5" value="Monthly" /><fieldpresent index="6" value="Bi-monthly" /><fieldpresent index="7" value="Quarterly" /><fieldpresent index="8" value="Semi-annually" /><fieldpresent index="9" value="Annually" /><fieldpresent index="10" value="Fiscal Period" /></fieldpresentlist></field>
+<field>
+<fieldname>STATEDIT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Edit Statistics</fielddesc>
+</field>
+<field>
+<fieldname>CRTITEMLOC</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Items at All Locations</fielddesc>
+</field>
+<field>
+<fieldname>ADDCSTTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Add'l. Cost on Rcpt. Returns</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Leave" /><fieldpresent index="2" value="Prorate" /></fieldpresentlist></field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Default Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>ITEMBRKID</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Item Structure</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>STATACCUM</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Accumulate Item Statistics</fielddesc>
+</field>
+<field>
+<fieldname>PSTTOCLOSD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Post To Closed Fiscal Periods</fielddesc>
+</field>
+<field>
+<fieldname>HYHEN</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Hyhen as Item Separator</fielddesc>
+</field>
+<field>
+<fieldname>FWDSLASH</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Forward Slash as Item Separator</fielddesc>
+</field>
+<field>
+<fieldname>BCKSLASH</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Back Slash as Item Separator</fielddesc>
+</field>
+<field>
+<fieldname>ASTERISK</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Asterisk as Item Separator</fielddesc>
+</field>
+<field>
+<fieldname>PERIOD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Period as Item Separator</fielddesc>
+</field>
+<field>
+<fieldname>LFTPARENS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Left Parenthesis as Item Separator</fielddesc>
+</field>
+<field>
+<fieldname>RGTPARENS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Right Parenthesis as Item Separator</fielddesc>
+</field>
+<field>
+<fieldname>POUNDSGN</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Pound Sign as Item Separator</fielddesc>
+</field>
+<field>
+<fieldname>RECNONSTK</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Receipt of Non-stock Items</fielddesc>
+</field>
+<field>
+<fieldname>DELPROMPT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Prompt to Delete during Posting</fielddesc>
+</field>
+<field>
+<fieldname>COSTDURING</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Cost During</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Day End Processing" /><fieldpresent index="2" value="Posting" /></fieldpresentlist></field>
+<field>
+<fieldname>ASSNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Assembly Number Length</fielddesc>
+</field>
+<field>
+<fieldname>ASSPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Assembly Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>ASSBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Assembly Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>DASNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Disassembly Number Length</fielddesc>
+</field>
+<field>
+<fieldname>DASPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Disassembly Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>DASBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Disassembly Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>TRFNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transfer Number Length</fielddesc>
+</field>
+<field>
+<fieldname>TRFPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Transfer Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>TRFBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Transfer Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>ADJNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Adjustment Number Length</fielddesc>
+</field>
+<field>
+<fieldname>ADJPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Adjustment Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>ADJBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Adjustment Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>SHPNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Shipment Number Length</fielddesc>
+</field>
+<field>
+<fieldname>SHPPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Shipment Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>SHPBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Shipment Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>SRTNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Shipment Return Number Length</fielddesc>
+</field>
+<field>
+<fieldname>SRTPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Shipment Return Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>SRTBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Shipment Return Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>RCPNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Receipt Number Length</fielddesc>
+</field>
+<field>
+<fieldname>RCPPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Receipt Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>RCPBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Receipt Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>TRCNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transit Receipt Number Length</fielddesc>
+</field>
+<field>
+<fieldname>TRCPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Transit Receipt Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>TRCBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Transit Receipt Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>RECDESEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Non-costed Receipt Day End Seq.</fielddesc>
+</field>
+<field>
+<fieldname>GITLOC</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Goods in Transit Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>DEFUOM</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Only Use Defined UOM</fielddesc>
+</field>
+<field>
+<fieldname>AGING1</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Aging Period 1</fielddesc>
+</field>
+<field>
+<fieldname>AGING2</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Aging Period 2</fielddesc>
+</field>
+<field>
+<fieldname>AGING3</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Aging Period 3</fielddesc>
+</field>
+<field>
+<fieldname>SLAUDURING</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Create Subledger/Audit During</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Day End Processing" /><fieldpresent index="2" value="Posting" /></fieldpresentlist></field>
+<field>
+<fieldname>ICSENSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Next Internal Usage Entry Seq.</fielddesc>
+</field>
+<field>
+<fieldname>ICSNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Internal Usage Number Length</fielddesc>
+</field>
+<field>
+<fieldname>ICSPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Internal Usage Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>ICSBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Internal Usage Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>SRCTYPERC</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>I/C Receipts</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPERR</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>I/C Receipt Returns</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPERA</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>I/C Receipt Adjustments</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPESH</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>I/C Shipments</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPESR</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>I/C Shipment Returns</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPETF</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>I/C Transfers</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEAS</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>I/C Assemblies</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEAD</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>I/C Adjustments</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPECO</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>I/C Consolidated Entry</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEDA</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>I/C Disassemblies</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SRCTYPEIN</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>I/C Internal Usage</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>DATEBUSDFT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Default Posting Date</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Document Date" /><fieldpresent index="2" value="Session Date" /></fieldpresentlist></field>
+<field>
+<fieldname>SERIALMASK</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Serial Number Mask</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SUSEEXPDAY</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Serials Days to Expire</fielddesc>
+</field>
+<field>
+<fieldname>SEXPDAYS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Serials Days to Expire</fielddesc>
+</field>
+<field>
+<fieldname>SDIFQTYOK</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Different Serial Qty</fielddesc>
+</field>
+<field>
+<fieldname>SALCQTYORD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Serial Alloc on Qty Ord.</fielddesc>
+</field>
+<field>
+<fieldname>SSORTBY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sort Serials by</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Serial Number" /><fieldpresent index="2" value="Stock Date" /><fieldpresent index="3" value="Expiry Date" /></fieldpresentlist></field>
+<field>
+<fieldname>SFIRST</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sort Serials First by</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Earliest" /><fieldpresent index="2" value="Latest" /></fieldpresentlist></field>
+<field>
+<fieldname>SEXPLEVEL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Stop Allocation of Expired Serials</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="Warning" /><fieldpresent index="2" value="Error" /></fieldpresentlist></field>
+<field>
+<fieldname>SHYPHEN</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Hyphen as Separator</fielddesc>
+</field>
+<field>
+<fieldname>SFWDSLASH</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Fwd Slash as Separator</fielddesc>
+</field>
+<field>
+<fieldname>SBCKSLASH</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Back Slash as Separator</fielddesc>
+</field>
+<field>
+<fieldname>SASTERISK</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Asterisk as Separator</fielddesc>
+</field>
+<field>
+<fieldname>SPERIOD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Period as Separator</fielddesc>
+</field>
+<field>
+<fieldname>SLFPARENS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Left Parenthesis as Sep</fielddesc>
+</field>
+<field>
+<fieldname>SRGTPARENS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Right Parenthesis as Sep</fielddesc>
+</field>
+<field>
+<fieldname>SPOUNDSIGN</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Pound Sign as Separator</fielddesc>
+</field>
+<field>
+<fieldname>SLFBRACKT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Left Bracket as Sep</fielddesc>
+</field>
+<field>
+<fieldname>SRGTBRACKT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Right Bracket as Sep</fielddesc>
+</field>
+<field>
+<fieldname>SLFBRACE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Left Brace as Sep</fielddesc>
+</field>
+<field>
+<fieldname>SRGTBRACE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Serials Right Brace as Sep</fielddesc>
+</field>
+<field>
+<fieldname>LOTMASK</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Lot Number Mask</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LUSEEXPDAY</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Lots Days to Expire</fielddesc>
+</field>
+<field>
+<fieldname>LEXPDAYS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Lots Days to Expire</fielddesc>
+</field>
+<field>
+<fieldname>LUSEQRNDAY</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Use Lots Days on Quarantine</fielddesc>
+</field>
+<field>
+<fieldname>LQRNDAYS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Lots Days on Quarantine</fielddesc>
+</field>
+<field>
+<fieldname>LDIFQTYOK</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Different Lot Qty</fielddesc>
+</field>
+<field>
+<fieldname>LALCQTYORD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Lot Alloc on Qty Ord.</fielddesc>
+</field>
+<field>
+<fieldname>LSORTBY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sort Lots by</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Lot Number" /><fieldpresent index="2" value="Stock Date" /><fieldpresent index="3" value="Expiry Date" /></fieldpresentlist></field>
+<field>
+<fieldname>LFIRST</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sort Lots First by</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Earliest" /><fieldpresent index="2" value="Latest" /></fieldpresentlist></field>
+<field>
+<fieldname>LEXPLEVEL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Stop Allocation of Expired Lots</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="None" /><fieldpresent index="1" value="Warning" /><fieldpresent index="2" value="Error" /></fieldpresentlist></field>
+<field>
+<fieldname>LHYPHEN</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Hyphen as Separator</fielddesc>
+</field>
+<field>
+<fieldname>LFWDSLASH</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Fwd Slash as Separator</fielddesc>
+</field>
+<field>
+<fieldname>LBCKSLASH</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Back Slash as Separator</fielddesc>
+</field>
+<field>
+<fieldname>LASTERISK</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Asterisk as Separator</fielddesc>
+</field>
+<field>
+<fieldname>LPERIOD</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Period as Separator</fielddesc>
+</field>
+<field>
+<fieldname>LLFPARENS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Left Parenthesis as Sep</fielddesc>
+</field>
+<field>
+<fieldname>LRGTPARENS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Right Parenthesis as Sep</fielddesc>
+</field>
+<field>
+<fieldname>LPOUNDSIGN</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Pound Sign as Separator</fielddesc>
+</field>
+<field>
+<fieldname>LLFBRACKT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Left Bracket as Separator</fielddesc>
+</field>
+<field>
+<fieldname>LRGTBRACKT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Right Bracket as Separator</fielddesc>
+</field>
+<field>
+<fieldname>LLFBRACE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Left Brace as Separator</fielddesc>
+</field>
+<field>
+<fieldname>LRGTBRACE</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Lots Right Brace as Separator</fielddesc>
+</field>
+<field>
+<fieldname>RECALENSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Recall/Release Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>RECNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Recall Number Length</fielddesc>
+</field>
+<field>
+<fieldname>RECPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Recall Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>RECBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Recall Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>RELNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Release Number Length</fielddesc>
+</field>
+<field>
+<fieldname>RELPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Release Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>RELBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Release Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>COMENSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Combine/Split Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>COMNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Combine Number Length</fielddesc>
+</field>
+<field>
+<fieldname>COMPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Combine Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>COMBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Combine Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>SPLNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Split Number Length</fielddesc>
+</field>
+<field>
+<fieldname>SPLPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Split Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>SPLBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Split Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>RCNENSEQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Reconciliation Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>RCNNUMBERL</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reconciliation Number Length</fielddesc>
+</field>
+<field>
+<fieldname>RCNPREFIXD</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Reconciliation Number Prefix</fielddesc>
+<mask>%-6C</mask></field>
+<field>
+<fieldname>RCNBODYD</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Next Reconciliation Number</fielddesc>
+<mask>%19D</mask></field>
+<field>
+<fieldname>DUPSERIALS</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Allow Duplicate Serials</fielddesc>
+</field>
+<field>
+<fieldname>SALESPERDS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Sales Stats Periods to Use</fielddesc>
+</field>
+<field>
+<fieldname>UPDTMINREQ</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Update Location Details Min. Qty.</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>MINFACTOR</fieldname>
+<fieldtype>BCD*5.2</fieldtype>
+<fielddesc>Minimum Quantity Margin Factor</fielddesc>
+</field>
+<field>
+<fieldname>MAXFACTOR</fieldname>
+<fieldtype>BCD*5.2</fieldtype>
+<fielddesc>Maximum Quantity Margin Factor</fielddesc>
+</field>
+<field>
+<fieldname>SALESHL</fieldname>
+<fieldtype>BCD*5.2</fieldtype>
+<fielddesc>Highlight Sales Variance Above</fielddesc>
+</field>
+<field>
+<fieldname>TRENDHL</fieldname>
+<fieldtype>BCD*5.2</fieldtype>
+<fielddesc>Highlight Trend Variance Above</fielddesc>
+</field>
+<field>
+<fieldname>MINMAXHL</fieldname>
+<fieldtype>BCD*5.2</fieldtype>
+<fielddesc>Highlight Min/Max Variance Above</fielddesc>
+</field>
+<field>
+<fieldname>CMNTDAYS</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Default No. Days for Expiry</fielddesc>
+</field>
+<field>
+<fieldname>FLUPDAYS</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Default No. Days for Follow Up</fielddesc>
+</field>
+<field>
+<fieldname>CMNTTYPE</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Default Comment Type</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>SWCMNTTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Allow Blank Comment Type</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DLASTDEP</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>UTC Date Last Day End</fielddesc>
+</field>
+<field>
+<fieldname>TLASTDEP</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc>UTC Time Last Day End</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>TK TK0200 TKBOXD TKBOXD</keywords>
+<pagetitle>VAT Configuration Detail</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="TKBOXD" desc="VAT Configuration Detail">
+<view name="TK0200" desc="VAT Configuration Detail" />
+<recordlength>101</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Box Number/Detail Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BOX</keyfield><keyfield>DETAILNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>GL Account/Tax AUthority</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>BOX</keyfield><keyfield>GLACCT</keyfield><keyfield>TAXAUTH</keyfield><keyfield>TTYPE</keyfield><keyfield>BUYERCLASS</keyfield><keyfield>ITEMCLASS</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>BOX</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Box Number</fielddesc>
+</field>
+<field>
+<fieldname>DETAILNUM</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Detail Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>FROM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>From GL or TX?</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="General Ledger" /><fieldpresent index="2" value="Tax Services" /></fieldpresentlist></field>
+<field>
+<fieldname>GLACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>GL Account Number</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>TAXAUTH</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>BUYERCLASS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Customer/Vendor Tax Class</fielddesc>
+</field>
+<field>
+<fieldname>ITEMCLASS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Item Tax Class</fielddesc>
+</field>
+<field>
+<fieldname>TTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Sales" /><fieldpresent index="2" value="Purchases" /><fieldpresent index="3" value="Not Applicable" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

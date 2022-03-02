@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>GL GL0005 GLOPT GL01</keywords>
+<pagetitle>General Ledger Options</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="GL01" desc="General Ledger Options">
+<view name="GL0005" desc="General Ledger Options" />
+<recordlength>404</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>General Ledger Option ID</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>OPTIONID</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>OPTIONID</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>GL option key</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>PHONENBR</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Company phone number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>FAX</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Company fax number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>COMPANYID</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Organization ID</fielddesc>
+</field>
+<field>
+<fieldname>CONTACT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Client contact name</fielddesc>
+</field>
+<field>
+<fieldname>CLOSESEG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>RESERVED Closing Segment Number</fielddesc>
+<mask>%06d</mask></field>
+<field>
+<fieldname>ACCTSEG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Main Acct Segment ID</fielddesc>
+<mask>%06d</mask></field>
+<field>
+<fieldname>ABRKDFLT</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Default Structure Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>ABRKDELM</fieldname>
+<fieldtype>String*1</fieldtype>
+<fielddesc>Structure Code delimiter</fielddesc>
+<fieldpresentlist><fieldpresent index=" -" value="-" /><fieldpresent index=" /" value="/" /><fieldpresent index=" \" value="\" /><fieldpresent index=" *" value="*" /><fieldpresent index=" ." value="." /></fieldpresentlist></field>
+<field>
+<fieldname>SWBTCHEDIT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Batch edit allowed</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="All Fields" /><fieldpresent index="2" value="Fiscal Period, Year, Doc. Date, Post. Date, Date" /><fieldpresent index="3" value="No Edit" /></fieldpresentlist></field>
+<field>
+<fieldname>SWPROVPST</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Provisional posting allowed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Provisional posting not allowed" /><fieldpresent index="1" value="Provisional posting allowed" /></fieldpresentlist></field>
+<field>
+<fieldname>SWPRTPBTCH</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Print Batches prior to Post</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Printing not required" /><fieldpresent index="1" value="Printing required" /></fieldpresentlist></field>
+<field>
+<fieldname>CODELOCK1</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Budget 1 lock</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Unlocked" /><fieldpresent index="1" value="Locked" /></fieldpresentlist></field>
+<field>
+<fieldname>CODELOCK2</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Budget 2 lock</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Unlocked" /><fieldpresent index="1" value="Locked" /></fieldpresentlist></field>
+<field>
+<fieldname>CODELOCK3</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Budget 3 lock</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Unlocked" /><fieldpresent index="1" value="Locked" /></fieldpresentlist></field>
+<field>
+<fieldname>CODELOCK4</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Budget 4 lock</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Unlocked" /><fieldpresent index="1" value="Locked" /></fieldpresentlist></field>
+<field>
+<fieldname>CODELOCK5</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Budget 5 lock</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Unlocked" /><fieldpresent index="1" value="Locked" /></fieldpresentlist></field>
+<field>
+<fieldname>LOCKFILL</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>RESERVED Space for more locks</fielddesc>
+</field>
+<field>
+<fieldname>SWQTY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Quantity History allowed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Do not allow quantities" /><fieldpresent index="1" value="Quantities allowed" /></fieldpresentlist></field>
+<field>
+<fieldname>QTYDEC</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Number of decimals for qty</fielddesc>
+</field>
+<field>
+<fieldname>YRSHIST</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Years of Summary History Kept</fielddesc>
+</field>
+<field>
+<fieldname>YRACCTDEL</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>RESERVED Yrs chkd for acct del</fielddesc>
+</field>
+<field>
+<fieldname>NEXTBTCHNO</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Last Issued Batch Number</fielddesc>
+</field>
+<field>
+<fieldname>PSTSQ</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Next actual post seq #</fielddesc>
+</field>
+<field>
+<fieldname>PROVPSTSQ</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Next provisional post seq #</fielddesc>
+</field>
+<field>
+<fieldname>PJRNLPRGTO</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>RESERVED Prov jrnl purged to</fielddesc>
+</field>
+<field>
+<fieldname>BTCHPSTTO</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>RESERVED Last Batch Posted</fielddesc>
+</field>
+<field>
+<fieldname>JRNLPRGTO</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>RESERVED Purge to batch</fielddesc>
+</field>
+<field>
+<fieldname>YRCLSLST</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Last closed year</fielddesc>
+</field>
+<field>
+<fieldname>YRLSTACTL</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Oldest year of Fiscal Sets</fielddesc>
+</field>
+<field>
+<fieldname>PRDNOPSTPR</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>RESERVED Period no post prior</fielddesc>
+</field>
+<field>
+<fieldname>YRNOPSTPR</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Oldest year of Trans. Detail</fielddesc>
+</field>
+<field>
+<fieldname>REACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Default retained earning acct</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>SWMC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Multicurrency Activated Switch</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Inactive" /><fieldpresent index="1" value="Active" /></fieldpresentlist></field>
+<field>
+<fieldname>DFLRATETYP</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Default currency rate type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SWACCTGRP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Account group switch</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Do not allow account groups" /><fieldpresent index="1" value="Account groups allowed" /></fieldpresentlist></field>
+<field>
+<fieldname>SWPRVYRPST</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Allow previous year posting</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Do not allow previous yr posting" /><fieldpresent index="1" value="Previous yr posting allowed" /></fieldpresentlist></field>
+<field>
+<fieldname>YRSTRANDTL</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Years of detail history kept</fielddesc>
+</field>
+<field>
+<fieldname>HSTCLRACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>RESERVED Acct history clearing acct</fielddesc>
+</field>
+<field>
+<fieldname>RPACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>Transition rounding account</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>SRCETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>SWUSESEC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Use GL Security</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWDEFACCSS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Default Access</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="All Accounts" /><fieldpresent index="1" value="No Accounts" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

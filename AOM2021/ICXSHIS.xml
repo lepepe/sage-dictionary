@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0835 ICXSHIS ICXSHIS</keywords>
+<pagetitle>Serial Number History</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICXSHIS" desc="Serial Number History">
+<view name="IC0835" desc="Serial Number History" />
+<recordlength>274</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Serial Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SERIALNUM</keyfield><keyfield>ITEMNUM</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>ENTRYSEQ</keyfield><keyfield>LINENO</keyfield><keyfield>COMPNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Item Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNUM</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>ENTRYSEQ</keyfield><keyfield>LINENO</keyfield><keyfield>COMPNUM</keyfield><keyfield>SERIALNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Customer/Vendor Serial</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>APP</keyfield><keyfield>CUSTVEND</keyfield><keyfield>SERIALNUM</keyfield><keyfield>ITEMNUM</keyfield><keyfield>TRANSDATE</keyfield><keyfield>TRANSTYPE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Customer/Vendor Item</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>APP</keyfield><keyfield>CUSTVEND</keyfield><keyfield>ITEMNUM</keyfield><keyfield>SERIALNUM</keyfield><keyfield>TRANSDATE</keyfield><keyfield>TRANSTYPE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Dayend Sequence</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DAYENDSEQ</keyfield><keyfield>ENTRYSEQ</keyfield><keyfield>SERIALNUM</keyfield><keyfield>ITEMNUM</keyfield><keyfield>LINENO</keyfield><keyfield>COMPNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Document Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DOCNUM</keyfield><keyfield>DETAILNUM</keyfield><keyfield>SERIALNUM</keyfield><keyfield>ITEMNUM</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>ENTRYSEQ</keyfield><keyfield>LINENO</keyfield><keyfield>COMPNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Document Type</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>APP</keyfield><keyfield>TRANSTYPE</keyfield><keyfield>DOCNUM</keyfield><keyfield>ITEMNUM</keyfield><keyfield>SERIALNUM</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>ENTRYSEQ</keyfield><keyfield>LINENO</keyfield><keyfield>COMPNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Transaction Date</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TRANSDATE</keyfield><keyfield>ITEMNUM</keyfield><keyfield>SERIALNUM</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>ENTRYSEQ</keyfield><keyfield>LINENO</keyfield><keyfield>COMPNUM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SERIALNUM</fieldname>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Unformatted Serial Number</fielddesc>
+</field>
+<field>
+<fieldname>ITEMNUM</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Unformatted Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>DAYENDSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Day End Number</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Transaction Sequence</fielddesc>
+</field>
+<field>
+<fieldname>LINENO</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>COMPNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Component Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>APP</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Application</fielddesc>
+</field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Receipt" /><fieldpresent index="2" value="Receipt Adjustment" /><fieldpresent index="3" value="Receipt Return" /><fieldpresent index="4" value="Shipment" /><fieldpresent index="5" value="Shipment Return" /><fieldpresent index="6" value="Adjustment Quantity Increase" /><fieldpresent index="7" value="Adjustment Quantity Decrease" /><fieldpresent index="8" value="Adjustment Cost Increase" /><fieldpresent index="9" value="Adjustment Cost Decrease" /><fieldpresent index="10" value="Adjustment Both Increase" /><fieldpresent index="11" value="Adjustment Both Decrease" /><fieldpresent index="12" value="Stock Transfer From" /><fieldpresent index="13" value="Stock Transfer To" /><fieldpresent index="14" value="Master Item Assembly" /><fieldpresent index="15" value="Component Item Assembly" /><fieldpresent index="16" value="Invoice" /><fieldpresent index="17" value="Credit Note" /><fieldpresent index="18" value="Debit Note" /><fieldpresent index="19" value="Shipment Adjustment" /><fieldpresent index="20" value="Internal Usage" /><fieldpresent index="116" value="Serial Receipt" /><fieldpresent index="117" value="Serial Shipment" /><fieldpresent index="120" value="Serial OE Invoice" /><fieldpresent index="121" value="Serial PO Invoice" /></fieldpresentlist></field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>STOCKED</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Stocked</fielddesc>
+</field>
+<field>
+<fieldname>COST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Cost</fielddesc>
+</field>
+<field>
+<fieldname>DOCNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>DETAILNUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Number</fielddesc>
+</field>
+<field>
+<fieldname>FISCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%4D</mask></field>
+<field>
+<fieldname>FISCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>WARRCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Warranty Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>REGISTERED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Registered</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>REGISTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Registered</fielddesc>
+</field>
+<field>
+<fieldname>CUSTVEND</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer/Vendor Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>INUSE1</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Warranty Period 1 Is In Use</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATE1</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Warranty Period 1 Expiry Date</fielddesc>
+</field>
+<field>
+<fieldname>EFFDATE1</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Warranty Period 1 Effective Date</fielddesc>
+</field>
+<field>
+<fieldname>LIFEWARR1</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Warranty Period 1 Lifetime</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>INUSE2</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Warranty Period 2 Is In Use</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATE2</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Warranty Period 2 Expiry Date</fielddesc>
+</field>
+<field>
+<fieldname>EFFDATE2</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Warranty Period 2 Effective Date</fielddesc>
+</field>
+<field>
+<fieldname>LIFEWARR2</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Warranty Period 2 Lifetime</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>INUSE3</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Warranty Period 3 Is In Use</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATE3</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Warranty Period 3 Expiry Date</fielddesc>
+</field>
+<field>
+<fieldname>EFFDATE3</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Warranty Period 3 Effective Date</fielddesc>
+</field>
+<field>
+<fieldname>LIFEWARR3</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Warranty Period 3 Lifetime</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>INUSE4</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Warranty Period 4 Is In Use</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATE4</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Warranty Period 4 Expiry Date</fielddesc>
+</field>
+<field>
+<fieldname>EFFDATE4</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Warranty Period 4 Effective Date</fielddesc>
+</field>
+<field>
+<fieldname>LIFEWARR4</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Warranty Period 4 Lifetime</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>INUSE5</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Warranty Period 5 Is In Use</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DATE5</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Warranty Period 5 Expiry Date</fielddesc>
+</field>
+<field>
+<fieldname>EFFDATE5</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Warranty Period 5 Effective Date</fielddesc>
+</field>
+<field>
+<fieldname>LIFEWARR5</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Warranty Period 5 Lifetime</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>DRILSRCTY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Drill Down Type</fielddesc>
+</field>
+<field>
+<fieldname>DRILLDWNLK</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Drill Down Link Number</fielddesc>
+</field>
+<field>
+<fieldname>ENTEREDBY</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Entered By</fielddesc>
+<mask>%-8N</mask></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

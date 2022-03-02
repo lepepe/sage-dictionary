@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>TK TK0580 TKTBOXD TKTBOXD</keywords>
+<pagetitle>VAT Worksheet Detail Amounts</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="TKTBOXD" desc="VAT Worksheet Detail Amounts">
+<view name="TK0580" desc="VAT Worksheet Detail Amounts" />
+<recordlength>121</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Box Number/Detail Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>FROMDATE</keyfield><keyfield>TODATE</keyfield><keyfield>BOX</keyfield><keyfield>DETAILNUM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>FROMDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>From Date</fielddesc>
+</field>
+<field>
+<fieldname>TODATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>To Date</fielddesc>
+</field>
+<field>
+<fieldname>BOX</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Box Number</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="1 - VAT due in this period on sales and other outputs" /><fieldpresent index="2" value="2 - VAT due in this period on acquisitions from other EC member states" /><fieldpresent index="4" value="4 - VAT reclaimed in this period on purchases and other inputs (including acquisitions from the EC)" /><fieldpresent index="6" value="6 - Total value of sales and all other outputs excluding any VAT" /><fieldpresent index="7" value="7 - Total value of purchases and all other inputs excluding any VAT" /><fieldpresent index="8" value="8 - Total sales of goods/related services, excluding VAT, to EC member states" /><fieldpresent index="9" value="9 - Total goods/related services acquisitions, excluding VAT, from EC member states" /></fieldpresentlist></field>
+<field>
+<fieldname>DETAILNUM</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Detail Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>FROM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>From GL or TX?</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="General Ledger" /><fieldpresent index="2" value="Tax Services" /></fieldpresentlist></field>
+<field>
+<fieldname>GLACCT</fieldname>
+<fieldtype>String*45</fieldtype>
+<fielddesc>GL Account Number</fielddesc>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>TAXAUTH</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>BUYERCLASS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Customer/Vendor Tax Class</fielddesc>
+</field>
+<field>
+<fieldname>ITEMCLASS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Item Tax Class</fielddesc>
+</field>
+<field>
+<fieldname>AMOUNT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount</fielddesc>
+</field>
+<field>
+<fieldname>TTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Sales" /><fieldpresent index="2" value="Purchases" /><fieldpresent index="3" value="Not Applicable" /></fieldpresentlist></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>IC IC0280 ICHIST ICHIST</keywords>
+<pagetitle>Transaction History</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ICHIST" desc="Transaction History">
+<view name="IC0280" desc="Transaction History" />
+<recordlength>213</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Account Set Code</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ACCTSET</keyfield><keyfield>LOCATION</keyfield><keyfield>ITEMNO</keyfield><keyfield>FISCYEAR</keyfield><keyfield>FISCPERIOD</keyfield><keyfield>TRANSDATE</keyfield><keyfield>DAYENDSEQ</keyfield><keyfield>ENTRYSEQ</keyfield><keyfield>LINENO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Item Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield><keyfield>ACCTSET</keyfield><keyfield>LOCATION</keyfield><keyfield>FISCYEAR</keyfield><keyfield>FISCPERIOD</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Location</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>LOCATION</keyfield><keyfield>ACCTSET</keyfield><keyfield>ITEMNO</keyfield><keyfield>FISCYEAR</keyfield><keyfield>FISCPERIOD</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Dayend Sequence</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DAYENDSEQ</keyfield><keyfield>ENTRYSEQ</keyfield><keyfield>LINENO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Item Number/Location</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ITEMNO</keyfield><keyfield>LOCATION</keyfield><keyfield>FISCYEAR</keyfield><keyfield>FISCPERIOD</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Document Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>DOCNUM</keyfield><keyfield>ITEMNO</keyfield><keyfield>LOCATION</keyfield><keyfield>TRANSTYPE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ACCTSET</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Account Set Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LOCATION</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Location</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>ITEMNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>FISCYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%4D</mask></field>
+<field>
+<fieldname>FISCPERIOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+</field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>DAYENDSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Day End Number</fielddesc>
+</field>
+<field>
+<fieldname>ENTRYSEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Transaction Sequence</fielddesc>
+</field>
+<field>
+<fieldname>LINENO</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Category</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>DOCNUM</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document Number</fielddesc>
+</field>
+<field>
+<fieldname>APP</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Source Application</fielddesc>
+</field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Receipt" /><fieldpresent index="2" value="Receipt Adjustment" /><fieldpresent index="3" value="Receipt Return" /><fieldpresent index="4" value="Shipment" /><fieldpresent index="5" value="Shipment Return" /><fieldpresent index="6" value="Adjustment Quantity Increase" /><fieldpresent index="7" value="Adjustment Quantity Decrease" /><fieldpresent index="8" value="Adjustment Cost Increase" /><fieldpresent index="9" value="Adjustment Cost Decrease" /><fieldpresent index="10" value="Adjustment Both Increase" /><fieldpresent index="11" value="Adjustment Both Decrease" /><fieldpresent index="12" value="Stock Transfer From" /><fieldpresent index="13" value="Stock Transfer To" /><fieldpresent index="14" value="Master Item Assembly" /><fieldpresent index="15" value="Component Item Assembly" /><fieldpresent index="16" value="Invoice" /><fieldpresent index="17" value="Credit Note" /><fieldpresent index="18" value="Debit Note" /><fieldpresent index="19" value="Shipment Adjustment" /><fieldpresent index="20" value="Internal Usage" /></fieldpresentlist></field>
+<field>
+<fieldname>QUANTITY</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity</fielddesc>
+</field>
+<field>
+<fieldname>UNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Unit of Measure</fielddesc>
+<mask>%-10w</mask></field>
+<field>
+<fieldname>SRCCURR</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Source Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>EXRATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>SRCEXTCST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Cost - Source</fielddesc>
+</field>
+<field>
+<fieldname>HOMEEXTCST</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Extended Cost - Functional</fielddesc>
+</field>
+<field>
+<fieldname>DRILSRCTY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Drill Down Type</fielddesc>
+</field>
+<field>
+<fieldname>DRILLDWNLK</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Drill Down Link Number</fielddesc>
+</field>
+<field>
+<fieldname>DRILAPP</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Drill Down Application Source</fielddesc>
+<mask>%-2A</mask></field>
+<field>
+<fieldname>JOBNO</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>DETAILNUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Number</fielddesc>
+</field>
+<field>
+<fieldname>COMPNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Detail Component Number</fielddesc>
+</field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

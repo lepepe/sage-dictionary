@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>BK BK0440 BKDISTD BKDISTD</keywords>
+<pagetitle>Bank Distribution Set Detail</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Bank Distribution Set Detail</title>
+<rotoid>BK0440</rotoid>
+<tablelist>
+<table name="BKDISTD" desc="Bank Distribution Set Detail" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Sequenced revisions</protocol><protocol>Key auto generate</protocol></protocollist>
+<dllname>BKDISTD</dllname>
+<compositionlist>
+<composition>
+<comprotoid>BK0445</comprotoid>
+<compdesc>Bank Distribution Set Header</compdesc>
+<compdll>BKDISTH</compdll>
+<comptablelist>
+<comptable name="BKDISTH" desc="Bank Distribution Set Header" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>GL0001</comprotoid>
+<compdesc>Accounts</compdesc>
+<compdll>GLAMF</compdll>
+<comptablelist>
+<comptable name="GLAMF" desc="Accounts" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>BK0003</comprotoid>
+<compdesc>Bank Distribution Codes</compdesc>
+<compdll>BKTT</compdll>
+<comptablelist>
+<comptable name="BKTT" desc="Bank Distribution Codes" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Distribution Set Detail Key</keytitle>
+<keyfieldlist>
+<keyfield>DSETCODE</keyfield>
+<keyfield>LINE</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Distribution Set Detail by Code</keytitle>
+<keyfieldlist>
+<keyfield>DISTCODE</keyfield>
+<keyfield>DSETCODE</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>DSETCODE</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Distribution Set Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>LINE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Line Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DISTCODE</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Distribution Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>ACCT</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*45</fieldtype>
+<fielddesc>G/L Account</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-45C</mask></field>
+<field>
+<fieldname>AMOUNT</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DISTCODED</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Distribution Code Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ACCOUNTD</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Account Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>LINEONE</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Line</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="C" desc="Calculated" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

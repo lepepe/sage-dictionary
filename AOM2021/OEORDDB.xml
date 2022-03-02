@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>OE OE0503 OEORDDB OEORDDB</keywords>
+<pagetitle>Order BOM Details</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="OEORDDB" desc="Order BOM Details">
+<view name="OE0503" desc="Order BOM Details" />
+<recordlength>214</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Uniq./Line No./Parent Cmp. No./C</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>ORDUNIQ</keyfield><keyfield>LINENUM</keyfield><keyfield>PRNCOMPNUM</keyfield><keyfield>COMPNUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Component/Uniq./Line No./Parent</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>COMPONENT</keyfield><keyfield>ORDUNIQ</keyfield><keyfield>LINENUM</keyfield><keyfield>PRNCOMPNUM</keyfield><keyfield>COMPNUM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ORDUNIQ</fieldname>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Order Uniquifier</fielddesc>
+</field>
+<field>
+<fieldname>LINENUM</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Detail Line Number</fielddesc>
+</field>
+<field>
+<fieldname>PRNCOMPNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Parent Component Number</fielddesc>
+</field>
+<field>
+<fieldname>COMPNUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Component Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>COMPONENT</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Component Item Number</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>QTY</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Component Quantity</fielddesc>
+</field>
+<field>
+<fieldname>UNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Unit of Measure</fielddesc>
+<mask>%-10c</mask></field>
+<field>
+<fieldname>QTYORDERED</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Ordered</fielddesc>
+</field>
+<field>
+<fieldname>QTYSHIPPED</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Quantity Shipped</fielddesc>
+</field>
+<field>
+<fieldname>DDTLNO</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Component's BOM Number</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>BUILDQTY</fieldname>
+<fieldtype>BCD*10.4</fieldtype>
+<fielddesc>Component's BOM Build Qty.</fielddesc>
+</field>
+<field>
+<fieldname>BUILDUNIT</fieldname>
+<fieldtype>String*10</fieldtype>
+<fielddesc>Component's BOM Build Unit</fielddesc>
+<mask>%-10c</mask></field>
+<field>
+<fieldname>BLDUNTCONV</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Component's BOM Build Unit Conv.</fielddesc>
+</field>
+<field>
+<fieldname>UNITCONV</fieldname>
+<fieldtype>BCD*10.6</fieldtype>
+<fielddesc>Unit Conversion</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

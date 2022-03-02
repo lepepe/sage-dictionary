@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0088 AROBLJP AROBLJP</keywords>
+<pagetitle>Document Detail Payments</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="AROBLJP" desc="Document Detail Payments">
+<view name="AR0088" desc="Document Detail Payments" />
+<recordlength>259</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Cust. No./Doc. No./Line No./Seq.</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDCUST</keyfield><keyfield>IDINVC</keyfield><keyfield>CNTLINE</keyfield><keyfield>CNTSEQENCE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Bank, Customer, Check/Receipt No</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDBANK</keyfield><keyfield>IDCUSTRMIT</keyfield><keyfield>IDRMIT</keyfield><keyfield>DATERMIT</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Customer, Payment CUID, Document</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDCUST</keyfield><keyfield>PYMCUID</keyfield><keyfield>IDINVC</keyfield><keyfield>CNTLINE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>IDCUST</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>IDINVC</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>CNTLINE</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>CNTSEQENCE</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Sequence Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>TRANSNBR</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Transaction Number</fielddesc>
+</field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>TRANSTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Document Type</fielddesc>
+<fieldpresentlist><fieldpresent index="5" value="Unapplied Cash" /><fieldpresent index="6" value="Debit Note Applied To" /><fieldpresent index="7" value="Applied Debit Note" /><fieldpresent index="8" value="Credit Note Applied To" /><fieldpresent index="9" value="Applied Credit Note" /><fieldpresent index="10" value="Prepayment" /><fieldpresent index="11" value="Receipt" /><fieldpresent index="12" value="Discount" /><fieldpresent index="14" value="Adjustment" /><fieldpresent index="16" value="Exchange Gain/Loss" /><fieldpresent index="17" value="Rounding" /><fieldpresent index="19" value="Refund" /><fieldpresent index="18" value="Retainage" /><fieldpresent index="20" value="Tax Withheld" /></fieldpresentlist></field>
+<field>
+<fieldname>TRXTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="3" value="Unapplied Cash - Applied" /><fieldpresent index="4" value="Unapplied Cash - Reversed" /><fieldpresent index="41" value="Debit Note Applied To" /><fieldpresent index="42" value="Applied Debit Note" /><fieldpresent index="43" value="Credit Note Applied To" /><fieldpresent index="44" value="Applied Credit Note" /><fieldpresent index="51" value="Receipt - Posted" /><fieldpresent index="52" value="Receipt - Applied" /><fieldpresent index="53" value="Receipt - Reversed" /><fieldpresent index="58" value="Prepayment - Applied" /><fieldpresent index="59" value="Prepayment - Reversed" /><fieldpresent index="61" value="Discount - Posted" /><fieldpresent index="63" value="Discount - Reversed" /><fieldpresent index="65" value="Exchange Gain/Loss - Posted" /><fieldpresent index="67" value="Exchange Gain/Loss - Reversed" /><fieldpresent index="91" value="Rounding - Posted" /><fieldpresent index="93" value="Rounding - Reversed" /><fieldpresent index="69" value="Unrealized Exchange Gain/Loss" /><fieldpresent index="80" value="Write-Off - Posted" /><fieldpresent index="81" value="Adjustment - Posted" /><fieldpresent index="83" value="Adjustment - Reversed" /><fieldpresent index="73" value="Refund - Posted" /><fieldpresent index="75" value="Refund - Reversed" /><fieldpresent index="100" value="Retainage - Invoiced" /><fieldpresent index="101" value="Retainage - Adjusted" /><fieldpresent index="102" value="Retainage - Revalued" /><fieldpresent index="103" value="Retainage - Exchange Gain/Loss" /><fieldpresent index="104" value="Retainage - Rounding" /><fieldpresent index="85" value="Receipt - Invoice Reversed" /><fieldpresent index="105" value="Tax Withheld - Posted" /><fieldpresent index="106" value="Tax Withheld - Reversed" /></fieldpresentlist></field>
+<field>
+<fieldname>TYPEBTCH</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Batch Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>CNTBTCH</fieldname>
+<fieldtype>BCD*5.0</fieldtype>
+<fielddesc>Batch Number</fielddesc>
+</field>
+<field>
+<fieldname>CNTITEM</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Entry Number</fielddesc>
+</field>
+<field>
+<fieldname>DATEBTCH</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Batch Date</fielddesc>
+</field>
+<field>
+<fieldname>AMTPAYMHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Receipt Amount</fielddesc>
+</field>
+<field>
+<fieldname>AMTPAYMTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cust. Receipt Amount</fielddesc>
+</field>
+<field>
+<fieldname>TXTOTRTHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Func. Retainage Tax Invoiced</fielddesc>
+</field>
+<field>
+<fieldname>TXTOTRTTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Cust. Retainage Tax Invoiced</fielddesc>
+</field>
+<field>
+<fieldname>CODECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency Code</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>IDRATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEEXCHHC</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operator</fielddesc>
+</field>
+<field>
+<fieldname>IDBANK</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Bank Code</fielddesc>
+<mask>%-8N</mask></field>
+<field>
+<fieldname>IDCUSTRMIT</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Remitting Customer Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>IDRMIT</fieldname>
+<fieldtype>String*24</fieldtype>
+<fielddesc>Check/Receipt No.</fielddesc>
+<mask>%-24C</mask></field>
+<field>
+<fieldname>DEPSEQ</fieldname>
+<fieldtype>???</fieldtype>
+<fielddesc>Deposit Serial Number</fielddesc>
+</field>
+<field>
+<fieldname>DEPLINE</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Deposit Line Number</fielddesc>
+</field>
+<field>
+<fieldname>DATERMIT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Receipt Date</fielddesc>
+</field>
+<field>
+<fieldname>PYMCUID</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Payment CUID</fielddesc>
+</field>
+<field>
+<fieldname>IDMEMOXREF</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Reference Document Number</fielddesc>
+</field>
+<field>
+<fieldname>FISCYR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCPER</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<mask>%02D</mask></field>
+<field>
+<fieldname>CODETAX</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Authority</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

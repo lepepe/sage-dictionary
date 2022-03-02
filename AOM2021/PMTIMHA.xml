@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PM PM0042 PMTIMHA PMTIMHA</keywords>
+<pagetitle>Timecard Audit</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="PMTIMHA" desc="Timecard Audit">
+<view name="PM0042" desc="Timecard Audit" />
+<recordlength>615</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Posting Sequence</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>POSTSEQNO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Sequence/Posting Sequence</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SEQ</keyfield><keyfield>POSTSEQNO</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Payroll Updated/Transaction Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PAYUPDATED</keyfield><keyfield>TRANSDATE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Payroll Updated/Transaction Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>PAYUPDATED</keyfield><keyfield>PAYTYPE</keyfield><keyfield>ENDDATE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Timecard Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TIMECARDNO</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>POSTSEQNO</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Posting Sequence</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>SEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Sequence</fielddesc>
+</field>
+<field>
+<fieldname>POSTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+<field>
+<fieldname>TIMECARDNO</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Time Card Number</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>TRANSDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Transaction Date</fielddesc>
+</field>
+<field>
+<fieldname>FISCALYEAR</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Fiscal Year</fielddesc>
+<mask>%04D</mask></field>
+<field>
+<fieldname>FISCALPER</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fiscal Period</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="1" /><fieldpresent index="2" value="2" /><fieldpresent index="3" value="3" /><fieldpresent index="4" value="4" /><fieldpresent index="5" value="5" /><fieldpresent index="6" value="6" /><fieldpresent index="7" value="7" /><fieldpresent index="8" value="8" /><fieldpresent index="9" value="9" /><fieldpresent index="10" value="10" /><fieldpresent index="11" value="11" /><fieldpresent index="12" value="12" /><fieldpresent index="13" value="13" /></fieldpresentlist></field>
+<field>
+<fieldname>STAFFCODE</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>Employee Number</fielddesc>
+<mask>%-16N</mask></field>
+<field>
+<fieldname>NAME</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Name</fielddesc>
+</field>
+<field>
+<fieldname>REFERENCE</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Reference</fielddesc>
+</field>
+<field>
+<fieldname>DESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Description</fielddesc>
+</field>
+<field>
+<fieldname>BEGINDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Begin Date</fielddesc>
+</field>
+<field>
+<fieldname>ENDDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>End Date</fielddesc>
+</field>
+<field>
+<fieldname>TOTCOSTSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Cost</fielddesc>
+</field>
+<field>
+<fieldname>TOTCOSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Cost</fielddesc>
+</field>
+<field>
+<fieldname>TOTBILLSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Billable</fielddesc>
+</field>
+<field>
+<fieldname>TOTBILLHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Total Billable</fielddesc>
+</field>
+<field>
+<fieldname>TOTQTY</fieldname>
+<fieldtype>BCD*10.2</fieldtype>
+<fielddesc>Total Quantity</fielddesc>
+</field>
+<field>
+<fieldname>ETOTCOSTSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Expenses Total Cost</fielddesc>
+</field>
+<field>
+<fieldname>ETOTCOSTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Expenses Total Cost</fielddesc>
+</field>
+<field>
+<fieldname>ETOTBILLSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Expenses Total Billable</fielddesc>
+</field>
+<field>
+<fieldname>ETOTBILLHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Expenses Total Billable</fielddesc>
+</field>
+<field>
+<fieldname>ETOTQTY</fieldname>
+<fieldtype>BCD*10.2</fieldtype>
+<fielddesc>Expenses Total Quantity</fielddesc>
+</field>
+<field>
+<fieldname>CCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operator</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>RATESPREAD</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Rate Spread</fielddesc>
+</field>
+<field>
+<fieldname>PRINTSTAT</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Printed</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="False" /><fieldpresent index="1" value="True" /></fieldpresentlist></field>
+<field>
+<fieldname>TRANSTAT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Entered" /><fieldpresent index="2" value="Imported" /><fieldpresent index="3" value="Generated" /><fieldpresent index="4" value="Posted" /></fieldpresentlist></field>
+<field>
+<fieldname>PAYUPDATED</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Payroll Updated ?</fielddesc>
+</field>
+<field>
+<fieldname>PAYROLLTC</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Payroll Timecard Number</fielddesc>
+</field>
+<field>
+<fieldname>PAYTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Payroll Type</fielddesc>
+<fieldpresentlist><fieldpresent index="3" value="None" /><fieldpresent index="1" value="US Payroll" /><fieldpresent index="2" value="Canadian Payroll" /></fieldpresentlist></field>
+<field>
+<fieldname>HMON</fieldname>
+<fieldtype>BCD*10.2</fieldtype>
+<fielddesc>Monday Hours</fielddesc>
+</field>
+<field>
+<fieldname>HTUE</fieldname>
+<fieldtype>BCD*10.2</fieldtype>
+<fielddesc>Tuesday Hours</fielddesc>
+</field>
+<field>
+<fieldname>HWED</fieldname>
+<fieldtype>BCD*10.2</fieldtype>
+<fielddesc>Wednesday Hours</fielddesc>
+</field>
+<field>
+<fieldname>HTHU</fieldname>
+<fieldtype>BCD*10.2</fieldtype>
+<fielddesc>Thursday Hours</fielddesc>
+</field>
+<field>
+<fieldname>HFRI</fieldname>
+<fieldtype>BCD*10.2</fieldtype>
+<fielddesc>Friday Hours</fielddesc>
+</field>
+<field>
+<fieldname>HSAT</fieldname>
+<fieldtype>BCD*10.2</fieldtype>
+<fielddesc>Saturday Hours</fielddesc>
+</field>
+<field>
+<fieldname>HSUN</fieldname>
+<fieldtype>BCD*10.2</fieldtype>
+<fielddesc>Sunday Hours</fielddesc>
+</field>
+<field>
+<fieldname>HWEEK</fieldname>
+<fieldtype>BCD*10.2</fieldtype>
+<fielddesc>Weekly Hours</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>CREATEBY</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Created By</fielddesc>
+</field>
+<field>
+<fieldname>CREATEDT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Created On</fielddesc>
+</field>
+<field>
+<fieldname>CREATETM</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc>Created At</fielddesc>
+</field>
+<field>
+<fieldname>APPROVEBY</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Approved By</fielddesc>
+</field>
+<field>
+<fieldname>APPROVEDT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Approved On</fielddesc>
+</field>
+<field>
+<fieldname>APPROVETM</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc>Approved At</fielddesc>
+</field>
+<field>
+<fieldname>POSTEDBY</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc>Posted By</fielddesc>
+</field>
+<field>
+<fieldname>POSTEDDT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posted On</fielddesc>
+</field>
+<field>
+<fieldname>POSTEDTM</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc>Posted At</fielddesc>
+</field>
+<field>
+<fieldname>GLHDESC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>G/L Entry Description</fielddesc>
+</field>
+<field>
+<fieldname>DATEBUS</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Posting Date</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

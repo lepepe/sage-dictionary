@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PO PO0810 POINVLS POINVLS</keywords>
+<pagetitle>Invoice Line Serials</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Invoice Line Serials</title>
+<rotoid>PO0810</rotoid>
+<tablelist>
+<table name="POINVLS" desc="Invoice Line Serials" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>POINVLS</dllname>
+<compositionlist>
+<composition>
+<comprotoid>PO0430</comprotoid>
+<compdesc>Invoice Lines</compdesc>
+<compdll>POINVL</compdll>
+<comptablelist>
+<comptable name="POINVL" desc="Invoice Lines" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0431</comprotoid>
+<compdesc>Invoice Posting Lines</compdesc>
+<compdll>POINVM</compdll>
+<comptablelist>
+<comptable name="POINVM" desc="Invoice Posting Lines" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>PO0811</comprotoid>
+<compdesc>Invoice Posting Lines Serials</compdesc>
+<compdll>POINVMS</compdll>
+<comptablelist>
+<comptable name="POINVMS" desc="Invoice Posting Lines Serials" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>Detail Key</keytitle>
+<keyfieldlist>
+<keyfield>INVHSEQ</keyfield>
+<keyfield>INVLREV</keyfield>
+<keyfield>SERIALNUMF</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>Serial Number Key</keytitle>
+<keyfieldlist>
+<keyfield>SERIALNUMF</keyfield>
+<keyfield>INVHSEQ</keyfield>
+<keyfield>INVLREV</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>INVHSEQ</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Invoice Sequence Key</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>INVLREV</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Line Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SERIALNUMF</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*40</fieldtype>
+<fielddesc>Serial Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>INVLSEQ</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Invoice Line Sequence</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>SCOUNT</fieldname>
+<fieldindex>50</fieldindex>
+<fieldtype>Long</fieldtype>
+<fielddesc>Serial Count</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

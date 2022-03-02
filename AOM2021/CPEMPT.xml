@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>CP CP0010 CPEMPT CPEMPT</keywords>
+<pagetitle>Employee Taxes</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="CPEMPT" desc="Employee Taxes">
+<view name="CP0010" desc="Employee Taxes" />
+<recordlength>88</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Employee</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>TAXID</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Employee-Category-Tax Type-Tax</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield><keyfield>CATEGORY</keyfield><keyfield>TAXTYPE</keyfield><keyfield>TAXID</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Tax, Distribution Code</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>TAXID</keyfield><keyfield>DISTCODE</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>EMPLOYEE</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Employee</fielddesc>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>TAXID</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Tax Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>EXTRAWH</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+</field>
+<field>
+<fieldname>CALCMTHD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+</field>
+<field>
+<fieldname>OVERRATE</fieldname>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>RESERVED - US Only</fielddesc>
+</field>
+<field>
+<fieldname>DISTCODE</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Distribution Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>OCCASIONAL</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>INTERNAL USE - Occasional Tax</fielddesc>
+</field>
+<field>
+<fieldname>EFFECTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>INTERNAL USE - Tax Table Effective Date</fielddesc>
+</field>
+<field>
+<fieldname>EMPPARMVER</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>INTERNAL USE - Employee Tax Table Parameter Version</fielddesc>
+</field>
+<field>
+<fieldname>EMPPARMCNT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>INTERNAL USE - Employee Tax Table Parameter Count</fielddesc>
+</field>
+<field>
+<fieldname>CATEGORY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>INTERNAL USE - Category</fielddesc>
+</field>
+<field>
+<fieldname>TAXTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>INTERNAL USE - Tax Type</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Number of Optional Fields</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

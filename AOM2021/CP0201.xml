@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>CP CP0201 CPEMBK CPEMBK</keywords>
+<pagetitle>Employee EFT Banks</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Employee EFT Banks</title>
+<rotoid>CP0201</rotoid>
+<tablelist>
+<table name="CPEMBK" desc="Employee EFT Banks" />
+</tablelist>
+<protocollist>
+<protocol>Detail</protocol><protocol>Ordered revisions</protocol></protocollist>
+<dllname>CPEMBK</dllname>
+<compositionlist>
+<composition>
+<comprotoid>CP0014</comprotoid>
+<compdesc>Employees</compdesc>
+<compdll>CPEMPL</compdll>
+<comptablelist>
+<comptable name="CPEMPL" desc="Employees" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+<key>
+<keytitle>EFT Banks</keytitle>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield>
+<keyfield>BKACCTCODE</keyfield>
+</keyfieldlist>
+</key>
+<key>
+<keytitle>EFT Banks by Calculation Type</keytitle>
+<keyfieldlist>
+<keyfield>EMPLOYEE</keyfield>
+<keyfield>EFTCALCTYP</keyfield>
+<keyfield>BKACCTCODE</keyfield>
+</keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>EMPLOYEE</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Employee</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-12N</mask></field>
+<field>
+<fieldname>BKACCTCODE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Employee EFT Bank</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="K" desc="Key" />
+<attributeflag type="Attribute" value="R" desc="Required" />
+</attributeflaglist>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>BKACCTDESC</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Employee EFT Bank Description</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>INSTITUTID</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>String*9</fieldtype>
+<fielddesc>Institution ID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-9d</mask></field>
+<field>
+<fieldname>ACCTNUM</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>String*18</fieldtype>
+<fielddesc>Account Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-12c</mask></field>
+<field>
+<fieldname>TRANSCODE</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Code</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+<attributeflag type="Attribute" value="X" desc="Check-editability" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="22" value="22 - Checking" /><fieldpresent index="32" value="32 - Savings" /></fieldpresentlist></field>
+<field>
+<fieldname>EFTCALCTYP</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>EFT Calculation Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Fixed Amount" /><fieldpresent index="2" value="% of Gross Earnings" /><fieldpresent index="3" value="% of Net Pay" /></fieldpresentlist></field>
+<field>
+<fieldname>AMTPCT</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>BCD*9.5</fieldtype>
+<fielddesc>Amt/Pct to be deposited</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>STARTDATE</fieldname>
+<fieldindex>9</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>Start Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>ENDDATE</fieldname>
+<fieldindex>10</fieldindex>
+<fieldtype>Date</fieldtype>
+<fielddesc>End Date</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>DCOUNTRY</fieldname>
+<fieldindex>11</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Destination Country</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-2C</mask></field>
+<field>
+<fieldname>DCURRENCY</fieldname>
+<fieldindex>12</fieldindex>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Destination Currency</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-3C</mask></field>
+<field>
+<fieldname>BKIDQUALIF</fieldname>
+<fieldindex>13</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Bank ID Qualifier</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="01- (NACHA) National Clearing System Number" /><fieldpresent index="2" value="02- BIC Bank Identification Number" /><fieldpresent index="3" value="03- IBAN- International Bank Account Number" /></fieldpresentlist></field>
+<field>
+<fieldname>PRENOTE</fieldname>
+<fieldindex>14</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Prenote Status</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="0" value="Not Sent" /><fieldpresent index="1" value="Pending" /><fieldpresent index="2" value="Approved" /><fieldpresent index="3" value="Declined" /></fieldpresentlist></field>
+<field>
+<fieldname>TRANSGUID</fieldname>
+<fieldindex>15</fieldindex>
+<fieldtype>String*36</fieldtype>
+<fielddesc>Sync Transaction GUID</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

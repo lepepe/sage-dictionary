@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AP AP0026 APOBS APOBS</keywords>
+<pagetitle>Document Sched. Payments</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="APOBS" desc="Document Sched. Payments">
+<view name="AP0026" desc="Document Sched. Payments" />
+<recordlength>293</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Vendor/Doc. No./Pmt. No.</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDVEND</keyfield><keyfield>IDINVC</keyfield><keyfield>CNTPAYM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Doc. No./Pmt. No.</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDINVC</keyfield><keyfield>CNTPAYM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Vendor/Order Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDVEND</keyfield><keyfield>IDORDRNBR</keyfield><keyfield>IDINVC</keyfield><keyfield>CNTPAYM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Vendor/PO Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDVEND</keyfield><keyfield>IDPONBR</keyfield><keyfield>IDINVC</keyfield><keyfield>CNTPAYM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Vendor/Due Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDVEND</keyfield><keyfield>DATEDUE</keyfield><keyfield>IDINVC</keyfield><keyfield>CNTPAYM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Vendor/Remaining Vend. Pmt. Amt.</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDVEND</keyfield><keyfield>AMTPYMRMTC</keyfield><keyfield>DATEDUE</keyfield><keyfield>IDINVC</keyfield><keyfield>CNTPAYM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Paid/Doc. No./Pmt. No.</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SWPAID</keyfield><keyfield>IDINVC</keyfield><keyfield>CNTPAYM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Vendor/Invoice Date</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDVEND</keyfield><keyfield>DATEINVC</keyfield><keyfield>IDINVC</keyfield><keyfield>CNTPAYM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Paid/Prepayment No.</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SWPAID</keyfield><keyfield>IDPREPAID</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Paid/Vendor/Doc. No./Pmt. No.</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SWPAID</keyfield><keyfield>IDVEND</keyfield><keyfield>IDINVC</keyfield><keyfield>CNTPAYM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Original Doc. No.</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDVEND</keyfield><keyfield>RTGAPPLYTO</keyfield><keyfield>IDINVC</keyfield><keyfield>CNTPAYM</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>IDVEND</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Vendor Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>IDINVC</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Document Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>CNTPAYM</fieldname>
+<fieldtype>BCD*3.0</fieldtype>
+<fielddesc>Payment Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>IDRMIT</fieldname>
+<fieldtype>String*18</fieldtype>
+<fielddesc>Check Number</fielddesc>
+<mask>%-18D</mask></field>
+<field>
+<fieldname>DATEDUE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Due Date</fielddesc>
+</field>
+<field>
+<fieldname>DATEDISC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Discount Date</fielddesc>
+</field>
+<field>
+<fieldname>SWPAID</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Fully Paid</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>AMTDUEHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Original Amount (Func.)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDISCHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Original Discount (Func.)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDCSRMHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Remaining Discount (Func.)</fielddesc>
+</field>
+<field>
+<fieldname>AMTPYMRMHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Remaining Amount (Func.)</fielddesc>
+</field>
+<field>
+<fieldname>AMTDUETC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Original Amount</fielddesc>
+</field>
+<field>
+<fieldname>AMTDISCTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Original Discount</fielddesc>
+</field>
+<field>
+<fieldname>AMTDSCRMTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Remaining Discount</fielddesc>
+</field>
+<field>
+<fieldname>AMTPYMRMTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Remaining Amount</fielddesc>
+</field>
+<field>
+<fieldname>IDORDRNBR</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Order Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>IDPONBR</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>PO Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>IDGRP</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Group Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>IDPREPAID</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Prepay Invoice Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>IDTRXTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Transaction Type</fielddesc>
+<fieldpresentlist><fieldpresent index="12" value="Invoice - Summary Entered" /><fieldpresent index="13" value="Invoice - Recurring Charge" /><fieldpresent index="22" value="Debit Note - Summary Entered" /><fieldpresent index="26" value="Debit Note - Advance Credit Claim" /><fieldpresent index="32" value="Credit Note - Summary Entered" /><fieldpresent index="40" value="Interest Charge" /><fieldpresent index="50" value="Prepayment - Posted" /><fieldpresent index="51" value="Payment - Posted" /></fieldpresentlist></field>
+<field>
+<fieldname>TXTTRXTYPE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Document Type</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Invoice" /><fieldpresent index="2" value="Debit Note" /><fieldpresent index="3" value="Credit Note" /><fieldpresent index="4" value="Interest" /><fieldpresent index="10" value="Prepayment" /><fieldpresent index="11" value="Payment" /></fieldpresentlist></field>
+<field>
+<fieldname>DATEINVC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Document Date</fielddesc>
+</field>
+<field>
+<fieldname>DATEACTV</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Activation Date</fielddesc>
+</field>
+<field>
+<fieldname>DAYSTOPAY</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Number of Days to Pay</fielddesc>
+</field>
+<field>
+<fieldname>SWJOB</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Job Related</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>AMTPYMLMTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Payment Limit</fielddesc>
+</field>
+<field>
+<fieldname>RTGAPPLYTO</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Original Doc. No.</fielddesc>
+<mask>%-22C</mask></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

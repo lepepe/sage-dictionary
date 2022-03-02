@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>OE OE0525 OEORDP</keywords>
+<pagetitle>Order Processing</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<view>
+<title>Order Processing</title>
+<rotoid>OE0525</rotoid>
+<protocollist>
+<protocol>Superview</protocol></protocollist>
+<dllname>OEORDP</dllname>
+<compositionlist>
+<composition>
+<comprotoid>OE0520</comprotoid>
+<compdesc>Orders</compdesc>
+<compdll>OEORDH</compdll>
+<comptablelist>
+<comptable name="OEORDH" desc="Orders" />
+<comptable name="OEORDH1" desc="Orders" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0500</comprotoid>
+<compdesc>Order Details</compdesc>
+<compdll>OEORDD</compdll>
+<comptablelist>
+<comptable name="OEORDD" desc="Order Details" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0740</comprotoid>
+<compdesc>Order Payment Schedules</compdesc>
+<compdll>OETERMO</compdll>
+<comptablelist>
+<comptable name="OETERMO" desc="Order Payment Schedules" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0180</comprotoid>
+<compdesc>Order Comments/Instructions</compdesc>
+<compdll>OECOINO</compdll>
+<comptablelist>
+<comptable name="OECOINO" desc="Order Comments/Instructions" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0526</comprotoid>
+<compdesc>Order from Quotes</compdesc>
+<compdll>OEORDQ</compdll>
+<comptablelist>
+<comptable name="OEORDQ" desc="Order from Quotes" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0522</comprotoid>
+<compdesc>Order Optional Fields</compdesc>
+<compdll>OEORDHO</compdll>
+<comptablelist>
+<comptable name="OEORDHO" desc="Order Optional Fields" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0501</comprotoid>
+<compdesc>Order Detail Optional Fields</compdesc>
+<compdll>OEORDDO</compdll>
+<comptablelist>
+<comptable name="OEORDDO" desc="Order Detail Optional Fields" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0503</comprotoid>
+<compdesc>Order BOM Details</compdesc>
+<compdll>OEORDDB</compdll>
+<comptablelist>
+<comptable name="OEORDDB" desc="Order BOM Details" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0502</comprotoid>
+<compdesc>Order Kitting Details</compdesc>
+<compdll>OEORDDD</compdll>
+<comptablelist>
+<comptable name="OEORDDD" desc="Order Kitting Details" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0508</comprotoid>
+<compdesc>Order Detail Serial Numbers</compdesc>
+<compdll>OEORDDS</compdll>
+<comptablelist>
+<comptable name="OEORDDS" desc="Order Detail Serial Numbers" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0507</comprotoid>
+<compdesc>Order Detail Lot Numbers</compdesc>
+<compdll>OEORDDL</compdll>
+<comptablelist>
+<comptable name="OEORDDL" desc="Order Detail Lot Numbers" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0504</comprotoid>
+<compdesc>Order Kitting Serial Numbers</compdesc>
+<compdll>OEORDDDS</compdll>
+<comptablelist>
+<comptable name="OEORDDDS" desc="Order Kitting Serial Numbers" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>OE0506</comprotoid>
+<compdesc>Order Kitting Detail Lot Numbers</compdesc>
+<compdll>OEORDDDL</compdll>
+<comptablelist>
+<comptable name="OEORDDDL" desc="Order Kitting Detail Lot Numbers" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>TX0910</comprotoid>
+<compdesc>Tax Document Calculation</compdesc>
+<compdll>TXDCALC</compdll>
+<comptablelist>
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>TX0910</comprotoid>
+<compdesc>Tax Document Calculation</compdesc>
+<compdll>TXDCALC</compdll>
+<comptablelist>
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>AR0016</comprotoid>
+<compdesc>Terms Codes</compdesc>
+<compdll>ARRTA</compdll>
+<comptablelist>
+<comptable name="ARRTA" desc="Terms Codes" />
+</comptablelist>
+</composition>
+<composition>
+<comprotoid>AR0017</comprotoid>
+<compdesc>Terms Payment Schedules</compdesc>
+<compdll>ARRTB</compdll>
+<comptablelist>
+<comptable name="ARRTB" desc="Terms Payment Schedules" />
+</comptablelist>
+</composition>
+</compositionlist>
+<keylist>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>ORDNUMBER</fieldname>
+<fieldindex>1</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Order Number</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>NEWTYPE</fieldname>
+<fieldindex>2</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>New Order Type</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Active" /><fieldpresent index="2" value="Future" /><fieldpresent index="3" value="Standing" /><fieldpresent index="4" value="Quote" /></fieldpresentlist></field>
+<field>
+<fieldname>ACTION</fieldname>
+<fieldindex>3</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Action Performed</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>TERMSCALC</fieldname>
+<fieldindex>4</fieldindex>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Terms Calculation Mode</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<fieldpresentlist><fieldpresent index="1" value="Calculate Terms Dates Only" /><fieldpresent index="2" value="Calculate Terms Amounts Only" /><fieldpresent index="3" value="Calculate Terms Dates and Amounts" /></fieldpresentlist></field>
+<field>
+<fieldname>NEWTERMS</fieldname>
+<fieldindex>5</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>New Terms</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>IMPORT</fieldname>
+<fieldindex>6</fieldindex>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Import in Progress</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QUOORDUNIQ</fieldname>
+<fieldindex>7</fieldindex>
+<fieldtype>BCD*10.0</fieldtype>
+<fielddesc>Order Uniq. Activated From Quote</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+</field>
+<field>
+<fieldname>QUOORDNUM</fieldname>
+<fieldindex>8</fieldindex>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Order Number Activated From Quote</fielddesc>
+<attributeflaglist>
+<attributeflag type="Attribute" value="E" desc="Editable" />
+<attributeflag type="Attribute" value="A" desc="Enabled" />
+</attributeflaglist>
+<mask>%-22C</mask></field>
+</fieldlist>
+</view>
+<footer />
+</pagebody>
+</page>

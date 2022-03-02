@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>PM PM0083 PMBWC PMBWC</keywords>
+<pagetitle>Billing Worksheet Customer</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="PMBWC" desc="Billing Worksheet Customer">
+<view name="PM0083" desc="Billing Worksheet Customer" />
+<recordlength>457</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>Worksheet Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>SEQ</keyfield><keyfield>LINENUM</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Detail Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>WORKID</keyfield><keyfield>CUSTLINE</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Customer Number</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>WORKID</keyfield><keyfield>CUSTOMER</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>SEQ</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Sequence</fielddesc>
+</field>
+<field>
+<fieldname>LINENUM</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Line Number</fielddesc>
+</field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>WORKID</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Worksheet Number</fielddesc>
+<mask>%-16C</mask></field>
+<field>
+<fieldname>CUSTLINE</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Customer Line Number</fielddesc>
+</field>
+<field>
+<fieldname>CUSTOMER</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>NAMECUST</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Customer Name</fielddesc>
+</field>
+<field>
+<fieldname>BILSTATUS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Status</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Invoice" /><fieldpresent index="2" value="Hold" /></fieldpresentlist></field>
+<field>
+<fieldname>BILAMTSR</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Document Amount</fielddesc>
+</field>
+<field>
+<fieldname>BILAMTHM</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Document Amount</fielddesc>
+</field>
+<field>
+<fieldname>RATE</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATEOP</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Rate Operator</fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Multiply" /><fieldpresent index="2" value="Divide" /></fieldpresentlist></field>
+<field>
+<fieldname>PONUMBER</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>P/O Number</fielddesc>
+<mask>%-22C</mask></field>
+<field>
+<fieldname>CURRENCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>TEXTOPFL1</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>TEXTOPFL2</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>TEXTOPFL3</fieldname>
+<fieldtype>String*4</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>TEXTOPFL4</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>TEXTOPFL5</fieldname>
+<fieldtype>String*15</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>TEXTOPFL6</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>OPFLDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>OPFLAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>RATESPREAD</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>RETRATE</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc></fielddesc>
+<fieldpresentlist><fieldpresent index="1" value="Use Original Document Exchange Rate" /><fieldpresent index="2" value="Use Current Exchange Rate" /></fieldpresentlist></field>
+<field>
+<fieldname>CONTRACT</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>^1</fielddesc>
+<mask>%-16C</mask></field>
+<field>
+<fieldname>FMTCONTNO</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>^1</fielddesc>
+<mask>%-16C</mask></field>
+<field>
+<fieldname>PROJECT</fieldname>
+<fieldtype>String*16</fieldtype>
+<fielddesc>^2</fielddesc>
+<mask>%-16N</mask></field>
+<field>
+<fieldname>NUMDTL</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>CODETAXGRP</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Tax Group</fielddesc>
+</field>
+<field>
+<fieldname>TCLASS1</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Customer Tax Class 1</fielddesc>
+</field>
+<field>
+<fieldname>TCLASS2</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Customer Tax Class 2</fielddesc>
+</field>
+<field>
+<fieldname>TCLASS3</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Customer Tax Class 3</fielddesc>
+</field>
+<field>
+<fieldname>TCLASS4</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Customer Tax Class 4</fielddesc>
+</field>
+<field>
+<fieldname>TCLASS5</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Customer Tax Class 5</fielddesc>
+</field>
+<field>
+<fieldname>TAUTH1</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Tax Authority 1</fielddesc>
+</field>
+<field>
+<fieldname>TAUTH2</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Tax Authority 2</fielddesc>
+</field>
+<field>
+<fieldname>TAUTH3</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Tax Authority 3</fielddesc>
+</field>
+<field>
+<fieldname>TAUTH4</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Tax Authority 4</fielddesc>
+</field>
+<field>
+<fieldname>TAUTH5</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>Customer Tax Authority 5</fielddesc>
+</field>
+<field>
+<fieldname>RCURRENCY</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Tax Reporting Currency</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>RATETYPERC</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Tax Reporting Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>RATEDATERC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Tax Reporting Rate Date</fielddesc>
+</field>
+<field>
+<fieldname>RATERC</fieldname>
+<fieldtype>BCD*8.7</fieldtype>
+<fielddesc>Tax Reporting Exchange Rate</fielddesc>
+</field>
+<field>
+<fieldname>RATEOPRC</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Tax Reporting Rate Operator</fielddesc>
+</field>
+<field>
+<fieldname>RATEOVERRC</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Tax Reporting Override</fielddesc>
+</field>
+<field>
+<fieldname>RATEOVER</fieldname>
+<fieldtype>Boolean</fieldtype>
+<fielddesc>Rate Override</fielddesc>
+</field>
+<field>
+<fieldname>ARACCTSET</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>A/R Account Set</fielddesc>
+<mask>%-6N</mask></field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>

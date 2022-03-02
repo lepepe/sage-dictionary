@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="pageTemplate.xsl"?>
+<page>
+<pagehead>
+<generator>Sage Accpac SDK 6.8A</generator>
+<keywords>AR AR0028 ARNAT ARNAT</keywords>
+<pagetitle>National Accounts</pagetitle>
+<pagedate>2020-Nov-06</pagedate>
+</pagehead>
+<pagebody>
+<header />
+<table name="ARNAT" desc="National Accounts">
+<view name="AR0028" desc="National Accounts" />
+<recordlength>1459</recordlength>
+<tableflaglist>
+<tableflag type="Table" value="A" desc="Audit-stamp" />
+<tableflag type="Table" value="R" desc="Record-structure" />
+</tableflaglist>
+<keylist>
+<key>
+<keytitle>National Account Number</keytitle>
+<keyflaglist>
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDNATACCT</keyfield></keyfieldlist>
+</key>
+<key>
+<keytitle>Customer Group Code</keytitle>
+<keyflaglist>
+<keyflag type="Key" value="D" desc="Duplicates" />
+<keyflag type="Key" value="M" desc="Modifiable" />
+</keyflaglist>
+<keyfieldlist>
+<keyfield>IDGRP</keyfield></keyfieldlist>
+</key>
+</keylist>
+<fieldlist>
+<field>
+<fieldname>IDNATACCT</fieldname>
+<fieldtype>String*12</fieldtype>
+<fielddesc>National Account Number</fielddesc>
+<mask>%-12C</mask></field>
+<field>
+<fieldname>AUDTDATE</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTTIME</fieldname>
+<fieldtype>Time</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTUSER</fieldname>
+<fieldtype>String*8</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>AUDTORG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc></fielddesc>
+</field>
+<field>
+<fieldname>IDGRP</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Group Code</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>SWACTV</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Status</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Inactive" /><fieldpresent index="1" value="Active" /></fieldpresentlist></field>
+<field>
+<fieldname>DATEINAC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Inactive Date</fielddesc>
+</field>
+<field>
+<fieldname>DATELSTMTN</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Last Maintained</fielddesc>
+</field>
+<field>
+<fieldname>SWHOLD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>On Hold</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>CODEDAB</fieldname>
+<fieldtype>String*9</fieldtype>
+<fielddesc>Credit Bureau Number</fielddesc>
+</field>
+<field>
+<fieldname>DABRTG</fieldname>
+<fieldtype>String*5</fieldtype>
+<fielddesc>Credit Bureau Rating</fielddesc>
+</field>
+<field>
+<fieldname>DATEDAB</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Credit Bureau Date</fielddesc>
+</field>
+<field>
+<fieldname>NAMEACCT</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>National Account Name</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE1</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 1</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE2</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 2</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE3</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 3</fielddesc>
+</field>
+<field>
+<fieldname>TEXTSTRE4</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Address Line 4</fielddesc>
+</field>
+<field>
+<fieldname>NAMECITY</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>City</fielddesc>
+</field>
+<field>
+<fieldname>CODESTATE</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>State/Prov.</fielddesc>
+</field>
+<field>
+<fieldname>CODEPOST</fieldname>
+<fieldtype>String*20</fieldtype>
+<fielddesc>Zip/Postal Code</fielddesc>
+</field>
+<field>
+<fieldname>CODECTRY</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Country</fielddesc>
+</field>
+<field>
+<fieldname>NAMECTAC</fieldname>
+<fieldtype>String*60</fieldtype>
+<fielddesc>Contact Name</fielddesc>
+</field>
+<field>
+<fieldname>TEXTPHON1</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Phone Number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>TEXTPHON2</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Fax Number</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>IDACCTSET</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Account Set</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>IDAUTOCASH</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Autocash Profile</fielddesc>
+</field>
+<field>
+<fieldname>IDBILLCYCL</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Billing Cycle</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>IDSVCCHRG</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Interest Profile</fielddesc>
+<mask>%-6N</mask></field>
+<field>
+<fieldname>IDDLNQ</fieldname>
+<fieldtype>String*6</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>CODECURN</fieldname>
+<fieldtype>String*3</fieldtype>
+<fielddesc>Currency Code</fielddesc>
+<mask>%-3N</mask></field>
+<field>
+<fieldname>SWPRTSTMT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Print Statements</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWPRTDLNQ</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>SWBALFWD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Account Type</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Open Item" /><fieldpresent index="1" value="Balance Forward" /></fieldpresentlist></field>
+<field>
+<fieldname>IDRATETYPE</fieldname>
+<fieldtype>String*2</fieldtype>
+<fielddesc>Rate Type</fielddesc>
+<mask>%-2N</mask></field>
+<field>
+<fieldname>AMTCRLIMIT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Credit Limit</fielddesc>
+</field>
+<field>
+<fieldname>AMTBALDUTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Balance Due in Cust. Currency</fielddesc>
+</field>
+<field>
+<fieldname>AMTBALDUHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Balance Due in Func. Currency</fielddesc>
+</field>
+<field>
+<fieldname>DATELSTSTM</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Statement</fielddesc>
+</field>
+<field>
+<fieldname>AMTLSTSTTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Statement Total Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTLSTSTHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Statement Total Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>DATEBALFWD</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date Balance Forward Begins</fielddesc>
+</field>
+<field>
+<fieldname>AMTBLFWDTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Balance Forward Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTBLFWDHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Balance Forward Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>DATERVAL</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>AMTLSTRVAL</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>CNTOPENINV</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Number of Open Documents</fielddesc>
+</field>
+<field>
+<fieldname>CNTINVPAID</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Number of Paid Invoices</fielddesc>
+</field>
+<field>
+<fieldname>CNTDAYSPAY</fieldname>
+<fieldtype>BCD*4.0</fieldtype>
+<fielddesc>Number of Days to Pay</fielddesc>
+</field>
+<field>
+<fieldname>DATEINVCHI</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Largest Invoice</fielddesc>
+</field>
+<field>
+<fieldname>DATEBALHI</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Highest Balance</fielddesc>
+</field>
+<field>
+<fieldname>DATEINVHIL</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Largest Invoice Last Yr.</fielddesc>
+</field>
+<field>
+<fieldname>DATEBALHIL</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Highest Bal. Last Yr.</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTAC</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Activity</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTIN</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Invoice</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTCR</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Credit Note</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTDR</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Debit Note</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTPA</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Receipt</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTDI</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Discount</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTAD</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Adjustment</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTWR</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Write-Off</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTRI</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Returned Check</fielddesc>
+</field>
+<field>
+<fieldname>DATELSTINT</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Interest Charge</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTDL</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Reserved</fielddesc>
+</field>
+<field>
+<fieldname>IDINVCHIGH</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Largest Invoice Number</fielddesc>
+</field>
+<field>
+<fieldname>IDINVCHILY</fieldname>
+<fieldtype>String*22</fieldtype>
+<fielddesc>Largest Invoice Number Last Yr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVHITC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Largest Invoice - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTBALHITC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Highest Balance - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVHLIT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Lgst. Inv. Last Yr. Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTBALHILT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>High Bal. Last Yr. - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Invoice Amt. - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTCRTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Cr. Note Amt. - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTDRTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Dr. Note Amt. - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTPAYMTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Receipt - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTDISCTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Discount Amt. - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTADJTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Adj. Amt. - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTWROFTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Write-Off Amt. Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTRIFTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Ret'd. Chk. Amt. Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTINTTTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Int. Charge - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVHIHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Largest Invoice - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTBALHIHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Highest Balance - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVHILH</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Lgst. Inv. Last Yr. Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTBALHILH</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>High Bal. Last Yr. - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTINVHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Invoice Amt. - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTCRHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Cr. Note Amt. - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTDRHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Dr. Note Amt. - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTPAYMHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Receipt - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTDISCHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Discount Amt. - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTADJHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Adj. Amt. - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTWROFHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Write-Off Amt. Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTRIFHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Ret'd. Chk. Amt. Func. Curr</fielddesc>
+</field>
+<field>
+<fieldname>AMTINTTHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Int. Charge - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>EMAIL</fieldname>
+<fieldtype>String*50</fieldtype>
+<fielddesc>E-mail</fielddesc>
+</field>
+<field>
+<fieldname>WEBSITE</fieldname>
+<fieldtype>String*100</fieldtype>
+<fielddesc>Web Site</fielddesc>
+</field>
+<field>
+<fieldname>CTACPHONE</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Contact's Phone</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>CTACFAX</fieldname>
+<fieldtype>String*30</fieldtype>
+<fielddesc>Contact's Fax</fielddesc>
+<mask>(%-3C) %-3C-%-24C</mask></field>
+<field>
+<fieldname>CTACEMAIL</fieldname>
+<fieldtype>String*50</fieldtype>
+<fielddesc>Contact's E-mail</fielddesc>
+</field>
+<field>
+<fieldname>DELMETHOD</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Delivery Method</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="Mail" /><fieldpresent index="2" value="Email (national account)" /><fieldpresent index="4" value="Email (contact)" /><fieldpresent index="5" value="Email (multiple contacts)" /></fieldpresentlist></field>
+<field>
+<fieldname>RTGAMTTC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount Retained - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>RTGAMTHC</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount Retained - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>VALUES</fieldname>
+<fieldtype>Long</fieldtype>
+<fielddesc>Optional Fields</fielddesc>
+</field>
+<field>
+<fieldname>DATELASTRF</fieldname>
+<fieldtype>Date</fieldtype>
+<fielddesc>Date of Last Refund.</fielddesc>
+</field>
+<field>
+<fieldname>AMTLASTRFT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Refund Amt. - Cust. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>AMTLASTRFH</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Last Refund Amt. - Func. Curr.</fielddesc>
+</field>
+<field>
+<fieldname>SWCHKLIMIT</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check Credit Limit</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>SWCHKOVER</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Check Overdue Amounts</fielddesc>
+<fieldpresentlist><fieldpresent index="0" value="No" /><fieldpresent index="1" value="Yes" /></fieldpresentlist></field>
+<field>
+<fieldname>OVERDAYS</fieldname>
+<fieldtype>Integer</fieldtype>
+<fielddesc>Days Overdue</fielddesc>
+</field>
+<field>
+<fieldname>OVERAMT</fieldname>
+<fieldtype>BCD*10.3</fieldtype>
+<fielddesc>Amount Overdue</fielddesc>
+</field>
+</fieldlist>
+</table>
+<footer />
+</pagebody>
+</page>
